@@ -1,6 +1,6 @@
 ﻿namespace AppTesis
 {
-    partial class Form3
+    partial class Formchoferes
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form3
+            // Formchoferes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 246);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.ClientSize = new System.Drawing.Size(626, 246);
+            this.Name = "Formchoferes";
+            this.Text = "Choferes";
             this.ResumeLayout(false);
 
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppTesis
 {
-    public partial class Form5 : Form
+    public partial class Formordenes : Form
     {
-        public Form5()
+        public Formordenes()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppTesis
 {
-    public partial class Form3 : Form
+    public partial class Formchoferes : Form
     {
-        public Form3()
+        public Formchoferes()
         {
             InitializeComponent();
         }
