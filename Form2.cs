@@ -39,12 +39,20 @@ namespace AppTesis
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-
+            //proxima funcion para diseñar el login
+            this.Close();
+            FormPrincipal Principal = new FormPrincipal();
+            Principal.ShowDialog();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
