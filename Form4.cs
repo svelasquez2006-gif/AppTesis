@@ -16,5 +16,33 @@ namespace AppTesis
         {
             InitializeComponent();
         }
+
+        private void vehiculosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.vehiculosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.basededatosDataSet);
+
+        }
+
+        private void Formvehiculos_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'basededatosDataSet.Vehiculos' Puede moverla o quitarla según sea necesario.
+            this.vehiculosTableAdapter.Fill(this.basededatosDataSet.Vehiculos);
+
+        }
+
+        private void agregar_Click(object sender, EventArgs e)
+        {
+            RegistarVehiculo vehiculo = new RegistarVehiculo();
+            vehiculo.Show();
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormPrincipal principal = new FormPrincipal();
+            principal.Show();
+        }
     }
 }

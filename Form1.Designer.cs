@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenú = new System.Windows.Forms.Panel();
+            this.Usuarios = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.c = new System.Windows.Forms.Button();
             this.btnVehículos = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             // panelMenú
             // 
             this.panelMenú.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panelMenú.Controls.Add(this.Usuarios);
             this.panelMenú.Controls.Add(this.btnSalir);
             this.panelMenú.Controls.Add(this.c);
             this.panelMenú.Controls.Add(this.btnVehículos);
@@ -53,8 +55,23 @@
             this.panelMenú.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenú.Location = new System.Drawing.Point(0, 0);
             this.panelMenú.Name = "panelMenú";
-            this.panelMenú.Size = new System.Drawing.Size(210, 701);
+            this.panelMenú.Size = new System.Drawing.Size(172, 701);
             this.panelMenú.TabIndex = 0;
+            this.panelMenú.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenú_Paint);
+            // 
+            // Usuarios
+            // 
+            this.Usuarios.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Usuarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usuarios.ForeColor = System.Drawing.Color.White;
+            this.Usuarios.Location = new System.Drawing.Point(0, 467);
+            this.Usuarios.Name = "Usuarios";
+            this.Usuarios.Size = new System.Drawing.Size(172, 132);
+            this.Usuarios.TabIndex = 4;
+            this.Usuarios.Text = "Gestionar Usuarios";
+            this.Usuarios.UseVisualStyleBackColor = true;
+            this.Usuarios.Click += new System.EventHandler(this.Usuarios_Click);
             // 
             // btnSalir
             // 
@@ -62,12 +79,13 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(0, 565);
+            this.btnSalir.Location = new System.Drawing.Point(0, 599);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(210, 136);
+            this.btnSalir.Size = new System.Drawing.Size(172, 102);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Cerrar sesión";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // c
             // 
@@ -75,12 +93,13 @@
             this.c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.c.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c.ForeColor = System.Drawing.Color.White;
-            this.c.Location = new System.Drawing.Point(0, 272);
+            this.c.Location = new System.Drawing.Point(0, 214);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(210, 136);
+            this.c.Size = new System.Drawing.Size(172, 118);
             this.c.TabIndex = 2;
             this.c.Text = "Órdenes de viaje";
             this.c.UseVisualStyleBackColor = true;
+            this.c.Click += new System.EventHandler(this.c_Click);
             // 
             // btnVehículos
             // 
@@ -88,12 +107,13 @@
             this.btnVehículos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVehículos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVehículos.ForeColor = System.Drawing.Color.White;
-            this.btnVehículos.Location = new System.Drawing.Point(0, 136);
+            this.btnVehículos.Location = new System.Drawing.Point(0, 103);
             this.btnVehículos.Name = "btnVehículos";
-            this.btnVehículos.Size = new System.Drawing.Size(210, 136);
+            this.btnVehículos.Size = new System.Drawing.Size(172, 111);
             this.btnVehículos.TabIndex = 1;
             this.btnVehículos.Text = "Vehículos";
             this.btnVehículos.UseVisualStyleBackColor = true;
+            this.btnVehículos.Click += new System.EventHandler(this.btnVehículos_Click);
             // 
             // buttonChoferes
             // 
@@ -103,19 +123,20 @@
             this.buttonChoferes.ForeColor = System.Drawing.Color.White;
             this.buttonChoferes.Location = new System.Drawing.Point(0, 0);
             this.buttonChoferes.Name = "buttonChoferes";
-            this.buttonChoferes.Size = new System.Drawing.Size(210, 136);
+            this.buttonChoferes.Size = new System.Drawing.Size(172, 103);
             this.buttonChoferes.TabIndex = 0;
             this.buttonChoferes.Text = "Choferes";
             this.buttonChoferes.UseVisualStyleBackColor = true;
+            this.buttonChoferes.Click += new System.EventHandler(this.buttonChoferes_Click);
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panelContenedor.Controls.Add(this.panel1);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(210, 0);
+            this.panelContenedor.Location = new System.Drawing.Point(172, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(974, 701);
+            this.panelContenedor.Size = new System.Drawing.Size(1012, 701);
             this.panelContenedor.TabIndex = 1;
             // 
             // panel1
@@ -190,6 +211,7 @@
         private System.Windows.Forms.Label labelUser;
         private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.Label labelRol;
+        private System.Windows.Forms.Button Usuarios;
     }
 }
 

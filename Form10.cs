@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppTesis
 {
-    public partial class FormUsuarios : Form
+    public partial class Registrarusu : Form
     {
-        public FormUsuarios()
+        public Registrarusu()
         {
             InitializeComponent();
         }
@@ -25,24 +25,16 @@ namespace AppTesis
 
         }
 
-        private void FormUsuarios_Load(object sender, EventArgs e)
+        private void Registrarusu_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'basededatosDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
             this.usuariosTableAdapter.Fill(this.basededatosDataSet.Usuarios);
 
         }
 
-        private void agregar_Click(object sender, EventArgs e)
-        {
-            Registrarusu agregarusu = new Registrarusu();
-            agregarusu.Show();
-        }
-
         private void salir_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormPrincipal principal= new FormPrincipal();
-            principal.Show();
         }
     }
 }

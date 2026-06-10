@@ -1,6 +1,6 @@
 ﻿namespace AppTesis
 {
-    partial class Form6
+    partial class RegistarChofer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,296 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label nombreLabel;
+            System.Windows.Forms.Label apellidoLabel;
+            System.Windows.Forms.Label cedulaLabel;
+            System.Windows.Forms.Label telefonoLabel;
+            System.Windows.Forms.Label correoLabel;
+            System.Windows.Forms.Label grado_LicenciaLabel;
+            System.Windows.Forms.Label direccionLabel;
+            System.Windows.Forms.Label estatusLabel;
+            this.basededatosDataSet = new AppTesis.basededatosDataSet();
+            this.choferesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.choferesTableAdapter = new AppTesis.basededatosDataSetTableAdapters.ChoferesTableAdapter();
+            this.tableAdapterManager = new AppTesis.basededatosDataSetTableAdapters.TableAdapterManager();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.cedulaTextBox = new System.Windows.Forms.TextBox();
+            this.telefonoTextBox = new System.Windows.Forms.TextBox();
+            this.correoTextBox = new System.Windows.Forms.TextBox();
+            this.grado_LicenciaTextBox = new System.Windows.Forms.TextBox();
+            this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.estatusTextBox = new System.Windows.Forms.TextBox();
+            this.agregar = new BotonRedondo();
+            this.salir = new BotonRedondo();
+            this.label1 = new System.Windows.Forms.Label();
+            nombreLabel = new System.Windows.Forms.Label();
+            apellidoLabel = new System.Windows.Forms.Label();
+            cedulaLabel = new System.Windows.Forms.Label();
+            telefonoLabel = new System.Windows.Forms.Label();
+            correoLabel = new System.Windows.Forms.Label();
+            grado_LicenciaLabel = new System.Windows.Forms.Label();
+            direccionLabel = new System.Windows.Forms.Label();
+            estatusLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.choferesBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(20, 80);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.TabIndex = 3;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // apellidoLabel
+            // 
+            apellidoLabel.AutoSize = true;
+            apellidoLabel.Location = new System.Drawing.Point(20, 106);
+            apellidoLabel.Name = "apellidoLabel";
+            apellidoLabel.Size = new System.Drawing.Size(47, 13);
+            apellidoLabel.TabIndex = 5;
+            apellidoLabel.Text = "Apellido:";
+            // 
+            // cedulaLabel
+            // 
+            cedulaLabel.AutoSize = true;
+            cedulaLabel.Location = new System.Drawing.Point(20, 132);
+            cedulaLabel.Name = "cedulaLabel";
+            cedulaLabel.Size = new System.Drawing.Size(43, 13);
+            cedulaLabel.TabIndex = 7;
+            cedulaLabel.Text = "Cedula:";
+            // 
+            // telefonoLabel
+            // 
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.Location = new System.Drawing.Point(20, 158);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new System.Drawing.Size(52, 13);
+            telefonoLabel.TabIndex = 9;
+            telefonoLabel.Text = "Telefono:";
+            // 
+            // correoLabel
+            // 
+            correoLabel.AutoSize = true;
+            correoLabel.Location = new System.Drawing.Point(231, 80);
+            correoLabel.Name = "correoLabel";
+            correoLabel.Size = new System.Drawing.Size(41, 13);
+            correoLabel.TabIndex = 11;
+            correoLabel.Text = "Correo:";
+            // 
+            // grado_LicenciaLabel
+            // 
+            grado_LicenciaLabel.AutoSize = true;
+            grado_LicenciaLabel.Location = new System.Drawing.Point(231, 106);
+            grado_LicenciaLabel.Name = "grado_LicenciaLabel";
+            grado_LicenciaLabel.Size = new System.Drawing.Size(82, 13);
+            grado_LicenciaLabel.TabIndex = 13;
+            grado_LicenciaLabel.Text = "Grado Licencia:";
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.Location = new System.Drawing.Point(231, 132);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(55, 13);
+            direccionLabel.TabIndex = 15;
+            direccionLabel.Text = "Direccion:";
+            // 
+            // estatusLabel
+            // 
+            estatusLabel.AutoSize = true;
+            estatusLabel.Location = new System.Drawing.Point(231, 158);
+            estatusLabel.Name = "estatusLabel";
+            estatusLabel.Size = new System.Drawing.Size(45, 13);
+            estatusLabel.TabIndex = 17;
+            estatusLabel.Text = "Estatus:";
+            // 
+            // basededatosDataSet
+            // 
+            this.basededatosDataSet.DataSetName = "basededatosDataSet";
+            this.basededatosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // choferesBindingSource
+            // 
+            this.choferesBindingSource.DataMember = "Choferes";
+            this.choferesBindingSource.DataSource = this.basededatosDataSet;
+            // 
+            // choferesTableAdapter
+            // 
+            this.choferesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ChoferesTableAdapter = this.choferesTableAdapter;
+            this.tableAdapterManager.Estatus_ChoferesTableAdapter = null;
+            this.tableAdapterManager.Estatus_OrdenTableAdapter = null;
+            this.tableAdapterManager.Estatus_VehiculoTableAdapter = null;
+            this.tableAdapterManager.Jerarquia_UsuariosTableAdapter = null;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.Ordenes_ViajeTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = AppTesis.basededatosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            this.tableAdapterManager.VehiculosTableAdapter = null;
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(86, 77);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.TabIndex = 4;
+            // 
+            // apellidoTextBox
+            // 
+            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Apellido", true));
+            this.apellidoTextBox.Location = new System.Drawing.Point(86, 103);
+            this.apellidoTextBox.Name = "apellidoTextBox";
+            this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.apellidoTextBox.TabIndex = 6;
+            // 
+            // cedulaTextBox
+            // 
+            this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Cedula", true));
+            this.cedulaTextBox.Location = new System.Drawing.Point(86, 129);
+            this.cedulaTextBox.Name = "cedulaTextBox";
+            this.cedulaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cedulaTextBox.TabIndex = 8;
+            // 
+            // telefonoTextBox
+            // 
+            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Telefono", true));
+            this.telefonoTextBox.Location = new System.Drawing.Point(86, 155);
+            this.telefonoTextBox.Name = "telefonoTextBox";
+            this.telefonoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.telefonoTextBox.TabIndex = 10;
+            // 
+            // correoTextBox
+            // 
+            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Correo", true));
+            this.correoTextBox.Location = new System.Drawing.Point(319, 77);
+            this.correoTextBox.Name = "correoTextBox";
+            this.correoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.correoTextBox.TabIndex = 12;
+            // 
+            // grado_LicenciaTextBox
+            // 
+            this.grado_LicenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Grado_Licencia", true));
+            this.grado_LicenciaTextBox.Location = new System.Drawing.Point(319, 103);
+            this.grado_LicenciaTextBox.Name = "grado_LicenciaTextBox";
+            this.grado_LicenciaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.grado_LicenciaTextBox.TabIndex = 14;
+            // 
+            // direccionTextBox
+            // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Direccion", true));
+            this.direccionTextBox.Location = new System.Drawing.Point(319, 129);
+            this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.direccionTextBox.TabIndex = 16;
+            // 
+            // estatusTextBox
+            // 
+            this.estatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Estatus", true));
+            this.estatusTextBox.Location = new System.Drawing.Point(319, 155);
+            this.estatusTextBox.Name = "estatusTextBox";
+            this.estatusTextBox.Size = new System.Drawing.Size(100, 20);
+            this.estatusTextBox.TabIndex = 18;
+            // 
+            // agregar
+            // 
+            this.agregar.BackColor = System.Drawing.Color.YellowGreen;
+            this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.agregar.FlatAppearance.BorderSize = 2;
+            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregar.Location = new System.Drawing.Point(48, 214);
+            this.agregar.Name = "agregar";
+            this.agregar.RadioBorde = 20;
+            this.agregar.Size = new System.Drawing.Size(150, 40);
+            this.agregar.TabIndex = 19;
+            this.agregar.Text = "Agregar Chofer";
+            this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.Click += new System.EventHandler(this.botonRedondo1_Click);
+            // 
+            // salir
+            // 
+            this.salir.BackColor = System.Drawing.Color.IndianRed;
+            this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.salir.FlatAppearance.BorderSize = 2;
+            this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salir.Location = new System.Drawing.Point(248, 214);
+            this.salir.Name = "salir";
+            this.salir.RadioBorde = 20;
+            this.salir.Size = new System.Drawing.Size(150, 40);
+            this.salir.TabIndex = 20;
+            this.salir.Text = "Cancelar";
+            this.salir.UseVisualStyleBackColor = false;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(137, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 25);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Registrar Chofer";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // RegistarChofer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form6";
+            this.ClientSize = new System.Drawing.Size(431, 275);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.salir);
+            this.Controls.Add(this.agregar);
+            this.Controls.Add(nombreLabel);
+            this.Controls.Add(this.nombreTextBox);
+            this.Controls.Add(apellidoLabel);
+            this.Controls.Add(this.apellidoTextBox);
+            this.Controls.Add(cedulaLabel);
+            this.Controls.Add(this.cedulaTextBox);
+            this.Controls.Add(telefonoLabel);
+            this.Controls.Add(this.telefonoTextBox);
+            this.Controls.Add(correoLabel);
+            this.Controls.Add(this.correoTextBox);
+            this.Controls.Add(grado_LicenciaLabel);
+            this.Controls.Add(this.grado_LicenciaTextBox);
+            this.Controls.Add(direccionLabel);
+            this.Controls.Add(this.direccionTextBox);
+            this.Controls.Add(estatusLabel);
+            this.Controls.Add(this.estatusTextBox);
+            this.Name = "RegistarChofer";
+            this.Text = "Registrar Chofer";
+            this.Load += new System.EventHandler(this.Form6_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.choferesBindingSource)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private basededatosDataSet basededatosDataSet;
+        private System.Windows.Forms.BindingSource choferesBindingSource;
+        private basededatosDataSetTableAdapters.ChoferesTableAdapter choferesTableAdapter;
+        private basededatosDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.TextBox apellidoTextBox;
+        private System.Windows.Forms.TextBox cedulaTextBox;
+        private System.Windows.Forms.TextBox telefonoTextBox;
+        private System.Windows.Forms.TextBox correoTextBox;
+        private System.Windows.Forms.TextBox grado_LicenciaTextBox;
+        private System.Windows.Forms.TextBox direccionTextBox;
+        private System.Windows.Forms.TextBox estatusTextBox;
+        private BotonRedondo agregar;
+        private BotonRedondo salir;
+        private System.Windows.Forms.Label label1;
     }
 }

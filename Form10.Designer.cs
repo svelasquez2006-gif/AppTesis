@@ -1,6 +1,6 @@
 ﻿namespace AppTesis
 {
-    partial class Formordenes
+    partial class Registrarusu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formordenes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrarusu));
+            System.Windows.Forms.Label nombreLabel;
+            System.Windows.Forms.Label apellidoLabel;
+            System.Windows.Forms.Label cedulaLabel;
+            System.Windows.Forms.Label usuarioLabel;
+            System.Windows.Forms.Label contrasenaLabel;
+            System.Windows.Forms.Label jerarquiaLabel;
             this.basededatosDataSet = new AppTesis.basededatosDataSet();
-            this.ordenes_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ordenes_ViajeTableAdapter = new AppTesis.basededatosDataSetTableAdapters.Ordenes_ViajeTableAdapter();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new AppTesis.basededatosDataSetTableAdapters.UsuariosTableAdapter();
             this.tableAdapterManager = new AppTesis.basededatosDataSetTableAdapters.TableAdapterManager();
-            this.ordenes_ViajeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.usuariosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -46,25 +52,26 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.ordenes_ViajeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.ordenes_ViajeDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agregar = new BotonRedondo();
-            this.modificar = new BotonRedondo();
-            this.salir = new BotonRedondo();
+            this.usuariosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.cedulaTextBox = new System.Windows.Forms.TextBox();
+            this.usuarioTextBox = new System.Windows.Forms.TextBox();
+            this.contrasenaTextBox = new System.Windows.Forms.TextBox();
+            this.jerarquiaTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.agregar = new BotonRedondo();
+            this.salir = new BotonRedondo();
+            nombreLabel = new System.Windows.Forms.Label();
+            apellidoLabel = new System.Windows.Forms.Label();
+            cedulaLabel = new System.Windows.Forms.Label();
+            usuarioLabel = new System.Windows.Forms.Label();
+            contrasenaLabel = new System.Windows.Forms.Label();
+            jerarquiaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenes_ViajeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenes_ViajeBindingNavigator)).BeginInit();
-            this.ordenes_ViajeBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenes_ViajeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingNavigator)).BeginInit();
+            this.usuariosBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // basededatosDataSet
@@ -72,14 +79,14 @@
             this.basededatosDataSet.DataSetName = "basededatosDataSet";
             this.basededatosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ordenes_ViajeBindingSource
+            // usuariosBindingSource
             // 
-            this.ordenes_ViajeBindingSource.DataMember = "Ordenes_Viaje";
-            this.ordenes_ViajeBindingSource.DataSource = this.basededatosDataSet;
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.basededatosDataSet;
             // 
-            // ordenes_ViajeTableAdapter
+            // usuariosTableAdapter
             // 
-            this.ordenes_ViajeTableAdapter.ClearBeforeFill = true;
+            this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -90,18 +97,18 @@
             this.tableAdapterManager.Estatus_VehiculoTableAdapter = null;
             this.tableAdapterManager.Jerarquia_UsuariosTableAdapter = null;
             this.tableAdapterManager.MantenimientoTableAdapter = null;
-            this.tableAdapterManager.Ordenes_ViajeTableAdapter = this.ordenes_ViajeTableAdapter;
+            this.tableAdapterManager.Ordenes_ViajeTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = AppTesis.basededatosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuariosTableAdapter = null;
+            this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
             this.tableAdapterManager.VehiculosTableAdapter = null;
             // 
-            // ordenes_ViajeBindingNavigator
+            // usuariosBindingNavigator
             // 
-            this.ordenes_ViajeBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.ordenes_ViajeBindingNavigator.BindingSource = this.ordenes_ViajeBindingSource;
-            this.ordenes_ViajeBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.ordenes_ViajeBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.ordenes_ViajeBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.usuariosBindingNavigator.BindingSource = this.usuariosBindingSource;
+            this.usuariosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.usuariosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.usuariosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -113,17 +120,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.ordenes_ViajeBindingNavigatorSaveItem});
-            this.ordenes_ViajeBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.ordenes_ViajeBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.ordenes_ViajeBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.ordenes_ViajeBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.ordenes_ViajeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.ordenes_ViajeBindingNavigator.Name = "ordenes_ViajeBindingNavigator";
-            this.ordenes_ViajeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ordenes_ViajeBindingNavigator.Size = new System.Drawing.Size(865, 25);
-            this.ordenes_ViajeBindingNavigator.TabIndex = 0;
-            this.ordenes_ViajeBindingNavigator.Text = "bindingNavigator1";
+            this.usuariosBindingNavigatorSaveItem});
+            this.usuariosBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.usuariosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.usuariosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.usuariosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.usuariosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.usuariosBindingNavigator.Name = "usuariosBindingNavigator";
+            this.usuariosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.usuariosBindingNavigator.Size = new System.Drawing.Size(440, 25);
+            this.usuariosBindingNavigator.TabIndex = 0;
+            this.usuariosBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -211,83 +218,126 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
-            // ordenes_ViajeBindingNavigatorSaveItem
+            // usuariosBindingNavigatorSaveItem
             // 
-            this.ordenes_ViajeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ordenes_ViajeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ordenes_ViajeBindingNavigatorSaveItem.Image")));
-            this.ordenes_ViajeBindingNavigatorSaveItem.Name = "ordenes_ViajeBindingNavigatorSaveItem";
-            this.ordenes_ViajeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.ordenes_ViajeBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.ordenes_ViajeBindingNavigatorSaveItem.Click += new System.EventHandler(this.ordenes_ViajeBindingNavigatorSaveItem_Click);
+            this.usuariosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.usuariosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("usuariosBindingNavigatorSaveItem.Image")));
+            this.usuariosBindingNavigatorSaveItem.Name = "usuariosBindingNavigatorSaveItem";
+            this.usuariosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.usuariosBindingNavigatorSaveItem.Text = "Guardar datos";
+            this.usuariosBindingNavigatorSaveItem.Click += new System.EventHandler(this.usuariosBindingNavigatorSaveItem_Click);
             // 
-            // ordenes_ViajeDataGridView
+            // nombreLabel
             // 
-            this.ordenes_ViajeDataGridView.AutoGenerateColumns = false;
-            this.ordenes_ViajeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ordenes_ViajeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.ordenes_ViajeDataGridView.DataSource = this.ordenes_ViajeBindingSource;
-            this.ordenes_ViajeDataGridView.Location = new System.Drawing.Point(21, 93);
-            this.ordenes_ViajeDataGridView.Name = "ordenes_ViajeDataGridView";
-            this.ordenes_ViajeDataGridView.Size = new System.Drawing.Size(832, 220);
-            this.ordenes_ViajeDataGridView.TabIndex = 1;
-            this.ordenes_ViajeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ordenes_ViajeDataGridView_CellContentClick);
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(27, 108);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.TabIndex = 3;
+            nombreLabel.Text = "Nombre:";
             // 
-            // dataGridViewTextBoxColumn1
+            // nombreTextBox
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDOrdenes_Viaje";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IDOrdenes_Viaje";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(80, 105);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.TabIndex = 4;
             // 
-            // dataGridViewTextBoxColumn2
+            // apellidoLabel
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cedula_Chofer";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cedula_Chofer";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            apellidoLabel.AutoSize = true;
+            apellidoLabel.Location = new System.Drawing.Point(27, 162);
+            apellidoLabel.Name = "apellidoLabel";
+            apellidoLabel.Size = new System.Drawing.Size(47, 13);
+            apellidoLabel.TabIndex = 5;
+            apellidoLabel.Text = "Apellido:";
             // 
-            // dataGridViewTextBoxColumn3
+            // apellidoTextBox
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Vehiculos_NroPlaca";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Vehiculos_NroPlaca";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Apellido", true));
+            this.apellidoTextBox.Location = new System.Drawing.Point(80, 159);
+            this.apellidoTextBox.Name = "apellidoTextBox";
+            this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.apellidoTextBox.TabIndex = 6;
             // 
-            // dataGridViewTextBoxColumn4
+            // cedulaLabel
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Destino";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Destino";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            cedulaLabel.AutoSize = true;
+            cedulaLabel.Location = new System.Drawing.Point(27, 230);
+            cedulaLabel.Name = "cedulaLabel";
+            cedulaLabel.Size = new System.Drawing.Size(43, 13);
+            cedulaLabel.TabIndex = 7;
+            cedulaLabel.Text = "Cedula:";
             // 
-            // dataGridViewTextBoxColumn5
+            // cedulaTextBox
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Fecha_Inicio";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha_Inicio";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Cedula", true));
+            this.cedulaTextBox.Location = new System.Drawing.Point(80, 227);
+            this.cedulaTextBox.Name = "cedulaTextBox";
+            this.cedulaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cedulaTextBox.TabIndex = 8;
             // 
-            // dataGridViewTextBoxColumn6
+            // usuarioLabel
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Fecha_Finalizacion";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Fecha_Finalizacion";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            usuarioLabel.AutoSize = true;
+            usuarioLabel.Location = new System.Drawing.Point(240, 104);
+            usuarioLabel.Name = "usuarioLabel";
+            usuarioLabel.Size = new System.Drawing.Size(46, 13);
+            usuarioLabel.TabIndex = 9;
+            usuarioLabel.Text = "Usuario:";
             // 
-            // dataGridViewTextBoxColumn7
+            // usuarioTextBox
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Distancia_Esperada";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Distancia_Esperada";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Usuario", true));
+            this.usuarioTextBox.Location = new System.Drawing.Point(310, 101);
+            this.usuarioTextBox.Name = "usuarioTextBox";
+            this.usuarioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.usuarioTextBox.TabIndex = 10;
             // 
-            // dataGridViewTextBoxColumn8
+            // contrasenaLabel
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Estatus";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Estatus";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            contrasenaLabel.AutoSize = true;
+            contrasenaLabel.Location = new System.Drawing.Point(240, 158);
+            contrasenaLabel.Name = "contrasenaLabel";
+            contrasenaLabel.Size = new System.Drawing.Size(64, 13);
+            contrasenaLabel.TabIndex = 11;
+            contrasenaLabel.Text = "Contrasena:";
+            // 
+            // contrasenaTextBox
+            // 
+            this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Contrasena", true));
+            this.contrasenaTextBox.Location = new System.Drawing.Point(310, 155);
+            this.contrasenaTextBox.Name = "contrasenaTextBox";
+            this.contrasenaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.contrasenaTextBox.TabIndex = 12;
+            // 
+            // jerarquiaLabel
+            // 
+            jerarquiaLabel.AutoSize = true;
+            jerarquiaLabel.Location = new System.Drawing.Point(240, 226);
+            jerarquiaLabel.Name = "jerarquiaLabel";
+            jerarquiaLabel.Size = new System.Drawing.Size(53, 13);
+            jerarquiaLabel.TabIndex = 13;
+            jerarquiaLabel.Text = "Jerarquia:";
+            // 
+            // jerarquiaTextBox
+            // 
+            this.jerarquiaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Jerarquia", true));
+            this.jerarquiaTextBox.Location = new System.Drawing.Point(310, 223);
+            this.jerarquiaTextBox.Name = "jerarquiaTextBox";
+            this.jerarquiaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.jerarquiaTextBox.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(119, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Registrar Usuario";
             // 
             // agregar
             // 
@@ -295,28 +345,13 @@
             this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregar.Location = new System.Drawing.Point(131, 351);
+            this.agregar.Location = new System.Drawing.Point(51, 285);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);
-            this.agregar.TabIndex = 2;
-            this.agregar.Text = "Agregar Orden";
+            this.agregar.TabIndex = 16;
+            this.agregar.Text = "Agregar Usuario";
             this.agregar.UseVisualStyleBackColor = false;
-            this.agregar.Click += new System.EventHandler(this.agregar_Click);
-            // 
-            // modificar
-            // 
-            this.modificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.modificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.modificar.FlatAppearance.BorderSize = 2;
-            this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modificar.Location = new System.Drawing.Point(363, 351);
-            this.modificar.Name = "modificar";
-            this.modificar.RadioBorde = 20;
-            this.modificar.Size = new System.Drawing.Size(150, 40);
-            this.modificar.TabIndex = 3;
-            this.modificar.Text = "Modificar Orden";
-            this.modificar.UseVisualStyleBackColor = false;
             // 
             // salir
             // 
@@ -324,45 +359,44 @@
             this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salir.Location = new System.Drawing.Point(598, 351);
+            this.salir.Location = new System.Drawing.Point(260, 285);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
-            this.salir.TabIndex = 4;
-            this.salir.Text = "Salir";
+            this.salir.TabIndex = 17;
+            this.salir.Text = "Cancelar";
             this.salir.UseVisualStyleBackColor = false;
             this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(316, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Lista de Ordenes de Viaje";
-            // 
-            // Formordenes
+            // Registrarusu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 409);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(440, 337);
             this.Controls.Add(this.salir);
-            this.Controls.Add(this.modificar);
             this.Controls.Add(this.agregar);
-            this.Controls.Add(this.ordenes_ViajeDataGridView);
-            this.Controls.Add(this.ordenes_ViajeBindingNavigator);
-            this.Name = "Formordenes";
-            this.Text = "Ordenes de Viaje";
-            this.Load += new System.EventHandler(this.Formordenes_Load);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(nombreLabel);
+            this.Controls.Add(this.nombreTextBox);
+            this.Controls.Add(apellidoLabel);
+            this.Controls.Add(this.apellidoTextBox);
+            this.Controls.Add(cedulaLabel);
+            this.Controls.Add(this.cedulaTextBox);
+            this.Controls.Add(usuarioLabel);
+            this.Controls.Add(this.usuarioTextBox);
+            this.Controls.Add(contrasenaLabel);
+            this.Controls.Add(this.contrasenaTextBox);
+            this.Controls.Add(jerarquiaLabel);
+            this.Controls.Add(this.jerarquiaTextBox);
+            this.Controls.Add(this.usuariosBindingNavigator);
+            this.Name = "Registrarusu";
+            this.Text = "Registrar Usuario";
+            this.Load += new System.EventHandler(this.Registrarusu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenes_ViajeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenes_ViajeBindingNavigator)).EndInit();
-            this.ordenes_ViajeBindingNavigator.ResumeLayout(false);
-            this.ordenes_ViajeBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ordenes_ViajeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingNavigator)).EndInit();
+            this.usuariosBindingNavigator.ResumeLayout(false);
+            this.usuariosBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,10 +405,10 @@
         #endregion
 
         private basededatosDataSet basededatosDataSet;
-        private System.Windows.Forms.BindingSource ordenes_ViajeBindingSource;
-        private basededatosDataSetTableAdapters.Ordenes_ViajeTableAdapter ordenes_ViajeTableAdapter;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private basededatosDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
         private basededatosDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator ordenes_ViajeBindingNavigator;
+        private System.Windows.Forms.BindingNavigator usuariosBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -386,19 +420,15 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton ordenes_ViajeBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView ordenes_ViajeDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private BotonRedondo agregar;
-        private BotonRedondo modificar;
-        private BotonRedondo salir;
+        private System.Windows.Forms.ToolStripButton usuariosBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.TextBox apellidoTextBox;
+        private System.Windows.Forms.TextBox cedulaTextBox;
+        private System.Windows.Forms.TextBox usuarioTextBox;
+        private System.Windows.Forms.TextBox contrasenaTextBox;
+        private System.Windows.Forms.TextBox jerarquiaTextBox;
         private System.Windows.Forms.Label label1;
+        private BotonRedondo agregar;
+        private BotonRedondo salir;
     }
 }
