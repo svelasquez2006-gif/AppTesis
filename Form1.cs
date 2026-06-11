@@ -58,6 +58,9 @@ namespace AppTesis
 
         private void Usuarios_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FormUsuarios usuario =new FormUsuarios();
+            usuario.Show();
 
         }
     }
