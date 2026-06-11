@@ -39,22 +39,11 @@
             this.labelHora = new System.Windows.Forms.Label();
             this.labelRol = new System.Windows.Forms.Label();
             this.labelUser = new System.Windows.Forms.Label();
-            this.panelResumenFlota = new System.Windows.Forms.Panel();
-            this.panelActividadReciente = new System.Windows.Forms.Panel();
-            this.labelResumen = new System.Windows.Forms.Label();
-            this.labelActividad = new System.Windows.Forms.Label();
-            this.labelVehículos = new System.Windows.Forms.Label();
-            this.labelNúmeroVehículosTotales = new System.Windows.Forms.Label();
-            this.labelVehículosDisponibles = new System.Windows.Forms.Label();
-            this.labelNúmerosDisponibles = new System.Windows.Forms.Label();
-            this.labelViajeReciente = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            
             this.panelMenú.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelResumenFlota.SuspendLayout();
-            this.panelActividadReciente.SuspendLayout();
+        
             this.SuspendLayout();
             // 
             // panelMenú
@@ -145,8 +134,7 @@
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panelContenedor.Controls.Add(this.panelActividadReciente);
-            this.panelContenedor.Controls.Add(this.panelResumenFlota);
+
             this.panelContenedor.Controls.Add(this.panel1);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(172, 0);
@@ -197,118 +185,11 @@
             // 
             // panelResumenFlota
             // 
-            this.panelResumenFlota.BackColor = System.Drawing.Color.White;
-            this.panelResumenFlota.Controls.Add(this.labelNúmerosDisponibles);
-            this.panelResumenFlota.Controls.Add(this.labelVehículosDisponibles);
-            this.panelResumenFlota.Controls.Add(this.labelNúmeroVehículosTotales);
-            this.panelResumenFlota.Controls.Add(this.labelVehículos);
-            this.panelResumenFlota.Controls.Add(this.labelResumen);
-            this.panelResumenFlota.Location = new System.Drawing.Point(32, 359);
-            this.panelResumenFlota.Name = "panelResumenFlota";
-            this.panelResumenFlota.Size = new System.Drawing.Size(455, 200);
-            this.panelResumenFlota.TabIndex = 1;
+      
             // 
             // panelActividadReciente
             // 
-            this.panelActividadReciente.BackColor = System.Drawing.Color.White;
-            this.panelActividadReciente.Controls.Add(this.label2);
-            this.panelActividadReciente.Controls.Add(this.label1);
-            this.panelActividadReciente.Controls.Add(this.labelViajeReciente);
-            this.panelActividadReciente.Controls.Add(this.labelActividad);
-            this.panelActividadReciente.Location = new System.Drawing.Point(495, 359);
-            this.panelActividadReciente.Name = "panelActividadReciente";
-            this.panelActividadReciente.Size = new System.Drawing.Size(448, 200);
-            this.panelActividadReciente.TabIndex = 2;
-            // 
-            // labelResumen
-            // 
-            this.labelResumen.AutoSize = true;
-            this.labelResumen.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelResumen.Location = new System.Drawing.Point(17, 12);
-            this.labelResumen.Name = "labelResumen";
-            this.labelResumen.Size = new System.Drawing.Size(187, 30);
-            this.labelResumen.TabIndex = 0;
-            this.labelResumen.Text = "Resumen de Flota";
-            // 
-            // labelActividad
-            // 
-            this.labelActividad.AutoSize = true;
-            this.labelActividad.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActividad.Location = new System.Drawing.Point(14, 12);
-            this.labelActividad.Name = "labelActividad";
-            this.labelActividad.Size = new System.Drawing.Size(195, 30);
-            this.labelActividad.TabIndex = 1;
-            this.labelActividad.Text = "Actividad Reciente";
-            // 
-            // labelVehículos
-            // 
-            this.labelVehículos.AutoSize = true;
-            this.labelVehículos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVehículos.Location = new System.Drawing.Point(22, 54);
-            this.labelVehículos.Name = "labelVehículos";
-            this.labelVehículos.Size = new System.Drawing.Size(142, 21);
-            this.labelVehículos.TabIndex = 1;
-            this.labelVehículos.Text = "Vehículos Totales";
-            // 
-            // labelNúmeroVehículosTotales
-            // 
-            this.labelNúmeroVehículosTotales.AutoSize = true;
-            this.labelNúmeroVehículosTotales.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNúmeroVehículosTotales.Location = new System.Drawing.Point(19, 75);
-            this.labelNúmeroVehículosTotales.Name = "labelNúmeroVehículosTotales";
-            this.labelNúmeroVehículosTotales.Size = new System.Drawing.Size(49, 37);
-            this.labelNúmeroVehículosTotales.TabIndex = 2;
-            this.labelNúmeroVehículosTotales.Text = "52";
-            // 
-            // labelVehículosDisponibles
-            // 
-            this.labelVehículosDisponibles.AutoSize = true;
-            this.labelVehículosDisponibles.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVehículosDisponibles.Location = new System.Drawing.Point(240, 54);
-            this.labelVehículosDisponibles.Name = "labelVehículosDisponibles";
-            this.labelVehículosDisponibles.Size = new System.Drawing.Size(100, 21);
-            this.labelVehículosDisponibles.TabIndex = 3;
-            this.labelVehículosDisponibles.Text = "Disponibles";
-            // 
-            // labelNúmerosDisponibles
-            // 
-            this.labelNúmerosDisponibles.AutoSize = true;
-            this.labelNúmerosDisponibles.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNúmerosDisponibles.Location = new System.Drawing.Point(237, 75);
-            this.labelNúmerosDisponibles.Name = "labelNúmerosDisponibles";
-            this.labelNúmerosDisponibles.Size = new System.Drawing.Size(49, 37);
-            this.labelNúmerosDisponibles.TabIndex = 4;
-            this.labelNúmerosDisponibles.Text = "45";
-            // 
-            // labelViajeReciente
-            // 
-            this.labelViajeReciente.AutoSize = true;
-            this.labelViajeReciente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelViajeReciente.Location = new System.Drawing.Point(15, 54);
-            this.labelViajeReciente.Name = "labelViajeReciente";
-            this.labelViajeReciente.Size = new System.Drawing.Size(247, 21);
-            this.labelViajeReciente.TabIndex = 5;
-            this.labelViajeReciente.Text = "Viaje ID 02 - Salida Confirmada";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(334, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Vehículo M01 - Reporte de Mantenimiento";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(247, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Viaje ID 01 - Llegada al Destino";
+         
             // 
             // FormPrincipal
             // 
@@ -325,10 +206,7 @@
             this.panelContenedor.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelResumenFlota.ResumeLayout(false);
-            this.panelResumenFlota.PerformLayout();
-            this.panelActividadReciente.ResumeLayout(false);
-            this.panelActividadReciente.PerformLayout();
+ 
             this.ResumeLayout(false);
 
         }
