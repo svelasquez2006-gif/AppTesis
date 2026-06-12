@@ -29,11 +29,27 @@ namespace AppTesis
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
+            string nombre = nombreTextBox.Text;
+            string apellido = apellidoTextBox.Text;
 
+            int.TryParse(cedulaTextBox.Text, out int ced);
+            int cedula = ced;
 
-            this.Validate();
-            this.choferesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.basededatosDataSet);
+            string telefono = telefonoTextBox.Text;
+            string correo = correoTextBox.Text;
+
+            int.TryParse(grado_LicenciaTextBox.Text, out int grado);
+            int licencia = grado;
+
+            string direccion = direccionTextBox.Text;
+            int.TryParse(estatusTextBox.Text, out int stat);
+            int estatus = stat;
+
+            this.choferesTableAdapter.InsertQuery(nombre, apellido, cedula, telefono, correo, licencia, direccion, estatus);
+
+            //this.Validate();
+            //this.choferesBindingSource.EndEdit();
+            //this.tableAdapterManager.UpdateAll(this.basededatosDataSet);
 
             
         }

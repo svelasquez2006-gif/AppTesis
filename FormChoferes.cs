@@ -26,7 +26,8 @@ namespace AppTesis
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            RegistarChofer chofer = new RegistarChofer();
+            chofer.ShowDialog();
         }
     }
 }
