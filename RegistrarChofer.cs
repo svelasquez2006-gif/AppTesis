@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mysqlx.Crud;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,20 +29,26 @@ namespace AppTesis
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
+
+
             this.Validate();
             this.choferesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.basededatosDataSet);
+
+            
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void salir_Click(object sender, EventArgs e)
         {
             this.Close();
             
+        }
+
+        private void choferesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

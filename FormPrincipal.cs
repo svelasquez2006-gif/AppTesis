@@ -25,7 +25,7 @@ namespace AppTesis
         private void buttonChoferes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Formchoferes choferes = new Formchoferes();
+            FormChoferes choferes = new FormChoferes();
             choferes.ShowDialog();
         }
 

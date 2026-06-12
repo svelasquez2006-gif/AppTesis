@@ -16,5 +16,17 @@ namespace AppTesis
         {
             InitializeComponent();
         }
+
+        private void FormChoferes_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'basededatosDataSet.Choferes' Puede moverla o quitarla según sea necesario.
+            this.choferesTableAdapter.Fill(this.basededatosDataSet.Choferes);
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
