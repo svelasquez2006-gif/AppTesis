@@ -39,6 +39,7 @@ namespace AppTesis
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
+             
             //proxima funcion para diseñar el login
             this.Hide();
             FormPrincipal Principal = new FormPrincipal();

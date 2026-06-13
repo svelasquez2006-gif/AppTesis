@@ -10,7 +10,7 @@
     <Shape ID="DesignTable:Estatus_Choferes" ZOrder="16" X="631" Y="70" Height="134" Width="246" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Estatus_Orden" ZOrder="15" X="366" Y="388" Height="134" Width="246" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Estatus_Vehiculo" ZOrder="14" X="636" Y="796" Height="134" Width="246" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:Jerarquia_Usuarios" ZOrder="13" X="947" Y="70" Height="115" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
+    <Shape ID="DesignTable:Jerarquia_Usuarios" ZOrder="13" X="947" Y="70" Height="134" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Mantenimiento" ZOrder="12" X="636" Y="573" Height="172" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:Ordenes_Viaje" ZOrder="2" X="70" Y="70" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:Usuarios" ZOrder="11" X="1270" Y="70" Height="229" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />

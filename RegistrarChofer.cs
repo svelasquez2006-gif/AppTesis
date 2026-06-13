@@ -45,7 +45,7 @@ namespace AppTesis
             int.TryParse(estatusTextBox.Text, out int stat);
             int estatus = stat;
 
-            this.choferesTableAdapter.InsertQuery(nombre, apellido, cedula, telefono, correo, licencia, direccion, estatus);
+            this.choferesTableAdapter.Guardar(nombre, apellido, cedula, telefono, correo, licencia, direccion, estatus);
 
             //this.Validate();
             //this.choferesBindingSource.EndEdit();
