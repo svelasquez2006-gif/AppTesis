@@ -31,5 +31,19 @@ namespace AppTesis
             this.ordenes_ViajeTableAdapter.Fill(this.basededatosDataSet.Ordenes_Viaje);
 
         }
+
+        private void agregar_Click(object sender, EventArgs e)
+        {
+            int.TryParse(cedula_ChoferTextBox.Text,out int cedula);
+            string placa = vehiculos_NroPlacaTextBox.Text;
+            string destino = destinoTextBox.Text;
+            string inicio=fecha_InicioTextBox.Text;
+            string finalizacion = fecha_FinalizacionTextBox.Text;
+            string distancia = distancia_EsperadaTextBox.Text;
+            int.TryParse(estatusTextBox.Text, out int estatus);
+        
+
+            this.ordenes_ViajeTableAdapter.Guardar(cedula,placa,destino,inicio,finalizacion,distancia,estatus);
+        }
     }
 }

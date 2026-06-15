@@ -31,19 +31,12 @@ namespace AppTesis
         {
             string nombre = nombreTextBox.Text;
             string apellido = apellidoTextBox.Text;
-
-            int.TryParse(cedulaTextBox.Text, out int ced);
-            int cedula = ced;
-
+            int.TryParse(cedulaTextBox.Text, out int cedula);
             string telefono = telefonoTextBox.Text;
             string correo = correoTextBox.Text;
-
-            int.TryParse(grado_LicenciaTextBox.Text, out int grado);
-            int licencia = grado;
-
+            int.TryParse(grado_LicenciaTextBox.Text, out int licencia);
             string direccion = direccionTextBox.Text;
-            int.TryParse(estatusTextBox.Text, out int stat);
-            int estatus = stat;
+            int.TryParse(estatusTextBox.Text, out int estatus);
 
             this.choferesTableAdapter.Guardar(nombre, apellido, cedula, telefono, correo, licencia, direccion, estatus);
 

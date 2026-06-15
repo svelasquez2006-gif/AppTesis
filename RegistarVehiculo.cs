@@ -41,7 +41,13 @@ namespace AppTesis
 
         private void agregar_Click(object sender, EventArgs e)
         {
-
+            string placa = nroPlacaTextBox.Text;
+            string marca = marcaTextBox.Text;
+            string modelo = modeloTextBox.Text;
+            string anio =anioTextBox.Text;
+            string color = colorTextBox.Text;
+            int.TryParse(estatusTextBox.Text,out int estatus);
+            this.vehiculosTableAdapter.Guardar(placa,marca,modelo,anio,color,estatus);
         }
 
         private void salir_Click(object sender, EventArgs e)

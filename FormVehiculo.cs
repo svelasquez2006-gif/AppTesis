@@ -44,5 +44,12 @@ namespace AppTesis
             FormPrincipal principal = new FormPrincipal();
             principal.Show();
         }
+
+        private void mantenimiento_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMantenimiento mantenimiento = new FormMantenimiento();
+            mantenimiento.Show();
+        }
     }
 }

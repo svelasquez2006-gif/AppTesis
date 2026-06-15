@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistarOrd));
             System.Windows.Forms.Label cedula_ChoferLabel;
             System.Windows.Forms.Label vehiculos_NroPlacaLabel;
             System.Windows.Forms.Label destinoLabel;
@@ -37,22 +36,23 @@
             System.Windows.Forms.Label fecha_FinalizacionLabel;
             System.Windows.Forms.Label distancia_EsperadaLabel;
             System.Windows.Forms.Label estatusLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistarOrd));
             this.basededatosDataSet = new AppTesis.basededatosDataSet();
             this.ordenes_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordenes_ViajeTableAdapter = new AppTesis.basededatosDataSetTableAdapters.Ordenes_ViajeTableAdapter();
             this.tableAdapterManager = new AppTesis.basededatosDataSetTableAdapters.TableAdapterManager();
             this.ordenes_ViajeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.ordenes_ViajeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.cedula_ChoferTextBox = new System.Windows.Forms.TextBox();
             this.vehiculos_NroPlacaTextBox = new System.Windows.Forms.TextBox();
@@ -76,6 +76,69 @@
             ((System.ComponentModel.ISupportInitialize)(this.ordenes_ViajeBindingNavigator)).BeginInit();
             this.ordenes_ViajeBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // cedula_ChoferLabel
+            // 
+            cedula_ChoferLabel.AutoSize = true;
+            cedula_ChoferLabel.Location = new System.Drawing.Point(29, 97);
+            cedula_ChoferLabel.Name = "cedula_ChoferLabel";
+            cedula_ChoferLabel.Size = new System.Drawing.Size(77, 13);
+            cedula_ChoferLabel.TabIndex = 3;
+            cedula_ChoferLabel.Text = "Cedula Chofer:";
+            // 
+            // vehiculos_NroPlacaLabel
+            // 
+            vehiculos_NroPlacaLabel.AutoSize = true;
+            vehiculos_NroPlacaLabel.Location = new System.Drawing.Point(29, 145);
+            vehiculos_NroPlacaLabel.Name = "vehiculos_NroPlacaLabel";
+            vehiculos_NroPlacaLabel.Size = new System.Drawing.Size(106, 13);
+            vehiculos_NroPlacaLabel.TabIndex = 5;
+            vehiculos_NroPlacaLabel.Text = "Vehiculos Nro Placa:";
+            // 
+            // destinoLabel
+            // 
+            destinoLabel.AutoSize = true;
+            destinoLabel.Location = new System.Drawing.Point(31, 206);
+            destinoLabel.Name = "destinoLabel";
+            destinoLabel.Size = new System.Drawing.Size(46, 13);
+            destinoLabel.TabIndex = 7;
+            destinoLabel.Text = "Destino:";
+            // 
+            // fecha_InicioLabel
+            // 
+            fecha_InicioLabel.AutoSize = true;
+            fecha_InicioLabel.Location = new System.Drawing.Point(266, 90);
+            fecha_InicioLabel.Name = "fecha_InicioLabel";
+            fecha_InicioLabel.Size = new System.Drawing.Size(68, 13);
+            fecha_InicioLabel.TabIndex = 9;
+            fecha_InicioLabel.Text = "Fecha Inicio:";
+            // 
+            // fecha_FinalizacionLabel
+            // 
+            fecha_FinalizacionLabel.AutoSize = true;
+            fecha_FinalizacionLabel.Location = new System.Drawing.Point(266, 130);
+            fecha_FinalizacionLabel.Name = "fecha_FinalizacionLabel";
+            fecha_FinalizacionLabel.Size = new System.Drawing.Size(98, 13);
+            fecha_FinalizacionLabel.TabIndex = 11;
+            fecha_FinalizacionLabel.Text = "Fecha Finalizacion:";
+            // 
+            // distancia_EsperadaLabel
+            // 
+            distancia_EsperadaLabel.AutoSize = true;
+            distancia_EsperadaLabel.Location = new System.Drawing.Point(266, 174);
+            distancia_EsperadaLabel.Name = "distancia_EsperadaLabel";
+            distancia_EsperadaLabel.Size = new System.Drawing.Size(102, 13);
+            distancia_EsperadaLabel.TabIndex = 13;
+            distancia_EsperadaLabel.Text = "Distancia Esperada:";
+            // 
+            // estatusLabel
+            // 
+            estatusLabel.AutoSize = true;
+            estatusLabel.Location = new System.Drawing.Point(266, 223);
+            estatusLabel.Name = "estatusLabel";
+            estatusLabel.Size = new System.Drawing.Size(45, 13);
+            estatusLabel.TabIndex = 15;
+            estatusLabel.Text = "Estatus:";
             // 
             // basededatosDataSet
             // 
@@ -135,6 +198,31 @@
             this.ordenes_ViajeBindingNavigator.TabIndex = 0;
             this.ordenes_ViajeBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -168,16 +256,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -200,26 +281,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // ordenes_ViajeBindingNavigatorSaveItem
             // 
@@ -230,15 +293,6 @@
             this.ordenes_ViajeBindingNavigatorSaveItem.Text = "Guardar datos";
             this.ordenes_ViajeBindingNavigatorSaveItem.Click += new System.EventHandler(this.ordenes_ViajeBindingNavigatorSaveItem_Click);
             // 
-            // cedula_ChoferLabel
-            // 
-            cedula_ChoferLabel.AutoSize = true;
-            cedula_ChoferLabel.Location = new System.Drawing.Point(29, 97);
-            cedula_ChoferLabel.Name = "cedula_ChoferLabel";
-            cedula_ChoferLabel.Size = new System.Drawing.Size(77, 13);
-            cedula_ChoferLabel.TabIndex = 3;
-            cedula_ChoferLabel.Text = "Cedula Chofer:";
-            // 
             // cedula_ChoferTextBox
             // 
             this.cedula_ChoferTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenes_ViajeBindingSource, "Cedula_Chofer", true));
@@ -246,15 +300,6 @@
             this.cedula_ChoferTextBox.Name = "cedula_ChoferTextBox";
             this.cedula_ChoferTextBox.Size = new System.Drawing.Size(100, 20);
             this.cedula_ChoferTextBox.TabIndex = 4;
-            // 
-            // vehiculos_NroPlacaLabel
-            // 
-            vehiculos_NroPlacaLabel.AutoSize = true;
-            vehiculos_NroPlacaLabel.Location = new System.Drawing.Point(29, 145);
-            vehiculos_NroPlacaLabel.Name = "vehiculos_NroPlacaLabel";
-            vehiculos_NroPlacaLabel.Size = new System.Drawing.Size(106, 13);
-            vehiculos_NroPlacaLabel.TabIndex = 5;
-            vehiculos_NroPlacaLabel.Text = "Vehiculos Nro Placa:";
             // 
             // vehiculos_NroPlacaTextBox
             // 
@@ -264,15 +309,6 @@
             this.vehiculos_NroPlacaTextBox.Size = new System.Drawing.Size(100, 20);
             this.vehiculos_NroPlacaTextBox.TabIndex = 6;
             // 
-            // destinoLabel
-            // 
-            destinoLabel.AutoSize = true;
-            destinoLabel.Location = new System.Drawing.Point(31, 206);
-            destinoLabel.Name = "destinoLabel";
-            destinoLabel.Size = new System.Drawing.Size(46, 13);
-            destinoLabel.TabIndex = 7;
-            destinoLabel.Text = "Destino:";
-            // 
             // destinoTextBox
             // 
             this.destinoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenes_ViajeBindingSource, "Destino", true));
@@ -280,15 +316,6 @@
             this.destinoTextBox.Name = "destinoTextBox";
             this.destinoTextBox.Size = new System.Drawing.Size(100, 20);
             this.destinoTextBox.TabIndex = 8;
-            // 
-            // fecha_InicioLabel
-            // 
-            fecha_InicioLabel.AutoSize = true;
-            fecha_InicioLabel.Location = new System.Drawing.Point(266, 90);
-            fecha_InicioLabel.Name = "fecha_InicioLabel";
-            fecha_InicioLabel.Size = new System.Drawing.Size(68, 13);
-            fecha_InicioLabel.TabIndex = 9;
-            fecha_InicioLabel.Text = "Fecha Inicio:";
             // 
             // fecha_InicioTextBox
             // 
@@ -298,15 +325,6 @@
             this.fecha_InicioTextBox.Size = new System.Drawing.Size(100, 20);
             this.fecha_InicioTextBox.TabIndex = 10;
             // 
-            // fecha_FinalizacionLabel
-            // 
-            fecha_FinalizacionLabel.AutoSize = true;
-            fecha_FinalizacionLabel.Location = new System.Drawing.Point(266, 130);
-            fecha_FinalizacionLabel.Name = "fecha_FinalizacionLabel";
-            fecha_FinalizacionLabel.Size = new System.Drawing.Size(98, 13);
-            fecha_FinalizacionLabel.TabIndex = 11;
-            fecha_FinalizacionLabel.Text = "Fecha Finalizacion:";
-            // 
             // fecha_FinalizacionTextBox
             // 
             this.fecha_FinalizacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenes_ViajeBindingSource, "Fecha_Finalizacion", true));
@@ -315,15 +333,6 @@
             this.fecha_FinalizacionTextBox.Size = new System.Drawing.Size(100, 20);
             this.fecha_FinalizacionTextBox.TabIndex = 12;
             // 
-            // distancia_EsperadaLabel
-            // 
-            distancia_EsperadaLabel.AutoSize = true;
-            distancia_EsperadaLabel.Location = new System.Drawing.Point(266, 174);
-            distancia_EsperadaLabel.Name = "distancia_EsperadaLabel";
-            distancia_EsperadaLabel.Size = new System.Drawing.Size(102, 13);
-            distancia_EsperadaLabel.TabIndex = 13;
-            distancia_EsperadaLabel.Text = "Distancia Esperada:";
-            // 
             // distancia_EsperadaTextBox
             // 
             this.distancia_EsperadaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenes_ViajeBindingSource, "Distancia_Esperada", true));
@@ -331,15 +340,6 @@
             this.distancia_EsperadaTextBox.Name = "distancia_EsperadaTextBox";
             this.distancia_EsperadaTextBox.Size = new System.Drawing.Size(100, 20);
             this.distancia_EsperadaTextBox.TabIndex = 14;
-            // 
-            // estatusLabel
-            // 
-            estatusLabel.AutoSize = true;
-            estatusLabel.Location = new System.Drawing.Point(266, 223);
-            estatusLabel.Name = "estatusLabel";
-            estatusLabel.Size = new System.Drawing.Size(45, 13);
-            estatusLabel.TabIndex = 15;
-            estatusLabel.Text = "Estatus:";
             // 
             // estatusTextBox
             // 
@@ -372,6 +372,7 @@
             this.agregar.TabIndex = 18;
             this.agregar.Text = "Agregar Orden";
             this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
             // salir
             // 

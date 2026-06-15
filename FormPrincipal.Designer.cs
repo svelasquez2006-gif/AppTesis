@@ -39,16 +39,16 @@
             this.labelHora = new System.Windows.Forms.Label();
             this.labelRol = new System.Windows.Forms.Label();
             this.labelUser = new System.Windows.Forms.Label();
-            
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMenú.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.panel1.SuspendLayout();
-        
             this.SuspendLayout();
             // 
             // panelMenú
             // 
             this.panelMenú.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panelMenú.Controls.Add(this.button1);
             this.panelMenú.Controls.Add(this.Usuarios);
             this.panelMenú.Controls.Add(this.btnSalir);
             this.panelMenú.Controls.Add(this.c);
@@ -134,7 +134,6 @@
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.SystemColors.InactiveCaption;
-
             this.panelContenedor.Controls.Add(this.panel1);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(172, 0);
@@ -183,13 +182,19 @@
             this.labelUser.TabIndex = 0;
             this.labelUser.Text = "Juan Pérez";
             // 
-            // panelResumenFlota
+            // button1
             // 
-      
-            // 
-            // panelActividadReciente
-            // 
-         
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 332);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 129);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Debug\r\n(insertar estados)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormPrincipal
             // 
@@ -206,7 +211,6 @@
             this.panelContenedor.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
- 
             this.ResumeLayout(false);
 
         }
@@ -224,6 +228,7 @@
         private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.Label labelRol;
         private System.Windows.Forms.Button Usuarios;
+        private System.Windows.Forms.Button button1;
     }
 }
 

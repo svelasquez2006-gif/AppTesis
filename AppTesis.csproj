@@ -126,6 +126,18 @@
     <Compile Include="botonredondeado.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FormInsertar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInsertar.Designer.cs">
+      <DependentUpon>FormInsertar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMantenimiento.Designer.cs">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOrdenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,12 +194,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarMantenimiento.Designer.cs">
+      <DependentUpon>RegistrarMantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistrarUsuario.Designer.cs">
       <DependentUpon>RegistrarUsuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormInsertar.resx">
+      <DependentUpon>FormInsertar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMantenimiento.resx">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormOrdenes.resx">
       <DependentUpon>FormOrdenes.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +249,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistrarMantenimiento.resx">
+      <DependentUpon>RegistrarMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrarUsuario.resx">
       <DependentUpon>RegistrarUsuario.cs</DependentUpon>
     </EmbeddedResource>

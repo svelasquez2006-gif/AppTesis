@@ -36,5 +36,17 @@ namespace AppTesis
         {
             this.Close();
         }
+
+        private void agregar_Click(object sender, EventArgs e)
+        {
+            string nombre = nombreTextBox.Text;
+            string apellido = apellidoTextBox.Text;
+            string cedula = cedulaTextBox.Text;
+            string usuario = usuarioTextBox.Text;
+            string contra = contrasenaTextBox.Text;
+            int.TryParse(jerarquiaTextBox.Text,out int jerarquia);
+
+            this.usuariosTableAdapter.Guardar(nombre,apellido,cedula,usuario,contra,jerarquia);
+        }
     }
 }
