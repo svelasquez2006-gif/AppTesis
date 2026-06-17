@@ -40,8 +40,8 @@ namespace AppTesis
         private void salir_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormPrincipal princpal = new FormPrincipal();
-            princpal.Show();
+            FormPrincipal principal = new FormPrincipal();
+            principal.Show();
         }
 
         private void agregar_Click(object sender, EventArgs e)

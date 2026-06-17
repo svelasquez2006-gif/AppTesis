@@ -83,72 +83,80 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(20, 80);
+            nombreLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(18, 74);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.Size = new System.Drawing.Size(54, 15);
             nombreLabel.TabIndex = 3;
             nombreLabel.Text = "Nombre:";
             // 
             // apellidoLabel
             // 
             apellidoLabel.AutoSize = true;
-            apellidoLabel.Location = new System.Drawing.Point(20, 106);
+            apellidoLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            apellidoLabel.Location = new System.Drawing.Point(18, 100);
             apellidoLabel.Name = "apellidoLabel";
-            apellidoLabel.Size = new System.Drawing.Size(47, 13);
+            apellidoLabel.Size = new System.Drawing.Size(54, 15);
             apellidoLabel.TabIndex = 5;
             apellidoLabel.Text = "Apellido:";
             // 
             // cedulaLabel
             // 
             cedulaLabel.AutoSize = true;
-            cedulaLabel.Location = new System.Drawing.Point(20, 132);
+            cedulaLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cedulaLabel.Location = new System.Drawing.Point(18, 126);
             cedulaLabel.Name = "cedulaLabel";
-            cedulaLabel.Size = new System.Drawing.Size(43, 13);
+            cedulaLabel.Size = new System.Drawing.Size(47, 15);
             cedulaLabel.TabIndex = 7;
             cedulaLabel.Text = "Cedula:";
             // 
             // telefonoLabel
             // 
             telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(20, 158);
+            telefonoLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            telefonoLabel.Location = new System.Drawing.Point(18, 152);
             telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(52, 13);
+            telefonoLabel.Size = new System.Drawing.Size(56, 15);
             telefonoLabel.TabIndex = 9;
             telefonoLabel.Text = "Telefono:";
             // 
             // correoLabel
             // 
             correoLabel.AutoSize = true;
-            correoLabel.Location = new System.Drawing.Point(231, 80);
+            correoLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            correoLabel.Location = new System.Drawing.Point(221, 74);
             correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(41, 13);
+            correoLabel.Size = new System.Drawing.Size(46, 15);
             correoLabel.TabIndex = 11;
             correoLabel.Text = "Correo:";
             // 
             // grado_LicenciaLabel
             // 
             grado_LicenciaLabel.AutoSize = true;
-            grado_LicenciaLabel.Location = new System.Drawing.Point(231, 106);
+            grado_LicenciaLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            grado_LicenciaLabel.Location = new System.Drawing.Point(221, 100);
             grado_LicenciaLabel.Name = "grado_LicenciaLabel";
-            grado_LicenciaLabel.Size = new System.Drawing.Size(82, 13);
+            grado_LicenciaLabel.Size = new System.Drawing.Size(88, 15);
             grado_LicenciaLabel.TabIndex = 13;
             grado_LicenciaLabel.Text = "Grado Licencia:";
             // 
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(231, 132);
+            direccionLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            direccionLabel.Location = new System.Drawing.Point(221, 126);
             direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(55, 13);
+            direccionLabel.Size = new System.Drawing.Size(60, 15);
             direccionLabel.TabIndex = 15;
             direccionLabel.Text = "Direccion:";
             // 
             // estatusLabel
             // 
             estatusLabel.AutoSize = true;
-            estatusLabel.Location = new System.Drawing.Point(231, 158);
+            estatusLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            estatusLabel.Location = new System.Drawing.Point(221, 152);
             estatusLabel.Name = "estatusLabel";
-            estatusLabel.Size = new System.Drawing.Size(45, 13);
+            estatusLabel.Size = new System.Drawing.Size(47, 15);
             estatusLabel.TabIndex = 17;
             estatusLabel.Text = "Estatus:";
             // 
@@ -183,7 +191,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(86, 77);
+            this.nombreTextBox.Location = new System.Drawing.Point(84, 72);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.nombreTextBox.TabIndex = 4;
@@ -191,7 +199,7 @@
             // apellidoTextBox
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Apellido", true));
-            this.apellidoTextBox.Location = new System.Drawing.Point(86, 103);
+            this.apellidoTextBox.Location = new System.Drawing.Point(84, 98);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
             this.apellidoTextBox.TabIndex = 6;
@@ -199,7 +207,7 @@
             // cedulaTextBox
             // 
             this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Cedula", true));
-            this.cedulaTextBox.Location = new System.Drawing.Point(86, 129);
+            this.cedulaTextBox.Location = new System.Drawing.Point(84, 124);
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(100, 20);
             this.cedulaTextBox.TabIndex = 8;
@@ -207,7 +215,7 @@
             // telefonoTextBox
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(86, 155);
+            this.telefonoTextBox.Location = new System.Drawing.Point(84, 150);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(100, 20);
             this.telefonoTextBox.TabIndex = 10;
@@ -215,7 +223,7 @@
             // correoTextBox
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Correo", true));
-            this.correoTextBox.Location = new System.Drawing.Point(319, 77);
+            this.correoTextBox.Location = new System.Drawing.Point(309, 72);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(100, 20);
             this.correoTextBox.TabIndex = 12;
@@ -223,7 +231,7 @@
             // grado_LicenciaTextBox
             // 
             this.grado_LicenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Grado_Licencia", true));
-            this.grado_LicenciaTextBox.Location = new System.Drawing.Point(319, 103);
+            this.grado_LicenciaTextBox.Location = new System.Drawing.Point(309, 98);
             this.grado_LicenciaTextBox.Name = "grado_LicenciaTextBox";
             this.grado_LicenciaTextBox.Size = new System.Drawing.Size(100, 20);
             this.grado_LicenciaTextBox.TabIndex = 14;
@@ -231,7 +239,7 @@
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(319, 129);
+            this.direccionTextBox.Location = new System.Drawing.Point(309, 124);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(100, 20);
             this.direccionTextBox.TabIndex = 16;
@@ -239,7 +247,7 @@
             // estatusTextBox
             // 
             this.estatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "Estatus", true));
-            this.estatusTextBox.Location = new System.Drawing.Point(319, 155);
+            this.estatusTextBox.Location = new System.Drawing.Point(309, 150);
             this.estatusTextBox.Name = "estatusTextBox";
             this.estatusTextBox.Size = new System.Drawing.Size(100, 20);
             this.estatusTextBox.TabIndex = 18;
@@ -250,7 +258,7 @@
             this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregar.Location = new System.Drawing.Point(48, 214);
+            this.agregar.Location = new System.Drawing.Point(42, 209);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);
@@ -265,7 +273,7 @@
             this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salir.Location = new System.Drawing.Point(248, 214);
+            this.salir.Location = new System.Drawing.Point(242, 209);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -278,7 +286,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(128, 34);
+            this.label1.Location = new System.Drawing.Point(127, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 25);
             this.label1.TabIndex = 21;
@@ -408,11 +416,13 @@
             this.choferesBindingNavigator.Size = new System.Drawing.Size(431, 25);
             this.choferesBindingNavigator.TabIndex = 22;
             this.choferesBindingNavigator.Text = "bindingNavigator1";
+            this.choferesBindingNavigator.Visible = false;
             // 
             // RegistarChofer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(431, 275);
             this.Controls.Add(this.choferesBindingNavigator);
             this.Controls.Add(this.label1);

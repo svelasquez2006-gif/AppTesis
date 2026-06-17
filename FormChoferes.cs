@@ -29,5 +29,12 @@ namespace AppTesis
             RegistarChofer chofer = new RegistarChofer();
             chofer.ShowDialog();
         }
+
+        private void btnMenú_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormPrincipal princpal = new FormPrincipal();
+            princpal.Show();
+        }
     }
 }

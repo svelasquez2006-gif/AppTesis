@@ -80,63 +80,70 @@
             // cedula_ChoferLabel
             // 
             cedula_ChoferLabel.AutoSize = true;
+            cedula_ChoferLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cedula_ChoferLabel.Location = new System.Drawing.Point(29, 97);
             cedula_ChoferLabel.Name = "cedula_ChoferLabel";
-            cedula_ChoferLabel.Size = new System.Drawing.Size(77, 13);
+            cedula_ChoferLabel.Size = new System.Drawing.Size(86, 15);
             cedula_ChoferLabel.TabIndex = 3;
             cedula_ChoferLabel.Text = "Cedula Chofer:";
             // 
             // vehiculos_NroPlacaLabel
             // 
             vehiculos_NroPlacaLabel.AutoSize = true;
+            vehiculos_NroPlacaLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             vehiculos_NroPlacaLabel.Location = new System.Drawing.Point(29, 145);
             vehiculos_NroPlacaLabel.Name = "vehiculos_NroPlacaLabel";
-            vehiculos_NroPlacaLabel.Size = new System.Drawing.Size(106, 13);
+            vehiculos_NroPlacaLabel.Size = new System.Drawing.Size(114, 15);
             vehiculos_NroPlacaLabel.TabIndex = 5;
             vehiculos_NroPlacaLabel.Text = "Vehiculos Nro Placa:";
             // 
             // destinoLabel
             // 
             destinoLabel.AutoSize = true;
+            destinoLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             destinoLabel.Location = new System.Drawing.Point(31, 206);
             destinoLabel.Name = "destinoLabel";
-            destinoLabel.Size = new System.Drawing.Size(46, 13);
+            destinoLabel.Size = new System.Drawing.Size(50, 15);
             destinoLabel.TabIndex = 7;
             destinoLabel.Text = "Destino:";
             // 
             // fecha_InicioLabel
             // 
             fecha_InicioLabel.AutoSize = true;
+            fecha_InicioLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fecha_InicioLabel.Location = new System.Drawing.Point(266, 90);
             fecha_InicioLabel.Name = "fecha_InicioLabel";
-            fecha_InicioLabel.Size = new System.Drawing.Size(68, 13);
+            fecha_InicioLabel.Size = new System.Drawing.Size(73, 15);
             fecha_InicioLabel.TabIndex = 9;
             fecha_InicioLabel.Text = "Fecha Inicio:";
             // 
             // fecha_FinalizacionLabel
             // 
             fecha_FinalizacionLabel.AutoSize = true;
+            fecha_FinalizacionLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fecha_FinalizacionLabel.Location = new System.Drawing.Point(266, 130);
             fecha_FinalizacionLabel.Name = "fecha_FinalizacionLabel";
-            fecha_FinalizacionLabel.Size = new System.Drawing.Size(98, 13);
+            fecha_FinalizacionLabel.Size = new System.Drawing.Size(106, 15);
             fecha_FinalizacionLabel.TabIndex = 11;
             fecha_FinalizacionLabel.Text = "Fecha Finalizacion:";
             // 
             // distancia_EsperadaLabel
             // 
             distancia_EsperadaLabel.AutoSize = true;
+            distancia_EsperadaLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             distancia_EsperadaLabel.Location = new System.Drawing.Point(266, 174);
             distancia_EsperadaLabel.Name = "distancia_EsperadaLabel";
-            distancia_EsperadaLabel.Size = new System.Drawing.Size(102, 13);
+            distancia_EsperadaLabel.Size = new System.Drawing.Size(108, 15);
             distancia_EsperadaLabel.TabIndex = 13;
             distancia_EsperadaLabel.Text = "Distancia Esperada:";
             // 
             // estatusLabel
             // 
             estatusLabel.AutoSize = true;
+            estatusLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             estatusLabel.Location = new System.Drawing.Point(266, 223);
             estatusLabel.Name = "estatusLabel";
-            estatusLabel.Size = new System.Drawing.Size(45, 13);
+            estatusLabel.Size = new System.Drawing.Size(47, 15);
             estatusLabel.TabIndex = 15;
             estatusLabel.Text = "Estatus:";
             // 
@@ -392,6 +399,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(508, 323);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.agregar);

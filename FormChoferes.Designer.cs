@@ -50,6 +50,7 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.choferesTableAdapter = new AppTesis.basededatosDataSetTableAdapters.ChoferesTableAdapter();
+            this.btnMenú = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChoferes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.choferesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).BeginInit();
@@ -251,12 +252,27 @@
             // 
             this.choferesTableAdapter.ClearBeforeFill = true;
             // 
+            // btnMenú
+            // 
+            this.btnMenú.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnMenú.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenú.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenú.ForeColor = System.Drawing.Color.White;
+            this.btnMenú.Location = new System.Drawing.Point(209, 531);
+            this.btnMenú.Name = "btnMenú";
+            this.btnMenú.Size = new System.Drawing.Size(186, 23);
+            this.btnMenú.TabIndex = 9;
+            this.btnMenú.Text = "Volver al Menú";
+            this.btnMenú.UseVisualStyleBackColor = false;
+            this.btnMenú.Click += new System.EventHandler(this.btnMenú_Click);
+            // 
             // FormChoferes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(871, 701);
+            this.Controls.Add(this.btnMenú);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -300,5 +316,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gradoLicenciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnMenú;
     }
 }

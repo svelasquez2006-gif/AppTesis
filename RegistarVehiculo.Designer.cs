@@ -77,54 +77,60 @@
             // nroPlacaLabel
             // 
             nroPlacaLabel.AutoSize = true;
-            nroPlacaLabel.Location = new System.Drawing.Point(19, 92);
+            nroPlacaLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nroPlacaLabel.Location = new System.Drawing.Point(18, 83);
             nroPlacaLabel.Name = "nroPlacaLabel";
-            nroPlacaLabel.Size = new System.Drawing.Size(57, 13);
+            nroPlacaLabel.Size = new System.Drawing.Size(61, 15);
             nroPlacaLabel.TabIndex = 3;
             nroPlacaLabel.Text = "Nro Placa:";
             // 
             // marcaLabel
             // 
             marcaLabel.AutoSize = true;
-            marcaLabel.Location = new System.Drawing.Point(16, 145);
+            marcaLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            marcaLabel.Location = new System.Drawing.Point(15, 136);
             marcaLabel.Name = "marcaLabel";
-            marcaLabel.Size = new System.Drawing.Size(40, 13);
+            marcaLabel.Size = new System.Drawing.Size(43, 15);
             marcaLabel.TabIndex = 5;
             marcaLabel.Text = "Marca:";
             // 
             // modeloLabel
             // 
             modeloLabel.AutoSize = true;
-            modeloLabel.Location = new System.Drawing.Point(16, 198);
+            modeloLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            modeloLabel.Location = new System.Drawing.Point(15, 189);
             modeloLabel.Name = "modeloLabel";
-            modeloLabel.Size = new System.Drawing.Size(45, 13);
+            modeloLabel.Size = new System.Drawing.Size(51, 15);
             modeloLabel.TabIndex = 7;
             modeloLabel.Text = "Modelo:";
             // 
             // anioLabel
             // 
             anioLabel.AutoSize = true;
-            anioLabel.Location = new System.Drawing.Point(200, 92);
+            anioLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            anioLabel.Location = new System.Drawing.Point(199, 83);
             anioLabel.Name = "anioLabel";
-            anioLabel.Size = new System.Drawing.Size(29, 13);
+            anioLabel.Size = new System.Drawing.Size(32, 15);
             anioLabel.TabIndex = 9;
             anioLabel.Text = "Año:";
             // 
             // colorLabel
             // 
             colorLabel.AutoSize = true;
-            colorLabel.Location = new System.Drawing.Point(196, 145);
+            colorLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            colorLabel.Location = new System.Drawing.Point(195, 136);
             colorLabel.Name = "colorLabel";
-            colorLabel.Size = new System.Drawing.Size(34, 13);
+            colorLabel.Size = new System.Drawing.Size(39, 15);
             colorLabel.TabIndex = 11;
             colorLabel.Text = "Color:";
             // 
             // estatusLabel
             // 
             estatusLabel.AutoSize = true;
-            estatusLabel.Location = new System.Drawing.Point(193, 198);
+            estatusLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            estatusLabel.Location = new System.Drawing.Point(192, 189);
             estatusLabel.Name = "estatusLabel";
-            estatusLabel.Size = new System.Drawing.Size(45, 13);
+            estatusLabel.Size = new System.Drawing.Size(47, 15);
             estatusLabel.TabIndex = 15;
             estatusLabel.Text = "Estatus:";
             // 
@@ -185,6 +191,7 @@
             this.vehiculosBindingNavigator.Size = new System.Drawing.Size(360, 25);
             this.vehiculosBindingNavigator.TabIndex = 0;
             this.vehiculosBindingNavigator.Text = "bindingNavigator1";
+            this.vehiculosBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -284,7 +291,7 @@
             // nroPlacaTextBox
             // 
             this.nroPlacaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculosBindingSource, "NroPlaca", true));
-            this.nroPlacaTextBox.Location = new System.Drawing.Point(82, 92);
+            this.nroPlacaTextBox.Location = new System.Drawing.Point(81, 83);
             this.nroPlacaTextBox.Name = "nroPlacaTextBox";
             this.nroPlacaTextBox.Size = new System.Drawing.Size(88, 20);
             this.nroPlacaTextBox.TabIndex = 4;
@@ -292,7 +299,7 @@
             // marcaTextBox
             // 
             this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculosBindingSource, "Marca", true));
-            this.marcaTextBox.Location = new System.Drawing.Point(82, 145);
+            this.marcaTextBox.Location = new System.Drawing.Point(81, 136);
             this.marcaTextBox.Name = "marcaTextBox";
             this.marcaTextBox.Size = new System.Drawing.Size(88, 20);
             this.marcaTextBox.TabIndex = 6;
@@ -300,7 +307,7 @@
             // modeloTextBox
             // 
             this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculosBindingSource, "Modelo", true));
-            this.modeloTextBox.Location = new System.Drawing.Point(82, 195);
+            this.modeloTextBox.Location = new System.Drawing.Point(81, 186);
             this.modeloTextBox.Name = "modeloTextBox";
             this.modeloTextBox.Size = new System.Drawing.Size(88, 20);
             this.modeloTextBox.TabIndex = 8;
@@ -308,7 +315,7 @@
             // anioTextBox
             // 
             this.anioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculosBindingSource, "Anio", true));
-            this.anioTextBox.Location = new System.Drawing.Point(244, 92);
+            this.anioTextBox.Location = new System.Drawing.Point(243, 83);
             this.anioTextBox.Name = "anioTextBox";
             this.anioTextBox.Size = new System.Drawing.Size(88, 20);
             this.anioTextBox.TabIndex = 10;
@@ -317,7 +324,7 @@
             // colorTextBox
             // 
             this.colorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculosBindingSource, "Color", true));
-            this.colorTextBox.Location = new System.Drawing.Point(244, 145);
+            this.colorTextBox.Location = new System.Drawing.Point(243, 136);
             this.colorTextBox.Name = "colorTextBox";
             this.colorTextBox.Size = new System.Drawing.Size(88, 20);
             this.colorTextBox.TabIndex = 12;
@@ -325,7 +332,7 @@
             // estatusTextBox
             // 
             this.estatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculosBindingSource, "Estatus", true));
-            this.estatusTextBox.Location = new System.Drawing.Point(244, 198);
+            this.estatusTextBox.Location = new System.Drawing.Point(243, 189);
             this.estatusTextBox.Name = "estatusTextBox";
             this.estatusTextBox.Size = new System.Drawing.Size(88, 20);
             this.estatusTextBox.TabIndex = 16;
@@ -334,11 +341,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(87, 40);
+            this.label1.Location = new System.Drawing.Point(86, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(193, 25);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Agregar Vehiculo";
+            this.label1.Text = "Agregar Vehículo";
             // 
             // agregar
             // 
@@ -346,7 +353,7 @@
             this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregar.Location = new System.Drawing.Point(12, 248);
+            this.agregar.Location = new System.Drawing.Point(11, 239);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);
@@ -361,7 +368,7 @@
             this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salir.Location = new System.Drawing.Point(196, 248);
+            this.salir.Location = new System.Drawing.Point(195, 239);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -374,6 +381,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(360, 300);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.agregar);

@@ -77,56 +77,62 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(27, 108);
+            nombreLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(21, 86);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.Size = new System.Drawing.Size(60, 17);
             nombreLabel.TabIndex = 3;
             nombreLabel.Text = "Nombre:";
             // 
             // apellidoLabel
             // 
             apellidoLabel.AutoSize = true;
-            apellidoLabel.Location = new System.Drawing.Point(27, 162);
+            apellidoLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            apellidoLabel.Location = new System.Drawing.Point(21, 140);
             apellidoLabel.Name = "apellidoLabel";
-            apellidoLabel.Size = new System.Drawing.Size(47, 13);
+            apellidoLabel.Size = new System.Drawing.Size(59, 17);
             apellidoLabel.TabIndex = 5;
             apellidoLabel.Text = "Apellido:";
             // 
             // cedulaLabel
             // 
             cedulaLabel.AutoSize = true;
-            cedulaLabel.Location = new System.Drawing.Point(27, 230);
+            cedulaLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cedulaLabel.Location = new System.Drawing.Point(21, 208);
             cedulaLabel.Name = "cedulaLabel";
-            cedulaLabel.Size = new System.Drawing.Size(43, 13);
+            cedulaLabel.Size = new System.Drawing.Size(51, 17);
             cedulaLabel.TabIndex = 7;
             cedulaLabel.Text = "Cedula:";
             // 
             // usuarioLabel
             // 
             usuarioLabel.AutoSize = true;
-            usuarioLabel.Location = new System.Drawing.Point(240, 104);
+            usuarioLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            usuarioLabel.Location = new System.Drawing.Point(230, 83);
             usuarioLabel.Name = "usuarioLabel";
-            usuarioLabel.Size = new System.Drawing.Size(46, 13);
+            usuarioLabel.Size = new System.Drawing.Size(56, 17);
             usuarioLabel.TabIndex = 9;
             usuarioLabel.Text = "Usuario:";
             // 
             // contrasenaLabel
             // 
             contrasenaLabel.AutoSize = true;
-            contrasenaLabel.Location = new System.Drawing.Point(240, 158);
+            contrasenaLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            contrasenaLabel.Location = new System.Drawing.Point(230, 137);
             contrasenaLabel.Name = "contrasenaLabel";
-            contrasenaLabel.Size = new System.Drawing.Size(64, 13);
+            contrasenaLabel.Size = new System.Drawing.Size(77, 17);
             contrasenaLabel.TabIndex = 11;
-            contrasenaLabel.Text = "Contrasena:";
+            contrasenaLabel.Text = "Contraseña:";
             // 
             // jerarquiaLabel
             // 
             jerarquiaLabel.AutoSize = true;
-            jerarquiaLabel.Location = new System.Drawing.Point(240, 226);
+            jerarquiaLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            jerarquiaLabel.Location = new System.Drawing.Point(230, 205);
             jerarquiaLabel.Name = "jerarquiaLabel";
-            jerarquiaLabel.Size = new System.Drawing.Size(53, 13);
+            jerarquiaLabel.Size = new System.Drawing.Size(65, 17);
             jerarquiaLabel.TabIndex = 13;
-            jerarquiaLabel.Text = "Jerarquia:";
+            jerarquiaLabel.Text = "Jerarquía:";
             // 
             // basededatosDataSet
             // 
@@ -185,6 +191,7 @@
             this.usuariosBindingNavigator.Size = new System.Drawing.Size(440, 25);
             this.usuariosBindingNavigator.TabIndex = 0;
             this.usuariosBindingNavigator.Text = "bindingNavigator1";
+            this.usuariosBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -284,7 +291,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(80, 105);
+            this.nombreTextBox.Location = new System.Drawing.Point(85, 87);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.nombreTextBox.TabIndex = 4;
@@ -292,7 +299,7 @@
             // apellidoTextBox
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Apellido", true));
-            this.apellidoTextBox.Location = new System.Drawing.Point(80, 159);
+            this.apellidoTextBox.Location = new System.Drawing.Point(85, 141);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
             this.apellidoTextBox.TabIndex = 6;
@@ -300,7 +307,7 @@
             // cedulaTextBox
             // 
             this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Cedula", true));
-            this.cedulaTextBox.Location = new System.Drawing.Point(80, 227);
+            this.cedulaTextBox.Location = new System.Drawing.Point(85, 209);
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(100, 20);
             this.cedulaTextBox.TabIndex = 8;
@@ -308,7 +315,7 @@
             // usuarioTextBox
             // 
             this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Usuario", true));
-            this.usuarioTextBox.Location = new System.Drawing.Point(310, 101);
+            this.usuarioTextBox.Location = new System.Drawing.Point(310, 83);
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.usuarioTextBox.TabIndex = 10;
@@ -316,7 +323,7 @@
             // contrasenaTextBox
             // 
             this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Contrasena", true));
-            this.contrasenaTextBox.Location = new System.Drawing.Point(310, 155);
+            this.contrasenaTextBox.Location = new System.Drawing.Point(310, 137);
             this.contrasenaTextBox.Name = "contrasenaTextBox";
             this.contrasenaTextBox.Size = new System.Drawing.Size(100, 20);
             this.contrasenaTextBox.TabIndex = 12;
@@ -324,7 +331,7 @@
             // jerarquiaTextBox
             // 
             this.jerarquiaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Jerarquia", true));
-            this.jerarquiaTextBox.Location = new System.Drawing.Point(310, 223);
+            this.jerarquiaTextBox.Location = new System.Drawing.Point(310, 205);
             this.jerarquiaTextBox.Name = "jerarquiaTextBox";
             this.jerarquiaTextBox.Size = new System.Drawing.Size(100, 20);
             this.jerarquiaTextBox.TabIndex = 14;
@@ -333,7 +340,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 49);
+            this.label1.Location = new System.Drawing.Point(119, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 25);
             this.label1.TabIndex = 15;
@@ -345,7 +352,7 @@
             this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregar.Location = new System.Drawing.Point(51, 285);
+            this.agregar.Location = new System.Drawing.Point(43, 274);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);
@@ -360,7 +367,7 @@
             this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salir.Location = new System.Drawing.Point(260, 285);
+            this.salir.Location = new System.Drawing.Point(252, 274);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -373,6 +380,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(440, 337);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.agregar);
