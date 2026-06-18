@@ -58,6 +58,7 @@
             this.Agregar = new BotonRedondo();
             this.Salir = new BotonRedondo();
             this.label1 = new System.Windows.Forms.Label();
+            this.vehiculosTableAdapter1 = new AppTesis.basededatosDataSetTableAdapters.VehiculosTableAdapter();
             codMantenimientoLabel = new System.Windows.Forms.Label();
             nroPlacaLabel = new System.Windows.Forms.Label();
             fechaMantenimientoLabel = new System.Windows.Forms.Label();
@@ -270,15 +271,16 @@
             this.nroPlacaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource, "NroPlaca", true));
             this.nroPlacaTextBox.Location = new System.Drawing.Point(153, 92);
             this.nroPlacaTextBox.Name = "nroPlacaTextBox";
-            this.nroPlacaTextBox.Size = new System.Drawing.Size(200, 20);
+            this.nroPlacaTextBox.Size = new System.Drawing.Size(97, 20);
             this.nroPlacaTextBox.TabIndex = 4;
             // 
             // fechaMantenimientoDateTimePicker
             // 
             this.fechaMantenimientoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.mantenimientoBindingSource, "FechaMantenimiento", true));
+            this.fechaMantenimientoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fechaMantenimientoDateTimePicker.Location = new System.Drawing.Point(153, 118);
             this.fechaMantenimientoDateTimePicker.Name = "fechaMantenimientoDateTimePicker";
-            this.fechaMantenimientoDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.fechaMantenimientoDateTimePicker.Size = new System.Drawing.Size(97, 20);
             this.fechaMantenimientoDateTimePicker.TabIndex = 6;
             // 
             // anotacionesTextBox
@@ -329,6 +331,10 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Registrar Mantenimiento";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // vehiculosTableAdapter1
+            // 
+            this.vehiculosTableAdapter1.ClearBeforeFill = true;
             // 
             // RegistrarMantenimiento
             // 
@@ -386,5 +392,6 @@
         private BotonRedondo Agregar;
         private BotonRedondo Salir;
         private System.Windows.Forms.Label label1;
+        private basededatosDataSetTableAdapters.VehiculosTableAdapter vehiculosTableAdapter1;
     }
 }

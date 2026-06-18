@@ -394,6 +394,7 @@
             this.salir.TabIndex = 19;
             this.salir.Text = "Cancelar";
             this.salir.UseVisualStyleBackColor = false;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
             // RegistarOrd
             // 

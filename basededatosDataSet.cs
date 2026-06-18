@@ -10,9 +10,12 @@
     }
 }
 
-namespace AppTesis.basededatosDataSetTableAdapters {
-    
-    
+namespace AppTesis.basededatosDataSetTableAdapters
+{
+    partial class VehiculosTableAdapter
+    {
+    }
+
     public partial class ChoferesTableAdapter {
     }
 }

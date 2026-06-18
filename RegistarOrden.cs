@@ -41,9 +41,38 @@ namespace AppTesis
             string finalizacion = fecha_FinalizacionTextBox.Text;
             string distancia = distancia_EsperadaTextBox.Text;
             int.TryParse(estatusTextBox.Text, out int estatus);
-        
 
-            this.ordenes_ViajeTableAdapter.Guardar(cedula,placa,destino,inicio,finalizacion,distancia,estatus);
+            //permite darle funcion a los botones guardando el valor del boton selecionado
+            DialogResult resultado = MessageBox.Show($"Desea guardar los siguientes datos?:" +
+                $"Cedula del Chofer:{cedula} ," +
+                $"Placa del Vehiculo:{placa} ," +
+                $"Destino del Viaje:{destino} ," +
+                $"Inicio:{inicio} ," +
+                $"finalizacion:{finalizacion} ," +
+                $"Distancia:{distancia}"
+                ,"¿Desea Guardar los datos?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (resultado== DialogResult.Yes) {
+                this.ordenes_ViajeTableAdapter.Guardar(cedula, placa, destino, inicio, finalizacion, distancia, estatus);
+            }
+            else if (resultado==DialogResult.No) { 
+            
+            }
+            
+
+            
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            cedula_ChoferTextBox.Clear();
+            vehiculos_NroPlacaTextBox.Clear();
+            destinoTextBox.Clear();
+            fecha_InicioTextBox.Clear();
+            fecha_FinalizacionTextBox.Clear();
+            distancia_EsperadaTextBox.Clear();
+            estatusTextBox.Clear();
+            this.Close();
         }
     }
 }

@@ -38,19 +38,39 @@ namespace AppTesis
             string direccion = direccionTextBox.Text;
             int.TryParse(estatusTextBox.Text, out int estatus);
 
-            this.choferesTableAdapter.Guardar(nombre, apellido, cedula, telefono, correo, licencia, direccion, estatus);
+            //permite darle funcion a los botones guardando el valor del boton selecionado
+            DialogResult resultado = MessageBox.Show($"Seguro desea guardar los siguientes datos?" +
+                                                     $"Nombre:{nombre} {apellido} ," +
+                                                     $"Cedula:{cedula}" +
+                                                     $"Telefono:{telefono} ," +
+                                                     $"Correo:{correo} ," +
+                                                     $"Grado de Licencia{licencia}° ," +
+                                                     $"Dirrecion:{direccion}", "¿Desea Guardar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            //this.Validate();
-            //this.choferesBindingSource.EndEdit();
-            //this.tableAdapterManager.UpdateAll(this.basededatosDataSet);
 
-            
+            if (resultado == DialogResult.Yes) { 
+                this.choferesTableAdapter.Guardar(nombre, apellido, cedula, telefono, correo, licencia, direccion, estatus);
+                }
+            else if (resultado == DialogResult.No)
+            {
+
+
+            }
+
         }
 
 
 
         private void salir_Click(object sender, EventArgs e)
         {
+            nombreTextBox.Clear();
+            apellidoTextBox.Clear();
+            cedulaTextBox.Clear();
+            telefonoTextBox.Clear();
+            correoTextBox.Clear();
+            grado_LicenciaTextBox.Clear();
+            direccionTextBox.Clear();
+            estatusTextBox.Clear();
             this.Close();
             
         }
