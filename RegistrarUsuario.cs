@@ -34,6 +34,12 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
+            nombreTextBox.Clear();
+            apellidoTextBox.Clear();
+            cedulaTextBox.Clear();
+            usuarioTextBox.Clear();
+            contrasenaTextBox.Clear();
+            jerarquiaTextBox.Clear();
             this.Close();
         }
 
@@ -46,7 +52,17 @@ namespace AppTesis
             string contra = contrasenaTextBox.Text;
             int.TryParse(jerarquiaTextBox.Text,out int jerarquia);
 
-            this.usuariosTableAdapter.Guardar(nombre,apellido,cedula,usuario,contra,jerarquia);
+            DialogResult resultado = MessageBox.Show($"Desea Registrar al siguiente usuario?: " +
+                $"Nombre:{nombre} ," +
+                $"Apellido:{cedula} ," +
+                $"Usuario:{usuario} ," +
+                $"Contraseña:{contra}"
+                ,"¿Desea Ingresar a este Usuario?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (resultado==DialogResult.Yes) {
+                this.usuariosTableAdapter.Guardar(nombre, apellido, cedula, usuario, contra, jerarquia);
+            }else if (resultado==DialogResult.No) {}
+            
         }
     }
 }
