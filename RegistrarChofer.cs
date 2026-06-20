@@ -45,7 +45,8 @@ namespace AppTesis
                                                      $"Telefono:{telefono} ," +
                                                      $"Correo:{correo} ," +
                                                      $"Grado de Licencia{licencia}° ," +
-                                                     $"Dirrecion:{direccion}", "¿Desea Guardar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                                     $"Dirrecion:{direccion}", 
+                                                     "¿Desea Guardar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
 
             if (resultado == DialogResult.Yes) { 

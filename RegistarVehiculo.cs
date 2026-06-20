@@ -50,8 +50,12 @@ namespace AppTesis
 
             //permite darle funcion a los botones guardando el valor del boton selecionado
             DialogResult resultado = MessageBox.Show($"Desea guardar los sigueintes datos?:" +
-                $"Placa:{placa}, Marca:{marca}, Modelo:{modelo} ,Año:{anio} ,Color{color}",
-                "¿Desea Guardar?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                                                     $"Placa:{placa}, " +
+                                                     $"Marca:{marca}, " +
+                                                     $"Modelo:{modelo}, "+
+                                                     $"Año:{anio}, "+
+                                                     $"Color{color} ",
+                                                     "¿Desea Guardar?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
 
             if (resultado==DialogResult.Yes) {
                 this.vehiculosTableAdapter.Guardar(placa, marca, modelo, anio, color, estatus);

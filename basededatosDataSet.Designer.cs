@@ -5255,7 +5255,7 @@ SELECT ID, Nombre, Apellido, Cedula, Telefono, Correo, Grado_Licencia, Direccion
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, Nombre, Apellido, Cedula, Telefono, Correo, Grado_Licencia, Direccion," +
@@ -5274,6 +5274,49 @@ SELECT ID, Nombre, Apellido, Cedula, Telefono, Correo, Grado_Licencia, Direccion
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Grado_Licencia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Grado_Licencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Direccion", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Direccion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estatus", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"UPDATE    Choferes
+SET       Nombre = @Nombre, 
+          Apellido = @Apellido, 
+          Telefono = @Telefono, 
+          Correo = @Correo, 
+          Grado_Licencia = @Grado_Licencia, 
+          Direccion = @Direccion, 
+          Estatus = @Estatus
+WHERE     (Cedula = @Original_Cedula) 
+          AND (@IsNull_ID = 1 AND ID IS NULL OR ID = @Original_ID)
+          AND (@IsNull_Nombre = 1 AND Nombre IS NULL OR Nombre = @Original_Nombre) 
+          AND (@IsNull_Apellido = 1 AND Apellido IS NULL OR Apellido = @Original_Apellido) 
+          AND (@IsNull_Telefono = 1 AND Telefono IS NULL OR Telefono = @Original_Telefono) 
+          AND (@IsNull_Correo = 1 AND Correo IS NULL OR Correo = @Original_Correo) 
+          AND (@IsNull_Grado_Licencia = 1 AND Grado_Licencia IS NULL OR Grado_Licencia = @Original_Grado_Licencia) 
+          AND (@IsNull_Direccion = 1 AND Direccion IS NULL OR Direccion = @Original_Direccion) 
+          AND (Estatus = @Original_Estatus);rado_Licencia, Direccion, Estatus FROM Choferes WHERE (ID = @ID)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 14, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Apellido", global::System.Data.SqlDbType.VarChar, 14, global::System.Data.ParameterDirection.Input, 0, 0, "Apellido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Grado_Licencia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Grado_Licencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Direccion", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Direccion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estatus", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cedula", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 14, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Apellido", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Apellido", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Apellido", global::System.Data.SqlDbType.VarChar, 14, global::System.Data.ParameterDirection.Input, 0, 0, "Apellido", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Correo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Grado_Licencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grado_Licencia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Grado_Licencia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Grado_Licencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Direccion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Direccion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Direccion", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Direccion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estatus", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5687,6 +5730,175 @@ SELECT ID, Nombre, Apellido, Cedula, Telefono, Correo, Grado_Licencia, Direccion
                 command.Parameters[6].Value = ((string)(Direccion));
             }
             command.Parameters[7].Value = ((int)(Estatus));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int Modificar(
+                    string Nombre, 
+                    string Apellido, 
+                    string Telefono, 
+                    string Correo, 
+                    global::System.Nullable<int> Grado_Licencia, 
+                    string Direccion, 
+                    int Estatus, 
+                    global::System.Nullable<int> Original_Cedula, 
+                    global::System.Nullable<int> IsNull_ID, 
+                    int Original_ID, 
+                    global::System.Nullable<int> IsNull_Nombre, 
+                    string Original_Nombre, 
+                    global::System.Nullable<int> IsNull_Apellido, 
+                    string Original_Apellido, 
+                    global::System.Nullable<int> IsNull_Telefono, 
+                    string Original_Telefono, 
+                    global::System.Nullable<int> IsNull_Correo, 
+                    string Original_Correo, 
+                    global::System.Nullable<int> IsNull_Grado_Licencia, 
+                    global::System.Nullable<int> Original_Grado_Licencia, 
+                    global::System.Nullable<int> IsNull_Direccion, 
+                    string Original_Direccion, 
+                    int Original_Estatus) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((Nombre == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Nombre));
+            }
+            if ((Apellido == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Apellido));
+            }
+            if ((Telefono == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Telefono));
+            }
+            if ((Correo == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(Correo));
+            }
+            if ((Grado_Licencia.HasValue == true)) {
+                command.Parameters[4].Value = ((int)(Grado_Licencia.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Direccion == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(Direccion));
+            }
+            command.Parameters[6].Value = ((int)(Estatus));
+            if ((Original_Cedula.HasValue == true)) {
+                command.Parameters[7].Value = ((int)(Original_Cedula.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_ID.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(IsNull_ID.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[9].Value = ((int)(Original_ID));
+            if ((IsNull_Nombre.HasValue == true)) {
+                command.Parameters[10].Value = ((int)(IsNull_Nombre.Value));
+            }
+            else {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Nombre == null)) {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[11].Value = ((string)(Original_Nombre));
+            }
+            if ((IsNull_Apellido.HasValue == true)) {
+                command.Parameters[12].Value = ((int)(IsNull_Apellido.Value));
+            }
+            else {
+                command.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Apellido == null)) {
+                command.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[13].Value = ((string)(Original_Apellido));
+            }
+            if ((IsNull_Telefono.HasValue == true)) {
+                command.Parameters[14].Value = ((int)(IsNull_Telefono.Value));
+            }
+            else {
+                command.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Telefono == null)) {
+                command.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[15].Value = ((string)(Original_Telefono));
+            }
+            if ((IsNull_Correo.HasValue == true)) {
+                command.Parameters[16].Value = ((int)(IsNull_Correo.Value));
+            }
+            else {
+                command.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Correo == null)) {
+                command.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[17].Value = ((string)(Original_Correo));
+            }
+            if ((IsNull_Grado_Licencia.HasValue == true)) {
+                command.Parameters[18].Value = ((int)(IsNull_Grado_Licencia.Value));
+            }
+            else {
+                command.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Grado_Licencia.HasValue == true)) {
+                command.Parameters[19].Value = ((int)(Original_Grado_Licencia.Value));
+            }
+            else {
+                command.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_Direccion.HasValue == true)) {
+                command.Parameters[20].Value = ((int)(IsNull_Direccion.Value));
+            }
+            else {
+                command.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Direccion == null)) {
+                command.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[21].Value = ((string)(Original_Direccion));
+            }
+            command.Parameters[22].Value = ((int)(Original_Estatus));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

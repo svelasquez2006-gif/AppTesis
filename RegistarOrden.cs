@@ -44,13 +44,13 @@ namespace AppTesis
 
             //permite darle funcion a los botones guardando el valor del boton selecionado
             DialogResult resultado = MessageBox.Show($"Desea guardar los siguientes datos?:" +
-                $"Cedula del Chofer:{cedula} ," +
-                $"Placa del Vehiculo:{placa} ," +
-                $"Destino del Viaje:{destino} ," +
-                $"Inicio:{inicio} ," +
-                $"finalizacion:{finalizacion} ," +
-                $"Distancia:{distancia}"
-                ,"¿Desea Guardar los datos?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                                                     $"Cedula del Chofer:{cedula} ," +
+                                                     $"Placa del Vehiculo:{placa} ," +
+                                                     $"Destino del Viaje:{destino} ," +
+                                                     $"Inicio:{inicio} ," +
+                                                     $"finalizacion:{finalizacion} ," +
+                                                     $"Distancia:{distancia}"
+                                                     ,"¿Desea Guardar los datos?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
 
             if (resultado== DialogResult.Yes) {
                 this.ordenes_ViajeTableAdapter.Guardar(cedula, placa, destino, inicio, finalizacion, distancia, estatus);
