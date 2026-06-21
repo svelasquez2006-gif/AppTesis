@@ -4,6 +4,10 @@
 
     partial class basededatosDataSet
     {
+        partial class ChoferesDataTable
+        {
+        }
+
         partial class VehiculosDataTable
         {
         }

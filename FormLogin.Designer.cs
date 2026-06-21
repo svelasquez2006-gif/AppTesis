@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.login = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.iniciar_sesion = new BotonRedondo();
             this.salir = new BotonRedondo();
+            this.basededatosDataSet = new AppTesis.basededatosDataSet();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new AppTesis.basededatosDataSetTableAdapters.UsuariosTableAdapter();
+            this.tableAdapterManager = new AppTesis.basededatosDataSetTableAdapters.TableAdapterManager();
+            this.usuarioTextBox = new System.Windows.Forms.TextBox();
+            this.contrasenaTextBox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // login
@@ -70,21 +77,6 @@
             this.label3.Text = "Contraseña";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(238, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(113, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(238, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(113, 20);
-            this.textBox2.TabIndex = 7;
-            // 
             // iniciar_sesion
             // 
             this.iniciar_sesion.BackColor = System.Drawing.Color.Green;
@@ -118,22 +110,69 @@
             this.salir.UseVisualStyleBackColor = false;
             this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
+            // basededatosDataSet
+            // 
+            this.basededatosDataSet.DataSetName = "basededatosDataSet";
+            this.basededatosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.basededatosDataSet;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ChoferesTableAdapter = null;
+            this.tableAdapterManager.Estatus_ChoferesTableAdapter = null;
+            this.tableAdapterManager.Estatus_OrdenTableAdapter = null;
+            this.tableAdapterManager.Estatus_VehiculoTableAdapter = null;
+            this.tableAdapterManager.Jerarquia_UsuariosTableAdapter = null;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.Ordenes_ViajeTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = AppTesis.basededatosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
+            this.tableAdapterManager.VehiculosTableAdapter = null;
+            // 
+            // usuarioTextBox
+            // 
+            this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Usuario", true));
+            this.usuarioTextBox.Location = new System.Drawing.Point(231, 108);
+            this.usuarioTextBox.Name = "usuarioTextBox";
+            this.usuarioTextBox.Size = new System.Drawing.Size(129, 20);
+            this.usuarioTextBox.TabIndex = 19;
+            // 
+            // contrasenaTextBox
+            // 
+            this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Contrasena", true));
+            this.contrasenaTextBox.Location = new System.Drawing.Point(231, 149);
+            this.contrasenaTextBox.Name = "contrasenaTextBox";
+            this.contrasenaTextBox.PasswordChar = '*';
+            this.contrasenaTextBox.Size = new System.Drawing.Size(129, 20);
+            this.contrasenaTextBox.TabIndex = 21;
+            // 
             // Formlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(391, 247);
+            this.ClientSize = new System.Drawing.Size(401, 252);
+            this.Controls.Add(this.usuarioTextBox);
+            this.Controls.Add(this.contrasenaTextBox);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.iniciar_sesion);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.login);
             this.Name = "Formlogin";
             this.Text = "Inicio de Sesion";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,9 +183,13 @@
         private System.Windows.Forms.Label login;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private BotonRedondo iniciar_sesion;
         private BotonRedondo salir;
+        private basededatosDataSet basededatosDataSet;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private basededatosDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private basededatosDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox usuarioTextBox;
+        private System.Windows.Forms.TextBox contrasenaTextBox;
     }
 }

@@ -162,6 +162,18 @@
     <Compile Include="FormVehiculo.Designer.cs">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarChofer.Designer.cs">
+      <DependentUpon>ModificarChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarVehiculo.Designer.cs">
+      <DependentUpon>ModificarVehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistarOrden.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVehiculo.resx">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarChofer.resx">
+      <DependentUpon>ModificarChofer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistarOrden.resx">
       <DependentUpon>RegistarOrden.cs</DependentUpon>

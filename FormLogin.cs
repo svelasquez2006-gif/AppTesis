@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mysqlx;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,13 @@ namespace AppTesis
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
+            string usuario=usuarioTextBox.Text,contra=contrasenaTextBox.Text;
+
+            if (usuario==""||contra=="")
+            {
+               MessageBox.Show("Por favor, Ingresar su Usuario y Contraseña","Campos Vacios",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+
+            }
              
             //proxima funcion para diseñar el login
             this.Hide();
@@ -48,12 +56,28 @@ namespace AppTesis
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'basededatosDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.Fill(this.basededatosDataSet.Usuarios);
+            // TODO: esta línea de código carga datos en la tabla 'basededatosDataSet.Vehiculos' Puede moverla o quitarla según sea necesario.
+            
 
         }
 
         private void salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void vehiculosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
