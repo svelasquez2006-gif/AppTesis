@@ -19,23 +19,29 @@ namespace AppTesis
 
         private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.usuariosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.basededatosDataSet);
+
 
         }
 
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'basededatosDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
-            this.usuariosTableAdapter.Fill(this.basededatosDataSet.Usuarios);
+            // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
+
 
         }
 
         private void agregar_Click(object sender, EventArgs e)
         {
-            Registrarusu agregarusu = new Registrarusu();
-            agregarusu.Show();
+            string cedula = cedulaTextBox.Text;
+            string nombre = nombreTextBox.Text;
+            string apellido = apellidoTextBox.Text;
+            string usuario = usuarioTextBox.Text;
+            string contrasena = contrasenaTextBox.Text;
+            string correo = correoTextBox.Text;
+            string jerarquia = jerarquiacomboBox.Text;
+            this.usuarioTableAdapter.add(cedula,nombre,apellido,usuario,contrasena,correo,jerarquia);
+            usuarioDataGridView.Refresh();
         }
 
         private void salir_Click(object sender, EventArgs e)
@@ -43,6 +49,19 @@ namespace AppTesis
             this.Close();
             FormPrincipal principal= new FormPrincipal();
             principal.Show();
+        }
+
+        private void modificar_Click(object sender, EventArgs e)
+        {
+            string cedula = cedulaTextBox.Text;
+            string nombre = nombreTextBox.Text;
+            string apellido = apellidoTextBox.Text;
+            string usuario = usuarioTextBox.Text;
+            string contrasena = contrasenaTextBox.Text;
+            string correo = correoTextBox.Text;
+            string jerarquia = jerarquiacomboBox.Text;
+            this.usuarioTableAdapter.modify(nombre,apellido,usuario,contrasena,correo,jerarquia,cedula);
+            usuarioDataGridView.Refresh();
         }
     }
 }

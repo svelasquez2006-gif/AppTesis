@@ -28,20 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.login = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.iniciar_sesion = new BotonRedondo();
             this.salir = new BotonRedondo();
-            this.basededatosDataSet = new AppTesis.basededatosDataSet();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new AppTesis.basededatosDataSetTableAdapters.UsuariosTableAdapter();
-            this.tableAdapterManager = new AppTesis.basededatosDataSetTableAdapters.TableAdapterManager();
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
             this.contrasenaTextBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // login
@@ -110,37 +103,8 @@
             this.salir.UseVisualStyleBackColor = false;
             this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
-            // basededatosDataSet
-            // 
-            this.basededatosDataSet.DataSetName = "basededatosDataSet";
-            this.basededatosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataMember = "Usuarios";
-            this.usuariosBindingSource.DataSource = this.basededatosDataSet;
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ChoferesTableAdapter = null;
-            this.tableAdapterManager.Estatus_ChoferesTableAdapter = null;
-            this.tableAdapterManager.Estatus_OrdenTableAdapter = null;
-            this.tableAdapterManager.Estatus_VehiculoTableAdapter = null;
-            this.tableAdapterManager.Jerarquia_UsuariosTableAdapter = null;
-            this.tableAdapterManager.MantenimientoTableAdapter = null;
-            this.tableAdapterManager.Ordenes_ViajeTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = AppTesis.basededatosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
-            this.tableAdapterManager.VehiculosTableAdapter = null;
-            // 
             // usuarioTextBox
             // 
-            this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Usuario", true));
             this.usuarioTextBox.Location = new System.Drawing.Point(231, 108);
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(129, 20);
@@ -148,7 +112,6 @@
             // 
             // contrasenaTextBox
             // 
-            this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Contrasena", true));
             this.contrasenaTextBox.Location = new System.Drawing.Point(231, 149);
             this.contrasenaTextBox.Name = "contrasenaTextBox";
             this.contrasenaTextBox.PasswordChar = '*';
@@ -171,8 +134,6 @@
             this.Name = "Formlogin";
             this.Text = "Inicio de Sesion";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,10 +146,6 @@
         private System.Windows.Forms.Label label3;
         private BotonRedondo iniciar_sesion;
         private BotonRedondo salir;
-        private basededatosDataSet basededatosDataSet;
-        private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private basededatosDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
-        private basededatosDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox usuarioTextBox;
         private System.Windows.Forms.TextBox contrasenaTextBox;
     }

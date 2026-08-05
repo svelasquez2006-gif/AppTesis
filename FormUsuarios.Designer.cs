@@ -29,25 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
-            this.basededatosDataSet = new AppTesis.basededatosDataSet();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new AppTesis.basededatosDataSetTableAdapters.UsuariosTableAdapter();
-            this.tableAdapterManager = new AppTesis.basededatosDataSetTableAdapters.TableAdapterManager();
-            this.usuariosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.usuariosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.usuariosDataGridView = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.Label cedulaLabel;
+            System.Windows.Forms.Label nombreLabel;
+            System.Windows.Forms.Label apellidoLabel;
+            System.Windows.Forms.Label usuarioLabel;
+            System.Windows.Forms.Label contrasenaLabel;
+            System.Windows.Forms.Label correoLabel;
+            System.Windows.Forms.Label jerarquiaLabel;
+            this.label1 = new System.Windows.Forms.Label();
+            this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
+            this.cedulaTextBox = new System.Windows.Forms.TextBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.usuarioTextBox = new System.Windows.Forms.TextBox();
+            this.contrasenaTextBox = new System.Windows.Forms.TextBox();
+            this.correoTextBox = new System.Windows.Forms.TextBox();
+            this.jerarquiacomboBox = new System.Windows.Forms.ComboBox();
+            this.salir = new BotonRedondo();
+            this.modificar = new BotonRedondo();
+            this.agregar = new BotonRedondo();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,176 +57,37 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.agregar = new BotonRedondo();
-            this.modificar = new BotonRedondo();
-            this.salir = new BotonRedondo();
-            ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingNavigator)).BeginInit();
-            this.usuariosBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
+            this.usuarioTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.UsuarioTableAdapter();
+            this.tableAdapterManager1 = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
+            cedulaLabel = new System.Windows.Forms.Label();
+            nombreLabel = new System.Windows.Forms.Label();
+            apellidoLabel = new System.Windows.Forms.Label();
+            usuarioLabel = new System.Windows.Forms.Label();
+            contrasenaLabel = new System.Windows.Forms.Label();
+            correoLabel = new System.Windows.Forms.Label();
+            jerarquiaLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // basededatosDataSet
+            // label1
             // 
-            this.basededatosDataSet.DataSetName = "basededatosDataSet";
-            this.basededatosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(391, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Lista de Usuarios";
             // 
-            // usuariosBindingSource
+            // usuarioDataGridView
             // 
-            this.usuariosBindingSource.DataMember = "Usuarios";
-            this.usuariosBindingSource.DataSource = this.basededatosDataSet;
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ChoferesTableAdapter = null;
-            this.tableAdapterManager.Estatus_ChoferesTableAdapter = null;
-            this.tableAdapterManager.Estatus_OrdenTableAdapter = null;
-            this.tableAdapterManager.Estatus_VehiculoTableAdapter = null;
-            this.tableAdapterManager.Jerarquia_UsuariosTableAdapter = null;
-            this.tableAdapterManager.MantenimientoTableAdapter = null;
-            this.tableAdapterManager.Ordenes_ViajeTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = AppTesis.basededatosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
-            this.tableAdapterManager.VehiculosTableAdapter = null;
-            // 
-            // usuariosBindingNavigator
-            // 
-            this.usuariosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.usuariosBindingNavigator.BindingSource = this.usuariosBindingSource;
-            this.usuariosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.usuariosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.usuariosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.usuariosBindingNavigatorSaveItem});
-            this.usuariosBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.usuariosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.usuariosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.usuariosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.usuariosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.usuariosBindingNavigator.Name = "usuariosBindingNavigator";
-            this.usuariosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.usuariosBindingNavigator.Size = new System.Drawing.Size(812, 25);
-            this.usuariosBindingNavigator.TabIndex = 0;
-            this.usuariosBindingNavigator.Text = "bindingNavigator1";
-            this.usuariosBindingNavigator.Visible = false;
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // usuariosBindingNavigatorSaveItem
-            // 
-            this.usuariosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.usuariosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("usuariosBindingNavigatorSaveItem.Image")));
-            this.usuariosBindingNavigatorSaveItem.Name = "usuariosBindingNavigatorSaveItem";
-            this.usuariosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.usuariosBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.usuariosBindingNavigatorSaveItem.Click += new System.EventHandler(this.usuariosBindingNavigatorSaveItem_Click);
-            // 
-            // usuariosDataGridView
-            // 
-            this.usuariosDataGridView.AutoGenerateColumns = false;
-            this.usuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usuariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.usuarioDataGridView.AllowUserToAddRows = false;
+            this.usuarioDataGridView.AllowUserToDeleteRows = false;
+            this.usuarioDataGridView.AutoGenerateColumns = false;
+            this.usuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -232,93 +95,135 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.usuariosDataGridView.DataSource = this.usuariosBindingSource;
-            this.usuariosDataGridView.Location = new System.Drawing.Point(30, 92);
-            this.usuariosDataGridView.Name = "usuariosDataGridView";
-            this.usuariosDataGridView.Size = new System.Drawing.Size(745, 220);
-            this.usuariosDataGridView.TabIndex = 1;
+            this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
+            this.usuarioDataGridView.Location = new System.Drawing.Point(142, 50);
+            this.usuarioDataGridView.Name = "usuarioDataGridView";
+            this.usuarioDataGridView.ReadOnly = true;
+            this.usuarioDataGridView.Size = new System.Drawing.Size(744, 220);
+            this.usuarioDataGridView.TabIndex = 5;
             // 
-            // dataGridViewTextBoxColumn1
+            // cedulaLabel
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idUsuarios";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idUsuarios";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            cedulaLabel.AutoSize = true;
+            cedulaLabel.Location = new System.Drawing.Point(42, 24);
+            cedulaLabel.Name = "cedulaLabel";
+            cedulaLabel.Size = new System.Drawing.Size(43, 13);
+            cedulaLabel.TabIndex = 6;
+            cedulaLabel.Text = "Cedula:";
             // 
-            // dataGridViewTextBoxColumn2
+            // cedulaTextBox
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Cedula", true));
+            this.cedulaTextBox.Location = new System.Drawing.Point(17, 40);
+            this.cedulaTextBox.Name = "cedulaTextBox";
+            this.cedulaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cedulaTextBox.TabIndex = 7;
             // 
-            // dataGridViewTextBoxColumn3
+            // nombreLabel
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellido";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(41, 63);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.TabIndex = 8;
+            nombreLabel.Text = "Nombre:";
             // 
-            // dataGridViewTextBoxColumn4
+            // nombreTextBox
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cedula";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Cedula";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(17, 79);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.TabIndex = 9;
             // 
-            // dataGridViewTextBoxColumn5
+            // apellidoLabel
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Usuario";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Usuario";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            apellidoLabel.AutoSize = true;
+            apellidoLabel.Location = new System.Drawing.Point(41, 103);
+            apellidoLabel.Name = "apellidoLabel";
+            apellidoLabel.Size = new System.Drawing.Size(47, 13);
+            apellidoLabel.TabIndex = 10;
+            apellidoLabel.Text = "Apellido:";
             // 
-            // dataGridViewTextBoxColumn6
+            // apellidoTextBox
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Contrasena";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Contrasena";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Apellido", true));
+            this.apellidoTextBox.Location = new System.Drawing.Point(17, 119);
+            this.apellidoTextBox.Name = "apellidoTextBox";
+            this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.apellidoTextBox.TabIndex = 11;
             // 
-            // dataGridViewTextBoxColumn7
+            // usuarioLabel
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Jerarquia";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Jerarquia";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            usuarioLabel.AutoSize = true;
+            usuarioLabel.Location = new System.Drawing.Point(42, 141);
+            usuarioLabel.Name = "usuarioLabel";
+            usuarioLabel.Size = new System.Drawing.Size(46, 13);
+            usuarioLabel.TabIndex = 12;
+            usuarioLabel.Text = "Usuario:";
             // 
-            // label1
+            // usuarioTextBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(319, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Lista de Usuarios";
+            this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Usuario", true));
+            this.usuarioTextBox.Location = new System.Drawing.Point(17, 157);
+            this.usuarioTextBox.Name = "usuarioTextBox";
+            this.usuarioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.usuarioTextBox.TabIndex = 13;
             // 
-            // agregar
+            // contrasenaLabel
             // 
-            this.agregar.BackColor = System.Drawing.Color.YellowGreen;
-            this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.agregar.FlatAppearance.BorderSize = 2;
-            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregar.Location = new System.Drawing.Point(106, 338);
-            this.agregar.Name = "agregar";
-            this.agregar.RadioBorde = 20;
-            this.agregar.Size = new System.Drawing.Size(150, 40);
-            this.agregar.TabIndex = 3;
-            this.agregar.Text = "Agregar Usuario";
-            this.agregar.UseVisualStyleBackColor = false;
-            this.agregar.Click += new System.EventHandler(this.agregar_Click);
+            contrasenaLabel.AutoSize = true;
+            contrasenaLabel.Location = new System.Drawing.Point(35, 179);
+            contrasenaLabel.Name = "contrasenaLabel";
+            contrasenaLabel.Size = new System.Drawing.Size(64, 13);
+            contrasenaLabel.TabIndex = 14;
+            contrasenaLabel.Text = "Contrasena:";
             // 
-            // modificar
+            // contrasenaTextBox
             // 
-            this.modificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.modificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.modificar.FlatAppearance.BorderSize = 2;
-            this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modificar.Location = new System.Drawing.Point(336, 338);
-            this.modificar.Name = "modificar";
-            this.modificar.RadioBorde = 20;
-            this.modificar.Size = new System.Drawing.Size(150, 40);
-            this.modificar.TabIndex = 4;
-            this.modificar.Text = "Modificar Usuario";
-            this.modificar.UseVisualStyleBackColor = false;
+            this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Contrasena", true));
+            this.contrasenaTextBox.Location = new System.Drawing.Point(17, 195);
+            this.contrasenaTextBox.Name = "contrasenaTextBox";
+            this.contrasenaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.contrasenaTextBox.TabIndex = 15;
+            // 
+            // correoLabel
+            // 
+            correoLabel.AutoSize = true;
+            correoLabel.Location = new System.Drawing.Point(42, 218);
+            correoLabel.Name = "correoLabel";
+            correoLabel.Size = new System.Drawing.Size(41, 13);
+            correoLabel.TabIndex = 16;
+            correoLabel.Text = "Correo:";
+            // 
+            // correoTextBox
+            // 
+            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Correo", true));
+            this.correoTextBox.Location = new System.Drawing.Point(17, 234);
+            this.correoTextBox.Name = "correoTextBox";
+            this.correoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.correoTextBox.TabIndex = 17;
+            // 
+            // jerarquiaLabel
+            // 
+            jerarquiaLabel.AutoSize = true;
+            jerarquiaLabel.Location = new System.Drawing.Point(37, 257);
+            jerarquiaLabel.Name = "jerarquiaLabel";
+            jerarquiaLabel.Size = new System.Drawing.Size(53, 13);
+            jerarquiaLabel.TabIndex = 18;
+            jerarquiaLabel.Text = "Jerarquia:";
+            // 
+            // jerarquiacomboBox
+            // 
+            this.jerarquiacomboBox.FormattingEnabled = true;
+            this.jerarquiacomboBox.Items.AddRange(new object[] {
+            "Jefe",
+            "Secretario",
+            "Empleado"});
+            this.jerarquiacomboBox.Location = new System.Drawing.Point(17, 273);
+            this.jerarquiacomboBox.Name = "jerarquiacomboBox";
+            this.jerarquiacomboBox.Size = new System.Drawing.Size(100, 21);
+            this.jerarquiacomboBox.TabIndex = 19;
             // 
             // salir
             // 
@@ -326,7 +231,7 @@
             this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salir.Location = new System.Drawing.Point(570, 338);
+            this.salir.Location = new System.Drawing.Point(714, 302);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -335,52 +240,156 @@
             this.salir.UseVisualStyleBackColor = false;
             this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
+            // modificar
+            // 
+            this.modificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.modificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.modificar.FlatAppearance.BorderSize = 2;
+            this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modificar.Location = new System.Drawing.Point(437, 302);
+            this.modificar.Name = "modificar";
+            this.modificar.RadioBorde = 20;
+            this.modificar.Size = new System.Drawing.Size(150, 40);
+            this.modificar.TabIndex = 4;
+            this.modificar.Text = "Modificar Usuario";
+            this.modificar.UseVisualStyleBackColor = false;
+            this.modificar.Click += new System.EventHandler(this.modificar_Click);
+            // 
+            // agregar
+            // 
+            this.agregar.BackColor = System.Drawing.Color.YellowGreen;
+            this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.agregar.FlatAppearance.BorderSize = 2;
+            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregar.Location = new System.Drawing.Point(158, 302);
+            this.agregar.Name = "agregar";
+            this.agregar.RadioBorde = 20;
+            this.agregar.Size = new System.Drawing.Size(150, 40);
+            this.agregar.TabIndex = 3;
+            this.agregar.Text = "Agregar Usuario";
+            this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.dataBaseDataSet;
+            // 
+            // dataBaseDataSet
+            // 
+            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
+            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Cedula";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cedula";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellido";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Apellido";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Usuario";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Usuario";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Contrasena";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Contrasena";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Correo";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Correo";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Jerarquia";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Jerarquia";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.ChoferTableAdapter = null;
+            this.tableAdapterManager1.ClienteTableAdapter = null;
+            this.tableAdapterManager1.MantenimientoTableAdapter = null;
+            this.tableAdapterManager1.Orden_ViajeTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.UsuarioTableAdapter = this.usuarioTableAdapter;
+            this.tableAdapterManager1.VehiculoTableAdapter = null;
+            // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(812, 390);
+            this.ClientSize = new System.Drawing.Size(907, 433);
+            this.Controls.Add(this.jerarquiacomboBox);
+            this.Controls.Add(cedulaLabel);
+            this.Controls.Add(this.cedulaTextBox);
+            this.Controls.Add(nombreLabel);
+            this.Controls.Add(this.nombreTextBox);
+            this.Controls.Add(apellidoLabel);
+            this.Controls.Add(this.apellidoTextBox);
+            this.Controls.Add(usuarioLabel);
+            this.Controls.Add(this.usuarioTextBox);
+            this.Controls.Add(contrasenaLabel);
+            this.Controls.Add(this.contrasenaTextBox);
+            this.Controls.Add(correoLabel);
+            this.Controls.Add(this.correoTextBox);
+            this.Controls.Add(jerarquiaLabel);
+            this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.modificar);
             this.Controls.Add(this.agregar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.usuariosDataGridView);
-            this.Controls.Add(this.usuariosBindingNavigator);
             this.Name = "FormUsuarios";
             this.Text = "Gestionar Usuarios";
             this.Load += new System.EventHandler(this.FormUsuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.basededatosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingNavigator)).EndInit();
-            this.usuariosBindingNavigator.ResumeLayout(false);
-            this.usuariosBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private basededatosDataSet basededatosDataSet;
-        private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private basededatosDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
-        private basededatosDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator usuariosBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton usuariosBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView usuariosDataGridView;
+        private System.Windows.Forms.Label label1;
+        private BotonRedondo agregar;
+        private BotonRedondo modificar;
+        private BotonRedondo salir;
+        private DataBaseDataSet dataBaseDataSet;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private DataBaseDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
+        private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.DataGridView usuarioDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -388,9 +397,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.Label label1;
-        private BotonRedondo agregar;
-        private BotonRedondo modificar;
-        private BotonRedondo salir;
+        private System.Windows.Forms.TextBox cedulaTextBox;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.TextBox apellidoTextBox;
+        private System.Windows.Forms.TextBox usuarioTextBox;
+        private System.Windows.Forms.TextBox contrasenaTextBox;
+        private System.Windows.Forms.TextBox correoTextBox;
+        private System.Windows.Forms.ComboBox jerarquiacomboBox;
     }
 }

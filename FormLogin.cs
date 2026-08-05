@@ -56,9 +56,7 @@ namespace AppTesis
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'basededatosDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
-            this.usuariosTableAdapter.Fill(this.basededatosDataSet.Usuarios);
-            // TODO: esta línea de código carga datos en la tabla 'basededatosDataSet.Vehiculos' Puede moverla o quitarla según sea necesario.
+
             
 
         }

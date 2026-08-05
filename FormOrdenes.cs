@@ -20,15 +20,15 @@ namespace AppTesis
         private void ordenes_ViajeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.ordenes_ViajeBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.basededatosDataSet);
+
 
         }
 
         private void Formordenes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'basededatosDataSet.Ordenes_Viaje' Puede moverla o quitarla según sea necesario.
-            this.ordenes_ViajeTableAdapter.Fill(this.basededatosDataSet.Ordenes_Viaje);
+            // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Orden_Viaje' Puede moverla o quitarla según sea necesario.
+            this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
+
 
         }
 
@@ -48,6 +48,14 @@ namespace AppTesis
         {
             RegistarOrd registrar = new RegistarOrd();
             registrar.Show();
+        }
+
+        private void orden_ViajeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.orden_ViajeBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataBaseDataSet);
+
         }
     }
 }

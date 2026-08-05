@@ -19,8 +19,9 @@ namespace AppTesis
 
         private void FormChoferes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'basededatosDataSet.Choferes' Puede moverla o quitarla según sea necesario.
-            this.choferesTableAdapter.Fill(this.basededatosDataSet.Choferes);
+            // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Chofer' Puede moverla o quitarla según sea necesario.
+            this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
+
 
         }
 
@@ -35,6 +36,14 @@ namespace AppTesis
             this.Close();
             FormPrincipal princpal = new FormPrincipal();
             princpal.Show();
+        }
+
+        private void choferBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.choferBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataBaseDataSet);
+
         }
     }
 }
