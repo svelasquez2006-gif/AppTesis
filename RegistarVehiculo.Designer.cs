@@ -353,7 +353,7 @@
             this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregar.Location = new System.Drawing.Point(11, 239);
+            this.agregar.Location = new System.Drawing.Point(12, 239);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);

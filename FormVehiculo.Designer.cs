@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.vehiculosDataGridView = new System.Windows.Forms.DataGridView();
             this.agregar = new BotonRedondo();
             this.modificar = new BotonRedondo();
             this.salir = new BotonRedondo();
             this.lblListVehículos = new System.Windows.Forms.Label();
             this.mantenimiento = new BotonRedondo();
-            ((System.ComponentModel.ISupportInitialize)(this.vehiculosDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // vehiculosDataGridView
-            // 
-            this.vehiculosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vehiculosDataGridView.Location = new System.Drawing.Point(12, 74);
-            this.vehiculosDataGridView.Name = "vehiculosDataGridView";
-            this.vehiculosDataGridView.Size = new System.Drawing.Size(839, 220);
-            this.vehiculosDataGridView.TabIndex = 1;
             // 
             // agregar
             // 
@@ -126,18 +116,15 @@
             this.Controls.Add(this.salir);
             this.Controls.Add(this.modificar);
             this.Controls.Add(this.agregar);
-            this.Controls.Add(this.vehiculosDataGridView);
             this.Name = "Formvehiculos";
             this.Text = "Vehiculos";
             this.Load += new System.EventHandler(this.Formvehiculos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.vehiculosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView vehiculosDataGridView;
         private BotonRedondo agregar;
         private BotonRedondo modificar;
         private BotonRedondo salir;
