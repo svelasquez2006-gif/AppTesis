@@ -114,7 +114,7 @@ SELECT Cedula, Nombre, Apellido, Telefono, Correo, Grado_Licencia, Direccion, Es
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="dbo.Chofer" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="ExistCedula" Modifier="Public" Name="ExistCedula" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ExistCedula">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="dbo.Chofer" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="ExistCedula" Modifier="Public" Name="ExistCedula" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ExistCedula">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Cedula
@@ -126,7 +126,7 @@ WHERE        (Cedula = @Cedula) </CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Modify" Modifier="Public" Name="Modify" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Modify">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Modify" Modifier="Public" Name="Modify" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Modify">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       Chofer
@@ -558,7 +558,7 @@ SELECT Cedula, Nombre, Apellido, Usuario, Contrasena, Correo, Jerarquia FROM Usu
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="ExistCedula" Modifier="Public" Name="ExistCedula" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ExistCedula">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="ExistCedula" Modifier="Public" Name="ExistCedula" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ExistCedula">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Cedula
@@ -570,7 +570,7 @@ WHERE        (Cedula = @Cedula) </CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="ExistUsuario" Modifier="Public" Name="ExistUsuario" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ExistUsuario">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="ExistUsuario" Modifier="Public" Name="ExistUsuario" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ExistUsuario">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Usuario
@@ -582,7 +582,7 @@ WHERE        (Usuario = @Usuario)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="modify" Modifier="Public" Name="modify" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="modify">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="modify" Modifier="Public" Name="modify" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="modify">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       Usuario
@@ -688,7 +688,9 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
               <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="add" Modifier="Public" Name="add" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="add">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>INSERT INTO [dbo].[Vehiculo] ([NroPlaca], [Marca], [Modelo], [Anio], [Color], [UltimoMantenimiento], [Estatus]) VALUES (@NroPlaca, @Marca, @Modelo, @Anio, @Color, @UltimoMantenimiento, @Estatus);
+                    <CommandText>INSERT INTO Vehiculo
+                         (NroPlaca, Marca, Modelo, Anio, Color, Estatus)
+VALUES        (@NroPlaca,@Marca,@Modelo,@Anio,@Color,@Estatus); 
 SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM Vehiculo WHERE (NroPlaca = @NroPlaca)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="NroPlaca" ColumnName="NroPlaca" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@NroPlaca" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="NroPlaca" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -696,13 +698,12 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
                       <Parameter AllowDbNull="true" AutogeneratedName="Modelo" ColumnName="Modelo" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="varchar(45)" DbType="AnsiString" Direction="Input" ParameterName="@Modelo" Precision="0" ProviderType="VarChar" Scale="0" Size="45" SourceColumn="Modelo" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="Anio" ColumnName="Anio" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Anio" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Anio" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="Color" ColumnName="Color" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="varchar(30)" DbType="AnsiString" Direction="Input" ParameterName="@Color" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumn="Color" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="UltimoMantenimiento" ColumnName="UltimoMantenimiento" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@UltimoMantenimiento" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="UltimoMantenimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Estatus" ColumnName="Estatus" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@Estatus" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="Estatus" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="dbo.Vehiculo" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="ExistPlaca" Modifier="Public" Name="ExistPlaca" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ExistPlaca">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="dbo.Vehiculo" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="ExistPlaca" Modifier="Public" Name="ExistPlaca" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ExistPlaca">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        NroPlaca
@@ -714,18 +715,17 @@ WHERE        (NroPlaca = @NroPlaca)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Modify" Modifier="Public" Name="Modify" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Modify">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Modify" Modifier="Public" Name="Modify" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Modify">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       Vehiculo
-SET                Marca = @Marca, Modelo = @Modelo, Anio = @Anio, Color = @Color, UltimoMantenimiento = @UltimoMantenimiento, Estatus = @Estatus
-WHERE        (NroPlaca = @Original_NroPlaca) </CommandText>
+SET                Marca = @Marca, Modelo = @Modelo, Anio = @Anio, Color = @Color, Estatus = @Estatus
+WHERE        (NroPlaca = @Original_NroPlaca)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="Marca" ColumnName="Marca" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="varchar(45)" DbType="AnsiString" Direction="Input" ParameterName="@Marca" Precision="0" ProviderType="VarChar" Scale="0" Size="45" SourceColumn="Marca" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="Modelo" ColumnName="Modelo" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="varchar(45)" DbType="AnsiString" Direction="Input" ParameterName="@Modelo" Precision="0" ProviderType="VarChar" Scale="0" Size="45" SourceColumn="Modelo" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="Anio" ColumnName="Anio" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Anio" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Anio" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="Color" ColumnName="Color" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="varchar(30)" DbType="AnsiString" Direction="Input" ParameterName="@Color" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumn="Color" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="UltimoMantenimiento" ColumnName="UltimoMantenimiento" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@UltimoMantenimiento" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="UltimoMantenimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Estatus" ColumnName="Estatus" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@Estatus" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="Estatus" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Original_NroPlaca" ColumnName="NroPlaca" DataSourceName="[C:\USERS\HP\SOURCE\REPOS\APPTESIS\DATABASE\NEW_DB\DATABASE.MDF].dbo.Vehiculo" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@Original_NroPlaca" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="NroPlaca" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -742,53 +742,53 @@ WHERE        (NroPlaca = @Original_NroPlaca) </CommandText>
   <xs:element name="DataBaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataBaseDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataBaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Chofer" msprop:Generator_RowClassName="ChoferRow" msprop:Generator_RowEvHandlerName="ChoferRowChangeEventHandler" msprop:Generator_RowDeletedName="ChoferRowDeleted" msprop:Generator_RowDeletingName="ChoferRowDeleting" msprop:Generator_RowEvArgName="ChoferRowChangeEvent" msprop:Generator_TablePropName="Chofer" msprop:Generator_RowChangedName="ChoferRowChanged" msprop:Generator_UserTableName="Chofer" msprop:Generator_RowChangingName="ChoferRowChanging" msprop:Generator_TableClassName="ChoferDataTable" msprop:Generator_TableVarName="tableChofer">
+        <xs:element name="Chofer" msprop:Generator_RowEvHandlerName="ChoferRowChangeEventHandler" msprop:Generator_RowDeletedName="ChoferRowDeleted" msprop:Generator_RowDeletingName="ChoferRowDeleting" msprop:Generator_RowEvArgName="ChoferRowChangeEvent" msprop:Generator_TablePropName="Chofer" msprop:Generator_RowChangedName="ChoferRowChanged" msprop:Generator_UserTableName="Chofer" msprop:Generator_RowChangingName="ChoferRowChanging" msprop:Generator_RowClassName="ChoferRow" msprop:Generator_TableClassName="ChoferDataTable" msprop:Generator_TableVarName="tableChofer">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Cedula" msprop:Generator_UserColumnName="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula">
+              <xs:element name="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_UserColumnName="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="11" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" minOccurs="0">
+              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Apellido" msprop:Generator_UserColumnName="Apellido" msprop:Generator_ColumnPropNameInTable="ApellidoColumn" msprop:Generator_ColumnPropNameInRow="Apellido" msprop:Generator_ColumnVarNameInTable="columnApellido" minOccurs="0">
+              <xs:element name="Apellido" msprop:Generator_ColumnPropNameInTable="ApellidoColumn" msprop:Generator_ColumnPropNameInRow="Apellido" msprop:Generator_UserColumnName="Apellido" msprop:Generator_ColumnVarNameInTable="columnApellido" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Telefono" msprop:Generator_UserColumnName="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" minOccurs="0">
+              <xs:element name="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_UserColumnName="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Correo" msprop:Generator_UserColumnName="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" minOccurs="0">
+              <xs:element name="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_UserColumnName="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Grado_Licencia" msprop:Generator_UserColumnName="Grado_Licencia" msprop:Generator_ColumnPropNameInTable="Grado_LicenciaColumn" msprop:Generator_ColumnPropNameInRow="Grado_Licencia" msprop:Generator_ColumnVarNameInTable="columnGrado_Licencia" type="xs:int" minOccurs="0" />
-              <xs:element name="Direccion" msprop:Generator_UserColumnName="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" minOccurs="0">
+              <xs:element name="Grado_Licencia" msprop:Generator_ColumnPropNameInTable="Grado_LicenciaColumn" msprop:Generator_ColumnPropNameInRow="Grado_Licencia" msprop:Generator_UserColumnName="Grado_Licencia" msprop:Generator_ColumnVarNameInTable="columnGrado_Licencia" type="xs:int" minOccurs="0" />
+              <xs:element name="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_UserColumnName="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Estatus" msprop:Generator_UserColumnName="Estatus" msprop:Generator_ColumnPropNameInTable="EstatusColumn" msprop:Generator_ColumnPropNameInRow="Estatus" msprop:Generator_ColumnVarNameInTable="columnEstatus">
+              <xs:element name="Estatus" msprop:Generator_ColumnPropNameInTable="EstatusColumn" msprop:Generator_ColumnPropNameInRow="Estatus" msprop:Generator_UserColumnName="Estatus" msprop:Generator_ColumnVarNameInTable="columnEstatus">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
@@ -798,38 +798,38 @@ WHERE        (NroPlaca = @Original_NroPlaca) </CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Cliente" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente">
+        <xs:element name="Cliente" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Cedula" msprop:Generator_UserColumnName="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula">
+              <xs:element name="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_UserColumnName="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="11" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" minOccurs="0">
+              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Apellido" msprop:Generator_UserColumnName="Apellido" msprop:Generator_ColumnPropNameInTable="ApellidoColumn" msprop:Generator_ColumnPropNameInRow="Apellido" msprop:Generator_ColumnVarNameInTable="columnApellido" minOccurs="0">
+              <xs:element name="Apellido" msprop:Generator_ColumnPropNameInTable="ApellidoColumn" msprop:Generator_ColumnPropNameInRow="Apellido" msprop:Generator_UserColumnName="Apellido" msprop:Generator_ColumnVarNameInTable="columnApellido" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Telefono" msprop:Generator_UserColumnName="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" minOccurs="0">
+              <xs:element name="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_UserColumnName="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Correo" msprop:Generator_UserColumnName="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" minOccurs="0">
+              <xs:element name="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_UserColumnName="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -839,19 +839,19 @@ WHERE        (NroPlaca = @Original_NroPlaca) </CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Mantenimiento" msprop:Generator_RowClassName="MantenimientoRow" msprop:Generator_RowEvHandlerName="MantenimientoRowChangeEventHandler" msprop:Generator_RowDeletedName="MantenimientoRowDeleted" msprop:Generator_RowDeletingName="MantenimientoRowDeleting" msprop:Generator_RowEvArgName="MantenimientoRowChangeEvent" msprop:Generator_TablePropName="Mantenimiento" msprop:Generator_RowChangedName="MantenimientoRowChanged" msprop:Generator_UserTableName="Mantenimiento" msprop:Generator_RowChangingName="MantenimientoRowChanging" msprop:Generator_TableClassName="MantenimientoDataTable" msprop:Generator_TableVarName="tableMantenimiento">
+        <xs:element name="Mantenimiento" msprop:Generator_RowEvHandlerName="MantenimientoRowChangeEventHandler" msprop:Generator_RowDeletedName="MantenimientoRowDeleted" msprop:Generator_RowDeletingName="MantenimientoRowDeleting" msprop:Generator_RowEvArgName="MantenimientoRowChangeEvent" msprop:Generator_TablePropName="Mantenimiento" msprop:Generator_RowChangedName="MantenimientoRowChanged" msprop:Generator_UserTableName="Mantenimiento" msprop:Generator_RowChangingName="MantenimientoRowChanging" msprop:Generator_RowClassName="MantenimientoRow" msprop:Generator_TableClassName="MantenimientoDataTable" msprop:Generator_TableVarName="tableMantenimiento">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CodMantenimiento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="CodMantenimiento" msprop:Generator_ColumnPropNameInTable="CodMantenimientoColumn" msprop:Generator_ColumnPropNameInRow="CodMantenimiento" msprop:Generator_ColumnVarNameInTable="columnCodMantenimiento" type="xs:int" />
-              <xs:element name="NroPlaca" msprop:Generator_UserColumnName="NroPlaca" msprop:Generator_ColumnPropNameInTable="NroPlacaColumn" msprop:Generator_ColumnPropNameInRow="NroPlaca" msprop:Generator_ColumnVarNameInTable="columnNroPlaca">
+              <xs:element name="CodMantenimiento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="CodMantenimientoColumn" msprop:Generator_ColumnPropNameInRow="CodMantenimiento" msprop:Generator_UserColumnName="CodMantenimiento" msprop:Generator_ColumnVarNameInTable="columnCodMantenimiento" type="xs:int" />
+              <xs:element name="NroPlaca" msprop:Generator_ColumnPropNameInTable="NroPlacaColumn" msprop:Generator_ColumnPropNameInRow="NroPlaca" msprop:Generator_UserColumnName="NroPlaca" msprop:Generator_ColumnVarNameInTable="columnNroPlaca">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FechaMantenimiento" msprop:Generator_UserColumnName="FechaMantenimiento" msprop:Generator_ColumnPropNameInTable="FechaMantenimientoColumn" msprop:Generator_ColumnPropNameInRow="FechaMantenimiento" msprop:Generator_ColumnVarNameInTable="columnFechaMantenimiento" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Anotaciones" msprop:Generator_UserColumnName="Anotaciones" msprop:Generator_ColumnPropNameInTable="AnotacionesColumn" msprop:Generator_ColumnPropNameInRow="Anotaciones" msprop:Generator_ColumnVarNameInTable="columnAnotaciones" minOccurs="0">
+              <xs:element name="FechaMantenimiento" msprop:Generator_ColumnPropNameInTable="FechaMantenimientoColumn" msprop:Generator_ColumnPropNameInRow="FechaMantenimiento" msprop:Generator_UserColumnName="FechaMantenimiento" msprop:Generator_ColumnVarNameInTable="columnFechaMantenimiento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Anotaciones" msprop:Generator_ColumnPropNameInTable="AnotacionesColumn" msprop:Generator_ColumnPropNameInRow="Anotaciones" msprop:Generator_UserColumnName="Anotaciones" msprop:Generator_ColumnVarNameInTable="columnAnotaciones" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
@@ -861,42 +861,42 @@ WHERE        (NroPlaca = @Original_NroPlaca) </CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Orden_Viaje" msprop:Generator_RowClassName="Orden_ViajeRow" msprop:Generator_RowEvHandlerName="Orden_ViajeRowChangeEventHandler" msprop:Generator_RowDeletedName="Orden_ViajeRowDeleted" msprop:Generator_RowDeletingName="Orden_ViajeRowDeleting" msprop:Generator_RowEvArgName="Orden_ViajeRowChangeEvent" msprop:Generator_TablePropName="Orden_Viaje" msprop:Generator_RowChangedName="Orden_ViajeRowChanged" msprop:Generator_UserTableName="Orden_Viaje" msprop:Generator_RowChangingName="Orden_ViajeRowChanging" msprop:Generator_TableClassName="Orden_ViajeDataTable" msprop:Generator_TableVarName="tableOrden_Viaje">
+        <xs:element name="Orden_Viaje" msprop:Generator_RowEvHandlerName="Orden_ViajeRowChangeEventHandler" msprop:Generator_RowDeletedName="Orden_ViajeRowDeleted" msprop:Generator_RowDeletingName="Orden_ViajeRowDeleting" msprop:Generator_RowEvArgName="Orden_ViajeRowChangeEvent" msprop:Generator_TablePropName="Orden_Viaje" msprop:Generator_RowChangedName="Orden_ViajeRowChanged" msprop:Generator_UserTableName="Orden_Viaje" msprop:Generator_RowChangingName="Orden_ViajeRowChanging" msprop:Generator_RowClassName="Orden_ViajeRow" msprop:Generator_TableClassName="Orden_ViajeDataTable" msprop:Generator_TableVarName="tableOrden_Viaje">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IDOrdenes_Viaje" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="IDOrdenes_Viaje" msprop:Generator_ColumnPropNameInTable="IDOrdenes_ViajeColumn" msprop:Generator_ColumnPropNameInRow="IDOrdenes_Viaje" msprop:Generator_ColumnVarNameInTable="columnIDOrdenes_Viaje" type="xs:int" />
-              <xs:element name="Cedula_Chofer" msprop:Generator_UserColumnName="Cedula_Chofer" msprop:Generator_ColumnPropNameInTable="Cedula_ChoferColumn" msprop:Generator_ColumnPropNameInRow="Cedula_Chofer" msprop:Generator_ColumnVarNameInTable="columnCedula_Chofer">
+              <xs:element name="IDOrdenes_Viaje" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IDOrdenes_ViajeColumn" msprop:Generator_ColumnPropNameInRow="IDOrdenes_Viaje" msprop:Generator_UserColumnName="IDOrdenes_Viaje" msprop:Generator_ColumnVarNameInTable="columnIDOrdenes_Viaje" type="xs:int" />
+              <xs:element name="Cedula_Chofer" msprop:Generator_ColumnPropNameInTable="Cedula_ChoferColumn" msprop:Generator_ColumnPropNameInRow="Cedula_Chofer" msprop:Generator_UserColumnName="Cedula_Chofer" msprop:Generator_ColumnVarNameInTable="columnCedula_Chofer">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="11" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Vehiculos_NroPlaca" msprop:Generator_UserColumnName="Vehiculos_NroPlaca" msprop:Generator_ColumnPropNameInTable="Vehiculos_NroPlacaColumn" msprop:Generator_ColumnPropNameInRow="Vehiculos_NroPlaca" msprop:Generator_ColumnVarNameInTable="columnVehiculos_NroPlaca">
+              <xs:element name="Vehiculos_NroPlaca" msprop:Generator_ColumnPropNameInTable="Vehiculos_NroPlacaColumn" msprop:Generator_ColumnPropNameInRow="Vehiculos_NroPlaca" msprop:Generator_UserColumnName="Vehiculos_NroPlaca" msprop:Generator_ColumnVarNameInTable="columnVehiculos_NroPlaca">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cedula_Cliente" msprop:Generator_UserColumnName="Cedula_Cliente" msprop:Generator_ColumnPropNameInTable="Cedula_ClienteColumn" msprop:Generator_ColumnPropNameInRow="Cedula_Cliente" msprop:Generator_ColumnVarNameInTable="columnCedula_Cliente">
+              <xs:element name="Cedula_Cliente" msprop:Generator_ColumnPropNameInTable="Cedula_ClienteColumn" msprop:Generator_ColumnPropNameInRow="Cedula_Cliente" msprop:Generator_UserColumnName="Cedula_Cliente" msprop:Generator_ColumnVarNameInTable="columnCedula_Cliente">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="11" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Destino" msprop:Generator_UserColumnName="Destino" msprop:Generator_ColumnPropNameInTable="DestinoColumn" msprop:Generator_ColumnPropNameInRow="Destino" msprop:Generator_ColumnVarNameInTable="columnDestino" minOccurs="0">
+              <xs:element name="Destino" msprop:Generator_ColumnPropNameInTable="DestinoColumn" msprop:Generator_ColumnPropNameInRow="Destino" msprop:Generator_UserColumnName="Destino" msprop:Generator_ColumnVarNameInTable="columnDestino" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Distancia_Esperada_Km" msprop:Generator_UserColumnName="Distancia_Esperada_Km" msprop:Generator_ColumnPropNameInTable="Distancia_Esperada_KmColumn" msprop:Generator_ColumnPropNameInRow="Distancia_Esperada_Km" msprop:Generator_ColumnVarNameInTable="columnDistancia_Esperada_Km" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Fecha_Inicio" msprop:Generator_UserColumnName="Fecha_Inicio" msprop:Generator_ColumnPropNameInTable="Fecha_InicioColumn" msprop:Generator_ColumnPropNameInRow="Fecha_Inicio" msprop:Generator_ColumnVarNameInTable="columnFecha_Inicio" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Fecha_Finalizacion" msprop:Generator_UserColumnName="Fecha_Finalizacion" msprop:Generator_ColumnPropNameInTable="Fecha_FinalizacionColumn" msprop:Generator_ColumnPropNameInRow="Fecha_Finalizacion" msprop:Generator_ColumnVarNameInTable="columnFecha_Finalizacion" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Estatus" msprop:Generator_UserColumnName="Estatus" msprop:Generator_ColumnPropNameInTable="EstatusColumn" msprop:Generator_ColumnPropNameInRow="Estatus" msprop:Generator_ColumnVarNameInTable="columnEstatus">
+              <xs:element name="Distancia_Esperada_Km" msprop:Generator_ColumnPropNameInTable="Distancia_Esperada_KmColumn" msprop:Generator_ColumnPropNameInRow="Distancia_Esperada_Km" msprop:Generator_UserColumnName="Distancia_Esperada_Km" msprop:Generator_ColumnVarNameInTable="columnDistancia_Esperada_Km" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Fecha_Inicio" msprop:Generator_ColumnPropNameInTable="Fecha_InicioColumn" msprop:Generator_ColumnPropNameInRow="Fecha_Inicio" msprop:Generator_UserColumnName="Fecha_Inicio" msprop:Generator_ColumnVarNameInTable="columnFecha_Inicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Fecha_Finalizacion" msprop:Generator_ColumnPropNameInTable="Fecha_FinalizacionColumn" msprop:Generator_ColumnPropNameInRow="Fecha_Finalizacion" msprop:Generator_UserColumnName="Fecha_Finalizacion" msprop:Generator_ColumnVarNameInTable="columnFecha_Finalizacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Estatus" msprop:Generator_ColumnPropNameInTable="EstatusColumn" msprop:Generator_ColumnPropNameInRow="Estatus" msprop:Generator_UserColumnName="Estatus" msprop:Generator_ColumnVarNameInTable="columnEstatus">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
@@ -906,52 +906,52 @@ WHERE        (NroPlaca = @Original_NroPlaca) </CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Usuario" msprop:Generator_RowClassName="UsuarioRow" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario">
+        <xs:element name="Usuario" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowClassName="UsuarioRow" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Cedula" msprop:Generator_UserColumnName="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula">
+              <xs:element name="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_UserColumnName="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="11" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" minOccurs="0">
+              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Apellido" msprop:Generator_UserColumnName="Apellido" msprop:Generator_ColumnPropNameInTable="ApellidoColumn" msprop:Generator_ColumnPropNameInRow="Apellido" msprop:Generator_ColumnVarNameInTable="columnApellido" minOccurs="0">
+              <xs:element name="Apellido" msprop:Generator_ColumnPropNameInTable="ApellidoColumn" msprop:Generator_ColumnPropNameInRow="Apellido" msprop:Generator_UserColumnName="Apellido" msprop:Generator_ColumnVarNameInTable="columnApellido" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Usuario" msprop:Generator_UserColumnName="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario">
+              <xs:element name="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_UserColumnName="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Contrasena" msprop:Generator_UserColumnName="Contrasena" msprop:Generator_ColumnPropNameInTable="ContrasenaColumn" msprop:Generator_ColumnPropNameInRow="Contrasena" msprop:Generator_ColumnVarNameInTable="columnContrasena">
+              <xs:element name="Contrasena" msprop:Generator_ColumnPropNameInTable="ContrasenaColumn" msprop:Generator_ColumnPropNameInRow="Contrasena" msprop:Generator_UserColumnName="Contrasena" msprop:Generator_ColumnVarNameInTable="columnContrasena">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Correo" msprop:Generator_UserColumnName="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" minOccurs="0">
+              <xs:element name="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_UserColumnName="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Jerarquia" msprop:Generator_UserColumnName="Jerarquia" msprop:Generator_ColumnPropNameInTable="JerarquiaColumn" msprop:Generator_ColumnPropNameInRow="Jerarquia" msprop:Generator_ColumnVarNameInTable="columnJerarquia">
+              <xs:element name="Jerarquia" msprop:Generator_ColumnPropNameInTable="JerarquiaColumn" msprop:Generator_ColumnPropNameInRow="Jerarquia" msprop:Generator_UserColumnName="Jerarquia" msprop:Generator_ColumnVarNameInTable="columnJerarquia">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
@@ -961,40 +961,40 @@ WHERE        (NroPlaca = @Original_NroPlaca) </CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Vehiculo" msprop:Generator_RowClassName="VehiculoRow" msprop:Generator_RowEvHandlerName="VehiculoRowChangeEventHandler" msprop:Generator_RowDeletedName="VehiculoRowDeleted" msprop:Generator_RowDeletingName="VehiculoRowDeleting" msprop:Generator_RowEvArgName="VehiculoRowChangeEvent" msprop:Generator_TablePropName="Vehiculo" msprop:Generator_RowChangedName="VehiculoRowChanged" msprop:Generator_UserTableName="Vehiculo" msprop:Generator_RowChangingName="VehiculoRowChanging" msprop:Generator_TableClassName="VehiculoDataTable" msprop:Generator_TableVarName="tableVehiculo">
+        <xs:element name="Vehiculo" msprop:Generator_RowEvHandlerName="VehiculoRowChangeEventHandler" msprop:Generator_RowDeletedName="VehiculoRowDeleted" msprop:Generator_RowDeletingName="VehiculoRowDeleting" msprop:Generator_RowEvArgName="VehiculoRowChangeEvent" msprop:Generator_TablePropName="Vehiculo" msprop:Generator_RowChangedName="VehiculoRowChanged" msprop:Generator_UserTableName="Vehiculo" msprop:Generator_RowChangingName="VehiculoRowChanging" msprop:Generator_RowClassName="VehiculoRow" msprop:Generator_TableClassName="VehiculoDataTable" msprop:Generator_TableVarName="tableVehiculo">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="NroPlaca" msprop:Generator_UserColumnName="NroPlaca" msprop:Generator_ColumnPropNameInTable="NroPlacaColumn" msprop:Generator_ColumnPropNameInRow="NroPlaca" msprop:Generator_ColumnVarNameInTable="columnNroPlaca">
+              <xs:element name="NroPlaca" msprop:Generator_ColumnPropNameInTable="NroPlacaColumn" msprop:Generator_ColumnPropNameInRow="NroPlaca" msprop:Generator_UserColumnName="NroPlaca" msprop:Generator_ColumnVarNameInTable="columnNroPlaca">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Marca" msprop:Generator_UserColumnName="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" minOccurs="0">
+              <xs:element name="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_UserColumnName="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="45" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Modelo" msprop:Generator_UserColumnName="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo" minOccurs="0">
+              <xs:element name="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_UserColumnName="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="45" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Anio" msprop:Generator_UserColumnName="Anio" msprop:Generator_ColumnPropNameInTable="AnioColumn" msprop:Generator_ColumnPropNameInRow="Anio" msprop:Generator_ColumnVarNameInTable="columnAnio" type="xs:int" minOccurs="0" />
-              <xs:element name="Color" msprop:Generator_UserColumnName="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnVarNameInTable="columnColor" minOccurs="0">
+              <xs:element name="Anio" msprop:Generator_ColumnPropNameInTable="AnioColumn" msprop:Generator_ColumnPropNameInRow="Anio" msprop:Generator_UserColumnName="Anio" msprop:Generator_ColumnVarNameInTable="columnAnio" type="xs:int" minOccurs="0" />
+              <xs:element name="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_UserColumnName="Color" msprop:Generator_ColumnVarNameInTable="columnColor" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="UltimoMantenimiento" msprop:Generator_UserColumnName="UltimoMantenimiento" msprop:Generator_ColumnPropNameInTable="UltimoMantenimientoColumn" msprop:Generator_ColumnPropNameInRow="UltimoMantenimiento" msprop:Generator_ColumnVarNameInTable="columnUltimoMantenimiento" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Estatus" msprop:Generator_UserColumnName="Estatus" msprop:Generator_ColumnPropNameInTable="EstatusColumn" msprop:Generator_ColumnPropNameInRow="Estatus" msprop:Generator_ColumnVarNameInTable="columnEstatus">
+              <xs:element name="UltimoMantenimiento" msprop:Generator_ColumnPropNameInTable="UltimoMantenimientoColumn" msprop:Generator_ColumnPropNameInRow="UltimoMantenimiento" msprop:Generator_UserColumnName="UltimoMantenimiento" msprop:Generator_ColumnVarNameInTable="columnUltimoMantenimiento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Estatus" msprop:Generator_ColumnPropNameInTable="EstatusColumn" msprop:Generator_ColumnPropNameInRow="Estatus" msprop:Generator_UserColumnName="Estatus" msprop:Generator_ColumnVarNameInTable="columnEstatus">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
@@ -1033,10 +1033,10 @@ WHERE        (NroPlaca = @Original_NroPlaca) </CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Mantenimiento_Vehiculo" msdata:parent="Vehiculo" msdata:child="Mantenimiento" msdata:parentkey="NroPlaca" msdata:childkey="NroPlaca" msprop:Generator_UserParentTable="Vehiculo" msprop:Generator_UserChildTable="Mantenimiento" msprop:Generator_RelationVarName="relationFK_Mantenimiento_Vehiculo" msprop:Generator_ChildPropName="GetMantenimientoRows" msprop:Generator_ParentPropName="VehiculoRow" msprop:Generator_UserRelationName="FK_Mantenimiento_Vehiculo" />
-      <msdata:Relationship name="FK_Orden_Viaje_Chofer" msdata:parent="Chofer" msdata:child="Orden_Viaje" msdata:parentkey="Cedula" msdata:childkey="Cedula_Chofer" msprop:Generator_UserParentTable="Chofer" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Chofer" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_UserRelationName="FK_Orden_Viaje_Chofer" msprop:Generator_ParentPropName="ChoferRow" />
-      <msdata:Relationship name="FK_Orden_Viaje_Cliente" msdata:parent="Cliente" msdata:child="Orden_Viaje" msdata:parentkey="Cedula" msdata:childkey="Cedula_Cliente" msprop:Generator_UserParentTable="Cliente" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Cliente" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_UserRelationName="FK_Orden_Viaje_Cliente" msprop:Generator_ParentPropName="ClienteRow" />
-      <msdata:Relationship name="FK_Orden_Viaje_Vehiculo" msdata:parent="Vehiculo" msdata:child="Orden_Viaje" msdata:parentkey="NroPlaca" msdata:childkey="Vehiculos_NroPlaca" msprop:Generator_UserParentTable="Vehiculo" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Vehiculo" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_ParentPropName="VehiculoRow" msprop:Generator_UserRelationName="FK_Orden_Viaje_Vehiculo" />
+      <msdata:Relationship name="FK_Mantenimiento_Vehiculo" msdata:parent="Vehiculo" msdata:child="Mantenimiento" msdata:parentkey="NroPlaca" msdata:childkey="NroPlaca" msprop:Generator_UserParentTable="Vehiculo" msprop:Generator_UserChildTable="Mantenimiento" msprop:Generator_RelationVarName="relationFK_Mantenimiento_Vehiculo" msprop:Generator_ChildPropName="GetMantenimientoRows" msprop:Generator_UserRelationName="FK_Mantenimiento_Vehiculo" msprop:Generator_ParentPropName="VehiculoRow" />
+      <msdata:Relationship name="FK_Orden_Viaje_Chofer" msdata:parent="Chofer" msdata:child="Orden_Viaje" msdata:parentkey="Cedula" msdata:childkey="Cedula_Chofer" msprop:Generator_UserParentTable="Chofer" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Chofer" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_ParentPropName="ChoferRow" msprop:Generator_UserRelationName="FK_Orden_Viaje_Chofer" />
+      <msdata:Relationship name="FK_Orden_Viaje_Cliente" msdata:parent="Cliente" msdata:child="Orden_Viaje" msdata:parentkey="Cedula" msdata:childkey="Cedula_Cliente" msprop:Generator_UserParentTable="Cliente" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Cliente" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_ParentPropName="ClienteRow" msprop:Generator_UserRelationName="FK_Orden_Viaje_Cliente" />
+      <msdata:Relationship name="FK_Orden_Viaje_Vehiculo" msdata:parent="Vehiculo" msdata:child="Orden_Viaje" msdata:parentkey="NroPlaca" msdata:childkey="Vehiculos_NroPlaca" msprop:Generator_UserParentTable="Vehiculo" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Vehiculo" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_UserRelationName="FK_Orden_Viaje_Vehiculo" msprop:Generator_ParentPropName="VehiculoRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

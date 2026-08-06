@@ -25,14 +25,35 @@ namespace AppTesis
 
         private void Formvehiculos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Vehiculo' Puede moverla o quitarla según sea necesario.
+            this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
 
 
         }
 
         private void agregar_Click(object sender, EventArgs e)
         {
-            RegistarVehiculo vehiculo = new RegistarVehiculo();
-            vehiculo.Show();
+            if(nroPlacaTextBox.Text==""|| marcaTextBox.Text==""||modeloTextBox.Text==""||anioTextBox.Text==""||colorTextBox.Text==""|| estatuscombobox.Text == "")
+            {
+                MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    string placa = nroPlacaTextBox.Text;
+                    string marca = marcaTextBox.Text;
+                    string modelo = modeloTextBox.Text;
+                    int.TryParse(anioTextBox.Text,out int anio);
+                    string color = colorTextBox.Text;
+                    string estatus = estatuscombobox.Text;
+                    this.vehiculoTableAdapter.add(placa, marca, modelo, anio, color, estatus);
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Ha ocurrido un error inesperado , " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
         }
 
         private void salir_Click(object sender, EventArgs e)
@@ -52,6 +73,40 @@ namespace AppTesis
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void vehiculoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.vehiculoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataBaseDataSet);
+
+        }
+
+        private void modificar_Click(object sender, EventArgs e)
+        {
+            if (nroPlacaTextBox.Text == "" || marcaTextBox.Text == "" || modeloTextBox.Text == "" || anioTextBox.Text == "" || colorTextBox.Text == "" || estatuscombobox.Text == "")
+            {
+                MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    string placa = nroPlacaTextBox.Text;
+                    string marca = marcaTextBox.Text;
+                    string modelo = modeloTextBox.Text;
+                    int.TryParse(anioTextBox.Text, out int anio);
+                    string color = colorTextBox.Text;
+                    string estatus = estatuscombobox.Text;
+                    this.vehiculoTableAdapter.Modify( marca, modelo, anio, color, estatus,placa);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ha ocurrido un error inesperado , " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
         }
     }
 }

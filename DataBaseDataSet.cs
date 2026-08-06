@@ -9,6 +9,10 @@
 
 namespace AppTesis.DataBaseDataSetTableAdapters
 {
+    partial class VehiculoTableAdapter
+    {
+    }
+
     partial class ChoferTableAdapter
     {
     }

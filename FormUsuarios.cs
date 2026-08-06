@@ -85,16 +85,46 @@ namespace AppTesis
 
         private void modificar_Click(object sender, EventArgs e)
         {
-            
-            string cedula = cedulaTextBox.Text;
-            string nombre = nombreTextBox.Text;
-            string apellido = apellidoTextBox.Text;
-            string usuario = usuarioTextBox.Text;
-            string contrasena = contrasenaTextBox.Text;
-            string correo = correoTextBox.Text;
-            string jerarquia = jerarquiacomboBox.Text;
-            this.usuarioTableAdapter.modify(nombre,apellido,usuario,contrasena,correo,jerarquia,cedula);
-            usuarioDataGridView.Refresh();
+
+            if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || usuarioTextBox.Text == "" || contrasenaTextBox.Text == "" || correoTextBox.Text == "" || jerarquiacomboBox == null)
+            {
+                MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+
+                    string cedula = cedulaTextBox.Text;
+                    string nombre = nombreTextBox.Text;
+                    string apellido = apellidoTextBox.Text;
+                    string usuario = usuarioTextBox.Text;
+                    string contrasena = contrasenaTextBox.Text;
+                    string correo = correoTextBox.Text;
+                    string jerarquia = jerarquiacomboBox.Text;
+                    this.usuarioTableAdapter.modify( nombre, apellido, usuario, contrasena, correo, jerarquia, cedula);
+                    usuarioDataGridView.Refresh();
+                }
+                catch (NullReferenceException)
+                {
+                    MessageBox.Show("Un campo fue enviado vacio", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 2627 || ex.Number == 2601)
+                    {
+                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error inesperado en la base de datos, " + ex.Message, "Error en la Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ha ocurrido un error inesperado , " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
     }
 }

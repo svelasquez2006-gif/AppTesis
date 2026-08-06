@@ -7349,7 +7349,9 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"INSERT INTO [dbo].[Vehiculo] ([NroPlaca], [Marca], [Modelo], [Anio], [Color], [UltimoMantenimiento], [Estatus]) VALUES (@NroPlaca, @Marca, @Modelo, @Anio, @Color, @UltimoMantenimiento, @Estatus);
+            this._commandCollection[1].CommandText = @"INSERT INTO Vehiculo
+                         (NroPlaca, Marca, Modelo, Anio, Color, Estatus)
+VALUES        (@NroPlaca,@Marca,@Modelo,@Anio,@Color,@Estatus); 
 SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM Vehiculo WHERE (NroPlaca = @NroPlaca)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NroPlaca", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "NroPlaca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7357,7 +7359,6 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Anio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Anio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Color", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Color", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UltimoMantenimiento", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "UltimoMantenimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estatus", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
@@ -7368,14 +7369,13 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "UPDATE       Vehiculo\r\nSET                Marca = @Marca, Modelo = @Modelo, Anio " +
-                "= @Anio, Color = @Color, UltimoMantenimiento = @UltimoMantenimiento, Estatus = @" +
-                "Estatus\r\nWHERE        (NroPlaca = @Original_NroPlaca) ";
+                "= @Anio, Color = @Color, Estatus = @Estatus\r\nWHERE        (NroPlaca = @Original_" +
+                "NroPlaca)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Anio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Anio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Color", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Color", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UltimoMantenimiento", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "UltimoMantenimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estatus", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NroPlaca", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "NroPlaca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -7696,7 +7696,7 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int add(string NroPlaca, string Marca, string Modelo, global::System.Nullable<int> Anio, string Color, global::System.Nullable<global::System.DateTime> UltimoMantenimiento, string Estatus) {
+        public virtual int add(string NroPlaca, string Marca, string Modelo, global::System.Nullable<int> Anio, string Color, string Estatus) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((NroPlaca == null)) {
                 throw new global::System.ArgumentNullException("NroPlaca");
@@ -7728,17 +7728,11 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
             else {
                 command.Parameters[4].Value = ((string)(Color));
             }
-            if ((UltimoMantenimiento.HasValue == true)) {
-                command.Parameters[5].Value = ((System.DateTime)(UltimoMantenimiento.Value));
-            }
-            else {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
             if ((Estatus == null)) {
                 throw new global::System.ArgumentNullException("Estatus");
             }
             else {
-                command.Parameters[6].Value = ((string)(Estatus));
+                command.Parameters[5].Value = ((string)(Estatus));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7795,7 +7789,7 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int Modify(string Marca, string Modelo, global::System.Nullable<int> Anio, string Color, global::System.Nullable<global::System.DateTime> UltimoMantenimiento, string Estatus, string Original_NroPlaca) {
+        public virtual int Modify(string Marca, string Modelo, global::System.Nullable<int> Anio, string Color, string Estatus, string Original_NroPlaca) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((Marca == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -7821,23 +7815,17 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
             else {
                 command.Parameters[3].Value = ((string)(Color));
             }
-            if ((UltimoMantenimiento.HasValue == true)) {
-                command.Parameters[4].Value = ((System.DateTime)(UltimoMantenimiento.Value));
-            }
-            else {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
             if ((Estatus == null)) {
                 throw new global::System.ArgumentNullException("Estatus");
             }
             else {
-                command.Parameters[5].Value = ((string)(Estatus));
+                command.Parameters[4].Value = ((string)(Estatus));
             }
             if ((Original_NroPlaca == null)) {
                 throw new global::System.ArgumentNullException("Original_NroPlaca");
             }
             else {
-                command.Parameters[6].Value = ((string)(Original_NroPlaca));
+                command.Parameters[5].Value = ((string)(Original_NroPlaca));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
