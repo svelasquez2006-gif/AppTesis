@@ -170,11 +170,11 @@
     <Compile Include="FormVehiculo.Designer.cs">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistarOrden.cs">
+    <Compile Include="FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistarOrden.Designer.cs">
-      <DependentUpon>RegistarOrden.cs</DependentUpon>
+    <Compile Include="FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistarVehiculo.cs">
       <SubType>Form</SubType>
@@ -232,8 +232,8 @@
     <EmbeddedResource Include="FormVehiculo.resx">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistarOrden.resx">
-      <DependentUpon>RegistarOrden.cs</DependentUpon>
+    <EmbeddedResource Include="FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistarVehiculo.resx">
       <DependentUpon>RegistarVehiculo.cs</DependentUpon>

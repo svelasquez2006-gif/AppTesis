@@ -37,6 +37,14 @@ namespace AppTesis
             {
                 MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (nroPlacaTextBox.Text.Length < 7)
+            {
+                MessageBox.Show("el numero de placa no puede tener menos de 7 digitos", "Verificar placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (nroPlacaTextBox.Text.Length > 7)
+            {
+                MessageBox.Show("el numero de placa no puede tener mas de 7 digitos", "Verificar placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 try

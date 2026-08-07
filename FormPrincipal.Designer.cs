@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenú = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.Usuarios = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.c = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.labelHora = new System.Windows.Forms.Label();
             this.labelRol = new System.Windows.Forms.Label();
             this.labelUser = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelMenú.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -60,6 +60,20 @@
             this.panelMenú.Size = new System.Drawing.Size(172, 701);
             this.panelMenú.TabIndex = 0;
             this.panelMenú.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenú_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 332);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 129);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Debug\r\n(insertar estados)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Usuarios
             // 
@@ -181,20 +195,6 @@
             this.labelUser.Size = new System.Drawing.Size(153, 37);
             this.labelUser.TabIndex = 0;
             this.labelUser.Text = "Juan Pérez";
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 129);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Debug\r\n(insertar estados)";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormPrincipal
             // 
