@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -49,10 +50,26 @@ namespace AppTesis
                     string telefono = telefonoTextBox.Text;
                     string correo = correoTextBox.Text;
 
-                    this.clienteTableAdapter.add(cedula,nombre,apellido,telefono,correo);
+                    this.clienteTableAdapter.add(cedula, nombre, apellido, telefono, correo);
+                    this.clienteTableAdapter.Fill(this.dataBaseDataSet.Cliente);
                 }
-                catch (Exception ex) 
-                
+                catch (NullReferenceException)
+                {
+                    MessageBox.Show("Un campo fue enviado vacio", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 2627 || ex.Number == 2601)
+                    {
+                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error inesperado en la base de datos, " + ex.Message, "Error en la Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                catch (Exception ex)
+
                 {
                     MessageBox.Show("Ha ocurrido un error inesperado , " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
@@ -63,7 +80,8 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            Formordenes ordenes = new Formordenes();
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)

@@ -52,6 +52,7 @@ namespace AppTesis
                     string correo = correoTextBox.Text;
                     string jerarquia = jerarquiacomboBox.Text;
                     this.usuarioTableAdapter.add(cedula, nombre, apellido, usuario, contrasena, correo, jerarquia);
+                    this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
                     usuarioDataGridView.Refresh();
                 }
                 catch (NullReferenceException)

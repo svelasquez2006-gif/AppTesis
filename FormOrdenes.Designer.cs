@@ -355,8 +355,9 @@
             // 
             // fecha_InicioDateTimePicker
             // 
+            this.fecha_InicioDateTimePicker.CustomFormat = "yyyy-MM-dd";
             this.fecha_InicioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orden_ViajeBindingSource, "Fecha_Inicio", true));
-            this.fecha_InicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fecha_InicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fecha_InicioDateTimePicker.Location = new System.Drawing.Point(141, 234);
             this.fecha_InicioDateTimePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.fecha_InicioDateTimePicker.Name = "fecha_InicioDateTimePicker";
@@ -366,8 +367,9 @@
             // 
             // fecha_FinalizacionDateTimePicker
             // 
+            this.fecha_FinalizacionDateTimePicker.CustomFormat = "yyyy-MM-dd";
             this.fecha_FinalizacionDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orden_ViajeBindingSource, "Fecha_Finalizacion", true));
-            this.fecha_FinalizacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fecha_FinalizacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fecha_FinalizacionDateTimePicker.Location = new System.Drawing.Point(141, 260);
             this.fecha_FinalizacionDateTimePicker.Name = "fecha_FinalizacionDateTimePicker";
             this.fecha_FinalizacionDateTimePicker.Size = new System.Drawing.Size(142, 20);

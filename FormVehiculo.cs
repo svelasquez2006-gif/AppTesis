@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -52,11 +53,30 @@ namespace AppTesis
                     string placa = nroPlacaTextBox.Text;
                     string marca = marcaTextBox.Text;
                     string modelo = modeloTextBox.Text;
-                    int.TryParse(anioTextBox.Text,out int anio);
+                    int.TryParse(anioTextBox.Text, out int anio);
                     string color = colorTextBox.Text;
                     string estatus = estatuscombobox.Text;
                     this.vehiculoTableAdapter.add(placa, marca, modelo, anio, color, estatus);
-                }catch(Exception ex)
+                    this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
+                }
+                catch (NullReferenceException)
+                {
+                    MessageBox.Show("Un campo fue enviado vacio", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 2627 || ex.Number == 2601)
+                    {
+                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error inesperado en la base de datos, " + ex.Message, "Error en la Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+
+                catch (Exception ex)
                 {
                     MessageBox.Show("Ha ocurrido un error inesperado , " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -60,16 +61,29 @@ namespace AppTesis
                     string placa = vehiculos_NroPlacaTextBox.Text;
                     string ced_cliente = cedula_ClienteTextBox.Text;
                     string destino = destinoTextBox.Text;
-                    string formato = "dd/mm/yyyy";
+                    string formato = "yyyy-mm-dd";
                     DateTime.TryParseExact(fecha_InicioDateTimePicker.Text, formato, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime inicio);
                     DateTime.TryParseExact(fecha_FinalizacionDateTimePicker.Text, formato, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime final);
                     decimal.TryParse(distancia_Esperada_KmTextBox.Text, out decimal distancia);
                     string estatus = Estatuscombobox.Text;
                     this.orden_ViajeTableAdapter.add(cedula, placa, ced_cliente, destino, distancia, inicio, final, estatus);
+                    this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
+                }
+
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 2627 || ex.Number == 2601)
+                    {
+                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error inesperado en la base de datos, " + ex.Message, "Error en la Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ha Ocurrido un error inesperado"+ ex.Message, "Ha Ocurrido un Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ha Ocurrido un error inesperado" + ex.Message, "Ha Ocurrido un Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -89,7 +103,8 @@ namespace AppTesis
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormCliente formCliente = new FormCliente();
         }
 
         private void modificar_Click(object sender, EventArgs e)
@@ -108,12 +123,27 @@ namespace AppTesis
                     string placa = vehiculos_NroPlacaTextBox.Text;
                     string ced_cliente = cedula_ClienteTextBox.Text;
                     string destino = destinoTextBox.Text;
-                    string formato = "dd/mm/yyyy";
+                    string formato = "yyyy-MM-dd";
                     DateTime.TryParseExact(fecha_InicioDateTimePicker.Text, formato, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime inicio);
                     DateTime.TryParseExact(fecha_FinalizacionDateTimePicker.Text, formato, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime final);
                     decimal.TryParse(distancia_Esperada_KmTextBox.Text, out decimal distancia);
                     string estatus = Estatuscombobox.Text;
-                    this.orden_ViajeTableAdapter.Modify(cedula, placa, ced_cliente, destino, distancia,inicio, final, estatus,id);
+                    this.orden_ViajeTableAdapter.Modify(cedula, placa, ced_cliente, destino, distancia, inicio, final, estatus, id);
+                }
+                catch (NullReferenceException)
+                {
+                    MessageBox.Show("Un campo fue enviado vacio", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 2627 || ex.Number == 2601)
+                    {
+                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error inesperado en la base de datos, " + ex.Message, "Error en la Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
                 catch (Exception ex)
                 {
