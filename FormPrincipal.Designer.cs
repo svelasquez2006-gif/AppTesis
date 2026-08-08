@@ -71,7 +71,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 129);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Debug\r\n(insertar estados)";
+            this.button1.Text = "Clientes";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

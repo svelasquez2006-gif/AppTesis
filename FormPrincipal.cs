@@ -66,7 +66,7 @@ namespace AppTesis
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormInsertar insertar=new FormInsertar();
+            FormCliente insertar=new FormCliente();
             insertar.ShowDialog();
         }
     }

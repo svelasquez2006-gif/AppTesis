@@ -62,7 +62,6 @@
             this.fecha_InicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.fecha_FinalizacionDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Estatuscombobox = new System.Windows.Forms.ComboBox();
-            this.Agregarcliente = new BotonRedondo();
             this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.iDOrdenes_ViajeTextBox = new System.Windows.Forms.TextBox();
@@ -182,7 +181,7 @@
             this.modificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.modificar.FlatAppearance.BorderSize = 2;
             this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modificar.Location = new System.Drawing.Point(423, 351);
+            this.modificar.Location = new System.Drawing.Point(546, 351);
             this.modificar.Name = "modificar";
             this.modificar.RadioBorde = 20;
             this.modificar.Size = new System.Drawing.Size(150, 40);
@@ -387,21 +386,6 @@
             this.Estatuscombobox.Size = new System.Drawing.Size(142, 21);
             this.Estatuscombobox.TabIndex = 23;
             // 
-            // Agregarcliente
-            // 
-            this.Agregarcliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Agregarcliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Agregarcliente.FlatAppearance.BorderSize = 2;
-            this.Agregarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Agregarcliente.Location = new System.Drawing.Point(684, 351);
-            this.Agregarcliente.Name = "Agregarcliente";
-            this.Agregarcliente.RadioBorde = 20;
-            this.Agregarcliente.Size = new System.Drawing.Size(150, 40);
-            this.Agregarcliente.TabIndex = 24;
-            this.Agregarcliente.Text = "Agregar Cliente";
-            this.Agregarcliente.UseVisualStyleBackColor = false;
-            this.Agregarcliente.Click += new System.EventHandler(this.botonRedondo1_Click);
-            // 
             // orden_ViajeTableAdapter
             // 
             this.orden_ViajeTableAdapter.ClearBeforeFill = true;
@@ -435,7 +419,6 @@
             this.ClientSize = new System.Drawing.Size(1284, 433);
             this.Controls.Add(iDOrdenes_ViajeLabel);
             this.Controls.Add(this.iDOrdenes_ViajeTextBox);
-            this.Controls.Add(this.Agregarcliente);
             this.Controls.Add(this.Estatuscombobox);
             this.Controls.Add(cedula_ChoferLabel);
             this.Controls.Add(this.cedula_ChoferTextBox);
@@ -495,7 +478,6 @@
         private System.Windows.Forms.DateTimePicker fecha_InicioDateTimePicker;
         private System.Windows.Forms.DateTimePicker fecha_FinalizacionDateTimePicker;
         private System.Windows.Forms.ComboBox Estatuscombobox;
-        private BotonRedondo Agregarcliente;
         private System.Windows.Forms.TextBox iDOrdenes_ViajeTextBox;
     }
 }
