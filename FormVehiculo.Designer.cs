@@ -72,54 +72,60 @@
             // nroPlacaLabel
             // 
             nroPlacaLabel.AutoSize = true;
-            nroPlacaLabel.Location = new System.Drawing.Point(10, 103);
+            nroPlacaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nroPlacaLabel.Location = new System.Drawing.Point(89, 104);
             nroPlacaLabel.Name = "nroPlacaLabel";
-            nroPlacaLabel.Size = new System.Drawing.Size(57, 13);
+            nroPlacaLabel.Size = new System.Drawing.Size(70, 16);
             nroPlacaLabel.TabIndex = 7;
             nroPlacaLabel.Text = "Nro Placa:";
             // 
             // marcaLabel
             // 
             marcaLabel.AutoSize = true;
-            marcaLabel.Location = new System.Drawing.Point(10, 129);
+            marcaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            marcaLabel.Location = new System.Drawing.Point(111, 129);
             marcaLabel.Name = "marcaLabel";
-            marcaLabel.Size = new System.Drawing.Size(40, 13);
+            marcaLabel.Size = new System.Drawing.Size(48, 16);
             marcaLabel.TabIndex = 9;
             marcaLabel.Text = "Marca:";
             // 
             // modeloLabel
             // 
             modeloLabel.AutoSize = true;
-            modeloLabel.Location = new System.Drawing.Point(10, 155);
+            modeloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            modeloLabel.Location = new System.Drawing.Point(103, 155);
             modeloLabel.Name = "modeloLabel";
-            modeloLabel.Size = new System.Drawing.Size(45, 13);
+            modeloLabel.Size = new System.Drawing.Size(56, 16);
             modeloLabel.TabIndex = 11;
             modeloLabel.Text = "Modelo:";
             // 
             // anioLabel
             // 
             anioLabel.AutoSize = true;
-            anioLabel.Location = new System.Drawing.Point(10, 181);
+            anioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            anioLabel.Location = new System.Drawing.Point(125, 181);
             anioLabel.Name = "anioLabel";
-            anioLabel.Size = new System.Drawing.Size(31, 13);
+            anioLabel.Size = new System.Drawing.Size(34, 16);
             anioLabel.TabIndex = 13;
-            anioLabel.Text = "Anio:";
+            anioLabel.Text = "Año:";
             // 
             // colorLabel
             // 
             colorLabel.AutoSize = true;
-            colorLabel.Location = new System.Drawing.Point(10, 207);
+            colorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            colorLabel.Location = new System.Drawing.Point(117, 207);
             colorLabel.Name = "colorLabel";
-            colorLabel.Size = new System.Drawing.Size(34, 13);
+            colorLabel.Size = new System.Drawing.Size(42, 16);
             colorLabel.TabIndex = 15;
             colorLabel.Text = "Color:";
             // 
             // estatusLabel
             // 
             estatusLabel.AutoSize = true;
-            estatusLabel.Location = new System.Drawing.Point(10, 233);
+            estatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            estatusLabel.Location = new System.Drawing.Point(105, 233);
             estatusLabel.Name = "estatusLabel";
-            estatusLabel.Size = new System.Drawing.Size(45, 13);
+            estatusLabel.Size = new System.Drawing.Size(54, 16);
             estatusLabel.TabIndex = 19;
             estatusLabel.Text = "Estatus:";
             // 
@@ -129,12 +135,13 @@
             this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregar.Location = new System.Drawing.Point(60, 319);
+            this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregar.Location = new System.Drawing.Point(12, 294);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);
             this.agregar.TabIndex = 2;
-            this.agregar.Text = "Agregar Vehiculo";
+            this.agregar.Text = "Agregar Vehículo";
             this.agregar.UseVisualStyleBackColor = false;
             this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
@@ -144,12 +151,13 @@
             this.modificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.modificar.FlatAppearance.BorderSize = 2;
             this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modificar.Location = new System.Drawing.Point(458, 319);
+            this.modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modificar.Location = new System.Drawing.Point(12, 354);
             this.modificar.Name = "modificar";
             this.modificar.RadioBorde = 20;
             this.modificar.Size = new System.Drawing.Size(150, 40);
             this.modificar.TabIndex = 3;
-            this.modificar.Text = "Modificar Vehiculo";
+            this.modificar.Text = "Modificar Vehículo";
             this.modificar.UseVisualStyleBackColor = false;
             this.modificar.Click += new System.EventHandler(this.modificar_Click);
             // 
@@ -159,12 +167,13 @@
             this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salir.Location = new System.Drawing.Point(656, 319);
+            this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salir.Location = new System.Drawing.Point(184, 354);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
             this.salir.TabIndex = 4;
-            this.salir.Text = "Volver al Menu";
+            this.salir.Text = "Volver al Menú";
             this.salir.UseVisualStyleBackColor = false;
             this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
@@ -172,11 +181,11 @@
             // 
             this.lblListVehículos.AutoSize = true;
             this.lblListVehículos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListVehículos.Location = new System.Drawing.Point(342, 20);
+            this.lblListVehículos.Location = new System.Drawing.Point(407, 21);
             this.lblListVehículos.Name = "lblListVehículos";
-            this.lblListVehículos.Size = new System.Drawing.Size(206, 25);
+            this.lblListVehículos.Size = new System.Drawing.Size(249, 25);
             this.lblListVehículos.TabIndex = 5;
-            this.lblListVehículos.Text = "Lista de Vehículos";
+            this.lblListVehículos.Text = "LISTA DE VEHÍCULOS";
             this.lblListVehículos.Click += new System.EventHandler(this.label1_Click);
             // 
             // mantenimiento
@@ -185,7 +194,8 @@
             this.mantenimiento.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.mantenimiento.FlatAppearance.BorderSize = 2;
             this.mantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mantenimiento.Location = new System.Drawing.Point(260, 319);
+            this.mantenimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mantenimiento.Location = new System.Drawing.Point(184, 294);
             this.mantenimiento.Name = "mantenimiento";
             this.mantenimiento.RadioBorde = 20;
             this.mantenimiento.Size = new System.Drawing.Size(150, 40);
@@ -292,7 +302,7 @@
             // nroPlacaTextBox
             // 
             this.nroPlacaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "NroPlaca", true));
-            this.nroPlacaTextBox.Location = new System.Drawing.Point(127, 100);
+            this.nroPlacaTextBox.Location = new System.Drawing.Point(165, 102);
             this.nroPlacaTextBox.Name = "nroPlacaTextBox";
             this.nroPlacaTextBox.Size = new System.Drawing.Size(156, 20);
             this.nroPlacaTextBox.TabIndex = 8;
@@ -300,7 +310,7 @@
             // marcaTextBox
             // 
             this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Marca", true));
-            this.marcaTextBox.Location = new System.Drawing.Point(127, 126);
+            this.marcaTextBox.Location = new System.Drawing.Point(165, 128);
             this.marcaTextBox.Name = "marcaTextBox";
             this.marcaTextBox.Size = new System.Drawing.Size(156, 20);
             this.marcaTextBox.TabIndex = 10;
@@ -308,7 +318,7 @@
             // modeloTextBox
             // 
             this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Modelo", true));
-            this.modeloTextBox.Location = new System.Drawing.Point(127, 152);
+            this.modeloTextBox.Location = new System.Drawing.Point(165, 154);
             this.modeloTextBox.Name = "modeloTextBox";
             this.modeloTextBox.Size = new System.Drawing.Size(156, 20);
             this.modeloTextBox.TabIndex = 12;
@@ -316,7 +326,7 @@
             // anioTextBox
             // 
             this.anioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Anio", true));
-            this.anioTextBox.Location = new System.Drawing.Point(127, 178);
+            this.anioTextBox.Location = new System.Drawing.Point(165, 180);
             this.anioTextBox.Name = "anioTextBox";
             this.anioTextBox.Size = new System.Drawing.Size(156, 20);
             this.anioTextBox.TabIndex = 14;
@@ -324,7 +334,7 @@
             // colorTextBox
             // 
             this.colorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Color", true));
-            this.colorTextBox.Location = new System.Drawing.Point(127, 204);
+            this.colorTextBox.Location = new System.Drawing.Point(165, 206);
             this.colorTextBox.Name = "colorTextBox";
             this.colorTextBox.Size = new System.Drawing.Size(156, 20);
             this.colorTextBox.TabIndex = 16;
@@ -336,7 +346,7 @@
             "Disponible",
             "Ocupado o en viaje",
             "Averiado"});
-            this.estatuscombobox.Location = new System.Drawing.Point(127, 233);
+            this.estatuscombobox.Location = new System.Drawing.Point(165, 233);
             this.estatuscombobox.Name = "estatuscombobox";
             this.estatuscombobox.Size = new System.Drawing.Size(156, 21);
             this.estatuscombobox.TabIndex = 20;

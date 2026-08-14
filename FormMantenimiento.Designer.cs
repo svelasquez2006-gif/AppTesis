@@ -61,36 +61,40 @@
             // nroPlacaLabel
             // 
             nroPlacaLabel.AutoSize = true;
-            nroPlacaLabel.Location = new System.Drawing.Point(14, 187);
+            nroPlacaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nroPlacaLabel.Location = new System.Drawing.Point(115, 170);
             nroPlacaLabel.Name = "nroPlacaLabel";
-            nroPlacaLabel.Size = new System.Drawing.Size(57, 13);
+            nroPlacaLabel.Size = new System.Drawing.Size(81, 20);
             nroPlacaLabel.TabIndex = 25;
             nroPlacaLabel.Text = "Nro Placa:";
             // 
             // fechaMantenimientoLabel
             // 
             fechaMantenimientoLabel.AutoSize = true;
-            fechaMantenimientoLabel.Location = new System.Drawing.Point(14, 214);
+            fechaMantenimientoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fechaMantenimientoLabel.Location = new System.Drawing.Point(29, 206);
             fechaMantenimientoLabel.Name = "fechaMantenimientoLabel";
-            fechaMantenimientoLabel.Size = new System.Drawing.Size(112, 13);
+            fechaMantenimientoLabel.Size = new System.Drawing.Size(167, 20);
             fechaMantenimientoLabel.TabIndex = 27;
             fechaMantenimientoLabel.Text = "Fecha Mantenimiento:";
             // 
             // anotacionesLabel
             // 
             anotacionesLabel.AutoSize = true;
-            anotacionesLabel.Location = new System.Drawing.Point(14, 239);
+            anotacionesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            anotacionesLabel.Location = new System.Drawing.Point(94, 246);
             anotacionesLabel.Name = "anotacionesLabel";
-            anotacionesLabel.Size = new System.Drawing.Size(69, 13);
+            anotacionesLabel.Size = new System.Drawing.Size(102, 20);
             anotacionesLabel.TabIndex = 29;
             anotacionesLabel.Text = "Anotaciones:";
             // 
             // codMantenimientoLabel
             // 
             codMantenimientoLabel.AutoSize = true;
-            codMantenimientoLabel.Location = new System.Drawing.Point(14, 161);
+            codMantenimientoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            codMantenimientoLabel.Location = new System.Drawing.Point(45, 139);
             codMantenimientoLabel.Name = "codMantenimientoLabel";
-            codMantenimientoLabel.Size = new System.Drawing.Size(101, 13);
+            codMantenimientoLabel.Size = new System.Drawing.Size(151, 20);
             codMantenimientoLabel.TabIndex = 23;
             codMantenimientoLabel.Text = "Cod Mantenimiento:";
             codMantenimientoLabel.Click += new System.EventHandler(this.codMantenimientoLabel_Click);
@@ -101,6 +105,7 @@
             this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregar.Location = new System.Drawing.Point(159, 357);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
@@ -116,6 +121,7 @@
             this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salir.Location = new System.Drawing.Point(448, 357);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
@@ -129,11 +135,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(229, 47);
+            this.label1.Location = new System.Drawing.Point(243, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 25);
+            this.label1.Size = new System.Drawing.Size(378, 25);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Historial de Mantenimientos";
+            this.label1.Text = "HISTORIAL DE MANTENIMIENTOS";
             // 
             // dataBaseDataSet
             // 
@@ -171,11 +177,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.mantenimientoDataGridView.DataSource = this.mantenimientoBindingSource;
-            this.mantenimientoDataGridView.Location = new System.Drawing.Point(287, 110);
+            this.mantenimientoDataGridView.Location = new System.Drawing.Point(423, 110);
             this.mantenimientoDataGridView.Name = "mantenimientoDataGridView";
             this.mantenimientoDataGridView.ReadOnly = true;
             this.mantenimientoDataGridView.Size = new System.Drawing.Size(441, 220);
             this.mantenimientoDataGridView.TabIndex = 23;
+            this.mantenimientoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mantenimientoDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -189,25 +196,28 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "NroPlaca";
             this.dataGridViewTextBoxColumn2.HeaderText = "NroPlaca";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "FechaMantenimiento";
             this.dataGridViewTextBoxColumn3.HeaderText = "FechaMantenimiento";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Anotaciones";
             this.dataGridViewTextBoxColumn4.HeaderText = "Anotaciones";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // nroPlacaTextBox
             // 
             this.nroPlacaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource, "NroPlaca", true));
-            this.nroPlacaTextBox.Location = new System.Drawing.Point(132, 184);
+            this.nroPlacaTextBox.Location = new System.Drawing.Point(202, 172);
             this.nroPlacaTextBox.Name = "nroPlacaTextBox";
-            this.nroPlacaTextBox.Size = new System.Drawing.Size(122, 20);
+            this.nroPlacaTextBox.Size = new System.Drawing.Size(182, 20);
             this.nroPlacaTextBox.TabIndex = 26;
             // 
             // fechaMantenimientoDateTimePicker
@@ -215,16 +225,16 @@
             this.fechaMantenimientoDateTimePicker.CustomFormat = "yyyy-MM-dd";
             this.fechaMantenimientoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.mantenimientoBindingSource, "FechaMantenimiento", true));
             this.fechaMantenimientoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaMantenimientoDateTimePicker.Location = new System.Drawing.Point(132, 210);
+            this.fechaMantenimientoDateTimePicker.Location = new System.Drawing.Point(202, 206);
             this.fechaMantenimientoDateTimePicker.Name = "fechaMantenimientoDateTimePicker";
-            this.fechaMantenimientoDateTimePicker.Size = new System.Drawing.Size(122, 20);
+            this.fechaMantenimientoDateTimePicker.Size = new System.Drawing.Size(182, 20);
             this.fechaMantenimientoDateTimePicker.TabIndex = 28;
             this.fechaMantenimientoDateTimePicker.Value = new System.DateTime(2026, 8, 7, 0, 0, 0, 0);
             // 
             // anotacionesTextBox
             // 
             this.anotacionesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource, "Anotaciones", true));
-            this.anotacionesTextBox.Location = new System.Drawing.Point(89, 236);
+            this.anotacionesTextBox.Location = new System.Drawing.Point(202, 246);
             this.anotacionesTextBox.Multiline = true;
             this.anotacionesTextBox.Name = "anotacionesTextBox";
             this.anotacionesTextBox.Size = new System.Drawing.Size(182, 73);
@@ -233,10 +243,10 @@
             // codMantenimientoTextBox
             // 
             this.codMantenimientoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource, "CodMantenimiento", true));
-            this.codMantenimientoTextBox.Location = new System.Drawing.Point(132, 158);
+            this.codMantenimientoTextBox.Location = new System.Drawing.Point(202, 141);
             this.codMantenimientoTextBox.Name = "codMantenimientoTextBox";
             this.codMantenimientoTextBox.ReadOnly = true;
-            this.codMantenimientoTextBox.Size = new System.Drawing.Size(122, 20);
+            this.codMantenimientoTextBox.Size = new System.Drawing.Size(182, 20);
             this.codMantenimientoTextBox.TabIndex = 24;
             this.codMantenimientoTextBox.TextChanged += new System.EventHandler(this.codMantenimientoTextBox_TextChanged);
             // 
@@ -244,7 +254,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 450);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(881, 450);
             this.Controls.Add(codMantenimientoLabel);
             this.Controls.Add(this.codMantenimientoTextBox);
             this.Controls.Add(nroPlacaLabel);

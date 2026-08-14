@@ -109,5 +109,10 @@ namespace AppTesis
         {
 
         }
+
+        private void mantenimientoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

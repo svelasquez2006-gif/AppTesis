@@ -80,12 +80,92 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
+            // cedulaLabel
+            // 
+            cedulaLabel.AutoSize = true;
+            cedulaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cedulaLabel.Location = new System.Drawing.Point(73, 224);
+            cedulaLabel.Name = "cedulaLabel";
+            cedulaLabel.Size = new System.Drawing.Size(53, 16);
+            cedulaLabel.TabIndex = 10;
+            cedulaLabel.Text = "Cédula:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(67, 250);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(59, 16);
+            nombreLabel.TabIndex = 12;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // apellidoLabel
+            // 
+            apellidoLabel.AutoSize = true;
+            apellidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            apellidoLabel.Location = new System.Drawing.Point(66, 276);
+            apellidoLabel.Name = "apellidoLabel";
+            apellidoLabel.Size = new System.Drawing.Size(60, 16);
+            apellidoLabel.TabIndex = 14;
+            apellidoLabel.Text = "Apellido:";
+            // 
+            // telefonoLabel
+            // 
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            telefonoLabel.Location = new System.Drawing.Point(62, 302);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new System.Drawing.Size(64, 16);
+            telefonoLabel.TabIndex = 16;
+            telefonoLabel.Text = "Teléfono:";
+            // 
+            // correoLabel
+            // 
+            correoLabel.AutoSize = true;
+            correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            correoLabel.Location = new System.Drawing.Point(76, 328);
+            correoLabel.Name = "correoLabel";
+            correoLabel.Size = new System.Drawing.Size(51, 16);
+            correoLabel.TabIndex = 18;
+            correoLabel.Text = "Correo:";
+            // 
+            // grado_LicenciaLabel
+            // 
+            grado_LicenciaLabel.AutoSize = true;
+            grado_LicenciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            grado_LicenciaLabel.Location = new System.Drawing.Point(26, 354);
+            grado_LicenciaLabel.Name = "grado_LicenciaLabel";
+            grado_LicenciaLabel.Size = new System.Drawing.Size(101, 16);
+            grado_LicenciaLabel.TabIndex = 20;
+            grado_LicenciaLabel.Text = "Grado Licencia:";
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            direccionLabel.Location = new System.Drawing.Point(59, 380);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(67, 16);
+            direccionLabel.TabIndex = 22;
+            direccionLabel.Text = "Dirección:";
+            // 
+            // estatusLabel
+            // 
+            estatusLabel.AutoSize = true;
+            estatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            estatusLabel.Location = new System.Drawing.Point(72, 406);
+            estatusLabel.Name = "estatusLabel";
+            estatusLabel.Size = new System.Drawing.Size(54, 16);
+            estatusLabel.TabIndex = 24;
+            estatusLabel.Text = "Estatus:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(289, 36);
+            this.label1.Location = new System.Drawing.Point(359, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(312, 37);
             this.label1.TabIndex = 0;
@@ -112,7 +192,7 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(698, 112);
             this.btnBuscar.Name = "btnBuscar";
@@ -125,7 +205,7 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(773, 112);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -152,7 +232,7 @@
             this.direccionDataGridViewTextBoxColumn,
             this.estatusDataGridViewTextBoxColumn});
             this.dgvChoferes.DataSource = this.choferBindingSource;
-            this.dgvChoferes.Location = new System.Drawing.Point(230, 163);
+            this.dgvChoferes.Location = new System.Drawing.Point(247, 163);
             this.dgvChoferes.Name = "dgvChoferes";
             this.dgvChoferes.ReadOnly = true;
             this.dgvChoferes.Size = new System.Drawing.Size(831, 333);
@@ -228,7 +308,7 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(139, 511);
             this.btnAgregar.Name = "btnAgregar";
@@ -242,7 +322,7 @@
             // 
             this.btnModificar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(366, 511);
             this.btnModificar.Name = "btnModificar";
@@ -256,7 +336,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(587, 511);
             this.btnEliminar.Name = "btnEliminar";
@@ -269,7 +349,7 @@
             // 
             this.btnMenú.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnMenú.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenú.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenú.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenú.ForeColor = System.Drawing.Color.White;
             this.btnMenú.Location = new System.Drawing.Point(801, 511);
             this.btnMenú.Name = "btnMenú";
@@ -294,125 +374,53 @@
             this.tableAdapterManager.UsuarioTableAdapter = null;
             this.tableAdapterManager.VehiculoTableAdapter = null;
             // 
-            // cedulaLabel
-            // 
-            cedulaLabel.AutoSize = true;
-            cedulaLabel.Location = new System.Drawing.Point(26, 224);
-            cedulaLabel.Name = "cedulaLabel";
-            cedulaLabel.Size = new System.Drawing.Size(43, 13);
-            cedulaLabel.TabIndex = 10;
-            cedulaLabel.Text = "Cedula:";
-            // 
             // cedulaTextBox
             // 
             this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferBindingSource, "Cedula", true));
-            this.cedulaTextBox.Location = new System.Drawing.Point(114, 221);
+            this.cedulaTextBox.Location = new System.Drawing.Point(129, 223);
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(100, 20);
             this.cedulaTextBox.TabIndex = 11;
             // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(26, 250);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
-            nombreLabel.TabIndex = 12;
-            nombreLabel.Text = "Nombre:";
-            // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(114, 247);
+            this.nombreTextBox.Location = new System.Drawing.Point(129, 249);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.nombreTextBox.TabIndex = 13;
             // 
-            // apellidoLabel
-            // 
-            apellidoLabel.AutoSize = true;
-            apellidoLabel.Location = new System.Drawing.Point(26, 276);
-            apellidoLabel.Name = "apellidoLabel";
-            apellidoLabel.Size = new System.Drawing.Size(47, 13);
-            apellidoLabel.TabIndex = 14;
-            apellidoLabel.Text = "Apellido:";
-            // 
             // apellidoTextBox
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferBindingSource, "Apellido", true));
-            this.apellidoTextBox.Location = new System.Drawing.Point(114, 273);
+            this.apellidoTextBox.Location = new System.Drawing.Point(129, 275);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
             this.apellidoTextBox.TabIndex = 15;
             // 
-            // telefonoLabel
-            // 
-            telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(26, 302);
-            telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(52, 13);
-            telefonoLabel.TabIndex = 16;
-            telefonoLabel.Text = "Telefono:";
-            // 
             // telefonoTextBox
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(114, 299);
+            this.telefonoTextBox.Location = new System.Drawing.Point(129, 301);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(100, 20);
             this.telefonoTextBox.TabIndex = 17;
             // 
-            // correoLabel
-            // 
-            correoLabel.AutoSize = true;
-            correoLabel.Location = new System.Drawing.Point(26, 328);
-            correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(41, 13);
-            correoLabel.TabIndex = 18;
-            correoLabel.Text = "Correo:";
-            // 
             // correoTextBox
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferBindingSource, "Correo", true));
-            this.correoTextBox.Location = new System.Drawing.Point(114, 325);
+            this.correoTextBox.Location = new System.Drawing.Point(129, 327);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(100, 20);
             this.correoTextBox.TabIndex = 19;
             // 
-            // grado_LicenciaLabel
-            // 
-            grado_LicenciaLabel.AutoSize = true;
-            grado_LicenciaLabel.Location = new System.Drawing.Point(26, 354);
-            grado_LicenciaLabel.Name = "grado_LicenciaLabel";
-            grado_LicenciaLabel.Size = new System.Drawing.Size(82, 13);
-            grado_LicenciaLabel.TabIndex = 20;
-            grado_LicenciaLabel.Text = "Grado Licencia:";
-            // 
-            // direccionLabel
-            // 
-            direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(26, 380);
-            direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(55, 13);
-            direccionLabel.TabIndex = 22;
-            direccionLabel.Text = "Direccion:";
-            // 
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(114, 377);
+            this.direccionTextBox.Location = new System.Drawing.Point(129, 379);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(100, 20);
             this.direccionTextBox.TabIndex = 23;
-            // 
-            // estatusLabel
-            // 
-            estatusLabel.AutoSize = true;
-            estatusLabel.Location = new System.Drawing.Point(26, 406);
-            estatusLabel.Name = "estatusLabel";
-            estatusLabel.Size = new System.Drawing.Size(45, 13);
-            estatusLabel.TabIndex = 24;
-            estatusLabel.Text = "Estatus:";
             // 
             // licenciacombobox
             // 
@@ -423,7 +431,7 @@
             "3",
             "4",
             "5"});
-            this.licenciacombobox.Location = new System.Drawing.Point(114, 350);
+            this.licenciacombobox.Location = new System.Drawing.Point(129, 352);
             this.licenciacombobox.Name = "licenciacombobox";
             this.licenciacombobox.Size = new System.Drawing.Size(100, 21);
             this.licenciacombobox.TabIndex = 25;
@@ -436,7 +444,7 @@
             "En Viaje",
             "De Vacaciones",
             "Inactivo"});
-            this.estatuscombobox.Location = new System.Drawing.Point(114, 403);
+            this.estatuscombobox.Location = new System.Drawing.Point(129, 405);
             this.estatuscombobox.Name = "estatuscombobox";
             this.estatuscombobox.Size = new System.Drawing.Size(100, 21);
             this.estatuscombobox.TabIndex = 26;
@@ -446,7 +454,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1072, 572);
+            this.ClientSize = new System.Drawing.Size(1095, 572);
             this.Controls.Add(this.estatuscombobox);
             this.Controls.Add(this.licenciacombobox);
             this.Controls.Add(cedulaLabel);
