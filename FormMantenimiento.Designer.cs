@@ -219,6 +219,7 @@
             this.nroPlacaTextBox.Name = "nroPlacaTextBox";
             this.nroPlacaTextBox.Size = new System.Drawing.Size(182, 20);
             this.nroPlacaTextBox.TabIndex = 26;
+            this.nroPlacaTextBox.TextChanged += new System.EventHandler(this.nroPlacaTextBox_TextChanged);
             // 
             // fechaMantenimientoDateTimePicker
             // 

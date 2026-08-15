@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -30,6 +31,12 @@ namespace AppTesis
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Orden_Viaje' Puede moverla o quitarla según sea necesario.
             this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
+            cedula_ChoferTextBox.MaxLength = 8;
+            vehiculos_NroPlacaTextBox.MaxLength = 7;
+            cedula_ClienteTextBox.MaxLength= 8;
+            //this.orden_ViajeTableAdapter.ScalarQuery();
+            
+
 
 
         }
@@ -53,15 +60,21 @@ namespace AppTesis
             {
                 MessageBox.Show("Se esta enviado un campo vacio", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (vehiculos_NroPlacaTextBox.Text.Length < 7)
+            {
+                MessageBox.Show("el numero de placa no puede tener menos de 7 digitos", "Verificar placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 try
                 {
+                    
                     string cedula = cedula_ChoferTextBox.Text;
                     string placa = vehiculos_NroPlacaTextBox.Text;
                     string ced_cliente = cedula_ClienteTextBox.Text;
                     string destino = destinoTextBox.Text;
                     string formato = "yyyy-mm-dd";
+
                     DateTime.TryParseExact(fecha_InicioDateTimePicker.Text, formato, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime inicio);
                     DateTime.TryParseExact(fecha_FinalizacionDateTimePicker.Text, formato, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime final);
                     decimal.TryParse(distancia_Esperada_KmTextBox.Text, out decimal distancia);
@@ -114,6 +127,10 @@ namespace AppTesis
             {
                 MessageBox.Show("Se esta enviado un campo vacio", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (vehiculos_NroPlacaTextBox.Text.Length < 7)
+            {
+                MessageBox.Show("el numero de placa no puede tener menos de 7 digitos", "Verificar placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 try
@@ -155,6 +172,48 @@ namespace AppTesis
         private void iDOrdenes_ViajeTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void vehiculos_NroPlacaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cedula_ClienteTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string limpio = Regex.Replace(cedula_ClienteTextBox.Text, @"[^\d]", "");
+
+            // 2. Si cambió el texto, lo actualiza (evita bucles infinitos)
+            if (cedula_ClienteTextBox.Text != limpio)
+            {
+                cedula_ClienteTextBox.Text = limpio;
+                cedula_ClienteTextBox.SelectionStart = cedula_ClienteTextBox.Text.Length; // Mantiene el cursor al final
+            }
+        }
+
+        private void cedula_ChoferTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string limpio = Regex.Replace(cedula_ChoferTextBox.Text, @"[^\d]", "");
+
+            // 2. Si cambió el texto, lo actualiza (evita bucles infinitos)
+            if (cedula_ChoferTextBox.Text != limpio)
+            {
+                cedula_ChoferTextBox.Text = limpio;
+                cedula_ChoferTextBox.SelectionStart = cedula_ChoferTextBox.Text.Length; // Mantiene el cursor al final
+            }
+        }
+
+        private void distancia_Esperada_KmTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+            string limpio = Regex.Replace(distancia_Esperada_KmTextBox.Text, @"[^\d]", "");
+
+            // 2. Si cambió el texto, lo actualiza (evita bucles infinitos)
+            if (distancia_Esperada_KmTextBox.Text != limpio)
+            {
+                distancia_Esperada_KmTextBox.Text = limpio;
+                distancia_Esperada_KmTextBox.SelectionStart = distancia_Esperada_KmTextBox.Text.Length; // Mantiene el cursor al final
+            }
         }
     }
 }

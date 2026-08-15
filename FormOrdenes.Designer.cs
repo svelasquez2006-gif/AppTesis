@@ -38,11 +38,19 @@
             System.Windows.Forms.Label fecha_FinalizacionLabel;
             System.Windows.Forms.Label estatusLabel;
             System.Windows.Forms.Label iDOrdenes_ViajeLabel;
-            this.agregar = new BotonRedondo();
-            this.modificar = new BotonRedondo();
-            this.salir = new BotonRedondo();
             this.label1 = new System.Windows.Forms.Label();
             this.orden_ViajeDataGridView = new System.Windows.Forms.DataGridView();
+            this.cedula_ChoferTextBox = new System.Windows.Forms.TextBox();
+            this.vehiculos_NroPlacaTextBox = new System.Windows.Forms.TextBox();
+            this.cedula_ClienteTextBox = new System.Windows.Forms.TextBox();
+            this.destinoTextBox = new System.Windows.Forms.TextBox();
+            this.distancia_Esperada_KmTextBox = new System.Windows.Forms.TextBox();
+            this.fecha_InicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.fecha_FinalizacionDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Estatuscombobox = new System.Windows.Forms.ComboBox();
+            this.iDOrdenes_ViajeTextBox = new System.Windows.Forms.TextBox();
+            this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,19 +60,11 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
-            this.cedula_ChoferTextBox = new System.Windows.Forms.TextBox();
-            this.vehiculos_NroPlacaTextBox = new System.Windows.Forms.TextBox();
-            this.cedula_ClienteTextBox = new System.Windows.Forms.TextBox();
-            this.destinoTextBox = new System.Windows.Forms.TextBox();
-            this.distancia_Esperada_KmTextBox = new System.Windows.Forms.TextBox();
-            this.fecha_InicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.fecha_FinalizacionDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Estatuscombobox = new System.Windows.Forms.ComboBox();
+            this.salir = new BotonRedondo();
+            this.modificar = new BotonRedondo();
+            this.agregar = new BotonRedondo();
             this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
-            this.iDOrdenes_ViajeTextBox = new System.Windows.Forms.TextBox();
             cedula_ChoferLabel = new System.Windows.Forms.Label();
             vehiculos_NroPlacaLabel = new System.Windows.Forms.Label();
             cedula_ClienteLabel = new System.Windows.Forms.Label();
@@ -169,54 +169,6 @@
             iDOrdenes_ViajeLabel.TabIndex = 24;
             iDOrdenes_ViajeLabel.Text = "IDOrdenes Viaje:";
             // 
-            // agregar
-            // 
-            this.agregar.BackColor = System.Drawing.Color.YellowGreen;
-            this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.agregar.FlatAppearance.BorderSize = 2;
-            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar.Location = new System.Drawing.Point(39, 351);
-            this.agregar.Name = "agregar";
-            this.agregar.RadioBorde = 20;
-            this.agregar.Size = new System.Drawing.Size(150, 40);
-            this.agregar.TabIndex = 2;
-            this.agregar.Text = "Agregar Orden";
-            this.agregar.UseVisualStyleBackColor = false;
-            this.agregar.Click += new System.EventHandler(this.agregar_Click);
-            // 
-            // modificar
-            // 
-            this.modificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.modificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.modificar.FlatAppearance.BorderSize = 2;
-            this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificar.Location = new System.Drawing.Point(222, 351);
-            this.modificar.Name = "modificar";
-            this.modificar.RadioBorde = 20;
-            this.modificar.Size = new System.Drawing.Size(150, 40);
-            this.modificar.TabIndex = 3;
-            this.modificar.Text = "Modificar Orden";
-            this.modificar.UseVisualStyleBackColor = false;
-            this.modificar.Click += new System.EventHandler(this.modificar_Click);
-            // 
-            // salir
-            // 
-            this.salir.BackColor = System.Drawing.Color.IndianRed;
-            this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.salir.FlatAppearance.BorderSize = 2;
-            this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(405, 351);
-            this.salir.Name = "salir";
-            this.salir.RadioBorde = 20;
-            this.salir.Size = new System.Drawing.Size(150, 40);
-            this.salir.TabIndex = 4;
-            this.salir.Text = "Volver al Menú";
-            this.salir.UseVisualStyleBackColor = false;
-            this.salir.Click += new System.EventHandler(this.salir_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -229,7 +181,6 @@
             // 
             // orden_ViajeDataGridView
             // 
-            this.orden_ViajeDataGridView.AllowUserToAddRows = false;
             this.orden_ViajeDataGridView.AllowUserToDeleteRows = false;
             this.orden_ViajeDataGridView.AutoGenerateColumns = false;
             this.orden_ViajeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -246,83 +197,9 @@
             this.orden_ViajeDataGridView.DataSource = this.orden_ViajeBindingSource;
             this.orden_ViajeDataGridView.Location = new System.Drawing.Point(339, 98);
             this.orden_ViajeDataGridView.Name = "orden_ViajeDataGridView";
-            this.orden_ViajeDataGridView.ReadOnly = true;
             this.orden_ViajeDataGridView.Size = new System.Drawing.Size(920, 220);
             this.orden_ViajeDataGridView.TabIndex = 6;
             this.orden_ViajeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orden_ViajeDataGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDOrdenes_Viaje";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IDOrdenes_Viaje";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cedula_Chofer";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cedula_Chofer";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Vehiculos_NroPlaca";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Vehiculos_NroPlaca";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cedula_Cliente";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Cedula_Cliente";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Destino";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Destino";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Distancia_Esperada_Km";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Distancia_Esperada_Km";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Fecha_Inicio";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Fecha_Inicio";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Fecha_Finalizacion";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Fecha_Finalizacion";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Estatus";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Estatus";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // orden_ViajeBindingSource
-            // 
-            this.orden_ViajeBindingSource.DataMember = "Orden_Viaje";
-            this.orden_ViajeBindingSource.DataSource = this.dataBaseDataSet;
-            // 
-            // dataBaseDataSet
-            // 
-            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
-            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cedula_ChoferTextBox
             // 
@@ -331,6 +208,7 @@
             this.cedula_ChoferTextBox.Name = "cedula_ChoferTextBox";
             this.cedula_ChoferTextBox.Size = new System.Drawing.Size(142, 20);
             this.cedula_ChoferTextBox.TabIndex = 9;
+            this.cedula_ChoferTextBox.TextChanged += new System.EventHandler(this.cedula_ChoferTextBox_TextChanged);
             // 
             // vehiculos_NroPlacaTextBox
             // 
@@ -339,6 +217,7 @@
             this.vehiculos_NroPlacaTextBox.Name = "vehiculos_NroPlacaTextBox";
             this.vehiculos_NroPlacaTextBox.Size = new System.Drawing.Size(142, 20);
             this.vehiculos_NroPlacaTextBox.TabIndex = 11;
+            this.vehiculos_NroPlacaTextBox.TextChanged += new System.EventHandler(this.vehiculos_NroPlacaTextBox_TextChanged);
             // 
             // cedula_ClienteTextBox
             // 
@@ -347,6 +226,7 @@
             this.cedula_ClienteTextBox.Name = "cedula_ClienteTextBox";
             this.cedula_ClienteTextBox.Size = new System.Drawing.Size(142, 20);
             this.cedula_ClienteTextBox.TabIndex = 13;
+            this.cedula_ClienteTextBox.TextChanged += new System.EventHandler(this.cedula_ClienteTextBox_TextChanged);
             // 
             // destinoTextBox
             // 
@@ -363,6 +243,7 @@
             this.distancia_Esperada_KmTextBox.Name = "distancia_Esperada_KmTextBox";
             this.distancia_Esperada_KmTextBox.Size = new System.Drawing.Size(142, 20);
             this.distancia_Esperada_KmTextBox.TabIndex = 17;
+            this.distancia_Esperada_KmTextBox.TextChanged += new System.EventHandler(this.distancia_Esperada_KmTextBox_TextChanged);
             // 
             // fecha_InicioDateTimePicker
             // 
@@ -398,6 +279,129 @@
             this.Estatuscombobox.Size = new System.Drawing.Size(142, 21);
             this.Estatuscombobox.TabIndex = 23;
             // 
+            // iDOrdenes_ViajeTextBox
+            // 
+            this.iDOrdenes_ViajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "IDOrdenes_Viaje", true));
+            this.iDOrdenes_ViajeTextBox.Location = new System.Drawing.Point(183, 92);
+            this.iDOrdenes_ViajeTextBox.Name = "iDOrdenes_ViajeTextBox";
+            this.iDOrdenes_ViajeTextBox.ReadOnly = true;
+            this.iDOrdenes_ViajeTextBox.Size = new System.Drawing.Size(142, 20);
+            this.iDOrdenes_ViajeTextBox.TabIndex = 25;
+            this.iDOrdenes_ViajeTextBox.TextChanged += new System.EventHandler(this.iDOrdenes_ViajeTextBox_TextChanged);
+            // 
+            // orden_ViajeBindingSource
+            // 
+            this.orden_ViajeBindingSource.DataMember = "Orden_Viaje";
+            this.orden_ViajeBindingSource.DataSource = this.dataBaseDataSet;
+            // 
+            // dataBaseDataSet
+            // 
+            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
+            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDOrdenes_Viaje";
+            this.dataGridViewTextBoxColumn1.HeaderText = "IDOrdenes_Viaje";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cedula_Chofer";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Cedula_Chofer";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Vehiculos_NroPlaca";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Vehiculos_NroPlaca";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cedula_Cliente";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Cedula_Cliente";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Destino";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Destino";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Distancia_Esperada_Km";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Distancia_Esperada_Km";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Fecha_Inicio";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Fecha_Inicio";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Fecha_Finalizacion";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Fecha_Finalizacion";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Estatus";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Estatus";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // salir
+            // 
+            this.salir.BackColor = System.Drawing.Color.IndianRed;
+            this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.salir.FlatAppearance.BorderSize = 2;
+            this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salir.Location = new System.Drawing.Point(405, 351);
+            this.salir.Name = "salir";
+            this.salir.RadioBorde = 20;
+            this.salir.Size = new System.Drawing.Size(150, 40);
+            this.salir.TabIndex = 4;
+            this.salir.Text = "Volver al Menú";
+            this.salir.UseVisualStyleBackColor = false;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
+            // 
+            // modificar
+            // 
+            this.modificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.modificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.modificar.FlatAppearance.BorderSize = 2;
+            this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modificar.Location = new System.Drawing.Point(222, 351);
+            this.modificar.Name = "modificar";
+            this.modificar.RadioBorde = 20;
+            this.modificar.Size = new System.Drawing.Size(150, 40);
+            this.modificar.TabIndex = 3;
+            this.modificar.Text = "Modificar Orden";
+            this.modificar.UseVisualStyleBackColor = false;
+            this.modificar.Click += new System.EventHandler(this.modificar_Click);
+            // 
+            // agregar
+            // 
+            this.agregar.BackColor = System.Drawing.Color.YellowGreen;
+            this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.agregar.FlatAppearance.BorderSize = 2;
+            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregar.Location = new System.Drawing.Point(39, 351);
+            this.agregar.Name = "agregar";
+            this.agregar.RadioBorde = 20;
+            this.agregar.Size = new System.Drawing.Size(150, 40);
+            this.agregar.TabIndex = 2;
+            this.agregar.Text = "Agregar Orden";
+            this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
+            // 
             // orden_ViajeTableAdapter
             // 
             this.orden_ViajeTableAdapter.ClearBeforeFill = true;
@@ -412,16 +416,6 @@
             this.tableAdapterManager.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             this.tableAdapterManager.VehiculoTableAdapter = null;
-            // 
-            // iDOrdenes_ViajeTextBox
-            // 
-            this.iDOrdenes_ViajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "IDOrdenes_Viaje", true));
-            this.iDOrdenes_ViajeTextBox.Location = new System.Drawing.Point(183, 92);
-            this.iDOrdenes_ViajeTextBox.Name = "iDOrdenes_ViajeTextBox";
-            this.iDOrdenes_ViajeTextBox.ReadOnly = true;
-            this.iDOrdenes_ViajeTextBox.Size = new System.Drawing.Size(142, 20);
-            this.iDOrdenes_ViajeTextBox.TabIndex = 25;
-            this.iDOrdenes_ViajeTextBox.TextChanged += new System.EventHandler(this.iDOrdenes_ViajeTextBox_TextChanged);
             // 
             // Formordenes
             // 

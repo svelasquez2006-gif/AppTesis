@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,6 +29,7 @@ namespace AppTesis
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
+            cedulaTextBox.MaxLength = 8;
 
 
         }
@@ -125,6 +127,18 @@ namespace AppTesis
                 {
                     MessageBox.Show("Ha ocurrido un error inesperado , " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+            }
+        }
+
+        private void cedulaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string limpio = Regex.Replace(cedulaTextBox.Text, @"[^\d]", "");
+
+            // 2. Si cambió el texto, lo actualiza (evita bucles infinitos)
+            if (cedulaTextBox.Text != limpio)
+            {
+                cedulaTextBox.Text = limpio;
+                cedulaTextBox.SelectionStart = cedulaTextBox.Text.Length; // Mantiene el cursor al final
             }
         }
     }

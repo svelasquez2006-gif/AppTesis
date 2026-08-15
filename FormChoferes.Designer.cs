@@ -53,10 +53,6 @@
             this.estatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.choferBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnMenú = new System.Windows.Forms.Button();
             this.choferTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.ChoferTableAdapter();
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
@@ -67,6 +63,11 @@
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.licenciacombobox = new System.Windows.Forms.ComboBox();
             this.estatuscombobox = new System.Windows.Forms.ComboBox();
+            this.agregar = new BotonRedondo();
+            this.botonRedondo1 = new BotonRedondo();
+            this.salir = new BotonRedondo();
+            this.Filtro = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             cedulaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
@@ -114,7 +115,7 @@
             // 
             telefonoLabel.AutoSize = true;
             telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoLabel.Location = new System.Drawing.Point(62, 302);
+            telefonoLabel.Location = new System.Drawing.Point(59, 305);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(64, 16);
             telefonoLabel.TabIndex = 16;
@@ -175,11 +176,11 @@
             // 
             this.labelCédulaNombreBuscar.AutoSize = true;
             this.labelCédulaNombreBuscar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCédulaNombreBuscar.Location = new System.Drawing.Point(12, 105);
+            this.labelCédulaNombreBuscar.Location = new System.Drawing.Point(37, 105);
             this.labelCédulaNombreBuscar.Name = "labelCédulaNombreBuscar";
-            this.labelCédulaNombreBuscar.Size = new System.Drawing.Size(296, 30);
+            this.labelCédulaNombreBuscar.Size = new System.Drawing.Size(111, 30);
             this.labelCédulaNombreBuscar.TabIndex = 1;
-            this.labelCédulaNombreBuscar.Text = "Buscar por Cédula o Nombre";
+            this.labelCédulaNombreBuscar.Text = "Filtrar por";
             // 
             // txtBuscarChofer
             // 
@@ -304,61 +305,6 @@
             this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
             this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(139, 511);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(186, 23);
-            this.btnAgregar.TabIndex = 6;
-            this.btnAgregar.Text = "Agregar Nuevo";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(366, 511);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(186, 23);
-            this.btnModificar.TabIndex = 7;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(587, 511);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(186, 23);
-            this.btnEliminar.TabIndex = 8;
-            this.btnEliminar.Text = "Dar de Baja";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnMenú
-            // 
-            this.btnMenú.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnMenú.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenú.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenú.ForeColor = System.Drawing.Color.White;
-            this.btnMenú.Location = new System.Drawing.Point(801, 511);
-            this.btnMenú.Name = "btnMenú";
-            this.btnMenú.Size = new System.Drawing.Size(186, 23);
-            this.btnMenú.TabIndex = 9;
-            this.btnMenú.Text = "Volver al Menú";
-            this.btnMenú.UseVisualStyleBackColor = false;
-            this.btnMenú.Click += new System.EventHandler(this.btnMenú_Click);
-            // 
             // choferTableAdapter
             // 
             this.choferTableAdapter.ClearBeforeFill = true;
@@ -381,6 +327,7 @@
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(100, 20);
             this.cedulaTextBox.TabIndex = 11;
+            this.cedulaTextBox.TextChanged += new System.EventHandler(this.cedulaTextBox_TextChanged);
             // 
             // nombreTextBox
             // 
@@ -405,6 +352,7 @@
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(100, 20);
             this.telefonoTextBox.TabIndex = 17;
+            this.telefonoTextBox.TextChanged += new System.EventHandler(this.telefonoTextBox_TextChanged);
             // 
             // correoTextBox
             // 
@@ -449,12 +397,89 @@
             this.estatuscombobox.Size = new System.Drawing.Size(100, 21);
             this.estatuscombobox.TabIndex = 26;
             // 
+            // agregar
+            // 
+            this.agregar.BackColor = System.Drawing.Color.YellowGreen;
+            this.agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.agregar.FlatAppearance.BorderSize = 2;
+            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregar.Location = new System.Drawing.Point(247, 511);
+            this.agregar.Name = "agregar";
+            this.agregar.RadioBorde = 20;
+            this.agregar.Size = new System.Drawing.Size(238, 40);
+            this.agregar.TabIndex = 27;
+            this.agregar.Text = "Agregar Chofer";
+            this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
+            // 
+            // botonRedondo1
+            // 
+            this.botonRedondo1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.botonRedondo1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.botonRedondo1.FlatAppearance.BorderSize = 2;
+            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRedondo1.Location = new System.Drawing.Point(579, 511);
+            this.botonRedondo1.Name = "botonRedondo1";
+            this.botonRedondo1.RadioBorde = 20;
+            this.botonRedondo1.Size = new System.Drawing.Size(205, 40);
+            this.botonRedondo1.TabIndex = 30;
+            this.botonRedondo1.Text = "Modificar Chofer";
+            this.botonRedondo1.UseVisualStyleBackColor = false;
+            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
+            // 
+            // salir
+            // 
+            this.salir.BackColor = System.Drawing.Color.IndianRed;
+            this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.salir.FlatAppearance.BorderSize = 2;
+            this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salir.Location = new System.Drawing.Point(854, 511);
+            this.salir.Name = "salir";
+            this.salir.RadioBorde = 20;
+            this.salir.Size = new System.Drawing.Size(224, 40);
+            this.salir.TabIndex = 31;
+            this.salir.Text = "Cancelar";
+            this.salir.UseVisualStyleBackColor = false;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
+            // 
+            // Filtro
+            // 
+            this.Filtro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Filtro.FormattingEnabled = true;
+            this.Filtro.Items.AddRange(new object[] {
+            "<Selecionar>",
+            "Cedula",
+            "Nombre"});
+            this.Filtro.Location = new System.Drawing.Point(143, 113);
+            this.Filtro.Name = "Filtro";
+            this.Filtro.Size = new System.Drawing.Size(121, 21);
+            this.Filtro.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(261, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 30);
+            this.label2.TabIndex = 33;
+            this.label2.Text = ":";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // FormChoferes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1095, 572);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Filtro);
+            this.Controls.Add(this.salir);
+            this.Controls.Add(this.botonRedondo1);
+            this.Controls.Add(this.agregar);
             this.Controls.Add(this.estatuscombobox);
             this.Controls.Add(this.licenciacombobox);
             this.Controls.Add(cedulaLabel);
@@ -471,10 +496,6 @@
             this.Controls.Add(direccionLabel);
             this.Controls.Add(this.direccionTextBox);
             this.Controls.Add(estatusLabel);
-            this.Controls.Add(this.btnMenú);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvChoferes);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnBuscar);
@@ -500,10 +521,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.DataGridView dgvChoferes;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnMenú;
         private DataBaseDataSet dataBaseDataSet;
         private System.Windows.Forms.BindingSource choferBindingSource;
         private DataBaseDataSetTableAdapters.ChoferTableAdapter choferTableAdapter;
@@ -524,5 +541,10 @@
         private System.Windows.Forms.TextBox direccionTextBox;
         private System.Windows.Forms.ComboBox licenciacombobox;
         private System.Windows.Forms.ComboBox estatuscombobox;
+        private BotonRedondo agregar;
+        private BotonRedondo botonRedondo1;
+        private BotonRedondo salir;
+        private System.Windows.Forms.ComboBox Filtro;
+        private System.Windows.Forms.Label label2;
     }
 }

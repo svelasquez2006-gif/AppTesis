@@ -29,7 +29,7 @@ namespace AppTesis
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Mantenimiento' Puede moverla o quitarla según sea necesario.
             this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
-
+            nroPlacaTextBox.MaxLength = 7;
 
         }
 
@@ -43,10 +43,6 @@ namespace AppTesis
             else if (nroPlacaTextBox.Text.Length <7) {
                 MessageBox.Show("el numero de placa no puede tener menos de 7 digitos", "Verificar placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
-            else if (nroPlacaTextBox.Text.Length > 7)
-            {
-                MessageBox.Show("el numero de placa no puede tener mas de 7 digitos", "Verificar placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             else {
 
                 try
@@ -55,7 +51,7 @@ namespace AppTesis
                     string placa = nroPlacaTextBox.Text;
                     string formato = "yyyy-MM-dd";
                     DateTime.TryParseExact(fechaMantenimientoDateTimePicker.Text, formato, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime mantenimiento);
-                    string anotaciones = nroPlacaTextBox.Text;
+                    string anotaciones = anotacionesTextBox.Text;
                     this.mantenimientoTableAdapter.add(placa, mantenimiento, anotaciones);
                     this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
 
@@ -111,6 +107,11 @@ namespace AppTesis
         }
 
         private void mantenimientoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void nroPlacaTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

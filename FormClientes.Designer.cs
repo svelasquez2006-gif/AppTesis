@@ -234,6 +234,7 @@
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(100, 20);
             this.cedulaTextBox.TabIndex = 20;
+            this.cedulaTextBox.TextChanged += new System.EventHandler(this.cedulaTextBox_TextChanged);
             // 
             // nombreTextBox
             // 
@@ -258,6 +259,7 @@
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(100, 20);
             this.telefonoTextBox.TabIndex = 26;
+            this.telefonoTextBox.TextChanged += new System.EventHandler(this.telefonoTextBox_TextChanged);
             // 
             // correoTextBox
             // 

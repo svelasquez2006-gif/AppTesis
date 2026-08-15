@@ -330,6 +330,7 @@
             this.anioTextBox.Name = "anioTextBox";
             this.anioTextBox.Size = new System.Drawing.Size(156, 20);
             this.anioTextBox.TabIndex = 14;
+            this.anioTextBox.TextChanged += new System.EventHandler(this.anioTextBox_TextChanged);
             // 
             // colorTextBox
             // 

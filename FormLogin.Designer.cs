@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.login = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,6 +36,13 @@
             this.salir = new BotonRedondo();
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
             this.contrasenaTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.UsuarioTableAdapter();
+            this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // login
@@ -42,7 +50,7 @@
             this.login.AutoSize = true;
             this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login.Location = new System.Drawing.Point(40, 32);
+            this.login.Location = new System.Drawing.Point(88, 42);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(326, 42);
             this.login.TabIndex = 0;
@@ -63,7 +71,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(112, 144);
+            this.label3.Location = new System.Drawing.Point(112, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 24);
             this.label3.TabIndex = 5;
@@ -78,10 +86,10 @@
             this.iniciar_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iniciar_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iniciar_sesion.ForeColor = System.Drawing.Color.White;
-            this.iniciar_sesion.Location = new System.Drawing.Point(209, 195);
+            this.iniciar_sesion.Location = new System.Drawing.Point(35, 195);
             this.iniciar_sesion.Name = "iniciar_sesion";
             this.iniciar_sesion.RadioBorde = 20;
-            this.iniciar_sesion.Size = new System.Drawing.Size(151, 40);
+            this.iniciar_sesion.Size = new System.Drawing.Size(188, 40);
             this.iniciar_sesion.TabIndex = 8;
             this.iniciar_sesion.Text = "Iniciar Sesion";
             this.iniciar_sesion.UseVisualStyleBackColor = false;
@@ -94,10 +102,10 @@
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salir.ForeColor = System.Drawing.Color.White;
-            this.salir.Location = new System.Drawing.Point(29, 195);
+            this.salir.Location = new System.Drawing.Point(274, 195);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
-            this.salir.Size = new System.Drawing.Size(144, 40);
+            this.salir.Size = new System.Drawing.Size(173, 40);
             this.salir.TabIndex = 9;
             this.salir.Text = "Salir";
             this.salir.UseVisualStyleBackColor = false;
@@ -114,16 +122,54 @@
             // 
             this.contrasenaTextBox.Location = new System.Drawing.Point(231, 149);
             this.contrasenaTextBox.Name = "contrasenaTextBox";
-            this.contrasenaTextBox.PasswordChar = '*';
             this.contrasenaTextBox.Size = new System.Drawing.Size(129, 20);
             this.contrasenaTextBox.TabIndex = 21;
+            this.contrasenaTextBox.UseSystemPasswordChar = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(366, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 33);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "👁‍🗨";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // dataBaseDataSet
+            // 
+            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
+            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.dataBaseDataSet;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ChoferTableAdapter = null;
+            this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.Orden_ViajeTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
+            this.tableAdapterManager.VehiculoTableAdapter = null;
             // 
             // Formlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(401, 278);
+            this.ClientSize = new System.Drawing.Size(477, 259);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.usuarioTextBox);
             this.Controls.Add(this.contrasenaTextBox);
             this.Controls.Add(this.salir);
@@ -134,6 +180,8 @@
             this.Name = "Formlogin";
             this.Text = "Inicio de Sesion";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +196,10 @@
         private BotonRedondo salir;
         private System.Windows.Forms.TextBox usuarioTextBox;
         private System.Windows.Forms.TextBox contrasenaTextBox;
+        private System.Windows.Forms.Label label1;
+        private DataBaseDataSet dataBaseDataSet;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private DataBaseDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
+        private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

@@ -239,6 +239,7 @@
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(100, 22);
             this.cedulaTextBox.TabIndex = 7;
+            this.cedulaTextBox.TextChanged += new System.EventHandler(this.cedulaTextBox_TextChanged);
             // 
             // nombreTextBox
             // 

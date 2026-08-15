@@ -23,7 +23,7 @@ namespace AppTesis
             string rutaRaiz = Directory.GetParent(rutaEjecucion).Parent.Parent.FullName;
             AppDomain.CurrentDomain.SetData("DataDirectory", rutaRaiz);
 
-            Application.Run(new FormPrincipal());
+            Application.Run(new Formlogin());
         }
         
     }

@@ -6,8 +6,10 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AppTesis
 {
@@ -22,15 +24,49 @@ namespace AppTesis
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Chofer' Puede moverla o quitarla según sea necesario.
             this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
-
+            Filtro.SelectedItem = "<Selecionar>";
+            telefonoTextBox.MaxLength = 11;     
+            cedulaTextBox.MaxLength = 8;
 
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (cedulaTextBox.Text==""|| nombreTextBox.Text==""|| apellidoTextBox.Text==""||telefonoTextBox.Text==""||correoTextBox.Text==""||licenciacombobox.Text==""||direccionTextBox.Text==""||estatuscombobox.Text=="")
+     
+        }
+
+        private void btnMenú_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void choferBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.choferBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataBaseDataSet);
+
+        }
+
+        private void estatusTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void agregar_Click(object sender, EventArgs e)
+        {
+            if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || telefonoTextBox.Text == "" || correoTextBox.Text == "" || licenciacombobox.Text == "" || direccionTextBox.Text == "" || estatuscombobox.Text == "")
             {
-                MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (telefonoTextBox.Text.Length<10)
+            {
+                MessageBox.Show("El telefono no puede tener menos de 10 digitos", "Faltan Digitos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -70,31 +106,15 @@ namespace AppTesis
             }
         }
 
-        private void btnMenú_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FormPrincipal princpal = new FormPrincipal();
-            princpal.Show();
-        }
-
-        private void choferBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.choferBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataBaseDataSet);
-
-        }
-
-        private void estatusTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void botonRedondo1_Click(object sender, EventArgs e)
         {
             if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || telefonoTextBox.Text == "" || correoTextBox.Text == "" || licenciacombobox.Text == "" || direccionTextBox.Text == "" || estatuscombobox.Text == "")
             {
                 MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (telefonoTextBox.Text.Length < 10)
+            {
+                MessageBox.Show("El telefono no puede tener menos de 10 digitos", "Faltan Digitos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -127,6 +147,44 @@ namespace AppTesis
                 {
                     MessageBox.Show("Ha ocurrido un error inesperado , " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+            }
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormPrincipal princpal = new FormPrincipal();
+            princpal.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void telefonoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // 1. Elimina cualquier cosa que no sea un número
+            string limpio = Regex.Replace(telefonoTextBox.Text, @"[^\d]", "");
+
+            // 2. Si cambió el texto, lo actualiza (evita bucles infinitos)
+            if (telefonoTextBox.Text != limpio)
+            {
+                telefonoTextBox.Text = limpio;
+                telefonoTextBox.SelectionStart = telefonoTextBox.Text.Length; // Mantiene el cursor al final
+            }
+
+        }
+
+        private void cedulaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string limpio = Regex.Replace(cedulaTextBox.Text, @"[^\d]", "");
+
+            // 2. Si cambió el texto, lo actualiza (evita bucles infinitos)
+            if (cedulaTextBox.Text != limpio)
+            {
+                cedulaTextBox.Text = limpio;
+                cedulaTextBox.SelectionStart = cedulaTextBox.Text.Length; // Mantiene el cursor al final
             }
         }
     }

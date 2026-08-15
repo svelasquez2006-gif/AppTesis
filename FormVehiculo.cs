@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,7 +29,8 @@ namespace AppTesis
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Vehiculo' Puede moverla o quitarla según sea necesario.
             this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
-
+            nroPlacaTextBox.MaxLength = 7;
+            anioTextBox.MaxLength = 4;
 
         }
 
@@ -42,10 +44,7 @@ namespace AppTesis
             {
                 MessageBox.Show("el numero de placa no puede tener menos de 7 digitos", "Verificar placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (nroPlacaTextBox.Text.Length > 7)
-            {
-                MessageBox.Show("el numero de placa no puede tener mas de 7 digitos", "Verificar placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
             else
             {
                 try
@@ -129,11 +128,34 @@ namespace AppTesis
                     string estatus = estatuscombobox.Text;
                     this.vehiculoTableAdapter.Modify( marca, modelo, anio, color, estatus,placa);
                 }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 2627 || ex.Number == 2601)
+                    {
+                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error inesperado en la base de datos, " + ex.Message, "Error en la Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Ha ocurrido un error inesperado , " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
+            }
+        }
+
+        private void anioTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string limpio = Regex.Replace(anioTextBox.Text, @"[^\d]", "");
+
+            // 2. Si cambió el texto, lo actualiza (evita bucles infinitos)
+            if (anioTextBox.Text != limpio)
+            {
+                anioTextBox.Text = limpio;
+                anioTextBox.SelectionStart = anioTextBox.Text.Length; // Mantiene el cursor al final
             }
         }
     }

@@ -19,6 +19,10 @@ namespace AppTesis
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Orden_Viaje' Puede moverla o quitarla según sea necesario.
+            this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
+            // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Mantenimiento' Puede moverla o quitarla según sea necesario.
+            this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
 
         }
 
@@ -68,6 +72,14 @@ namespace AppTesis
         {
             FormCliente insertar=new FormCliente();
             insertar.ShowDialog();
+        }
+
+        private void mantenimientoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.mantenimientoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataBaseDataSet);
+
         }
     }
 }
