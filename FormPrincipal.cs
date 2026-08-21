@@ -24,6 +24,16 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Mantenimiento' Puede moverla o quitarla según sea necesario.
             this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
 
+            labelUser.Text = $"{SesionUsuario.Nombre} {SesionUsuario.Apellido}";
+            labelRol.Text = SesionUsuario.Jerarquia;
+            labelHora.Text = DateTime.Now.ToString();
+            string jefe = "Jefe";
+            string secre = "Secretario";
+            if (SesionUsuario.Jerarquia != jefe && SesionUsuario.Jerarquia != secre && SesionUsuario.Jerarquia!= "Developer")
+            {
+                Usuarios.Hide();
+            }
+
         }
 
         private void buttonChoferes_Click(object sender, EventArgs e)
@@ -40,6 +50,10 @@ namespace AppTesis
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            SesionUsuario.Apellido = null;
+            SesionUsuario.Nombre = null;
+            SesionUsuario.Jerarquia = null;
+            SesionUsuario.Cedula = null;
             this.Hide();
             Formlogin login=new Formlogin();
             login.Show();
@@ -62,6 +76,7 @@ namespace AppTesis
 
         private void Usuarios_Click(object sender, EventArgs e)
         {
+
             this.Hide();
             FormUsuarios usuario =new FormUsuarios();
             usuario.Show();
@@ -79,6 +94,23 @@ namespace AppTesis
             this.Validate();
             this.mantenimientoBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dataBaseDataSet);
+
+        }
+
+        private void labelUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rutas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRutas rutas = new FormRutas();
+            rutas.Show();
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

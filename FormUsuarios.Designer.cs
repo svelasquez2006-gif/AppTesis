@@ -288,6 +288,7 @@
             // 
             // jerarquiacomboBox
             // 
+            this.jerarquiacomboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Jerarquia", true));
             this.jerarquiacomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jerarquiacomboBox.FormattingEnabled = true;
             this.jerarquiacomboBox.Items.AddRange(new object[] {
@@ -358,6 +359,8 @@
             this.tableAdapterManager1.ClienteTableAdapter = null;
             this.tableAdapterManager1.MantenimientoTableAdapter = null;
             this.tableAdapterManager1.Orden_ViajeTableAdapter = null;
+            this.tableAdapterManager1.RegistroAccionesTableAdapter = null;
+            this.tableAdapterManager1.RutasTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.UsuarioTableAdapter = this.usuarioTableAdapter;
             this.tableAdapterManager1.VehiculoTableAdapter = null;

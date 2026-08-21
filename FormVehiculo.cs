@@ -30,13 +30,13 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Vehiculo' Puede moverla o quitarla según sea necesario.
             this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
             nroPlacaTextBox.MaxLength = 7;
-            anioTextBox.MaxLength = 4;
+            
 
         }
 
         private void agregar_Click(object sender, EventArgs e)
         {
-            if(nroPlacaTextBox.Text==""|| marcaTextBox.Text==""||modeloTextBox.Text==""||anioTextBox.Text==""||colorTextBox.Text==""|| estatuscombobox.Text == "")
+            if(nroPlacaTextBox.Text==""|| marcaTextBox.Text==""||modeloTextBox.Text==""||AñoDatePicker.Text==""||colorTextBox.Text==""|| estatuscombobox.Text == "")
             {
                 MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -52,10 +52,11 @@ namespace AppTesis
                     string placa = nroPlacaTextBox.Text;
                     string marca = marcaTextBox.Text;
                     string modelo = modeloTextBox.Text;
-                    int.TryParse(anioTextBox.Text, out int anio);
+                    string tipo_vehiculo = TipoComboBox.Text;
+                    int.TryParse(AñoDatePicker.Text, out int anio);
                     string color = colorTextBox.Text;
                     string estatus = estatuscombobox.Text;
-                    this.vehiculoTableAdapter.add(placa, marca, modelo, anio, color, estatus);
+                    this.vehiculoTableAdapter.add(placa,tipo_vehiculo, marca, modelo, anio, color, estatus);
                     this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
                 }
                 catch (NullReferenceException)
@@ -112,7 +113,7 @@ namespace AppTesis
 
         private void modificar_Click(object sender, EventArgs e)
         {
-            if (nroPlacaTextBox.Text == "" || marcaTextBox.Text == "" || modeloTextBox.Text == "" || anioTextBox.Text == "" || colorTextBox.Text == "" || estatuscombobox.Text == "")
+            if (nroPlacaTextBox.Text == "" || marcaTextBox.Text == "" || modeloTextBox.Text == "" || AñoDatePicker.Text == "" || colorTextBox.Text == "" || estatuscombobox.Text == "")
             {
                 MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -121,12 +122,13 @@ namespace AppTesis
                 try
                 {
                     string placa = nroPlacaTextBox.Text;
+                    string tipo_vehiculo = TipoComboBox.Text;
                     string marca = marcaTextBox.Text;
                     string modelo = modeloTextBox.Text;
-                    int.TryParse(anioTextBox.Text, out int anio);
+                    int.TryParse(AñoDatePicker.Text, out int anio);
                     string color = colorTextBox.Text;
                     string estatus = estatuscombobox.Text;
-                    this.vehiculoTableAdapter.Modify( marca, modelo, anio, color, estatus,placa);
+                    this.vehiculoTableAdapter.modify(tipo_vehiculo, marca, modelo, anio, color, estatus,placa);
                 }
                 catch (SqlException ex)
                 {
@@ -147,7 +149,7 @@ namespace AppTesis
             }
         }
 
-        private void anioTextBox_TextChanged(object sender, EventArgs e)
+        /*private void anioTextBox_TextChanged(object sender, EventArgs e)
         {
             string limpio = Regex.Replace(anioTextBox.Text, @"[^\d]", "");
 
@@ -157,6 +159,6 @@ namespace AppTesis
                 anioTextBox.Text = limpio;
                 anioTextBox.SelectionStart = anioTextBox.Text.Length; // Mantiene el cursor al final
             }
-        }
+        }*/
     }
 }

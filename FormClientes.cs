@@ -39,10 +39,17 @@ namespace AppTesis
         private void agregar_Click(object sender, EventArgs e)
         {
 
-            if (cedulaTextBox.Text==""||nombreTextBox.Text==""||apellidoTextBox.Text=="" ||telefonoTextBox.Text==""||correoTextBox.Text=="") 
+            if (cedulaTextBox.Text==""||nombreTextBox.Text==""||apellidoTextBox.Text=="" ||telefonoTextBox.Text==""||correoTextBox.Text=="" ||TipoComboBox.Text=="") 
             {
                 MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            else if (cedulaTextBox.Text.Length < 7)
+            {
+                MessageBox.Show("No se puede registrar clientes con cedulas menores a 7 digitos", "Corregir longitud de Cedula", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+
             else if (telefonoTextBox.Text.Length < 10)
             {
                 MessageBox.Show("El telefono no puede tener menos de 10 digitos", "Faltan Digitos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -56,8 +63,10 @@ namespace AppTesis
                     string apellido = apellidoTextBox.Text;
                     string telefono = telefonoTextBox.Text;
                     string correo = correoTextBox.Text;
+                    string dirreccion = DirrecionTextBox.Text;
+                    string tipo = TipoComboBox.Text;
 
-                    this.clienteTableAdapter.add(cedula, nombre, apellido, telefono, correo);
+                    this.clienteTableAdapter.add(cedula, nombre, apellido, telefono, correo,dirreccion,tipo);
                     this.clienteTableAdapter.Fill(this.dataBaseDataSet.Cliente);
                 }
                 catch (NullReferenceException)
@@ -68,7 +77,7 @@ namespace AppTesis
                 {
                     if (ex.Number == 2627 || ex.Number == 2601)
                     {
-                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Intentas ingresar una cedula o rif que ya pertenece a otro cliente.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
@@ -93,10 +102,16 @@ namespace AppTesis
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-            if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || telefonoTextBox.Text == "" || correoTextBox.Text == "")
+            if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || telefonoTextBox.Text == "" || correoTextBox.Text == "" || TipoComboBox.Text=="")
             {
                 MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            else if (cedulaTextBox.Text.Length < 7)
+            {
+                MessageBox.Show("No se puede registrar clientes con cedulas menores a 7 digitos", "Corregir longitud de Cedula", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             else if (telefonoTextBox.Text.Length < 10)
             {
                 MessageBox.Show("El telefono no puede tener menos de 10 digitos", "Faltan Digitos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -110,8 +125,10 @@ namespace AppTesis
                     string apellido = apellidoTextBox.Text;
                     string telefono = telefonoTextBox.Text;
                     string correo = correoTextBox.Text;
+                    string dirreccion = DirrecionTextBox.Text;
+                    string tipo = TipoComboBox.Text;
 
-                    this.clienteTableAdapter.modify( nombre, apellido, telefono, correo,cedula);
+                    this.clienteTableAdapter.modify( nombre, apellido, telefono, correo,dirreccion,tipo,cedula);
                 }
                 catch (Exception ex)
 
@@ -144,6 +161,11 @@ namespace AppTesis
                 telefonoTextBox.Text = limpio;
                 telefonoTextBox.SelectionStart = telefonoTextBox.Text.Length; // Mantiene el cursor al final
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

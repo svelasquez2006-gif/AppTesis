@@ -27,20 +27,22 @@ namespace AppTesis
 
         private void FormMantenimiento_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Vehiculo' Puede moverla o quitarla según sea necesario.
+            this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Mantenimiento' Puede moverla o quitarla según sea necesario.
             this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
-            nroPlacaTextBox.MaxLength = 7;
+            
 
         }
 
         private void agregar_Click(object sender, EventArgs e)
         {
 
-            if (nroPlacaTextBox.Text == "" || anotacionesTextBox.Text == "")
+            if (PlacaComboBox.Text == "" || anotacionesTextBox.Text == ""|| fechaMantenimientoDateTimePicker.Text==""|| tasa_USDTextBox.Text==""||coste_BSTextBox.Text=="")
             {
                 MessageBox.Show("Se esta enviado un campo vacio", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
-            else if (nroPlacaTextBox.Text.Length <7) {
+            else if (PlacaComboBox.Text.Length <7) {
                 MessageBox.Show("el numero de placa no puede tener menos de 7 digitos", "Verificar placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
             else {
@@ -48,11 +50,12 @@ namespace AppTesis
                 try
                 {
                     int.TryParse(codMantenimientoTextBox.Text, out int codmantenimiento);
-                    string placa = nroPlacaTextBox.Text;
-                    string formato = "yyyy-MM-dd";
-                    DateTime.TryParseExact(fechaMantenimientoDateTimePicker.Text, formato, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime mantenimiento);
+                    string placa = PlacaComboBox.Text;
+                    DateTime fecha = fechaMantenimientoDateTimePicker.Value;
                     string anotaciones = anotacionesTextBox.Text;
-                    this.mantenimientoTableAdapter.add(placa, mantenimiento, anotaciones);
+                    decimal.TryParse(tasa_USDTextBox.Text,out decimal tasa);
+                    decimal.TryParse(coste_BSTextBox.Text, out decimal coste);
+                    this.mantenimientoTableAdapter.add(placa, fecha, anotaciones,tasa,coste);
                     this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
 
                 }
@@ -114,6 +117,16 @@ namespace AppTesis
         private void nroPlacaTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tasa_USDLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PlacaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

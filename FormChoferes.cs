@@ -22,11 +22,14 @@ namespace AppTesis
 
         private void FormChoferes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Rutas' Puede moverla o quitarla según sea necesario.
+            this.rutasTableAdapter.Fill(this.dataBaseDataSet.Rutas);
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Chofer' Puede moverla o quitarla según sea necesario.
             this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
             Filtro.SelectedItem = "<Selecionar>";
             telefonoTextBox.MaxLength = 11;     
             cedulaTextBox.MaxLength = 8;
+            experienciaTextBox.MaxLength = 2;
 
         }
 
@@ -64,6 +67,10 @@ namespace AppTesis
             {
                 MessageBox.Show("No se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if(cedulaTextBox.Text.Length<7)
+            {
+                MessageBox.Show("No se puede registrar Choferes con cedulas menores a 7 digitos", "Corregir longitud de Cedula", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else if (telefonoTextBox.Text.Length<10)
             {
                 MessageBox.Show("El telefono no puede tener menos de 10 digitos", "Faltan Digitos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -75,12 +82,17 @@ namespace AppTesis
                     string cedula = cedulaTextBox.Text;
                     string nombre = nombreTextBox.Text;
                     string apellido = apellidoTextBox.Text;
+                    DateTime fechaNacimiento = fecha_NacimientoDateTimePicker.Value;
+                    int.TryParse(edadTextBox.Text, out int ed);
                     string telefono = telefonoTextBox.Text;
                     string correo = correoTextBox.Text;
                     int.TryParse(licenciacombobox.Text, out int licencia);
+                    int.TryParse(experienciaTextBox.Text, out int experiencia);
                     string dirreccion = direccionTextBox.Text;
+                    string ruta = RutaComboBox.Text;
                     string estatus = estatuscombobox.Text;
-                    this.choferTableAdapter.add(cedula, nombre, apellido, telefono, correo, licencia, dirreccion, estatus);
+                    string afiliacion = AfiliacionComboBox.Text;
+                    this.choferTableAdapter.add(cedula, nombre, apellido,fechaNacimiento,ed, telefono, correo, licencia,experiencia, dirreccion,ruta, estatus,afiliacion);
                     this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
 
                 }
@@ -92,7 +104,7 @@ namespace AppTesis
                 {
                     if (ex.Number == 2627 || ex.Number == 2601)
                     {
-                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Intentas ingresar Una cedula que ya pertenece a otro chofer.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
@@ -112,6 +124,12 @@ namespace AppTesis
             {
                 MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            else if (cedulaTextBox.Text.Length < 7)
+            {
+                MessageBox.Show("No se puede registrar Choferes con cedulas menores a 7 digitos", "Corregir longitud de Cedula", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             else if (telefonoTextBox.Text.Length < 10)
             {
                 MessageBox.Show("El telefono no puede tener menos de 10 digitos", "Faltan Digitos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -123,12 +141,17 @@ namespace AppTesis
                     string cedula = cedulaTextBox.Text;
                     string nombre = nombreTextBox.Text;
                     string apellido = apellidoTextBox.Text;
+                    DateTime fechaNacimiento = fecha_NacimientoDateTimePicker.Value;
+                    int.TryParse(edadTextBox.Text, out int ed);
                     string telefono = telefonoTextBox.Text;
                     string correo = correoTextBox.Text;
                     int.TryParse(licenciacombobox.Text, out int licencia);
+                    int.TryParse(experienciaTextBox.Text, out int experiencia);
                     string dirreccion = direccionTextBox.Text;
+                    string ruta = RutaComboBox.Text;
                     string estatus = estatuscombobox.Text;
-                    this.choferTableAdapter.Modify(nombre, apellido, telefono, correo, licencia, dirreccion, estatus, cedula);
+                    string afiliacion = AfiliacionComboBox.Text;
+                    this.choferTableAdapter.modify(nombre, apellido,fechaNacimiento,ed, telefono, correo, licencia ,experiencia, dirreccion,ruta, estatus,afiliacion, cedula);
 
                 }
 
@@ -136,7 +159,7 @@ namespace AppTesis
                 {
                     if (ex.Number == 2627 || ex.Number == 2601)
                     {
-                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Intentas ingresar Una cedula que ya pertenece a otro chofer.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
@@ -186,6 +209,30 @@ namespace AppTesis
                 cedulaTextBox.Text = limpio;
                 cedulaTextBox.SelectionStart = cedulaTextBox.Text.Length; // Mantiene el cursor al final
             }
+        }
+
+        private void fecha_NacimientoDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            // 1. Obtener la fecha seleccionada en el DatePicker
+            DateTime fechaNacimiento = fecha_NacimientoDateTimePicker.Value;
+            DateTime fechaActual = DateTime.Today;
+
+            // 2. Calcular la diferencia inicial en años
+            int edad = fechaActual.Year - fechaNacimiento.Year;
+
+            // 3. Ajustar si no ha pasado su cumpleaños este año
+            if (fechaNacimiento.Date > fechaActual.AddYears(-edad))
+            {
+                edad--;
+            }
+
+            // El resultado está en la variable 'edad'
+            edadTextBox.Text = edad.ToString();
+        }
+
+        private void experienciaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

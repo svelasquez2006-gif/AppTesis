@@ -30,42 +30,52 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
             cedulaTextBox.MaxLength = 8;
+            
 
 
         }
 
         private void agregar_Click(object sender, EventArgs e)
         {
+            bool existe = ExisteUsuario(usuarioTextBox.Text.Trim());
 
             if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || usuarioTextBox.Text == "" || contrasenaTextBox.Text == "" || correoTextBox.Text == "" || jerarquiacomboBox == null)
             {
                 MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            else if(existe)
+            {
+                MessageBox.Show("Ya Esxiste este Usuario, Porfavor Ingrese Otro","Usuario Existente",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+
             else
             {
                 try
                 {
 
                     string cedula = cedulaTextBox.Text;
-                    string nombre = nombreTextBox.Text;
-                    string apellido = apellidoTextBox.Text;
-                    string usuario = usuarioTextBox.Text;
-                    string contrasena = contrasenaTextBox.Text;
-                    string correo = correoTextBox.Text;
+                    string nombre = nombreTextBox.Text.Trim();
+                    string apellido = apellidoTextBox.Text.Trim();
+                    string usuario = usuarioTextBox.Text.Trim();
+                    string contrasena = contrasenaTextBox.Text.Trim();
+                    string correo = correoTextBox.Text.Trim();
                     string jerarquia = jerarquiacomboBox.Text;
                     this.usuarioTableAdapter.add(cedula, nombre, apellido, usuario, contrasena, correo, jerarquia);
                     this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
                     usuarioDataGridView.Refresh();
                 }
+                //valores nulos 
                 catch (NullReferenceException)
                 {
                     MessageBox.Show("Un campo fue enviado vacio", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+                //exepceiones de sql para vlor indice duplicado y error inesperado
                 catch (SqlException ex)
                 {
                     if (ex.Number == 2627 || ex.Number == 2601)
                     {
-                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("La Cedula que intentaste Ingresar Ya la Posee otro usuario..", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
@@ -74,7 +84,7 @@ namespace AppTesis
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ha ocurrido un error inesperado , " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Ha ocurrido un error inesperado , Por Favor contacte a soporte tecnico para resolverlo" + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -82,16 +92,23 @@ namespace AppTesis
         private void salir_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormPrincipal principal= new FormPrincipal();
+            FormPrincipal principal = new FormPrincipal();
             principal.Show();
         }
 
         private void modificar_Click(object sender, EventArgs e)
         {
+            bool existe = ExisteUsuario(usuarioTextBox.Text.Trim());
 
             if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || usuarioTextBox.Text == "" || contrasenaTextBox.Text == "" || correoTextBox.Text == "" || jerarquiacomboBox == null)
             {
                 MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
+            else if (existe)
+            {
+                MessageBox.Show("Ya Esxiste este Usuario, Porfavor Ingrese Otro", "Usuario Existente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -99,30 +116,37 @@ namespace AppTesis
                 {
 
                     string cedula = cedulaTextBox.Text;
-                    string nombre = nombreTextBox.Text;
-                    string apellido = apellidoTextBox.Text;
-                    string usuario = usuarioTextBox.Text;
-                    string contrasena = contrasenaTextBox.Text;
-                    string correo = correoTextBox.Text;
+                    string nombre = nombreTextBox.Text.Trim();
+                    string apellido = apellidoTextBox.Text.Trim();
+                    string usuario = usuarioTextBox.Text.Trim();
+                    string contrasena = contrasenaTextBox.Text.Trim();
+                    string correo = correoTextBox.Text.Trim();
                     string jerarquia = jerarquiacomboBox.Text;
-                    this.usuarioTableAdapter.modify( nombre, apellido, usuario, contrasena, correo, jerarquia, cedula);
+                    this.usuarioTableAdapter.modify(nombre, apellido, usuario, contrasena, correo, jerarquia, cedula);
                     usuarioDataGridView.Refresh();
                 }
+
+                //Valor nulos
                 catch (NullReferenceException)
                 {
                     MessageBox.Show("Un campo fue enviado vacio", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+
+                //exepceiones de sql para vlor indice duplicado y error inesperado
                 catch (SqlException ex)
                 {
+
                     if (ex.Number == 2627 || ex.Number == 2601)
                     {
-                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("La Cedula que intentaste Ingresar Ya la Posee otro usuario.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
+
                     else
                     {
                         MessageBox.Show("Ha ocurrido un error inesperado en la base de datos, " + ex.Message, "Error en la Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show("Ha ocurrido un error inesperado , " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -139,6 +163,30 @@ namespace AppTesis
             {
                 cedulaTextBox.Text = limpio;
                 cedulaTextBox.SelectionStart = cedulaTextBox.Text.Length; // Mantiene el cursor al final
+            }
+        }
+
+        private bool ExisteUsuario(string usuario)
+        {
+            try
+            {
+                // Llamamos al método pasando solo los 2 argumentos que te pide: usuario y contraseña
+                string resultado = this.usuarioTableAdapter.ExistUsuario(usuario);
+
+                // Si la base de datos encontró coincidencia, el resultado no será nulo ni vacío
+                if (!string.IsNullOrEmpty(resultado))
+                {
+                    return true;  // Login correcto
+                }
+                else
+                {
+                    return false; // Login incorrecto
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de conexión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
     }

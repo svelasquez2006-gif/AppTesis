@@ -35,6 +35,7 @@
             System.Windows.Forms.Label anioLabel;
             System.Windows.Forms.Label colorLabel;
             System.Windows.Forms.Label estatusLabel;
+            System.Windows.Forms.Label tipo_VehiculoLabel;
             this.agregar = new BotonRedondo();
             this.modificar = new BotonRedondo();
             this.salir = new BotonRedondo();
@@ -55,15 +56,17 @@
             this.nroPlacaTextBox = new System.Windows.Forms.TextBox();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.modeloTextBox = new System.Windows.Forms.TextBox();
-            this.anioTextBox = new System.Windows.Forms.TextBox();
             this.colorTextBox = new System.Windows.Forms.TextBox();
             this.estatuscombobox = new System.Windows.Forms.ComboBox();
+            this.AñoDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.TipoComboBox = new System.Windows.Forms.ComboBox();
             nroPlacaLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             modeloLabel = new System.Windows.Forms.Label();
             anioLabel = new System.Windows.Forms.Label();
             colorLabel = new System.Windows.Forms.Label();
             estatusLabel = new System.Windows.Forms.Label();
+            tipo_VehiculoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoDataGridView)).BeginInit();
@@ -73,7 +76,7 @@
             // 
             nroPlacaLabel.AutoSize = true;
             nroPlacaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nroPlacaLabel.Location = new System.Drawing.Point(89, 104);
+            nroPlacaLabel.Location = new System.Drawing.Point(89, 78);
             nroPlacaLabel.Name = "nroPlacaLabel";
             nroPlacaLabel.Size = new System.Drawing.Size(70, 16);
             nroPlacaLabel.TabIndex = 7;
@@ -128,6 +131,16 @@
             estatusLabel.Size = new System.Drawing.Size(54, 16);
             estatusLabel.TabIndex = 19;
             estatusLabel.Text = "Estatus:";
+            // 
+            // tipo_VehiculoLabel
+            // 
+            tipo_VehiculoLabel.AutoSize = true;
+            tipo_VehiculoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            tipo_VehiculoLabel.Location = new System.Drawing.Point(66, 102);
+            tipo_VehiculoLabel.Name = "tipo_VehiculoLabel";
+            tipo_VehiculoLabel.Size = new System.Drawing.Size(93, 16);
+            tipo_VehiculoLabel.TabIndex = 21;
+            tipo_VehiculoLabel.Text = "Tipo Vehiculo:";
             // 
             // agregar
             // 
@@ -225,6 +238,8 @@
             this.tableAdapterManager.ClienteTableAdapter = null;
             this.tableAdapterManager.MantenimientoTableAdapter = null;
             this.tableAdapterManager.Orden_ViajeTableAdapter = null;
+            this.tableAdapterManager.RegistroAccionesTableAdapter = null;
+            this.tableAdapterManager.RutasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             this.tableAdapterManager.VehiculoTableAdapter = this.vehiculoTableAdapter;
@@ -253,7 +268,7 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "NroPlaca";
-            this.dataGridViewTextBoxColumn1.HeaderText = "NroPlaca";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Numero de Placa";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
@@ -274,7 +289,7 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Anio";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Anio";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Año";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
@@ -288,7 +303,7 @@
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "UltimoMantenimiento";
-            this.dataGridViewTextBoxColumn6.HeaderText = "UltimoMantenimiento";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Fecha del Ultimo Mantenimiento";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
@@ -302,7 +317,7 @@
             // nroPlacaTextBox
             // 
             this.nroPlacaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "NroPlaca", true));
-            this.nroPlacaTextBox.Location = new System.Drawing.Point(165, 102);
+            this.nroPlacaTextBox.Location = new System.Drawing.Point(165, 76);
             this.nroPlacaTextBox.Name = "nroPlacaTextBox";
             this.nroPlacaTextBox.Size = new System.Drawing.Size(156, 20);
             this.nroPlacaTextBox.TabIndex = 8;
@@ -323,15 +338,6 @@
             this.modeloTextBox.Size = new System.Drawing.Size(156, 20);
             this.modeloTextBox.TabIndex = 12;
             // 
-            // anioTextBox
-            // 
-            this.anioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Anio", true));
-            this.anioTextBox.Location = new System.Drawing.Point(165, 180);
-            this.anioTextBox.Name = "anioTextBox";
-            this.anioTextBox.Size = new System.Drawing.Size(156, 20);
-            this.anioTextBox.TabIndex = 14;
-            this.anioTextBox.TextChanged += new System.EventHandler(this.anioTextBox_TextChanged);
-            // 
             // colorTextBox
             // 
             this.colorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Color", true));
@@ -342,6 +348,7 @@
             // 
             // estatuscombobox
             // 
+            this.estatuscombobox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Estatus", true));
             this.estatuscombobox.FormattingEnabled = true;
             this.estatuscombobox.Items.AddRange(new object[] {
             "Disponible",
@@ -352,12 +359,38 @@
             this.estatuscombobox.Size = new System.Drawing.Size(156, 21);
             this.estatuscombobox.TabIndex = 20;
             // 
+            // AñoDatePicker
+            // 
+            this.AñoDatePicker.CustomFormat = "yyyy";
+            this.AñoDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.AñoDatePicker.Location = new System.Drawing.Point(165, 177);
+            this.AñoDatePicker.Name = "AñoDatePicker";
+            this.AñoDatePicker.Size = new System.Drawing.Size(63, 20);
+            this.AñoDatePicker.TabIndex = 21;
+            // 
+            // TipoComboBox
+            // 
+            this.TipoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Tipo_Vehiculo", true));
+            this.TipoComboBox.FormattingEnabled = true;
+            this.TipoComboBox.Items.AddRange(new object[] {
+            "Autobus",
+            "Camioneta",
+            "Automovil",
+            "Trailer"});
+            this.TipoComboBox.Location = new System.Drawing.Point(165, 102);
+            this.TipoComboBox.Name = "TipoComboBox";
+            this.TipoComboBox.Size = new System.Drawing.Size(156, 21);
+            this.TipoComboBox.TabIndex = 22;
+            // 
             // Formvehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1116, 415);
+            this.Controls.Add(this.TipoComboBox);
+            this.Controls.Add(tipo_VehiculoLabel);
+            this.Controls.Add(this.AñoDatePicker);
             this.Controls.Add(this.estatuscombobox);
             this.Controls.Add(nroPlacaLabel);
             this.Controls.Add(this.nroPlacaTextBox);
@@ -366,7 +399,6 @@
             this.Controls.Add(modeloLabel);
             this.Controls.Add(this.modeloTextBox);
             this.Controls.Add(anioLabel);
-            this.Controls.Add(this.anioTextBox);
             this.Controls.Add(colorLabel);
             this.Controls.Add(this.colorTextBox);
             this.Controls.Add(estatusLabel);
@@ -398,6 +430,13 @@
         private DataBaseDataSetTableAdapters.VehiculoTableAdapter vehiculoTableAdapter;
         private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView vehiculoDataGridView;
+        private System.Windows.Forms.TextBox nroPlacaTextBox;
+        private System.Windows.Forms.TextBox marcaTextBox;
+        private System.Windows.Forms.TextBox modeloTextBox;
+        private System.Windows.Forms.TextBox colorTextBox;
+        private System.Windows.Forms.ComboBox estatuscombobox;
+        private System.Windows.Forms.DateTimePicker AñoDatePicker;
+        private System.Windows.Forms.ComboBox TipoComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -405,11 +444,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.TextBox nroPlacaTextBox;
-        private System.Windows.Forms.TextBox marcaTextBox;
-        private System.Windows.Forms.TextBox modeloTextBox;
-        private System.Windows.Forms.TextBox anioTextBox;
-        private System.Windows.Forms.TextBox colorTextBox;
-        private System.Windows.Forms.ComboBox estatuscombobox;
     }
 }

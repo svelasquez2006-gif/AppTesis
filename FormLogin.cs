@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace AppTesis
 {
     public partial class Formlogin : Form
@@ -39,7 +40,7 @@ namespace AppTesis
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)
@@ -70,6 +71,32 @@ namespace AppTesis
                     if(esvalido)
                     {
                         MessageBox.Show($"Inicio de Sesion Exitoso, Bienvenido {usuario}","Inicio de Sesion Exitoso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+
+                        try
+                        {
+                            // 1. Desactivamos las restricciones del DataSet
+                            
+
+                            // 2. Llenamos la tabla normalmente
+                            var dtUsuario = this.usuarioTableAdapter.GetDataByUsuario(usuario);
+                            if (dtUsuario.Rows.Count > 0)
+                            {
+                                // 3. Guardamos los datos en la clase estática de sesión
+                                SesionUsuario.Nombre = dtUsuario.Rows[0]["Nombre"].ToString();
+                                SesionUsuario.Apellido = dtUsuario.Rows[0]["Apellido"].ToString();
+                                SesionUsuario.Jerarquia = dtUsuario.Rows[0]["Jerarquia"].ToString();
+                                SesionUsuario.Cedula = dtUsuario.Rows[0]["Cedula"].ToString();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al cargar datos: " + ex.Message);
+                        }
+
+                        
+
+
 
                         this.Hide();
                         FormPrincipal Principal = new FormPrincipal();

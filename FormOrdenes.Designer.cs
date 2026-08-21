@@ -29,145 +29,270 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label iDOrdenes_ViajeLabel;
             System.Windows.Forms.Label cedula_ChoferLabel;
             System.Windows.Forms.Label vehiculos_NroPlacaLabel;
             System.Windows.Forms.Label cedula_ClienteLabel;
             System.Windows.Forms.Label destinoLabel;
-            System.Windows.Forms.Label distancia_Esperada_KmLabel;
             System.Windows.Forms.Label fecha_InicioLabel;
             System.Windows.Forms.Label fecha_FinalizacionLabel;
             System.Windows.Forms.Label estatusLabel;
-            System.Windows.Forms.Label iDOrdenes_ViajeLabel;
+            System.Windows.Forms.Label rutaLabel;
+            System.Windows.Forms.Label dias_ViajeLabel;
+            System.Windows.Forms.Label distanciaLabel;
+            System.Windows.Forms.Label origenLabel;
+            System.Windows.Forms.Label paradasLabel;
+            System.Windows.Forms.Label tasa_USDLabel;
+            System.Windows.Forms.Label pago_BSLabel;
+            System.Windows.Forms.Label BS;
+            System.Windows.Forms.Label USD;
             this.label1 = new System.Windows.Forms.Label();
             this.orden_ViajeDataGridView = new System.Windows.Forms.DataGridView();
-            this.cedula_ChoferTextBox = new System.Windows.Forms.TextBox();
-            this.vehiculos_NroPlacaTextBox = new System.Windows.Forms.TextBox();
-            this.cedula_ClienteTextBox = new System.Windows.Forms.TextBox();
-            this.destinoTextBox = new System.Windows.Forms.TextBox();
-            this.distancia_Esperada_KmTextBox = new System.Windows.Forms.TextBox();
-            this.fecha_InicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.fecha_FinalizacionDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Estatuscombobox = new System.Windows.Forms.ComboBox();
-            this.iDOrdenes_ViajeTextBox = new System.Windows.Forms.TextBox();
             this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salir = new BotonRedondo();
             this.modificar = new BotonRedondo();
             this.agregar = new BotonRedondo();
             this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
+            this.iDOrdenes_ViajeTextBox = new System.Windows.Forms.TextBox();
+            this.destinoTextBox = new System.Windows.Forms.TextBox();
+            this.fecha_InicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.fecha_FinalizacionDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dias_ViajeTextBox = new System.Windows.Forms.TextBox();
+            this.distanciaTextBox = new System.Windows.Forms.TextBox();
+            this.origenTextBox = new System.Windows.Forms.TextBox();
+            this.paradasTextBox = new System.Windows.Forms.TextBox();
+            this.tasa_USDTextBox = new System.Windows.Forms.TextBox();
+            this.montobs = new System.Windows.Forms.TextBox();
+            this.EstatusComboBox = new System.Windows.Forms.ComboBox();
+            this.ClienteComboBox = new System.Windows.Forms.ComboBox();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.RutaComboBox = new System.Windows.Forms.ComboBox();
+            this.rutasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ChoferComboBox = new System.Windows.Forms.ComboBox();
+            this.choferBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PlacaComboBox = new System.Windows.Forms.ComboBox();
+            this.vehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rutasTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.RutasTableAdapter();
+            this.choferTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.ChoferTableAdapter();
+            this.vehiculoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.VehiculoTableAdapter();
+            this.clienteTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.ClienteTableAdapter();
+            this.montousd = new System.Windows.Forms.TextBox();
+            this.UsdRadio = new System.Windows.Forms.RadioButton();
+            this.BsRadio = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.IDOrdenes_Viaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dias_Viaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Distancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Origen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Paradas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedula_Chofer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vehiculos_NroPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedula_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Finalizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tasa_USD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pago_BS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            iDOrdenes_ViajeLabel = new System.Windows.Forms.Label();
             cedula_ChoferLabel = new System.Windows.Forms.Label();
             vehiculos_NroPlacaLabel = new System.Windows.Forms.Label();
             cedula_ClienteLabel = new System.Windows.Forms.Label();
             destinoLabel = new System.Windows.Forms.Label();
-            distancia_Esperada_KmLabel = new System.Windows.Forms.Label();
             fecha_InicioLabel = new System.Windows.Forms.Label();
             fecha_FinalizacionLabel = new System.Windows.Forms.Label();
             estatusLabel = new System.Windows.Forms.Label();
-            iDOrdenes_ViajeLabel = new System.Windows.Forms.Label();
+            rutaLabel = new System.Windows.Forms.Label();
+            dias_ViajeLabel = new System.Windows.Forms.Label();
+            distanciaLabel = new System.Windows.Forms.Label();
+            origenLabel = new System.Windows.Forms.Label();
+            paradasLabel = new System.Windows.Forms.Label();
+            tasa_USDLabel = new System.Windows.Forms.Label();
+            pago_BSLabel = new System.Windows.Forms.Label();
+            BS = new System.Windows.Forms.Label();
+            USD = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rutasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.choferBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cedula_ChoferLabel
-            // 
-            cedula_ChoferLabel.AutoSize = true;
-            cedula_ChoferLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cedula_ChoferLabel.Location = new System.Drawing.Point(82, 119);
-            cedula_ChoferLabel.Name = "cedula_ChoferLabel";
-            cedula_ChoferLabel.Size = new System.Drawing.Size(95, 16);
-            cedula_ChoferLabel.TabIndex = 8;
-            cedula_ChoferLabel.Text = "Cedula Chofer:";
-            // 
-            // vehiculos_NroPlacaLabel
-            // 
-            vehiculos_NroPlacaLabel.AutoSize = true;
-            vehiculos_NroPlacaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            vehiculos_NroPlacaLabel.Location = new System.Drawing.Point(45, 145);
-            vehiculos_NroPlacaLabel.Name = "vehiculos_NroPlacaLabel";
-            vehiculos_NroPlacaLabel.Size = new System.Drawing.Size(132, 16);
-            vehiculos_NroPlacaLabel.TabIndex = 10;
-            vehiculos_NroPlacaLabel.Text = "Vehiculos Nro Placa:";
-            // 
-            // cedula_ClienteLabel
-            // 
-            cedula_ClienteLabel.AutoSize = true;
-            cedula_ClienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cedula_ClienteLabel.Location = new System.Drawing.Point(80, 170);
-            cedula_ClienteLabel.Name = "cedula_ClienteLabel";
-            cedula_ClienteLabel.Size = new System.Drawing.Size(97, 16);
-            cedula_ClienteLabel.TabIndex = 12;
-            cedula_ClienteLabel.Text = "Cedula Cliente:";
-            // 
-            // destinoLabel
-            // 
-            destinoLabel.AutoSize = true;
-            destinoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            destinoLabel.Location = new System.Drawing.Point(121, 196);
-            destinoLabel.Name = "destinoLabel";
-            destinoLabel.Size = new System.Drawing.Size(56, 16);
-            destinoLabel.TabIndex = 14;
-            destinoLabel.Text = "Destino:";
-            // 
-            // distancia_Esperada_KmLabel
-            // 
-            distancia_Esperada_KmLabel.AutoSize = true;
-            distancia_Esperada_KmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            distancia_Esperada_KmLabel.Location = new System.Drawing.Point(26, 222);
-            distancia_Esperada_KmLabel.Name = "distancia_Esperada_KmLabel";
-            distancia_Esperada_KmLabel.Size = new System.Drawing.Size(151, 16);
-            distancia_Esperada_KmLabel.TabIndex = 16;
-            distancia_Esperada_KmLabel.Text = "Distancia Esperada Km:";
-            // 
-            // fecha_InicioLabel
-            // 
-            fecha_InicioLabel.AutoSize = true;
-            fecha_InicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fecha_InicioLabel.Location = new System.Drawing.Point(95, 248);
-            fecha_InicioLabel.Name = "fecha_InicioLabel";
-            fecha_InicioLabel.Size = new System.Drawing.Size(82, 16);
-            fecha_InicioLabel.TabIndex = 18;
-            fecha_InicioLabel.Text = "Fecha Inicio:";
-            // 
-            // fecha_FinalizacionLabel
-            // 
-            fecha_FinalizacionLabel.AutoSize = true;
-            fecha_FinalizacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fecha_FinalizacionLabel.Location = new System.Drawing.Point(55, 274);
-            fecha_FinalizacionLabel.Name = "fecha_FinalizacionLabel";
-            fecha_FinalizacionLabel.Size = new System.Drawing.Size(122, 16);
-            fecha_FinalizacionLabel.TabIndex = 20;
-            fecha_FinalizacionLabel.Text = "Fecha Finalizacion:";
-            // 
-            // estatusLabel
-            // 
-            estatusLabel.AutoSize = true;
-            estatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            estatusLabel.Location = new System.Drawing.Point(123, 301);
-            estatusLabel.Name = "estatusLabel";
-            estatusLabel.Size = new System.Drawing.Size(54, 16);
-            estatusLabel.TabIndex = 22;
-            estatusLabel.Text = "Estatus:";
             // 
             // iDOrdenes_ViajeLabel
             // 
             iDOrdenes_ViajeLabel.AutoSize = true;
-            iDOrdenes_ViajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iDOrdenes_ViajeLabel.Location = new System.Drawing.Point(68, 93);
+            iDOrdenes_ViajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            iDOrdenes_ViajeLabel.Location = new System.Drawing.Point(29, 39);
             iDOrdenes_ViajeLabel.Name = "iDOrdenes_ViajeLabel";
-            iDOrdenes_ViajeLabel.Size = new System.Drawing.Size(109, 16);
-            iDOrdenes_ViajeLabel.TabIndex = 24;
-            iDOrdenes_ViajeLabel.Text = "IDOrdenes Viaje:";
+            iDOrdenes_ViajeLabel.Size = new System.Drawing.Size(77, 16);
+            iDOrdenes_ViajeLabel.TabIndex = 6;
+            iDOrdenes_ViajeLabel.Text = "ID del viaje:";
+            // 
+            // cedula_ChoferLabel
+            // 
+            cedula_ChoferLabel.AutoSize = true;
+            cedula_ChoferLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            cedula_ChoferLabel.Location = new System.Drawing.Point(186, 39);
+            cedula_ChoferLabel.Name = "cedula_ChoferLabel";
+            cedula_ChoferLabel.Size = new System.Drawing.Size(115, 16);
+            cedula_ChoferLabel.TabIndex = 8;
+            cedula_ChoferLabel.Text = "Cedula del chofer:";
+            // 
+            // vehiculos_NroPlacaLabel
+            // 
+            vehiculos_NroPlacaLabel.AutoSize = true;
+            vehiculos_NroPlacaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            vehiculos_NroPlacaLabel.Location = new System.Drawing.Point(184, 82);
+            vehiculos_NroPlacaLabel.Name = "vehiculos_NroPlacaLabel";
+            vehiculos_NroPlacaLabel.Size = new System.Drawing.Size(120, 16);
+            vehiculos_NroPlacaLabel.TabIndex = 10;
+            vehiculos_NroPlacaLabel.Text = "Placa del vehiculo:";
+            // 
+            // cedula_ClienteLabel
+            // 
+            cedula_ClienteLabel.AutoSize = true;
+            cedula_ClienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            cedula_ClienteLabel.Location = new System.Drawing.Point(184, 130);
+            cedula_ClienteLabel.Name = "cedula_ClienteLabel";
+            cedula_ClienteLabel.Size = new System.Drawing.Size(117, 16);
+            cedula_ClienteLabel.TabIndex = 12;
+            cedula_ClienteLabel.Text = "Cedula del cliente:";
+            // 
+            // destinoLabel
+            // 
+            destinoLabel.AutoSize = true;
+            destinoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            destinoLabel.Location = new System.Drawing.Point(34, 311);
+            destinoLabel.Name = "destinoLabel";
+            destinoLabel.Size = new System.Drawing.Size(110, 16);
+            destinoLabel.TabIndex = 14;
+            destinoLabel.Text = "Destino del viaje:";
+            // 
+            // fecha_InicioLabel
+            // 
+            fecha_InicioLabel.AutoSize = true;
+            fecha_InicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            fecha_InicioLabel.Location = new System.Drawing.Point(184, 175);
+            fecha_InicioLabel.Name = "fecha_InicioLabel";
+            fecha_InicioLabel.Size = new System.Drawing.Size(101, 16);
+            fecha_InicioLabel.TabIndex = 16;
+            fecha_InicioLabel.Text = "Fecha de Inicio:";
+            // 
+            // fecha_FinalizacionLabel
+            // 
+            fecha_FinalizacionLabel.AutoSize = true;
+            fecha_FinalizacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            fecha_FinalizacionLabel.Location = new System.Drawing.Point(175, 220);
+            fecha_FinalizacionLabel.Name = "fecha_FinalizacionLabel";
+            fecha_FinalizacionLabel.Size = new System.Drawing.Size(141, 16);
+            fecha_FinalizacionLabel.TabIndex = 18;
+            fecha_FinalizacionLabel.Text = "Fecha de Finalizacion:";
+            // 
+            // estatusLabel
+            // 
+            estatusLabel.AutoSize = true;
+            estatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            estatusLabel.Location = new System.Drawing.Point(213, 262);
+            estatusLabel.Name = "estatusLabel";
+            estatusLabel.Size = new System.Drawing.Size(54, 16);
+            estatusLabel.TabIndex = 20;
+            estatusLabel.Text = "Estatus:";
+            // 
+            // rutaLabel
+            // 
+            rutaLabel.AutoSize = true;
+            rutaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            rutaLabel.Location = new System.Drawing.Point(32, 85);
+            rutaLabel.Name = "rutaLabel";
+            rutaLabel.Size = new System.Drawing.Size(92, 16);
+            rutaLabel.TabIndex = 22;
+            rutaLabel.Text = "Ruta del viaje:";
+            // 
+            // dias_ViajeLabel
+            // 
+            dias_ViajeLabel.AutoSize = true;
+            dias_ViajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dias_ViajeLabel.Location = new System.Drawing.Point(32, 136);
+            dias_ViajeLabel.Name = "dias_ViajeLabel";
+            dias_ViajeLabel.Size = new System.Drawing.Size(91, 16);
+            dias_ViajeLabel.TabIndex = 24;
+            dias_ViajeLabel.Text = "Dias de Viaje:";
+            // 
+            // distanciaLabel
+            // 
+            distanciaLabel.AutoSize = true;
+            distanciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            distanciaLabel.Location = new System.Drawing.Point(32, 181);
+            distanciaLabel.Name = "distanciaLabel";
+            distanciaLabel.Size = new System.Drawing.Size(106, 16);
+            distanciaLabel.TabIndex = 26;
+            distanciaLabel.Text = "Distancia en Km:";
+            // 
+            // origenLabel
+            // 
+            origenLabel.AutoSize = true;
+            origenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            origenLabel.Location = new System.Drawing.Point(32, 223);
+            origenLabel.Name = "origenLabel";
+            origenLabel.Size = new System.Drawing.Size(104, 16);
+            origenLabel.TabIndex = 28;
+            origenLabel.Text = "Origen del viaje:";
+            // 
+            // paradasLabel
+            // 
+            paradasLabel.AutoSize = true;
+            paradasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            paradasLabel.Location = new System.Drawing.Point(32, 265);
+            paradasLabel.Name = "paradasLabel";
+            paradasLabel.Size = new System.Drawing.Size(116, 16);
+            paradasLabel.TabIndex = 30;
+            paradasLabel.Text = "Paradas del viaje:";
+            // 
+            // tasa_USDLabel
+            // 
+            tasa_USDLabel.AutoSize = true;
+            tasa_USDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            tasa_USDLabel.Location = new System.Drawing.Point(53, 361);
+            tasa_USDLabel.Name = "tasa_USDLabel";
+            tasa_USDLabel.Size = new System.Drawing.Size(74, 16);
+            tasa_USDLabel.TabIndex = 32;
+            tasa_USDLabel.Text = "Tasa USD:";
+            // 
+            // pago_BSLabel
+            // 
+            pago_BSLabel.AutoSize = true;
+            pago_BSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            pago_BSLabel.Location = new System.Drawing.Point(3, 46);
+            pago_BSLabel.Name = "pago_BSLabel";
+            pago_BSLabel.Size = new System.Drawing.Size(61, 16);
+            pago_BSLabel.TabIndex = 34;
+            pago_BSLabel.Text = "Pago en:";
+            // 
+            // BS
+            // 
+            BS.AutoSize = true;
+            BS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            BS.Location = new System.Drawing.Point(63, 42);
+            BS.Name = "BS";
+            BS.Size = new System.Drawing.Size(86, 16);
+            BS.TabIndex = 41;
+            BS.Text = "Monto en BS:";
+            // 
+            // USD
+            // 
+            USD.AutoSize = true;
+            USD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            USD.Location = new System.Drawing.Point(56, 68);
+            USD.Name = "USD";
+            USD.Size = new System.Drawing.Size(93, 16);
+            USD.TabIndex = 45;
+            USD.Text = "Monto en Usd:";
             // 
             // label1
             // 
@@ -185,109 +310,27 @@
             this.orden_ViajeDataGridView.AutoGenerateColumns = false;
             this.orden_ViajeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.orden_ViajeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
+            this.IDOrdenes_Viaje,
+            this.Ruta,
+            this.Dias_Viaje,
+            this.Distancia,
+            this.Origen,
+            this.Paradas,
+            this.Destino,
+            this.Cedula_Chofer,
+            this.Vehiculos_NroPlaca,
+            this.Cedula_Cliente,
+            this.Fecha_Inicio,
+            this.Fecha_Finalizacion,
+            this.Tasa_USD,
+            this.Pago_BS,
+            this.Estatus});
             this.orden_ViajeDataGridView.DataSource = this.orden_ViajeBindingSource;
-            this.orden_ViajeDataGridView.Location = new System.Drawing.Point(339, 98);
+            this.orden_ViajeDataGridView.Location = new System.Drawing.Point(430, 90);
             this.orden_ViajeDataGridView.Name = "orden_ViajeDataGridView";
-            this.orden_ViajeDataGridView.Size = new System.Drawing.Size(920, 220);
+            this.orden_ViajeDataGridView.Size = new System.Drawing.Size(842, 220);
             this.orden_ViajeDataGridView.TabIndex = 6;
             this.orden_ViajeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orden_ViajeDataGridView_CellContentClick);
-            // 
-            // cedula_ChoferTextBox
-            // 
-            this.cedula_ChoferTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Cedula_Chofer", true));
-            this.cedula_ChoferTextBox.Location = new System.Drawing.Point(183, 118);
-            this.cedula_ChoferTextBox.Name = "cedula_ChoferTextBox";
-            this.cedula_ChoferTextBox.Size = new System.Drawing.Size(142, 20);
-            this.cedula_ChoferTextBox.TabIndex = 9;
-            this.cedula_ChoferTextBox.TextChanged += new System.EventHandler(this.cedula_ChoferTextBox_TextChanged);
-            // 
-            // vehiculos_NroPlacaTextBox
-            // 
-            this.vehiculos_NroPlacaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Vehiculos_NroPlaca", true));
-            this.vehiculos_NroPlacaTextBox.Location = new System.Drawing.Point(183, 144);
-            this.vehiculos_NroPlacaTextBox.Name = "vehiculos_NroPlacaTextBox";
-            this.vehiculos_NroPlacaTextBox.Size = new System.Drawing.Size(142, 20);
-            this.vehiculos_NroPlacaTextBox.TabIndex = 11;
-            this.vehiculos_NroPlacaTextBox.TextChanged += new System.EventHandler(this.vehiculos_NroPlacaTextBox_TextChanged);
-            // 
-            // cedula_ClienteTextBox
-            // 
-            this.cedula_ClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Cedula_Cliente", true));
-            this.cedula_ClienteTextBox.Location = new System.Drawing.Point(183, 170);
-            this.cedula_ClienteTextBox.Name = "cedula_ClienteTextBox";
-            this.cedula_ClienteTextBox.Size = new System.Drawing.Size(142, 20);
-            this.cedula_ClienteTextBox.TabIndex = 13;
-            this.cedula_ClienteTextBox.TextChanged += new System.EventHandler(this.cedula_ClienteTextBox_TextChanged);
-            // 
-            // destinoTextBox
-            // 
-            this.destinoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Destino", true));
-            this.destinoTextBox.Location = new System.Drawing.Point(183, 196);
-            this.destinoTextBox.Name = "destinoTextBox";
-            this.destinoTextBox.Size = new System.Drawing.Size(142, 20);
-            this.destinoTextBox.TabIndex = 15;
-            // 
-            // distancia_Esperada_KmTextBox
-            // 
-            this.distancia_Esperada_KmTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Distancia_Esperada_Km", true));
-            this.distancia_Esperada_KmTextBox.Location = new System.Drawing.Point(183, 222);
-            this.distancia_Esperada_KmTextBox.Name = "distancia_Esperada_KmTextBox";
-            this.distancia_Esperada_KmTextBox.Size = new System.Drawing.Size(142, 20);
-            this.distancia_Esperada_KmTextBox.TabIndex = 17;
-            this.distancia_Esperada_KmTextBox.TextChanged += new System.EventHandler(this.distancia_Esperada_KmTextBox_TextChanged);
-            // 
-            // fecha_InicioDateTimePicker
-            // 
-            this.fecha_InicioDateTimePicker.CustomFormat = "yyyy-MM-dd";
-            this.fecha_InicioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orden_ViajeBindingSource, "Fecha_Inicio", true));
-            this.fecha_InicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_InicioDateTimePicker.Location = new System.Drawing.Point(183, 248);
-            this.fecha_InicioDateTimePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.fecha_InicioDateTimePicker.Name = "fecha_InicioDateTimePicker";
-            this.fecha_InicioDateTimePicker.Size = new System.Drawing.Size(142, 20);
-            this.fecha_InicioDateTimePicker.TabIndex = 19;
-            this.fecha_InicioDateTimePicker.Value = new System.DateTime(2026, 8, 5, 21, 36, 27, 0);
-            // 
-            // fecha_FinalizacionDateTimePicker
-            // 
-            this.fecha_FinalizacionDateTimePicker.CustomFormat = "yyyy-MM-dd";
-            this.fecha_FinalizacionDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orden_ViajeBindingSource, "Fecha_Finalizacion", true));
-            this.fecha_FinalizacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_FinalizacionDateTimePicker.Location = new System.Drawing.Point(183, 274);
-            this.fecha_FinalizacionDateTimePicker.Name = "fecha_FinalizacionDateTimePicker";
-            this.fecha_FinalizacionDateTimePicker.Size = new System.Drawing.Size(142, 20);
-            this.fecha_FinalizacionDateTimePicker.TabIndex = 21;
-            // 
-            // Estatuscombobox
-            // 
-            this.Estatuscombobox.FormattingEnabled = true;
-            this.Estatuscombobox.Items.AddRange(new object[] {
-            "Pendiente",
-            "Cancelada",
-            "Completada"});
-            this.Estatuscombobox.Location = new System.Drawing.Point(183, 300);
-            this.Estatuscombobox.Name = "Estatuscombobox";
-            this.Estatuscombobox.Size = new System.Drawing.Size(142, 21);
-            this.Estatuscombobox.TabIndex = 23;
-            // 
-            // iDOrdenes_ViajeTextBox
-            // 
-            this.iDOrdenes_ViajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "IDOrdenes_Viaje", true));
-            this.iDOrdenes_ViajeTextBox.Location = new System.Drawing.Point(183, 92);
-            this.iDOrdenes_ViajeTextBox.Name = "iDOrdenes_ViajeTextBox";
-            this.iDOrdenes_ViajeTextBox.ReadOnly = true;
-            this.iDOrdenes_ViajeTextBox.Size = new System.Drawing.Size(142, 20);
-            this.iDOrdenes_ViajeTextBox.TabIndex = 25;
-            this.iDOrdenes_ViajeTextBox.TextChanged += new System.EventHandler(this.iDOrdenes_ViajeTextBox_TextChanged);
             // 
             // orden_ViajeBindingSource
             // 
@@ -299,61 +342,6 @@
             this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
             this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDOrdenes_Viaje";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IDOrdenes_Viaje";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cedula_Chofer";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cedula_Chofer";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Vehiculos_NroPlaca";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Vehiculos_NroPlaca";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cedula_Cliente";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Cedula_Cliente";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Destino";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Destino";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Distancia_Esperada_Km";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Distancia_Esperada_Km";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Fecha_Inicio";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Fecha_Inicio";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Fecha_Finalizacion";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Fecha_Finalizacion";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Estatus";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Estatus";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
             // salir
             // 
             this.salir.BackColor = System.Drawing.Color.IndianRed;
@@ -361,7 +349,7 @@
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(405, 351);
+            this.salir.Location = new System.Drawing.Point(1122, 338);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -377,7 +365,7 @@
             this.modificar.FlatAppearance.BorderSize = 2;
             this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificar.Location = new System.Drawing.Point(222, 351);
+            this.modificar.Location = new System.Drawing.Point(796, 338);
             this.modificar.Name = "modificar";
             this.modificar.RadioBorde = 20;
             this.modificar.Size = new System.Drawing.Size(150, 40);
@@ -393,7 +381,7 @@
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar.Location = new System.Drawing.Point(39, 351);
+            this.agregar.Location = new System.Drawing.Point(430, 338);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);
@@ -413,34 +401,383 @@
             this.tableAdapterManager.ClienteTableAdapter = null;
             this.tableAdapterManager.MantenimientoTableAdapter = null;
             this.tableAdapterManager.Orden_ViajeTableAdapter = this.orden_ViajeTableAdapter;
+            this.tableAdapterManager.RegistroAccionesTableAdapter = null;
+            this.tableAdapterManager.RutasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             this.tableAdapterManager.VehiculoTableAdapter = null;
+            // 
+            // iDOrdenes_ViajeTextBox
+            // 
+            this.iDOrdenes_ViajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "IDOrdenes_Viaje", true));
+            this.iDOrdenes_ViajeTextBox.Location = new System.Drawing.Point(32, 58);
+            this.iDOrdenes_ViajeTextBox.Name = "iDOrdenes_ViajeTextBox";
+            this.iDOrdenes_ViajeTextBox.ReadOnly = true;
+            this.iDOrdenes_ViajeTextBox.Size = new System.Drawing.Size(109, 20);
+            this.iDOrdenes_ViajeTextBox.TabIndex = 7;
+            // 
+            // destinoTextBox
+            // 
+            this.destinoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Destino", true));
+            this.destinoTextBox.Location = new System.Drawing.Point(35, 330);
+            this.destinoTextBox.Name = "destinoTextBox";
+            this.destinoTextBox.ReadOnly = true;
+            this.destinoTextBox.Size = new System.Drawing.Size(109, 20);
+            this.destinoTextBox.TabIndex = 15;
+            // 
+            // fecha_InicioDateTimePicker
+            // 
+            this.fecha_InicioDateTimePicker.CustomFormat = "yyyy/MM/dd";
+            this.fecha_InicioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orden_ViajeBindingSource, "Fecha_Inicio", true));
+            this.fecha_InicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fecha_InicioDateTimePicker.Location = new System.Drawing.Point(187, 197);
+            this.fecha_InicioDateTimePicker.Name = "fecha_InicioDateTimePicker";
+            this.fecha_InicioDateTimePicker.Size = new System.Drawing.Size(109, 20);
+            this.fecha_InicioDateTimePicker.TabIndex = 17;
+            this.fecha_InicioDateTimePicker.ValueChanged += new System.EventHandler(this.fecha_InicioDateTimePicker_ValueChanged);
+            // 
+            // fecha_FinalizacionDateTimePicker
+            // 
+            this.fecha_FinalizacionDateTimePicker.CustomFormat = "yyyy/MM/dd";
+            this.fecha_FinalizacionDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orden_ViajeBindingSource, "Fecha_Finalizacion", true));
+            this.fecha_FinalizacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fecha_FinalizacionDateTimePicker.Location = new System.Drawing.Point(187, 239);
+            this.fecha_FinalizacionDateTimePicker.Name = "fecha_FinalizacionDateTimePicker";
+            this.fecha_FinalizacionDateTimePicker.Size = new System.Drawing.Size(112, 20);
+            this.fecha_FinalizacionDateTimePicker.TabIndex = 19;
+            // 
+            // dias_ViajeTextBox
+            // 
+            this.dias_ViajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Dias_Viaje", true));
+            this.dias_ViajeTextBox.Location = new System.Drawing.Point(35, 158);
+            this.dias_ViajeTextBox.Name = "dias_ViajeTextBox";
+            this.dias_ViajeTextBox.ReadOnly = true;
+            this.dias_ViajeTextBox.Size = new System.Drawing.Size(106, 20);
+            this.dias_ViajeTextBox.TabIndex = 25;
+            // 
+            // distanciaTextBox
+            // 
+            this.distanciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Distancia", true));
+            this.distanciaTextBox.Location = new System.Drawing.Point(32, 200);
+            this.distanciaTextBox.Name = "distanciaTextBox";
+            this.distanciaTextBox.ReadOnly = true;
+            this.distanciaTextBox.Size = new System.Drawing.Size(109, 20);
+            this.distanciaTextBox.TabIndex = 27;
+            // 
+            // origenTextBox
+            // 
+            this.origenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Origen", true));
+            this.origenTextBox.Location = new System.Drawing.Point(32, 242);
+            this.origenTextBox.Name = "origenTextBox";
+            this.origenTextBox.ReadOnly = true;
+            this.origenTextBox.Size = new System.Drawing.Size(109, 20);
+            this.origenTextBox.TabIndex = 29;
+            // 
+            // paradasTextBox
+            // 
+            this.paradasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Paradas", true));
+            this.paradasTextBox.Location = new System.Drawing.Point(35, 284);
+            this.paradasTextBox.Name = "paradasTextBox";
+            this.paradasTextBox.ReadOnly = true;
+            this.paradasTextBox.Size = new System.Drawing.Size(109, 20);
+            this.paradasTextBox.TabIndex = 31;
+            // 
+            // tasa_USDTextBox
+            // 
+            this.tasa_USDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Tasa_USD", true));
+            this.tasa_USDTextBox.Location = new System.Drawing.Point(35, 380);
+            this.tasa_USDTextBox.Name = "tasa_USDTextBox";
+            this.tasa_USDTextBox.Size = new System.Drawing.Size(109, 20);
+            this.tasa_USDTextBox.TabIndex = 33;
+            // 
+            // montobs
+            // 
+            this.montobs.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Pago_BS", true));
+            this.montobs.Location = new System.Drawing.Point(155, 42);
+            this.montobs.Name = "montobs";
+            this.montobs.ReadOnly = true;
+            this.montobs.Size = new System.Drawing.Size(109, 20);
+            this.montobs.TabIndex = 35;
+            // 
+            // EstatusComboBox
+            // 
+            this.EstatusComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Estatus", true));
+            this.EstatusComboBox.FormattingEnabled = true;
+            this.EstatusComboBox.Items.AddRange(new object[] {
+            "Completada",
+            "En Curso",
+            "Atrasada",
+            "Pendiente a Realizar",
+            "Pendiente por Pago",
+            "Cancelada"});
+            this.EstatusComboBox.Location = new System.Drawing.Point(189, 280);
+            this.EstatusComboBox.Name = "EstatusComboBox";
+            this.EstatusComboBox.Size = new System.Drawing.Size(109, 21);
+            this.EstatusComboBox.TabIndex = 36;
+            // 
+            // ClienteComboBox
+            // 
+            this.ClienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.orden_ViajeBindingSource, "Cedula_Cliente", true));
+            this.ClienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Cedula_Cliente", true));
+            this.ClienteComboBox.DataSource = this.clienteBindingSource;
+            this.ClienteComboBox.DisplayMember = "Cedula";
+            this.ClienteComboBox.FormattingEnabled = true;
+            this.ClienteComboBox.Location = new System.Drawing.Point(189, 151);
+            this.ClienteComboBox.Name = "ClienteComboBox";
+            this.ClienteComboBox.Size = new System.Drawing.Size(107, 21);
+            this.ClienteComboBox.TabIndex = 37;
+            this.ClienteComboBox.ValueMember = "Cedula";
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.dataBaseDataSet;
+            // 
+            // RutaComboBox
+            // 
+            this.RutaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.orden_ViajeBindingSource, "Ruta", true));
+            this.RutaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Ruta", true));
+            this.RutaComboBox.DataSource = this.rutasBindingSource;
+            this.RutaComboBox.DisplayMember = "Nombre_Ruta";
+            this.RutaComboBox.FormattingEnabled = true;
+            this.RutaComboBox.Location = new System.Drawing.Point(32, 104);
+            this.RutaComboBox.Name = "RutaComboBox";
+            this.RutaComboBox.Size = new System.Drawing.Size(109, 21);
+            this.RutaComboBox.TabIndex = 38;
+            this.RutaComboBox.ValueMember = "Nombre_Ruta";
+            this.RutaComboBox.SelectionChangeCommitted += new System.EventHandler(this.RutaComboBox_SelectionChangeCommitted);
+            // 
+            // rutasBindingSource
+            // 
+            this.rutasBindingSource.DataMember = "Rutas";
+            this.rutasBindingSource.DataSource = this.dataBaseDataSet;
+            // 
+            // ChoferComboBox
+            // 
+            this.ChoferComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.orden_ViajeBindingSource, "Cedula_Chofer", true));
+            this.ChoferComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Cedula_Chofer", true));
+            this.ChoferComboBox.DataSource = this.choferBindingSource;
+            this.ChoferComboBox.DisplayMember = "Cedula";
+            this.ChoferComboBox.FormattingEnabled = true;
+            this.ChoferComboBox.Location = new System.Drawing.Point(189, 58);
+            this.ChoferComboBox.Name = "ChoferComboBox";
+            this.ChoferComboBox.Size = new System.Drawing.Size(107, 21);
+            this.ChoferComboBox.TabIndex = 39;
+            this.ChoferComboBox.ValueMember = "Cedula";
+            // 
+            // choferBindingSource
+            // 
+            this.choferBindingSource.DataMember = "Chofer";
+            this.choferBindingSource.DataSource = this.dataBaseDataSet;
+            // 
+            // PlacaComboBox
+            // 
+            this.PlacaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.orden_ViajeBindingSource, "Vehiculos_NroPlaca", true));
+            this.PlacaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Vehiculos_NroPlaca", true));
+            this.PlacaComboBox.DataSource = this.vehiculoBindingSource;
+            this.PlacaComboBox.DisplayMember = "NroPlaca";
+            this.PlacaComboBox.FormattingEnabled = true;
+            this.PlacaComboBox.Location = new System.Drawing.Point(189, 101);
+            this.PlacaComboBox.Name = "PlacaComboBox";
+            this.PlacaComboBox.Size = new System.Drawing.Size(107, 21);
+            this.PlacaComboBox.TabIndex = 40;
+            this.PlacaComboBox.ValueMember = "NroPlaca";
+            // 
+            // vehiculoBindingSource
+            // 
+            this.vehiculoBindingSource.DataMember = "Vehiculo";
+            this.vehiculoBindingSource.DataSource = this.dataBaseDataSet;
+            // 
+            // rutasTableAdapter
+            // 
+            this.rutasTableAdapter.ClearBeforeFill = true;
+            // 
+            // choferTableAdapter
+            // 
+            this.choferTableAdapter.ClearBeforeFill = true;
+            // 
+            // vehiculoTableAdapter
+            // 
+            this.vehiculoTableAdapter.ClearBeforeFill = true;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // montousd
+            // 
+            this.montousd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Pago_BS", true));
+            this.montousd.Location = new System.Drawing.Point(155, 67);
+            this.montousd.Name = "montousd";
+            this.montousd.ReadOnly = true;
+            this.montousd.Size = new System.Drawing.Size(109, 20);
+            this.montousd.TabIndex = 42;
+            // 
+            // UsdRadio
+            // 
+            this.UsdRadio.AutoSize = true;
+            this.UsdRadio.Location = new System.Drawing.Point(55, 12);
+            this.UsdRadio.Name = "UsdRadio";
+            this.UsdRadio.Size = new System.Drawing.Size(44, 17);
+            this.UsdRadio.TabIndex = 43;
+            this.UsdRadio.TabStop = true;
+            this.UsdRadio.Text = "Usd";
+            this.UsdRadio.UseVisualStyleBackColor = true;
+            // 
+            // BsRadio
+            // 
+            this.BsRadio.AutoSize = true;
+            this.BsRadio.Location = new System.Drawing.Point(6, 12);
+            this.BsRadio.Name = "BsRadio";
+            this.BsRadio.Size = new System.Drawing.Size(37, 17);
+            this.BsRadio.TabIndex = 44;
+            this.BsRadio.TabStop = true;
+            this.BsRadio.Text = "Bs";
+            this.BsRadio.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.UsdRadio);
+            this.groupBox1.Controls.Add(USD);
+            this.groupBox1.Controls.Add(this.BsRadio);
+            this.groupBox1.Controls.Add(pago_BSLabel);
+            this.groupBox1.Controls.Add(this.montobs);
+            this.groupBox1.Controls.Add(BS);
+            this.groupBox1.Controls.Add(this.montousd);
+            this.groupBox1.Location = new System.Drawing.Point(154, 330);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(270, 93);
+            this.groupBox1.TabIndex = 46;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Moneda";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // IDOrdenes_Viaje
+            // 
+            this.IDOrdenes_Viaje.DataPropertyName = "IDOrdenes_Viaje";
+            this.IDOrdenes_Viaje.HeaderText = "ID de la orden";
+            this.IDOrdenes_Viaje.Name = "IDOrdenes_Viaje";
+            this.IDOrdenes_Viaje.ReadOnly = true;
+            // 
+            // Ruta
+            // 
+            this.Ruta.DataPropertyName = "Ruta";
+            this.Ruta.HeaderText = "Ruta del viaje";
+            this.Ruta.Name = "Ruta";
+            // 
+            // Dias_Viaje
+            // 
+            this.Dias_Viaje.DataPropertyName = "Dias_Viaje";
+            this.Dias_Viaje.HeaderText = "Dias de viaje";
+            this.Dias_Viaje.Name = "Dias_Viaje";
+            // 
+            // Distancia
+            // 
+            this.Distancia.DataPropertyName = "Distancia";
+            this.Distancia.HeaderText = "Distancia en Km";
+            this.Distancia.Name = "Distancia";
+            // 
+            // Origen
+            // 
+            this.Origen.DataPropertyName = "Origen";
+            this.Origen.HeaderText = "Origen";
+            this.Origen.Name = "Origen";
+            // 
+            // Paradas
+            // 
+            this.Paradas.DataPropertyName = "Paradas";
+            this.Paradas.HeaderText = "Paradas";
+            this.Paradas.Name = "Paradas";
+            // 
+            // Destino
+            // 
+            this.Destino.DataPropertyName = "Destino";
+            this.Destino.HeaderText = "Destino";
+            this.Destino.Name = "Destino";
+            // 
+            // Cedula_Chofer
+            // 
+            this.Cedula_Chofer.DataPropertyName = "Cedula_Chofer";
+            this.Cedula_Chofer.HeaderText = "Cedula del chofer";
+            this.Cedula_Chofer.Name = "Cedula_Chofer";
+            // 
+            // Vehiculos_NroPlaca
+            // 
+            this.Vehiculos_NroPlaca.DataPropertyName = "Vehiculos_NroPlaca";
+            this.Vehiculos_NroPlaca.HeaderText = "Placa del vehiculo";
+            this.Vehiculos_NroPlaca.Name = "Vehiculos_NroPlaca";
+            // 
+            // Cedula_Cliente
+            // 
+            this.Cedula_Cliente.DataPropertyName = "Cedula_Cliente";
+            this.Cedula_Cliente.HeaderText = "Cedula del cliente";
+            this.Cedula_Cliente.Name = "Cedula_Cliente";
+            // 
+            // Fecha_Inicio
+            // 
+            this.Fecha_Inicio.DataPropertyName = "Fecha_Inicio";
+            this.Fecha_Inicio.HeaderText = "Fecha de inicio";
+            this.Fecha_Inicio.Name = "Fecha_Inicio";
+            // 
+            // Fecha_Finalizacion
+            // 
+            this.Fecha_Finalizacion.DataPropertyName = "Fecha_Finalizacion";
+            this.Fecha_Finalizacion.HeaderText = "Fecha de finalizacion ";
+            this.Fecha_Finalizacion.Name = "Fecha_Finalizacion";
+            // 
+            // Tasa_USD
+            // 
+            this.Tasa_USD.DataPropertyName = "Tasa_USD";
+            this.Tasa_USD.HeaderText = "Tasa USD";
+            this.Tasa_USD.Name = "Tasa_USD";
+            // 
+            // Pago_BS
+            // 
+            this.Pago_BS.DataPropertyName = "Pago_BS";
+            this.Pago_BS.HeaderText = "Pago en BS";
+            this.Pago_BS.Name = "Pago_BS";
+            // 
+            // Estatus
+            // 
+            this.Estatus.DataPropertyName = "Estatus";
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.Name = "Estatus";
             // 
             // Formordenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1284, 433);
+            this.ClientSize = new System.Drawing.Size(1284, 446);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.PlacaComboBox);
+            this.Controls.Add(this.ChoferComboBox);
+            this.Controls.Add(this.RutaComboBox);
+            this.Controls.Add(this.ClienteComboBox);
+            this.Controls.Add(this.EstatusComboBox);
             this.Controls.Add(iDOrdenes_ViajeLabel);
             this.Controls.Add(this.iDOrdenes_ViajeTextBox);
-            this.Controls.Add(this.Estatuscombobox);
             this.Controls.Add(cedula_ChoferLabel);
-            this.Controls.Add(this.cedula_ChoferTextBox);
             this.Controls.Add(vehiculos_NroPlacaLabel);
-            this.Controls.Add(this.vehiculos_NroPlacaTextBox);
             this.Controls.Add(cedula_ClienteLabel);
-            this.Controls.Add(this.cedula_ClienteTextBox);
             this.Controls.Add(destinoLabel);
             this.Controls.Add(this.destinoTextBox);
-            this.Controls.Add(distancia_Esperada_KmLabel);
-            this.Controls.Add(this.distancia_Esperada_KmTextBox);
             this.Controls.Add(fecha_InicioLabel);
             this.Controls.Add(this.fecha_InicioDateTimePicker);
             this.Controls.Add(fecha_FinalizacionLabel);
             this.Controls.Add(this.fecha_FinalizacionDateTimePicker);
             this.Controls.Add(estatusLabel);
+            this.Controls.Add(rutaLabel);
+            this.Controls.Add(dias_ViajeLabel);
+            this.Controls.Add(this.dias_ViajeTextBox);
+            this.Controls.Add(distanciaLabel);
+            this.Controls.Add(this.distanciaTextBox);
+            this.Controls.Add(origenLabel);
+            this.Controls.Add(this.origenTextBox);
+            this.Controls.Add(paradasLabel);
+            this.Controls.Add(this.paradasTextBox);
+            this.Controls.Add(tasa_USDLabel);
+            this.Controls.Add(this.tasa_USDTextBox);
             this.Controls.Add(this.orden_ViajeDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.salir);
@@ -452,6 +789,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rutasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.choferBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,23 +810,48 @@
         private DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter orden_ViajeTableAdapter;
         private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView orden_ViajeDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.TextBox cedula_ChoferTextBox;
-        private System.Windows.Forms.TextBox vehiculos_NroPlacaTextBox;
-        private System.Windows.Forms.TextBox cedula_ClienteTextBox;
+        private System.Windows.Forms.TextBox iDOrdenes_ViajeTextBox;
         private System.Windows.Forms.TextBox destinoTextBox;
-        private System.Windows.Forms.TextBox distancia_Esperada_KmTextBox;
         private System.Windows.Forms.DateTimePicker fecha_InicioDateTimePicker;
         private System.Windows.Forms.DateTimePicker fecha_FinalizacionDateTimePicker;
-        private System.Windows.Forms.ComboBox Estatuscombobox;
-        private System.Windows.Forms.TextBox iDOrdenes_ViajeTextBox;
+        private System.Windows.Forms.TextBox dias_ViajeTextBox;
+        private System.Windows.Forms.TextBox distanciaTextBox;
+        private System.Windows.Forms.TextBox origenTextBox;
+        private System.Windows.Forms.TextBox paradasTextBox;
+        private System.Windows.Forms.TextBox tasa_USDTextBox;
+        private System.Windows.Forms.TextBox montobs;
+        private System.Windows.Forms.ComboBox EstatusComboBox;
+        private System.Windows.Forms.ComboBox ClienteComboBox;
+        private System.Windows.Forms.ComboBox RutaComboBox;
+        private System.Windows.Forms.ComboBox ChoferComboBox;
+        private System.Windows.Forms.ComboBox PlacaComboBox;
+        private System.Windows.Forms.BindingSource rutasBindingSource;
+        private DataBaseDataSetTableAdapters.RutasTableAdapter rutasTableAdapter;
+        private System.Windows.Forms.BindingSource choferBindingSource;
+        private DataBaseDataSetTableAdapters.ChoferTableAdapter choferTableAdapter;
+        private System.Windows.Forms.BindingSource vehiculoBindingSource;
+        private DataBaseDataSetTableAdapters.VehiculoTableAdapter vehiculoTableAdapter;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+        private DataBaseDataSetTableAdapters.ClienteTableAdapter clienteTableAdapter;
+        private System.Windows.Forms.TextBox montousd;
+        private System.Windows.Forms.RadioButton UsdRadio;
+        private System.Windows.Forms.RadioButton BsRadio;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDOrdenes_Viaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dias_Viaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Distancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Origen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Paradas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Destino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedula_Chofer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vehiculos_NroPlaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedula_Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Inicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Finalizacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tasa_USD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pago_BS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
     }
 }

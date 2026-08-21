@@ -50,6 +50,26 @@
   <PropertyGroup>
     <ApplicationIcon>images-_2_.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.6.2\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
@@ -122,6 +142,13 @@
     <Compile Include="botonredondeado.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FormRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRutas.Designer.cs">
+      <DependentUpon>FormRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sesion.cs" />
     <Compile Include="DataBaseDataSet.cs">
       <DependentUpon>DataBaseDataSet.xsd</DependentUpon>
     </Compile>
@@ -129,12 +156,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataBaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FormInsertar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormInsertar.Designer.cs">
-      <DependentUpon>FormInsertar.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMantenimiento.cs">
       <SubType>Form</SubType>
@@ -186,9 +207,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormInsertar.resx">
-      <DependentUpon>FormInsertar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMantenimiento.resx">
       <DependentUpon>FormMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRutas.resx">
+      <DependentUpon>FormRutas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVehiculo.resx">
       <DependentUpon>FormVehiculo.cs</DependentUpon>

@@ -1,3 +1,10 @@
 <Solution>
-  <Project Path="AppTesis.csproj" Id="e075863b-977b-4bc7-9c7a-17ed3e58b187" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="../ControlesPersonalizados/ControlesPersonalizados.csproj" Id="5665f079-57a4-4560-b8da-8df7fef51a21" />
+  <Project Path="AppTesis.csproj" Id="e075863b-977b-4bc7-9c7a-17ed3e58b187">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
 </Solution>
