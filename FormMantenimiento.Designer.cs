@@ -34,7 +34,9 @@
             System.Windows.Forms.Label anotacionesLabel;
             System.Windows.Forms.Label codMantenimientoLabel;
             System.Windows.Forms.Label tasa_USDLabel;
-            System.Windows.Forms.Label coste_BSLabel;
+            System.Windows.Forms.Label USD;
+            System.Windows.Forms.Label pago_BSLabel;
+            System.Windows.Forms.Label BS;
             this.agregar = new BotonRedondo();
             this.salir = new BotonRedondo();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,20 +57,25 @@
             this.PlacaComboBox = new System.Windows.Forms.ComboBox();
             this.vehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vehiculoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.VehiculoTableAdapter();
-            this.mantenimientoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tasa_USDTextBox = new System.Windows.Forms.TextBox();
-            this.coste_BSTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.UsdRadio = new System.Windows.Forms.RadioButton();
+            this.BsRadio = new System.Windows.Forms.RadioButton();
+            this.montobs = new System.Windows.Forms.TextBox();
+            this.montousd = new System.Windows.Forms.TextBox();
             nroPlacaLabel = new System.Windows.Forms.Label();
             fechaMantenimientoLabel = new System.Windows.Forms.Label();
             anotacionesLabel = new System.Windows.Forms.Label();
             codMantenimientoLabel = new System.Windows.Forms.Label();
             tasa_USDLabel = new System.Windows.Forms.Label();
-            coste_BSLabel = new System.Windows.Forms.Label();
+            USD = new System.Windows.Forms.Label();
+            pago_BSLabel = new System.Windows.Forms.Label();
+            BS = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantenimientoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantenimientoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mantenimientoBindingSource1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // nroPlacaLabel
@@ -95,7 +102,7 @@
             // 
             anotacionesLabel.AutoSize = true;
             anotacionesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            anotacionesLabel.Location = new System.Drawing.Point(96, 259);
+            anotacionesLabel.Location = new System.Drawing.Point(115, 282);
             anotacionesLabel.Name = "anotacionesLabel";
             anotacionesLabel.Size = new System.Drawing.Size(102, 20);
             anotacionesLabel.TabIndex = 29;
@@ -116,22 +123,42 @@
             // 
             tasa_USDLabel.AutoSize = true;
             tasa_USDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            tasa_USDLabel.Location = new System.Drawing.Point(111, 192);
+            tasa_USDLabel.Location = new System.Drawing.Point(111, 181);
             tasa_USDLabel.Name = "tasa_USDLabel";
             tasa_USDLabel.Size = new System.Drawing.Size(87, 20);
             tasa_USDLabel.TabIndex = 31;
             tasa_USDLabel.Text = "Tasa USD:";
             tasa_USDLabel.Click += new System.EventHandler(this.tasa_USDLabel_Click);
             // 
-            // coste_BSLabel
+            // USD
             // 
-            coste_BSLabel.AutoSize = true;
-            coste_BSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            coste_BSLabel.Location = new System.Drawing.Point(117, 227);
-            coste_BSLabel.Name = "coste_BSLabel";
-            coste_BSLabel.Size = new System.Drawing.Size(81, 20);
-            coste_BSLabel.TabIndex = 32;
-            coste_BSLabel.Text = "Coste BS:";
+            USD.AutoSize = true;
+            USD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            USD.Location = new System.Drawing.Point(127, 41);
+            USD.Name = "USD";
+            USD.Size = new System.Drawing.Size(93, 16);
+            USD.TabIndex = 45;
+            USD.Text = "Monto en Usd:";
+            // 
+            // pago_BSLabel
+            // 
+            pago_BSLabel.AutoSize = true;
+            pago_BSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            pago_BSLabel.Location = new System.Drawing.Point(68, 19);
+            pago_BSLabel.Name = "pago_BSLabel";
+            pago_BSLabel.Size = new System.Drawing.Size(61, 16);
+            pago_BSLabel.TabIndex = 34;
+            pago_BSLabel.Text = "Pago en:";
+            // 
+            // BS
+            // 
+            BS.AutoSize = true;
+            BS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            BS.Location = new System.Drawing.Point(134, 15);
+            BS.Name = "BS";
+            BS.Size = new System.Drawing.Size(86, 16);
+            BS.TabIndex = 41;
+            BS.Text = "Monto en BS:";
             // 
             // agregar
             // 
@@ -140,7 +167,7 @@
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar.Location = new System.Drawing.Point(159, 357);
+            this.agregar.Location = new System.Drawing.Point(268, 401);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);
@@ -156,7 +183,7 @@
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(448, 357);
+            this.salir.Location = new System.Drawing.Point(674, 401);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -215,7 +242,7 @@
             this.Tasa_USD,
             this.Coste_BS});
             this.mantenimientoDataGridView.DataSource = this.mantenimientoBindingSource;
-            this.mantenimientoDataGridView.Location = new System.Drawing.Point(423, 110);
+            this.mantenimientoDataGridView.Location = new System.Drawing.Point(431, 112);
             this.mantenimientoDataGridView.Name = "mantenimientoDataGridView";
             this.mantenimientoDataGridView.ReadOnly = true;
             this.mantenimientoDataGridView.Size = new System.Drawing.Size(441, 220);
@@ -278,7 +305,7 @@
             // anotacionesTextBox
             // 
             this.anotacionesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource, "Anotaciones", true));
-            this.anotacionesTextBox.Location = new System.Drawing.Point(204, 259);
+            this.anotacionesTextBox.Location = new System.Drawing.Point(219, 284);
             this.anotacionesTextBox.Multiline = true;
             this.anotacionesTextBox.Name = "anotacionesTextBox";
             this.anotacionesTextBox.Size = new System.Drawing.Size(182, 73);
@@ -296,7 +323,7 @@
             // 
             // PlacaComboBox
             // 
-            this.PlacaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.mantenimientoBindingSource1, "NroPlaca", true));
+            this.PlacaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource, "NroPlaca", true));
             this.PlacaComboBox.DataSource = this.vehiculoBindingSource;
             this.PlacaComboBox.DisplayMember = "NroPlaca";
             this.PlacaComboBox.FormattingEnabled = true;
@@ -316,36 +343,82 @@
             // 
             this.vehiculoTableAdapter.ClearBeforeFill = true;
             // 
-            // mantenimientoBindingSource1
-            // 
-            this.mantenimientoBindingSource1.DataMember = "FK_Mantenimiento_Vehiculo";
-            this.mantenimientoBindingSource1.DataSource = this.vehiculoBindingSource;
-            // 
             // tasa_USDTextBox
             // 
-            this.tasa_USDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource1, "Tasa_USD", true));
-            this.tasa_USDTextBox.Location = new System.Drawing.Point(204, 192);
+            this.tasa_USDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource, "Tasa_USD", true));
+            this.tasa_USDTextBox.Location = new System.Drawing.Point(204, 181);
             this.tasa_USDTextBox.Name = "tasa_USDTextBox";
             this.tasa_USDTextBox.Size = new System.Drawing.Size(182, 20);
             this.tasa_USDTextBox.TabIndex = 32;
             // 
-            // coste_BSTextBox
+            // groupBox1
             // 
-            this.coste_BSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource1, "Coste_BS", true));
-            this.coste_BSTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.coste_BSTextBox.Location = new System.Drawing.Point(204, 227);
-            this.coste_BSTextBox.Name = "coste_BSTextBox";
-            this.coste_BSTextBox.Size = new System.Drawing.Size(182, 26);
-            this.coste_BSTextBox.TabIndex = 33;
+            this.groupBox1.Controls.Add(this.UsdRadio);
+            this.groupBox1.Controls.Add(USD);
+            this.groupBox1.Controls.Add(this.BsRadio);
+            this.groupBox1.Controls.Add(pago_BSLabel);
+            this.groupBox1.Controls.Add(this.montobs);
+            this.groupBox1.Controls.Add(BS);
+            this.groupBox1.Controls.Add(this.montousd);
+            this.groupBox1.Location = new System.Drawing.Point(55, 207);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(346, 66);
+            this.groupBox1.TabIndex = 47;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Moneda";
+            // 
+            // UsdRadio
+            // 
+            this.UsdRadio.AutoSize = true;
+            this.UsdRadio.Location = new System.Drawing.Point(6, 37);
+            this.UsdRadio.Name = "UsdRadio";
+            this.UsdRadio.Size = new System.Drawing.Size(44, 17);
+            this.UsdRadio.TabIndex = 43;
+            this.UsdRadio.TabStop = true;
+            this.UsdRadio.Text = "Usd";
+            this.UsdRadio.UseVisualStyleBackColor = true;
+            this.UsdRadio.CheckedChanged += new System.EventHandler(this.UsdRadio_CheckedChanged);
+            // 
+            // BsRadio
+            // 
+            this.BsRadio.AutoSize = true;
+            this.BsRadio.Location = new System.Drawing.Point(6, 12);
+            this.BsRadio.Name = "BsRadio";
+            this.BsRadio.Size = new System.Drawing.Size(37, 17);
+            this.BsRadio.TabIndex = 44;
+            this.BsRadio.TabStop = true;
+            this.BsRadio.Text = "Bs";
+            this.BsRadio.UseVisualStyleBackColor = true;
+            this.BsRadio.CheckedChanged += new System.EventHandler(this.BsRadio_CheckedChanged);
+            // 
+            // montobs
+            // 
+            this.montobs.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource, "Coste_BS", true));
+            this.montobs.Location = new System.Drawing.Point(226, 15);
+            this.montobs.Name = "montobs";
+            this.montobs.ReadOnly = true;
+            this.montobs.Size = new System.Drawing.Size(109, 20);
+            this.montobs.TabIndex = 35;
+            this.montobs.TextChanged += new System.EventHandler(this.montobs_TextChanged);
+            this.montobs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.montobs_KeyPress);
+            // 
+            // montousd
+            // 
+            this.montousd.Location = new System.Drawing.Point(226, 40);
+            this.montousd.Name = "montousd";
+            this.montousd.ReadOnly = true;
+            this.montousd.Size = new System.Drawing.Size(109, 20);
+            this.montousd.TabIndex = 42;
+            this.montousd.TextChanged += new System.EventHandler(this.montousd_TextChanged);
+            this.montousd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.montousd_KeyPress);
             // 
             // FormMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(884, 450);
-            this.Controls.Add(coste_BSLabel);
-            this.Controls.Add(this.coste_BSTextBox);
+            this.ClientSize = new System.Drawing.Size(884, 459);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(tasa_USDLabel);
             this.Controls.Add(this.tasa_USDTextBox);
             this.Controls.Add(this.PlacaComboBox);
@@ -367,7 +440,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.mantenimientoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantenimientoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mantenimientoBindingSource1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,14 +462,17 @@
         private System.Windows.Forms.ComboBox PlacaComboBox;
         private System.Windows.Forms.BindingSource vehiculoBindingSource;
         private DataBaseDataSetTableAdapters.VehiculoTableAdapter vehiculoTableAdapter;
-        private System.Windows.Forms.BindingSource mantenimientoBindingSource1;
         private System.Windows.Forms.TextBox tasa_USDTextBox;
-        private System.Windows.Forms.TextBox coste_BSTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tasa_USD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coste_BS;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton UsdRadio;
+        private System.Windows.Forms.RadioButton BsRadio;
+        private System.Windows.Forms.TextBox montobs;
+        private System.Windows.Forms.TextBox montousd;
     }
 }

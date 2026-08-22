@@ -37,14 +37,28 @@ namespace AppTesis
 
         private void agregar_Click(object sender, EventArgs e)
         {
-            bool existe = ExisteUsuario(usuarioTextBox.Text.Trim());
+            bool existe = ExisteUsuario(usuarioTextBox.Text.Trim(),cedulaTextBox.Text.Trim());
 
-            if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || usuarioTextBox.Text == "" || contrasenaTextBox.Text == "" || correoTextBox.Text == "" || jerarquiacomboBox == null)
+            List<string> camposVacios = new List<string>();
+
+            foreach (Control c in this.Controls)
             {
-                MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (c is System.Windows.Forms.TextBox textBox && string.IsNullOrEmpty(textBox.Text))
+                {
+                    // Agrega el nombre del campo a la lista
+                    camposVacios.Add(textBox.Name);
+                }
             }
 
-            else if(existe)
+            // Si la lista tiene elementos, muestra el mensaje
+            if (camposVacios.Count > 0)
+            {
+                string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
+                MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+            else if(existe )
             {
                 MessageBox.Show("Ya Esxiste este Usuario, Porfavor Ingrese Otro","Usuario Existente",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
@@ -98,14 +112,27 @@ namespace AppTesis
 
         private void modificar_Click(object sender, EventArgs e)
         {
-            bool existe = ExisteUsuario(usuarioTextBox.Text.Trim());
+            bool existe = ExisteUsuario(usuarioTextBox.Text.Trim(),cedulaTextBox.Text);
 
-            if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || usuarioTextBox.Text == "" || contrasenaTextBox.Text == "" || correoTextBox.Text == "" || jerarquiacomboBox == null)
+            List<string> camposVacios = new List<string>();
+
+            foreach (Control c in this.Controls)
             {
-                MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (c is System.Windows.Forms.TextBox textBox && string.IsNullOrEmpty(textBox.Text))
+                {
+                    // Agrega el nombre del campo a la lista
+                    camposVacios.Add(textBox.Name);
+                }
             }
 
-            
+            // Si la lista tiene elementos, muestra el mensaje
+            if (camposVacios.Count > 0)
+            {
+                string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
+                MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
             else if (existe)
             {
                 MessageBox.Show("Ya Esxiste este Usuario, Porfavor Ingrese Otro", "Usuario Existente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -166,12 +193,12 @@ namespace AppTesis
             }
         }
 
-        private bool ExisteUsuario(string usuario)
+        private bool ExisteUsuario(string usuario, string cedula)
         {
             try
             {
                 // Llamamos al método pasando solo los 2 argumentos que te pide: usuario y contraseña
-                string resultado = this.usuarioTableAdapter.ExistUsuario(usuario);
+                string resultado = this.usuarioTableAdapter.ExistUsuario(usuario, cedula)?.ToString()??"";
 
                 // Si la base de datos encontró coincidencia, el resultado no será nulo ni vacío
                 if (!string.IsNullOrEmpty(resultado))

@@ -11,11 +11,15 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace AppTesis
 {
     public partial class Formordenes : Form
     {
+        // Bandera para evitar que la conversión se ejecute al seleccionar filas en el DataGrid
+        private bool esCargaDeDatos = false;
         public Formordenes()
         {
             InitializeComponent();
@@ -62,11 +66,24 @@ namespace AppTesis
 
         private void agregar_Click(object sender, EventArgs e)
         {
-            if (RutaComboBox.Text=="" ||ChoferComboBox.Text == "" || PlacaComboBox.Text == "" || ClienteComboBox.Text == "" 
-                || fecha_InicioDateTimePicker==null || fecha_FinalizacionDateTimePicker==null || EstatusComboBox.Text == "")
+            List<string> camposVacios = new List<string>();
+
+            foreach (Control c in this.Controls)
             {
-                MessageBox.Show("Se esta enviado un campo vacio", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (c is TextBox textBox && string.IsNullOrEmpty(textBox.Text))
+                {
+                    // Agrega el nombre del campo a la lista
+                    camposVacios.Add(textBox.Name);
+                }
             }
+
+            // Si la lista tiene elementos, muestra el mensaje
+            if (camposVacios.Count > 0)
+            {
+                string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
+                MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
 
             if (UsdRadio.Checked==false && BsRadio.Checked==false)
             {
@@ -136,6 +153,38 @@ namespace AppTesis
 
         private void orden_ViajeDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            if (e.RowIndex < 0) return;
+
+            // 1. ACTIVAR la bandera para bloquear la conversión automática
+            esCargaDeDatos = true;
+
+            try
+            {
+                // Obtener la fila donde se hizo clic
+                DataGridViewRow fila = orden_ViajeDataGridView.Rows[e.RowIndex];
+
+                // Cargar el monto de la base de datos (Bs) en el TextBox montobs
+                string montoBsBD = fila.Cells["Pago_Bs"].Value?.ToString() ?? "0,00";
+                montobs.Text = montoBsBD;
+
+                // Calcular la equivalencia en USD para mostrarla en el campo montousd
+                if (decimal.TryParse(tasa_USDTextBox.Text.Replace('.', ','), out decimal tasa) && tasa > 0)
+                {
+                    if (decimal.TryParse(montoBsBD.Replace('.', ','), out decimal bsValue))
+                    {
+                        montousd.Text = Math.Round(bsValue / tasa, 2).ToString("0.00");
+                    }
+                }
+            }
+            finally
+            {
+                // 2. DESACTIVAR la bandera para permitir que el usuario vuelva a escribir
+                esCargaDeDatos = false;
+            }
+
+
+            orden_ViajeDataGridView.Columns["Pago_Bs"].DefaultCellStyle.Format = "N2";
             if (orden_ViajeDataGridView.CurrentRow != null)
             {
                 // 1. Obtener las fechas de la fila seleccionada
@@ -164,12 +213,23 @@ namespace AppTesis
 
         private void modificar_Click(object sender, EventArgs e)
         {
-            if (RutaComboBox.Text == "" || ChoferComboBox.Text == "" || PlacaComboBox.Text == "" || ClienteComboBox.Text == ""
-                || fecha_InicioDateTimePicker == null || fecha_FinalizacionDateTimePicker == null || EstatusComboBox.Text == "")
+            List<string> camposVacios = new List<string>();
+
+            foreach (Control c in this.Controls)
             {
-                MessageBox.Show("Se esta enviado un campo vacio", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (c is TextBox textBox && string.IsNullOrEmpty(textBox.Text))
+                {
+                    // Agrega el nombre del campo a la lista
+                    camposVacios.Add(textBox.Name);
+                }
             }
 
+            // Si la lista tiene elementos, muestra el mensaje
+            if (camposVacios.Count > 0)
+            {
+                string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
+                MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             if (UsdRadio.Checked == false && BsRadio.Checked == false)
             {
                 MessageBox.Show("Seleccione un tipo de moneda", "Moneda no seleccionada", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -206,6 +266,10 @@ namespace AppTesis
                     decimal.TryParse(montobs.Text, out decimal monto);
 
                     this.orden_ViajeTableAdapter.modify(ruta,dias,distancia,origen,paradas,destino,chofer,placa,cliente,inicio,final,tasa,monto,estatus, id);
+                    this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
+                    montobs.Text = "0,00";
+                    montousd.Text = "0,00";
+
                 }
                 catch (NullReferenceException)
                 {
@@ -229,32 +293,6 @@ namespace AppTesis
             }
         }
 
-        private void iDOrdenes_ViajeTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void vehiculos_NroPlacaTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cedula_ClienteTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cedula_ChoferTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void distancia_Esperada_KmTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void RutaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             // 1. Validar que exista una selección válida
@@ -274,32 +312,68 @@ namespace AppTesis
         private void CalcularConversion()
         {
             // Aseguramos que haya una tasa válida antes de operar para evitar divisiones entre cero
-            if (decimal.TryParse(tasa_USDTextBox.Text, out decimal tasa) && tasa > 0)
-            {
-                decimal.TryParse(montobs.Text, out decimal monto);
-                decimal.TryParse(montousd.Text, out decimal monto2);
+            // 1. Validar la tasa de cambio primero
 
+            if (esCargaDeDatos) return;
+            // 1. Validar la tasa de cambio usando la cultura actual o InvariantCulture
+            // Normalizar la tasa
+            string tasaTexto = tasa_USDTextBox.Text.Replace('.', ',');
+            if (!decimal.TryParse(tasaTexto, out decimal tasa) || tasa <= 0)
+                return;
+
+            try
+            {
                 if (UsdRadio.Checked)
                 {
-                    montobs.ReadOnly =true; // Nota: Si deshabilitas montopri aquí, el usuario no podrá escribir más en él. Revisa si querías deshabilitar montoresult.
-                    montousd.ReadOnly = false;
-                    decimal resultado = monto * tasa;
-                    // ¡Cuidado! Si escribes el resultado en montopri, sobreescribirás lo que el usuario está digitando.
-                    montobs.Text = resultado.ToString("N2");
+                    string usdTexto = montousd.Text.Replace('.', ',');
+
+                    if (decimal.TryParse(usdTexto, out decimal montoUSD))
+                    {
+                        if (montoUSD > 999999999m) return; // Control anti-overflow
+
+                        decimal resultadoBs = montoUSD * tasa;
+                        if (resultadoBs > 999999999999m) return;
+
+                        // Asignamos el valor exacto al instante
+                        string conversionStr = Math.Round(resultadoBs, 2).ToString("0.00");
+                        if (montobs.Text != conversionStr) montobs.Text = conversionStr;
+                    }
+                    else if (string.IsNullOrWhiteSpace(montousd.Text))
+                    {
+                        montobs.Text = "";
+                    }
                 }
                 else if (BsRadio.Checked)
                 {
-                    montousd.ReadOnly = true;
-                    montobs.ReadOnly=false;
-                    decimal resultado = monto2 / tasa;
-                    montousd.Text = resultado.ToString("N2");
+                    string bsTexto = montobs.Text.Replace('.', ',');
+
+                    if (decimal.TryParse(bsTexto, out decimal montoBs))
+                    {
+                        if (montoBs > 999999999999m) return; // Control anti-overflow
+
+                        decimal resultadoUsd = montoBs / tasa;
+                        if (resultadoUsd > 999999999m) return;
+
+                        // Asignamos el valor exacto al instante (ejemplo: 750 / 750 = 1.00)
+                        string conversionStr = Math.Round(resultadoUsd, 2).ToString("0.00");
+                        if (montousd.Text != conversionStr) montousd.Text = conversionStr;
+                    }
+                    else if (string.IsNullOrWhiteSpace(montobs.Text))
+                    {
+                        montousd.Text = "";
+                    }
                 }
+            }
+            catch (OverflowException)
+            {
+                montousd.Text = "0,00";
+                montobs.Text = "0,00";
             }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-            CalcularConversion();
+            
         }
 
         private void RutaComboBox_SelectionChangeCommitted(object sender, EventArgs e)
@@ -335,6 +409,124 @@ namespace AppTesis
                 MessageBox.Show("Error al actualizar la ruta: " + ex.Message);
             }
         }
+
+        private void BsRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            // Solo actuamos si el RadioButton se acaba de activar (Checked == true)
+            if (sender is RadioButton rb && rb.Checked)
+            {
+                if (UsdRadio.Checked)
+                {
+                    montobs.Clear();
+                    montobs.ReadOnly = true;    // Bloqueado (aquí cae el resultado)
+                    montousd.ReadOnly = false;  // Permitir escribir el monto en dólares
+                    montousd.Focus();
+                }
+                else if (BsRadio.Checked)
+                {
+                    montousd.Clear();
+                    montousd.ReadOnly = true;   // Bloqueado (aquí cae el resultado)
+                    montobs.ReadOnly = false;   // Permitir escribir el monto en bolívares
+                    montobs.Focus();
+                }
+            }
+        }
+
+        private void UsdRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            // Solo actuamos si el RadioButton se acaba de activar (Checked == true)
+            if (sender is RadioButton rb && rb.Checked)
+            {
+                if (UsdRadio.Checked)
+                {
+                    montobs.Clear();
+                    montobs.ReadOnly = true;    // Bloqueado (aquí cae el resultado)
+                    montousd.ReadOnly = false;  // Permitir escribir el monto en dólares
+                    montousd.Focus();
+                }
+                else if (BsRadio.Checked)
+                {
+                    montousd.Clear();
+                    montousd.ReadOnly = true;   // Bloqueado (aquí cae el resultado)
+                    montobs.ReadOnly = false;   // Permitir escribir el monto en bolívares
+                    montobs.Focus();
+                }
+            }
+        }
+
+
+
+        private void montousd_TextChanged(object sender, EventArgs e)
+        {
+
+            CalcularConversion();
+        }
+
+        private void tasa_USDTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string textoOriginal = tasa_USDTextBox.Text;
+
+            // 1. Remueve cualquier caracter que no sea dígito ni coma
+            string limpio = Regex.Replace(textoOriginal, @"[^\d,]", "");
+
+            // 2. Si hay más de una coma, conserva solo la primera
+            int primerComa = limpio.IndexOf(',');
+            if (primerComa != -1)
+            {
+                // Mantiene todo hasta la primera coma y elimina comas adicionales del resto
+                string parteEntera = limpio.Substring(0, primerComa + 1);
+                string parteDecimal = limpio.Substring(primerComa + 1).Replace(",", "");
+                limpio = parteEntera + parteDecimal;
+            }
+
+            // 3. Si cambió el texto, lo actualiza
+            if (tasa_USDTextBox.Text != limpio)
+            {
+                tasa_USDTextBox.Text = limpio;
+                tasa_USDTextBox.SelectionStart = tasa_USDTextBox.Text.Length;
+            }
+        }
+
+        private void montobs_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+
+            if (char.IsControl(e.KeyChar)) return;
+
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+            {
+                e.KeyChar = ',';
+                if (txt.Text.Contains(",")) e.Handled = true; // Si ya hay coma, la bloquea
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true; // Bloquea letras y símbolos
+
+            
+        }
+
+        private void montobs_TextChanged(object sender, EventArgs e)
+        {
+            CalcularConversion();
+        }
+
+        private void montousd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+
+            if (char.IsControl(e.KeyChar)) return;
+
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+            {
+                e.KeyChar = ',';
+                if (txt.Text.Contains(",")) e.Handled = true; // Si ya hay coma, la bloquea
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true; // Bloquea letras y símbolos
+
+        }
+
 
         // 2. Vincul
     }

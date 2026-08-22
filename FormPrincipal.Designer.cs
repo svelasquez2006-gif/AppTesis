@@ -30,8 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenú = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.Usuarios = new System.Windows.Forms.Button();
+            this.Reportes = new System.Windows.Forms.Button();
+            this.rutas = new System.Windows.Forms.Button();
+            this.Clientes = new System.Windows.Forms.Button();
+            this.Basededatos = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.c = new System.Windows.Forms.Button();
             this.btnVehículos = new System.Windows.Forms.Button();
@@ -77,7 +80,6 @@
             this.mantenimientoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.MantenimientoTableAdapter();
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
-            this.rutas = new System.Windows.Forms.Button();
             this.panelMenú.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -97,9 +99,11 @@
             // 
             this.panelMenú.AutoScroll = true;
             this.panelMenú.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panelMenú.Controls.Add(this.rutas);
-            this.panelMenú.Controls.Add(this.button1);
             this.panelMenú.Controls.Add(this.Usuarios);
+            this.panelMenú.Controls.Add(this.Reportes);
+            this.panelMenú.Controls.Add(this.rutas);
+            this.panelMenú.Controls.Add(this.Clientes);
+            this.panelMenú.Controls.Add(this.Basededatos);
             this.panelMenú.Controls.Add(this.btnSalir);
             this.panelMenú.Controls.Add(this.c);
             this.panelMenú.Controls.Add(this.btnVehículos);
@@ -111,20 +115,6 @@
             this.panelMenú.TabIndex = 0;
             this.panelMenú.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenú_Paint);
             // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 129);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Clientes";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Usuarios
             // 
             this.Usuarios.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -134,10 +124,65 @@
             this.Usuarios.Location = new System.Drawing.Point(0, 572);
             this.Usuarios.Name = "Usuarios";
             this.Usuarios.Size = new System.Drawing.Size(149, 132);
-            this.Usuarios.TabIndex = 4;
+            this.Usuarios.TabIndex = 8;
             this.Usuarios.Text = "Gestionar Usuarios";
             this.Usuarios.UseVisualStyleBackColor = true;
-            this.Usuarios.Click += new System.EventHandler(this.Usuarios_Click);
+            this.Usuarios.Click += new System.EventHandler(this.Usuarios_Click_1);
+            // 
+            // Reportes
+            // 
+            this.Reportes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reportes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reportes.ForeColor = System.Drawing.Color.White;
+            this.Reportes.Location = new System.Drawing.Point(0, 704);
+            this.Reportes.Name = "Reportes";
+            this.Reportes.Size = new System.Drawing.Size(149, 132);
+            this.Reportes.TabIndex = 7;
+            this.Reportes.Text = "Reportes";
+            this.Reportes.UseVisualStyleBackColor = true;
+            // 
+            // rutas
+            // 
+            this.rutas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rutas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rutas.ForeColor = System.Drawing.Color.White;
+            this.rutas.Location = new System.Drawing.Point(0, 461);
+            this.rutas.Name = "rutas";
+            this.rutas.Size = new System.Drawing.Size(149, 111);
+            this.rutas.TabIndex = 6;
+            this.rutas.Text = "Rutas";
+            this.rutas.UseVisualStyleBackColor = true;
+            this.rutas.Click += new System.EventHandler(this.rutas_Click);
+            // 
+            // Clientes
+            // 
+            this.Clientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clientes.ForeColor = System.Drawing.Color.White;
+            this.Clientes.Location = new System.Drawing.Point(0, 332);
+            this.Clientes.Name = "Clientes";
+            this.Clientes.Size = new System.Drawing.Size(149, 129);
+            this.Clientes.TabIndex = 5;
+            this.Clientes.Text = "Clientes";
+            this.Clientes.UseVisualStyleBackColor = true;
+            this.Clientes.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Basededatos
+            // 
+            this.Basededatos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Basededatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Basededatos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Basededatos.ForeColor = System.Drawing.Color.White;
+            this.Basededatos.Location = new System.Drawing.Point(0, 836);
+            this.Basededatos.Name = "Basededatos";
+            this.Basededatos.Size = new System.Drawing.Size(149, 132);
+            this.Basededatos.TabIndex = 4;
+            this.Basededatos.Text = "Base de Datos";
+            this.Basededatos.UseVisualStyleBackColor = true;
+            this.Basededatos.Click += new System.EventHandler(this.Usuarios_Click);
             // 
             // btnSalir
             // 
@@ -146,7 +191,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(0, 704);
+            this.btnSalir.Location = new System.Drawing.Point(0, 968);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(149, 102);
             this.btnSalir.TabIndex = 3;
@@ -472,6 +517,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(952, 222);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBoxUser
             // 
@@ -535,20 +581,6 @@
             // 
             this.orden_ViajeTableAdapter.ClearBeforeFill = true;
             // 
-            // rutas
-            // 
-            this.rutas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rutas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rutas.ForeColor = System.Drawing.Color.White;
-            this.rutas.Location = new System.Drawing.Point(0, 461);
-            this.rutas.Name = "rutas";
-            this.rutas.Size = new System.Drawing.Size(149, 111);
-            this.rutas.TabIndex = 6;
-            this.rutas.Text = "Rutas";
-            this.rutas.UseVisualStyleBackColor = true;
-            this.rutas.Click += new System.EventHandler(this.rutas_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,8 +624,8 @@
         private System.Windows.Forms.Label labelUser;
         private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.Label labelRol;
-        private System.Windows.Forms.Button Usuarios;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Basededatos;
+        private System.Windows.Forms.Button Clientes;
         private System.Windows.Forms.PictureBox pictureBoxUser;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -632,6 +664,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Pago_BS;
         private System.Windows.Forms.DataGridViewTextBoxColumn estatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button rutas;
+        private System.Windows.Forms.Button Usuarios;
+        private System.Windows.Forms.Button Reportes;
     }
 }
 

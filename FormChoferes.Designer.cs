@@ -48,19 +48,6 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.dgvChoferes = new System.Windows.Forms.DataGridView();
-            this.cedulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gradoLicenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Experiencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ruta_Asignada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Afiliacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.choferBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.choferTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.ChoferTableAdapter();
@@ -85,6 +72,20 @@
             this.rutasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rutasTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.RutasTableAdapter();
             this.AfiliacionComboBox = new System.Windows.Forms.ComboBox();
+            this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grado_Licencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Experiencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruta_Asignada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Afiliacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoTelfComboBox = new System.Windows.Forms.ComboBox();
             cedulaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
@@ -138,7 +139,7 @@
             // 
             telefonoLabel.AutoSize = true;
             telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoLabel.Location = new System.Drawing.Point(56, 297);
+            telefonoLabel.Location = new System.Drawing.Point(12, 293);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(64, 16);
             telefonoLabel.TabIndex = 16;
@@ -297,18 +298,18 @@
             this.dgvChoferes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvChoferes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChoferes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cedulaDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidoDataGridViewTextBoxColumn,
+            this.Cedula,
+            this.Nombre,
+            this.Apellido,
             this.Fecha_Nacimiento,
             this.Edad,
-            this.telefonoDataGridViewTextBoxColumn,
-            this.correoDataGridViewTextBoxColumn,
-            this.gradoLicenciaDataGridViewTextBoxColumn,
+            this.Telefono,
+            this.Correo,
+            this.Grado_Licencia,
             this.Experiencia,
-            this.direccionDataGridViewTextBoxColumn,
+            this.Direccion,
             this.Ruta_Asignada,
-            this.estatusDataGridViewTextBoxColumn,
+            this.Estatus,
             this.Afiliacion});
             this.dgvChoferes.DataSource = this.choferBindingSource;
             this.dgvChoferes.Location = new System.Drawing.Point(247, 163);
@@ -316,97 +317,7 @@
             this.dgvChoferes.ReadOnly = true;
             this.dgvChoferes.Size = new System.Drawing.Size(831, 333);
             this.dgvChoferes.TabIndex = 5;
-            // 
-            // cedulaDataGridViewTextBoxColumn
-            // 
-            this.cedulaDataGridViewTextBoxColumn.DataPropertyName = "Cedula";
-            this.cedulaDataGridViewTextBoxColumn.HeaderText = "Cedula";
-            this.cedulaDataGridViewTextBoxColumn.Name = "cedulaDataGridViewTextBoxColumn";
-            this.cedulaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Fecha_Nacimiento
-            // 
-            this.Fecha_Nacimiento.DataPropertyName = "Fecha_Nacimiento";
-            this.Fecha_Nacimiento.HeaderText = "Fecha de Nacimiento";
-            this.Fecha_Nacimiento.Name = "Fecha_Nacimiento";
-            this.Fecha_Nacimiento.ReadOnly = true;
-            // 
-            // Edad
-            // 
-            this.Edad.DataPropertyName = "Edad";
-            this.Edad.HeaderText = "Edad";
-            this.Edad.Name = "Edad";
-            this.Edad.ReadOnly = true;
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // correoDataGridViewTextBoxColumn
-            // 
-            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
-            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
-            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
-            this.correoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // gradoLicenciaDataGridViewTextBoxColumn
-            // 
-            this.gradoLicenciaDataGridViewTextBoxColumn.DataPropertyName = "Grado_Licencia";
-            this.gradoLicenciaDataGridViewTextBoxColumn.HeaderText = "Grado de la Licencia";
-            this.gradoLicenciaDataGridViewTextBoxColumn.Name = "gradoLicenciaDataGridViewTextBoxColumn";
-            this.gradoLicenciaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Experiencia
-            // 
-            this.Experiencia.DataPropertyName = "Experiencia";
-            this.Experiencia.HeaderText = "Años de Experiencia";
-            this.Experiencia.Name = "Experiencia";
-            this.Experiencia.ReadOnly = true;
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Ruta_Asignada
-            // 
-            this.Ruta_Asignada.DataPropertyName = "Ruta_Asignada";
-            this.Ruta_Asignada.HeaderText = "Ruta Asignada";
-            this.Ruta_Asignada.Name = "Ruta_Asignada";
-            this.Ruta_Asignada.ReadOnly = true;
-            // 
-            // estatusDataGridViewTextBoxColumn
-            // 
-            this.estatusDataGridViewTextBoxColumn.DataPropertyName = "Estatus";
-            this.estatusDataGridViewTextBoxColumn.HeaderText = "Estatus";
-            this.estatusDataGridViewTextBoxColumn.Name = "estatusDataGridViewTextBoxColumn";
-            this.estatusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Afiliacion
-            // 
-            this.Afiliacion.DataPropertyName = "Afiliacion";
-            this.Afiliacion.HeaderText = "Afiliacion";
-            this.Afiliacion.Name = "Afiliacion";
-            this.Afiliacion.ReadOnly = true;
+            this.dgvChoferes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChoferes_CellClick);
             // 
             // choferBindingSource
             // 
@@ -462,10 +373,9 @@
             // 
             // telefonoTextBox
             // 
-            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(126, 293);
+            this.telefonoTextBox.Location = new System.Drawing.Point(143, 293);
             this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.telefonoTextBox.Size = new System.Drawing.Size(83, 20);
             this.telefonoTextBox.TabIndex = 17;
             this.telefonoTextBox.TextChanged += new System.EventHandler(this.telefonoTextBox_TextChanged);
             // 
@@ -650,12 +560,126 @@
             this.AfiliacionComboBox.Size = new System.Drawing.Size(100, 21);
             this.AfiliacionComboBox.TabIndex = 40;
             // 
+            // Cedula
+            // 
+            this.Cedula.DataPropertyName = "Cedula";
+            this.Cedula.HeaderText = "Cedula";
+            this.Cedula.Name = "Cedula";
+            this.Cedula.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.DataPropertyName = "Apellido";
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Fecha_Nacimiento
+            // 
+            this.Fecha_Nacimiento.DataPropertyName = "Fecha_Nacimiento";
+            this.Fecha_Nacimiento.HeaderText = "Fecha de Nacimiento";
+            this.Fecha_Nacimiento.Name = "Fecha_Nacimiento";
+            this.Fecha_Nacimiento.ReadOnly = true;
+            // 
+            // Edad
+            // 
+            this.Edad.DataPropertyName = "Edad";
+            this.Edad.HeaderText = "Edad";
+            this.Edad.Name = "Edad";
+            this.Edad.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "Correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            // 
+            // Grado_Licencia
+            // 
+            this.Grado_Licencia.DataPropertyName = "Grado_Licencia";
+            this.Grado_Licencia.HeaderText = "Grado de la Licencia";
+            this.Grado_Licencia.Name = "Grado_Licencia";
+            this.Grado_Licencia.ReadOnly = true;
+            // 
+            // Experiencia
+            // 
+            this.Experiencia.DataPropertyName = "Experiencia";
+            this.Experiencia.HeaderText = "Años de Experiencia";
+            this.Experiencia.Name = "Experiencia";
+            this.Experiencia.ReadOnly = true;
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "Direccion";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            // 
+            // Ruta_Asignada
+            // 
+            this.Ruta_Asignada.DataPropertyName = "Ruta_Asignada";
+            this.Ruta_Asignada.HeaderText = "Ruta Asignada";
+            this.Ruta_Asignada.Name = "Ruta_Asignada";
+            this.Ruta_Asignada.ReadOnly = true;
+            // 
+            // Estatus
+            // 
+            this.Estatus.DataPropertyName = "Estatus";
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
+            // 
+            // Afiliacion
+            // 
+            this.Afiliacion.DataPropertyName = "Afiliacion";
+            this.Afiliacion.HeaderText = "Afiliacion";
+            this.Afiliacion.Name = "Afiliacion";
+            this.Afiliacion.ReadOnly = true;
+            // 
+            // CodigoTelfComboBox
+            // 
+            this.CodigoTelfComboBox.FormattingEnabled = true;
+            this.CodigoTelfComboBox.Items.AddRange(new object[] {
+            "0412",
+            "0414",
+            "0416",
+            "0422",
+            "0424",
+            "0426",
+            "0212",
+            "0241",
+            "0243",
+            "0251",
+            "0261",
+            "0268",
+            "0281"});
+            this.CodigoTelfComboBox.Location = new System.Drawing.Point(80, 292);
+            this.CodigoTelfComboBox.Name = "CodigoTelfComboBox";
+            this.CodigoTelfComboBox.Size = new System.Drawing.Size(57, 21);
+            this.CodigoTelfComboBox.TabIndex = 41;
+            // 
             // FormChoferes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1098, 578);
+            this.Controls.Add(this.CodigoTelfComboBox);
             this.Controls.Add(this.AfiliacionComboBox);
             this.Controls.Add(this.RutaComboBox);
             this.Controls.Add(afiliacionLabel);
@@ -737,18 +761,19 @@
         private System.Windows.Forms.BindingSource rutasBindingSource;
         private DataBaseDataSetTableAdapters.RutasTableAdapter rutasTableAdapter;
         private System.Windows.Forms.ComboBox AfiliacionComboBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedulaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Nacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gradoLicenciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grado_Licencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Experiencia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruta_Asignada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Afiliacion;
+        private System.Windows.Forms.ComboBox CodigoTelfComboBox;
     }
 }

@@ -31,7 +31,9 @@ namespace AppTesis
             string secre = "Secretario";
             if (SesionUsuario.Jerarquia != jefe && SesionUsuario.Jerarquia != secre && SesionUsuario.Jerarquia!= "Developer")
             {
+                Basededatos.Hide();
                 Usuarios.Hide();
+                Reportes.Hide();
             }
 
         }
@@ -77,9 +79,7 @@ namespace AppTesis
         private void Usuarios_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            FormUsuarios usuario =new FormUsuarios();
-            usuario.Show();
+            
 
         }
 
@@ -112,6 +112,18 @@ namespace AppTesis
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Usuarios_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormUsuarios usuario = new FormUsuarios();
+            usuario.Show();
         }
     }
 }

@@ -27,7 +27,7 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Chofer' Puede moverla o quitarla según sea necesario.
             this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
             Filtro.SelectedItem = "<Selecionar>";
-            telefonoTextBox.MaxLength = 11;     
+            telefonoTextBox.MaxLength = 7;     
             cedulaTextBox.MaxLength = 8;
             experienciaTextBox.MaxLength = 2;
 
@@ -63,15 +63,29 @@ namespace AppTesis
 
         private void agregar_Click(object sender, EventArgs e)
         {
-            if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || telefonoTextBox.Text == "" || correoTextBox.Text == "" || licenciacombobox.Text == "" || direccionTextBox.Text == "" || estatuscombobox.Text == "")
+            List<string> camposVacios = new List<string>();
+
+            foreach (Control c in this.Controls)
             {
-                MessageBox.Show("No se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (c is System.Windows.Forms.TextBox textBox && string.IsNullOrEmpty(textBox.Text))
+                {
+                    // Agrega el nombre del campo a la lista
+                    camposVacios.Add(textBox.Name);
+                }
             }
+
+            // Si la lista tiene elementos, muestra el mensaje
+            if (camposVacios.Count > 0)
+            {
+                string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
+                MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             else if(cedulaTextBox.Text.Length<7)
             {
                 MessageBox.Show("No se puede registrar Choferes con cedulas menores a 7 digitos", "Corregir longitud de Cedula", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (telefonoTextBox.Text.Length<10)
+            else if (telefonoTextBox.Text.Length<7)
             {
                 MessageBox.Show("El telefono no puede tener menos de 10 digitos", "Faltan Digitos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -84,7 +98,11 @@ namespace AppTesis
                     string apellido = apellidoTextBox.Text;
                     DateTime fechaNacimiento = fecha_NacimientoDateTimePicker.Value;
                     int.TryParse(edadTextBox.Text, out int ed);
-                    string telefono = telefonoTextBox.Text;
+
+                    string codigo = CodigoTelfComboBox.Text;
+                    string celdigitos = telefonoTextBox.Text;
+                    string telefono = codigo + celdigitos;
+
                     string correo = correoTextBox.Text;
                     int.TryParse(licenciacombobox.Text, out int licencia);
                     int.TryParse(experienciaTextBox.Text, out int experiencia);
@@ -120,9 +138,22 @@ namespace AppTesis
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-            if (cedulaTextBox.Text == "" || nombreTextBox.Text == "" || apellidoTextBox.Text == "" || telefonoTextBox.Text == "" || correoTextBox.Text == "" || licenciacombobox.Text == "" || direccionTextBox.Text == "" || estatuscombobox.Text == "")
+            List<string> camposVacios = new List<string>();
+
+            foreach (Control c in this.Controls)
             {
-                MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (c is System.Windows.Forms.TextBox textBox && string.IsNullOrEmpty(textBox.Text))
+                {
+                    // Agrega el nombre del campo a la lista
+                    camposVacios.Add(textBox.Name);
+                }
+            }
+
+            // Si la lista tiene elementos, muestra el mensaje
+            if (camposVacios.Count > 0)
+            {
+                string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
+                MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (cedulaTextBox.Text.Length < 7)
@@ -130,7 +161,7 @@ namespace AppTesis
                 MessageBox.Show("No se puede registrar Choferes con cedulas menores a 7 digitos", "Corregir longitud de Cedula", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            else if (telefonoTextBox.Text.Length < 10)
+            else if (telefonoTextBox.Text.Length < 7)
             {
                 MessageBox.Show("El telefono no puede tener menos de 10 digitos", "Faltan Digitos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -143,7 +174,11 @@ namespace AppTesis
                     string apellido = apellidoTextBox.Text;
                     DateTime fechaNacimiento = fecha_NacimientoDateTimePicker.Value;
                     int.TryParse(edadTextBox.Text, out int ed);
-                    string telefono = telefonoTextBox.Text;
+
+                    string codigo = CodigoTelfComboBox.Text;
+                    string celdigitos = telefonoTextBox.Text;
+                    string telefono = codigo + celdigitos;
+
                     string correo = correoTextBox.Text;
                     int.TryParse(licenciacombobox.Text, out int licencia);
                     int.TryParse(experienciaTextBox.Text, out int experiencia);
@@ -152,6 +187,7 @@ namespace AppTesis
                     string estatus = estatuscombobox.Text;
                     string afiliacion = AfiliacionComboBox.Text;
                     this.choferTableAdapter.modify(nombre, apellido,fechaNacimiento,ed, telefono, correo, licencia ,experiencia, dirreccion,ruta, estatus,afiliacion, cedula);
+                    this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
 
                 }
 
@@ -233,6 +269,38 @@ namespace AppTesis
         private void experienciaTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvChoferes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // 2. Obtener la fila actual
+                DataGridViewRow fila = dgvChoferes.Rows[e.RowIndex];
+
+                // 3. Leer el teléfono. Reemplaza "Telefono" por el nombre de tu columna
+                string telefonoCompleto = fila.Cells["Telefono"].Value?.ToString() ?? "";
+
+                // 4. Verificar que tenga los 11 dígitos requeridos en Venezuela
+                if (telefonoCompleto.Length >= 11)
+                {
+                    // Extrae los primeros 4 dígitos (Código de área/operadora)
+                    string codigo = telefonoCompleto.Substring(0, 4);
+
+                    // Extrae los 7 dígitos restantes (Número local)
+                    string numero = telefonoCompleto.Substring(4);
+
+                    // 5. Cargar los datos en los controles de tu formulario
+                    CodigoTelfComboBox.Text = codigo; // Busca y asigna el código en el Combo
+                    telefonoTextBox.Text = numero;      // Muestra el número en el TextBox
+                }
+                else
+                {
+                    // Limpia los campos si el formato es inválido o está vacío
+                    CodigoTelfComboBox.SelectedIndex = -1;
+                    telefonoTextBox.Clear();
+                }
+            }
         }
     }
 }

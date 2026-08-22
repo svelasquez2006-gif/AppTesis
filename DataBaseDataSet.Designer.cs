@@ -9056,9 +9056,11 @@ SELECT Cedula, Nombre, Apellido, Usuario, Contrasena, Correo, Jerarquia FROM Usu
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jerarquia", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Jerarquia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT Usuario FROM Usuario WHERE Usuario =@Usuario";
+            this._commandCollection[2].CommandText = "SELECT        Usuario\r\nFROM            Usuario\r\nWHERE        (Usuario = @Usuario)" +
+                " AND (Cedula <> @Cedula)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Usuario", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.VarChar, 11, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT        Cedula, Nombre, Apellido, Jerarquia, Usuario, Contrasena, Correo\r\nF" +
@@ -9496,13 +9498,19 @@ SELECT Cedula, Nombre, Apellido, Usuario, Contrasena, Correo, Jerarquia FROM Usu
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual string ExistUsuario(string Usuario) {
+        public virtual object ExistUsuario(string Usuario, string Cedula) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Usuario == null)) {
                 throw new global::System.ArgumentNullException("Usuario");
             }
             else {
                 command.Parameters[0].Value = ((string)(Usuario));
+            }
+            if ((Cedula == null)) {
+                throw new global::System.ArgumentNullException("Cedula");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Cedula));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9523,7 +9531,7 @@ SELECT Cedula, Nombre, Apellido, Usuario, Contrasena, Correo, Jerarquia FROM Usu
                 return null;
             }
             else {
-                return ((string)(returnValue));
+                return ((object)(returnValue));
             }
         }
         
@@ -9856,10 +9864,10 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "UPDATE       Vehiculo\r\nSET                UltimoMantenimiento = @UltimoMantenimie" +
-                "nto\r\nWHERE        (NroPlaca = @Original_NroPlaca); \r\n";
+                "nto\r\nWHERE        (NroPlaca = @NroPlaca)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UltimoMantenimiento", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "UltimoMantenimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NroPlaca", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "NroPlaca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NroPlaca", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "NroPlaca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "UPDATE       Vehiculo\r\nSET                Tipo_Vehiculo = @Tipo_Vehiculo, Marca =" +
@@ -10300,7 +10308,7 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int addMantenimiento(global::System.Nullable<global::System.DateTime> UltimoMantenimiento, string Original_NroPlaca) {
+        public virtual int addMantenimiento(global::System.Nullable<global::System.DateTime> UltimoMantenimiento, string NroPlaca) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((UltimoMantenimiento.HasValue == true)) {
                 command.Parameters[0].Value = ((System.DateTime)(UltimoMantenimiento.Value));
@@ -10308,11 +10316,11 @@ SELECT NroPlaca, Marca, Modelo, Anio, Color, UltimoMantenimiento, Estatus FROM V
             else {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Original_NroPlaca == null)) {
-                throw new global::System.ArgumentNullException("Original_NroPlaca");
+            if ((NroPlaca == null)) {
+                throw new global::System.ArgumentNullException("NroPlaca");
             }
             else {
-                command.Parameters[1].Value = ((string)(Original_NroPlaca));
+                command.Parameters[1].Value = ((string)(NroPlaca));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
