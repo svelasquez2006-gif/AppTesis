@@ -58,6 +58,7 @@
             this.reporteUsuariosToolStripMenuItem.Name = "reporteUsuariosToolStripMenuItem";
             this.reporteUsuariosToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
             this.reporteUsuariosToolStripMenuItem.Text = "Reporte Usuarios";
+            this.reporteUsuariosToolStripMenuItem.Click += new System.EventHandler(this.reporteUsuariosToolStripMenuItem_Click);
             // 
             // reporteFlotaToolStripMenuItem
             // 
@@ -83,30 +84,35 @@
             this.reporteChoferesToolStripMenuItem.Name = "reporteChoferesToolStripMenuItem";
             this.reporteChoferesToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.reporteChoferesToolStripMenuItem.Text = "Reporte Choferes";
+            this.reporteChoferesToolStripMenuItem.Click += new System.EventHandler(this.reporteChoferesToolStripMenuItem_Click);
             // 
             // reporteMantenimientosToolStripMenuItem
             // 
             this.reporteMantenimientosToolStripMenuItem.Name = "reporteMantenimientosToolStripMenuItem";
             this.reporteMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.reporteMantenimientosToolStripMenuItem.Text = "Reporte Mantenimientos";
+            this.reporteMantenimientosToolStripMenuItem.Click += new System.EventHandler(this.reporteMantenimientosToolStripMenuItem_Click);
             // 
             // reportesOrdenesDeViajeToolStripMenuItem
             // 
             this.reportesOrdenesDeViajeToolStripMenuItem.Name = "reportesOrdenesDeViajeToolStripMenuItem";
             this.reportesOrdenesDeViajeToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.reportesOrdenesDeViajeToolStripMenuItem.Text = "Reportes Ordenes de Viaje";
+            this.reportesOrdenesDeViajeToolStripMenuItem.Click += new System.EventHandler(this.reportesOrdenesDeViajeToolStripMenuItem_Click);
             // 
             // reportesRutasToolStripMenuItem
             // 
             this.reportesRutasToolStripMenuItem.Name = "reportesRutasToolStripMenuItem";
             this.reportesRutasToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.reportesRutasToolStripMenuItem.Text = "Reportes Rutas";
+            this.reportesRutasToolStripMenuItem.Click += new System.EventHandler(this.reportesRutasToolStripMenuItem_Click);
             // 
             // reportesClientesToolStripMenuItem
             // 
             this.reportesClientesToolStripMenuItem.Name = "reportesClientesToolStripMenuItem";
             this.reportesClientesToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.reportesClientesToolStripMenuItem.Text = "Reportes Clientes";
+            this.reportesClientesToolStripMenuItem.Click += new System.EventHandler(this.reportesClientesToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 

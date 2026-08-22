@@ -141,6 +141,7 @@
             this.Reportes.TabIndex = 7;
             this.Reportes.Text = "Reportes";
             this.Reportes.UseVisualStyleBackColor = true;
+            this.Reportes.Click += new System.EventHandler(this.Reportes_Click);
             // 
             // rutas
             // 

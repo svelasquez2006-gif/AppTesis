@@ -125,5 +125,13 @@ namespace AppTesis
             FormUsuarios usuario = new FormUsuarios();
             usuario.Show();
         }
+
+        private void Reportes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Reportes rep = new Reportes();
+            rep.Show();
+
+        }
     }
 }

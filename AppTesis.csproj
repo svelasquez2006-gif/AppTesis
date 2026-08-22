@@ -89,6 +89,24 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=9.7.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.9.7.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
@@ -142,17 +160,47 @@
     <Compile Include="botonredondeado.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Choferes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choferes.Designer.cs">
+      <DependentUpon>Choferes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientes.Designer.cs">
+      <DependentUpon>clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRutas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRutas.Designer.cs">
       <DependentUpon>FormRutas.cs</DependentUpon>
     </Compile>
+    <Compile Include="mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimiento.Designer.cs">
+      <DependentUpon>mantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ordenesviaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ordenesviaje.Designer.cs">
+      <DependentUpon>ordenesviaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ruta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ruta.Designer.cs">
+      <DependentUpon>ruta.cs</DependentUpon>
     </Compile>
     <Compile Include="Sesion.cs" />
     <Compile Include="DataBaseDataSet.cs">
@@ -213,6 +261,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuarios.Designer.cs">
+      <DependentUpon>usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vehiculo.Designer.cs">
+      <DependentUpon>vehiculo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Choferes.resx">
+      <DependentUpon>Choferes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes.resx">
+      <DependentUpon>clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMantenimiento.resx">
       <DependentUpon>FormMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +307,12 @@
     <EmbeddedResource Include="FormChoferes.resx">
       <DependentUpon>FormChoferes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="mantenimiento.resx">
+      <DependentUpon>mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ordenesviaje.resx">
+      <DependentUpon>ordenesviaje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -250,8 +323,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReporteChoferes.rdlc" />
+    <EmbeddedResource Include="ReporteClientes.rdlc" />
+    <EmbeddedResource Include="ReporteMantenimiento.rdlc" />
+    <EmbeddedResource Include="ReporteOrdenesViaje.rdlc" />
+    <EmbeddedResource Include="ReporteVehiculos.rdlc" />
+    <EmbeddedResource Include="usuarios.rdlc" />
+    <EmbeddedResource Include="Rutas.rdlc" />
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ruta.resx">
+      <DependentUpon>ruta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuarios.resx">
+      <DependentUpon>usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vehiculo.resx">
+      <DependentUpon>vehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="basededatosDataSet.xsc">
       <DependentUpon>basededatosDataSet.xsd</DependentUpon>
@@ -290,6 +379,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images-_2_.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\6900514.png" />
     <None Include="Resources\Icon User.png" />
   </ItemGroup>
