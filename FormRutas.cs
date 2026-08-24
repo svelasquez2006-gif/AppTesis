@@ -70,10 +70,10 @@ namespace AppTesis
                     string Ruta = nombre_RutaTextBox.Text;
                     int.TryParse(dias_ViajeTextBox.Text, out int dias);
                     decimal.TryParse(distancia_kmTextBox.Text, out decimal distancia);
-                    string origen = origenTextBox.Text;
+
                     string paradas = paradasTextBox.Text;
-                    string destino = destinoTextBox.Text;
-                    this.rutasTableAdapter.add(Ruta,dias,distancia,origen,paradas,destino);
+
+                    this.rutasTableAdapter.add(Ruta,dias,distancia,paradas);
                     this.rutasTableAdapter.Fill(this.dataBaseDataSet.Rutas);
                     
                 }
@@ -167,10 +167,10 @@ namespace AppTesis
                     string Ruta = nombre_RutaTextBox.Text;
                     int.TryParse(dias_ViajeTextBox.Text, out int dias);
                     decimal.TryParse(distancia_kmTextBox.Text, out decimal distancia);
-                    string origen = origenTextBox.Text;
+
                     string paradas = paradasTextBox.Text;
-                    string destino = destinoTextBox.Text;
-                    this.rutasTableAdapter.modify(dias, distancia, origen, paradas, destino, Ruta);
+
+                    this.rutasTableAdapter.modify(dias, distancia, paradas, Ruta);
                     this.rutasTableAdapter.Fill(this.dataBaseDataSet.Rutas);
 
                 }

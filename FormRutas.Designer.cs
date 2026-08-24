@@ -32,9 +32,7 @@
             System.Windows.Forms.Label nombre_RutaLabel;
             System.Windows.Forms.Label dias_ViajeLabel;
             System.Windows.Forms.Label distancia_kmLabel;
-            System.Windows.Forms.Label origenLabel;
             System.Windows.Forms.Label paradasLabel;
-            System.Windows.Forms.Label destinoLabel;
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.rutasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rutasTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.RutasTableAdapter();
@@ -43,25 +41,19 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.nombre_RutaTextBox = new System.Windows.Forms.TextBox();
             this.dias_ViajeTextBox = new System.Windows.Forms.TextBox();
             this.distancia_kmTextBox = new System.Windows.Forms.TextBox();
-            this.origenTextBox = new System.Windows.Forms.TextBox();
             this.paradasTextBox = new System.Windows.Forms.TextBox();
-            this.destinoTextBox = new System.Windows.Forms.TextBox();
             this.modificar = new BotonRedondo();
             this.salir = new BotonRedondo();
             this.agregar = new BotonRedondo();
             nombre_RutaLabel = new System.Windows.Forms.Label();
             dias_ViajeLabel = new System.Windows.Forms.Label();
             distancia_kmLabel = new System.Windows.Forms.Label();
-            origenLabel = new System.Windows.Forms.Label();
             paradasLabel = new System.Windows.Forms.Label();
-            destinoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rutasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rutasDataGridView)).BeginInit();
@@ -81,7 +73,7 @@
             // 
             dias_ViajeLabel.AutoSize = true;
             dias_ViajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dias_ViajeLabel.Location = new System.Drawing.Point(24, 154);
+            dias_ViajeLabel.Location = new System.Drawing.Point(28, 168);
             dias_ViajeLabel.Name = "dias_ViajeLabel";
             dias_ViajeLabel.Size = new System.Drawing.Size(84, 20);
             dias_ViajeLabel.TabIndex = 20;
@@ -91,41 +83,21 @@
             // 
             distancia_kmLabel.AutoSize = true;
             distancia_kmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            distancia_kmLabel.Location = new System.Drawing.Point(4, 182);
+            distancia_kmLabel.Location = new System.Drawing.Point(8, 219);
             distancia_kmLabel.Name = "distancia_kmLabel";
             distancia_kmLabel.Size = new System.Drawing.Size(104, 20);
             distancia_kmLabel.TabIndex = 22;
             distancia_kmLabel.Text = "Distancia km:";
             // 
-            // origenLabel
-            // 
-            origenLabel.AutoSize = true;
-            origenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            origenLabel.Location = new System.Drawing.Point(48, 206);
-            origenLabel.Name = "origenLabel";
-            origenLabel.Size = new System.Drawing.Size(60, 20);
-            origenLabel.TabIndex = 24;
-            origenLabel.Text = "Origen:";
-            // 
             // paradasLabel
             // 
             paradasLabel.AutoSize = true;
             paradasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            paradasLabel.Location = new System.Drawing.Point(36, 232);
+            paradasLabel.Location = new System.Drawing.Point(40, 248);
             paradasLabel.Name = "paradasLabel";
             paradasLabel.Size = new System.Drawing.Size(72, 20);
             paradasLabel.TabIndex = 26;
             paradasLabel.Text = "Paradas:";
-            // 
-            // destinoLabel
-            // 
-            destinoLabel.AutoSize = true;
-            destinoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            destinoLabel.Location = new System.Drawing.Point(36, 260);
-            destinoLabel.Name = "destinoLabel";
-            destinoLabel.Size = new System.Drawing.Size(68, 20);
-            destinoLabel.TabIndex = 28;
-            destinoLabel.Text = "Destino:";
             // 
             // dataBaseDataSet
             // 
@@ -146,6 +118,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ChoferTableAdapter = null;
             this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.EmpresasSubcontratadaTableAdapter = null;
             this.tableAdapterManager.MantenimientoTableAdapter = null;
             this.tableAdapterManager.Orden_ViajeTableAdapter = null;
             this.tableAdapterManager.RegistroAccionesTableAdapter = null;
@@ -164,9 +137,7 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewTextBoxColumn5});
             this.rutasDataGridView.DataSource = this.rutasBindingSource;
             this.rutasDataGridView.Location = new System.Drawing.Point(257, 105);
             this.rutasDataGridView.Name = "rutasDataGridView";
@@ -195,26 +166,12 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Origen";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Origen";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Paradas";
             this.dataGridViewTextBoxColumn5.HeaderText = "Paradas";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Destino";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Destino";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // label1
             // 
@@ -237,7 +194,7 @@
             // dias_ViajeTextBox
             // 
             this.dias_ViajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "Dias_Viaje", true));
-            this.dias_ViajeTextBox.Location = new System.Drawing.Point(118, 156);
+            this.dias_ViajeTextBox.Location = new System.Drawing.Point(122, 170);
             this.dias_ViajeTextBox.Name = "dias_ViajeTextBox";
             this.dias_ViajeTextBox.Size = new System.Drawing.Size(100, 20);
             this.dias_ViajeTextBox.TabIndex = 21;
@@ -246,35 +203,19 @@
             // distancia_kmTextBox
             // 
             this.distancia_kmTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "Distancia_km", true));
-            this.distancia_kmTextBox.Location = new System.Drawing.Point(118, 182);
+            this.distancia_kmTextBox.Location = new System.Drawing.Point(122, 219);
             this.distancia_kmTextBox.Name = "distancia_kmTextBox";
             this.distancia_kmTextBox.Size = new System.Drawing.Size(100, 20);
             this.distancia_kmTextBox.TabIndex = 23;
             this.distancia_kmTextBox.TextChanged += new System.EventHandler(this.distancia_kmTextBox_TextChanged);
             // 
-            // origenTextBox
-            // 
-            this.origenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "Origen", true));
-            this.origenTextBox.Location = new System.Drawing.Point(118, 208);
-            this.origenTextBox.Name = "origenTextBox";
-            this.origenTextBox.Size = new System.Drawing.Size(100, 20);
-            this.origenTextBox.TabIndex = 25;
-            // 
             // paradasTextBox
             // 
             this.paradasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "Paradas", true));
-            this.paradasTextBox.Location = new System.Drawing.Point(118, 234);
+            this.paradasTextBox.Location = new System.Drawing.Point(122, 250);
             this.paradasTextBox.Name = "paradasTextBox";
             this.paradasTextBox.Size = new System.Drawing.Size(100, 20);
             this.paradasTextBox.TabIndex = 27;
-            // 
-            // destinoTextBox
-            // 
-            this.destinoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "Destino", true));
-            this.destinoTextBox.Location = new System.Drawing.Point(118, 260);
-            this.destinoTextBox.Name = "destinoTextBox";
-            this.destinoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.destinoTextBox.TabIndex = 29;
             // 
             // modificar
             // 
@@ -339,12 +280,8 @@
             this.Controls.Add(this.dias_ViajeTextBox);
             this.Controls.Add(distancia_kmLabel);
             this.Controls.Add(this.distancia_kmTextBox);
-            this.Controls.Add(origenLabel);
-            this.Controls.Add(this.origenTextBox);
             this.Controls.Add(paradasLabel);
             this.Controls.Add(this.paradasTextBox);
-            this.Controls.Add(destinoLabel);
-            this.Controls.Add(this.destinoTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rutasDataGridView);
             this.Name = "FormRutas";
@@ -375,9 +312,7 @@
         private System.Windows.Forms.TextBox nombre_RutaTextBox;
         private System.Windows.Forms.TextBox dias_ViajeTextBox;
         private System.Windows.Forms.TextBox distancia_kmTextBox;
-        private System.Windows.Forms.TextBox origenTextBox;
         private System.Windows.Forms.TextBox paradasTextBox;
-        private System.Windows.Forms.TextBox destinoTextBox;
         private BotonRedondo modificar;
         private BotonRedondo salir;
         private BotonRedondo agregar;

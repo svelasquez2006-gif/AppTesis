@@ -105,14 +105,14 @@ namespace AppTesis
                     string ruta = RutaComboBox.Text;
                     int.TryParse(dias_ViajeTextBox.Text,out int dias);
                     decimal.TryParse(distanciaTextBox.Text, out decimal distancia);
-                    string origen =origenTextBox.Text;
+
                     string paradas =paradasTextBox.Text;
-                    string destino = destinoTextBox.Text;
+   
 
                     string chofer =ChoferComboBox.Text;
                     string placa =PlacaComboBox.Text;
                     string cliente = ClienteComboBox.Text;
-                    
+                    string nombre = NombreCliente.Text;
 
                     DateTime inicio = fecha_InicioDateTimePicker.Value;
                     DateTime final = fecha_FinalizacionDateTimePicker.Value;                  
@@ -121,7 +121,7 @@ namespace AppTesis
                     decimal.TryParse(montobs.Text, out decimal monto);
 
 
-                    this.orden_ViajeTableAdapter.add(ruta,dias,distancia,origen,paradas, destino,chofer, placa, cliente,  inicio, final, tasa,monto,estatus);
+                    this.orden_ViajeTableAdapter.add(ruta,dias,distancia,paradas,chofer, placa, cliente,nombre , inicio, final, tasa,monto,estatus);
                     this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
                 }
 
@@ -250,14 +250,14 @@ namespace AppTesis
                     string ruta = RutaComboBox.Text;
                     int.TryParse(dias_ViajeTextBox.Text, out int dias);
                     decimal.TryParse(distanciaTextBox.Text, out decimal distancia);
-                    string origen = origenTextBox.Text;
+
                     string paradas = paradasTextBox.Text;
-                    string destino = destinoTextBox.Text;
+
 
                     string chofer = ChoferComboBox.Text;
                     string placa = PlacaComboBox.Text;
                     string cliente = ClienteComboBox.Text;
-
+                    string nombre = NombreCliente.Text;
 
                     DateTime inicio = fecha_InicioDateTimePicker.Value;
                     DateTime final = fecha_FinalizacionDateTimePicker.Value;
@@ -265,7 +265,7 @@ namespace AppTesis
                     decimal.TryParse(tasa_USDTextBox.Text, out decimal tasa);
                     decimal.TryParse(montobs.Text, out decimal monto);
 
-                    this.orden_ViajeTableAdapter.modify(ruta,dias,distancia,origen,paradas,destino,chofer,placa,cliente,inicio,final,tasa,monto,estatus, id);
+                    this.orden_ViajeTableAdapter.modify(ruta,dias,distancia,paradas,chofer,placa,cliente,nombre,inicio,final,tasa,monto,estatus, id);
                     this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
                     montobs.Text = "0,00";
                     montousd.Text = "0,00";
@@ -399,9 +399,8 @@ namespace AppTesis
 
                     dias_ViajeTextBox.Text = fila.Dias_Viaje.ToString();
                     distanciaTextBox.Text = fila.Distancia_km.ToString();
-                    origenTextBox.Text = fila.Origen;
                     paradasTextBox.Text = fila.Paradas;
-                    destinoTextBox.Text = fila.Destino;
+
                 }
             }
             catch (Exception ex)
@@ -525,6 +524,55 @@ namespace AppTesis
 
             if (!char.IsDigit(e.KeyChar)) e.Handled = true; // Bloquea letras y símbolos
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RutaComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NombreCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClienteComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            // 1. Validaciones de selección
+            if (ClienteComboBox.SelectedIndex == -1 || ClienteComboBox.SelectedValue == null)
+                return;
+
+            if (ClienteComboBox.SelectedValue is System.Data.DataRowView)
+                return;
+
+            try
+            {
+                string idBuscar = ClienteComboBox.SelectedValue.ToString();
+
+                // 2. Traer los datos a una tabla temporal (NO sobrescribe la lista del ComboBox)
+                var tablaTemporal = this.clienteTableAdapter.GetDataByID(idBuscar);
+
+                // 3. Cargar los campos en los TextBox
+                if (tablaTemporal != null && tablaTemporal.Rows.Count > 0)
+                {
+                    var fila = tablaTemporal[0];
+
+                    string n = fila.Nombre.ToString();
+                    string a = fila.Apellido.ToString();
+                    string nombre_completo = $"{n} {a}";
+                    NombreCliente.Text = nombre_completo;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar la ruta: " + ex.Message);
+            }
         }
 
 
