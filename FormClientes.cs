@@ -31,7 +31,15 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Cliente' Puede moverla o quitarla según sea necesario.
             this.clienteTableAdapter.Fill(this.dataBaseDataSet.Cliente);
 
-            cedulaTextBox.MaxLength = 8;
+            if (TipoComboBox.Text=="Natural")
+            {
+
+                cedulaTextBox.MaxLength = 8;
+            }
+            else if (TipoComboBox.Text == "Jurdica")
+            {
+                cedulaTextBox.MaxLength = 9;
+            }
             telefonoTextBox.MaxLength = 7;
 
 
