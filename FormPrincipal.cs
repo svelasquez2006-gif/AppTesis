@@ -20,13 +20,13 @@ namespace AppTesis
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Orden_Viaje' Puede moverla o quitarla según sea necesario.
-            this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
+            
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Mantenimiento' Puede moverla o quitarla según sea necesario.
             this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
 
             labelUser.Text = $"{SesionUsuario.Nombre} {SesionUsuario.Apellido}";
             labelRol.Text = SesionUsuario.Jerarquia;
-            labelHora.Text = DateTime.Now.ToString();
+            labelHora.Text = DateTime.Now.ToString("dd/MM/yyyy");
             string jefe = "Jefe";
             string secre = "Secretario";
             if (SesionUsuario.Jerarquia != jefe && SesionUsuario.Jerarquia != secre && SesionUsuario.Jerarquia!= "Developer")
@@ -131,6 +131,11 @@ namespace AppTesis
             this.Hide();
             Reportes rep = new Reportes();
             rep.Show();
+
+        }
+
+        private void labelHora_Click(object sender, EventArgs e)
+        {
 
         }
     }

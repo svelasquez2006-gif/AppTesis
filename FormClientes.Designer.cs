@@ -42,6 +42,13 @@
             this.clienteTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.ClienteTableAdapter();
             this.tableAdapterManager1 = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.clienteDataGridView = new System.Windows.Forms.DataGridView();
+            this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
@@ -51,13 +58,6 @@
             this.DirrecionTextBox = new System.Windows.Forms.TextBox();
             this.TipoComboBox = new System.Windows.Forms.ComboBox();
             this.CodigoTelfComboBox = new System.Windows.Forms.ComboBox();
-            this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelced = new System.Windows.Forms.Label();
             this.LabelApellido = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -125,11 +125,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(317, 18);
+            this.label1.Location = new System.Drawing.Point(64, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 25);
+            this.label1.Size = new System.Drawing.Size(122, 25);
             this.label1.TabIndex = 17;
-            this.label1.Text = "LISTA DE CLIENTES";
+            this.label1.Text = "CLIENTES";
             // 
             // agregar
             // 
@@ -182,6 +182,7 @@
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.ChoferTableAdapter = null;
             this.tableAdapterManager1.ClienteTableAdapter = this.clienteTableAdapter;
+            this.tableAdapterManager1.EmpresasSubcontratadaTableAdapter = null;
             this.tableAdapterManager1.MantenimientoTableAdapter = null;
             this.tableAdapterManager1.Orden_ViajeTableAdapter = null;
             this.tableAdapterManager1.RegistroAccionesTableAdapter = null;
@@ -209,6 +210,48 @@
             this.clienteDataGridView.Size = new System.Drawing.Size(746, 238);
             this.clienteDataGridView.TabIndex = 19;
             this.clienteDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clienteDataGridView_CellClick);
+            // 
+            // Cedula
+            // 
+            this.Cedula.DataPropertyName = "Cedula";
+            this.Cedula.HeaderText = "Cedula o Rif";
+            this.Cedula.Name = "Cedula";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Apellido
+            // 
+            this.Apellido.DataPropertyName = "Apellido";
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "Correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "Direccion";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            // 
+            // Tipo_Cliente
+            // 
+            this.Tipo_Cliente.DataPropertyName = "Tipo_Cliente";
+            this.Tipo_Cliente.HeaderText = "Tipo de Cliente";
+            this.Tipo_Cliente.Name = "Tipo_Cliente";
             // 
             // cedulaTextBox
             // 
@@ -309,48 +352,6 @@
             this.CodigoTelfComboBox.Name = "CodigoTelfComboBox";
             this.CodigoTelfComboBox.Size = new System.Drawing.Size(50, 21);
             this.CodigoTelfComboBox.TabIndex = 35;
-            // 
-            // Cedula
-            // 
-            this.Cedula.DataPropertyName = "Cedula";
-            this.Cedula.HeaderText = "Cedula o Rif";
-            this.Cedula.Name = "Cedula";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Apellido
-            // 
-            this.Apellido.DataPropertyName = "Apellido";
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            // 
-            // Telefono
-            // 
-            this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // Correo
-            // 
-            this.Correo.DataPropertyName = "Correo";
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            // 
-            // Direccion
-            // 
-            this.Direccion.DataPropertyName = "Direccion";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            // 
-            // Tipo_Cliente
-            // 
-            this.Tipo_Cliente.DataPropertyName = "Tipo_Cliente";
-            this.Tipo_Cliente.HeaderText = "Tipo de Cliente";
-            this.Tipo_Cliente.Name = "Tipo_Cliente";
             // 
             // labelced
             // 

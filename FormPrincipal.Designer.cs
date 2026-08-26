@@ -60,7 +60,6 @@
             this.Distancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Origen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paradas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destinoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cedulaChoferDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehiculosNroPlacaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cedulaClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -375,7 +374,6 @@
             this.Distancia,
             this.Origen,
             this.Paradas,
-            this.destinoDataGridViewTextBoxColumn,
             this.cedulaChoferDataGridViewTextBoxColumn,
             this.vehiculosNroPlacaDataGridViewTextBoxColumn,
             this.cedulaClienteDataGridViewTextBoxColumn,
@@ -426,12 +424,6 @@
             this.Paradas.DataPropertyName = "Paradas";
             this.Paradas.HeaderText = "Paradas";
             this.Paradas.Name = "Paradas";
-            // 
-            // destinoDataGridViewTextBoxColumn
-            // 
-            this.destinoDataGridViewTextBoxColumn.DataPropertyName = "Destino";
-            this.destinoDataGridViewTextBoxColumn.HeaderText = "Destino";
-            this.destinoDataGridViewTextBoxColumn.Name = "destinoDataGridViewTextBoxColumn";
             // 
             // cedulaChoferDataGridViewTextBoxColumn
             // 
@@ -539,6 +531,7 @@
             this.labelHora.Size = new System.Drawing.Size(127, 30);
             this.labelHora.TabIndex = 2;
             this.labelHora.Text = "13/08/2026";
+            this.labelHora.Click += new System.EventHandler(this.labelHora_Click);
             // 
             // labelRol
             // 
@@ -570,6 +563,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ChoferTableAdapter = null;
             this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.EmpresasSubcontratadaTableAdapter = null;
             this.tableAdapterManager.MantenimientoTableAdapter = this.mantenimientoTableAdapter;
             this.tableAdapterManager.Orden_ViajeTableAdapter = this.orden_ViajeTableAdapter;
             this.tableAdapterManager.RegistroAccionesTableAdapter = null;

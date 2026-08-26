@@ -60,6 +60,7 @@
             this.Tasa_USD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pago_BS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Incidencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
@@ -95,7 +96,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.NombreCliente = new System.Windows.Forms.TextBox();
             this.IncidenciasTextBox = new System.Windows.Forms.TextBox();
-            this.Incidencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.agginci = new System.Windows.Forms.Button();
             iDOrdenes_ViajeLabel = new System.Windows.Forms.Label();
@@ -127,7 +127,7 @@
             // 
             iDOrdenes_ViajeLabel.AutoSize = true;
             iDOrdenes_ViajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            iDOrdenes_ViajeLabel.Location = new System.Drawing.Point(29, 39);
+            iDOrdenes_ViajeLabel.Location = new System.Drawing.Point(29, 61);
             iDOrdenes_ViajeLabel.Name = "iDOrdenes_ViajeLabel";
             iDOrdenes_ViajeLabel.Size = new System.Drawing.Size(77, 16);
             iDOrdenes_ViajeLabel.TabIndex = 6;
@@ -137,7 +137,7 @@
             // 
             cedula_ChoferLabel.AutoSize = true;
             cedula_ChoferLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            cedula_ChoferLabel.Location = new System.Drawing.Point(168, 46);
+            cedula_ChoferLabel.Location = new System.Drawing.Point(25, 220);
             cedula_ChoferLabel.Name = "cedula_ChoferLabel";
             cedula_ChoferLabel.Size = new System.Drawing.Size(115, 16);
             cedula_ChoferLabel.TabIndex = 8;
@@ -147,7 +147,7 @@
             // 
             vehiculos_NroPlacaLabel.AutoSize = true;
             vehiculos_NroPlacaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            vehiculos_NroPlacaLabel.Location = new System.Drawing.Point(166, 89);
+            vehiculos_NroPlacaLabel.Location = new System.Drawing.Point(23, 263);
             vehiculos_NroPlacaLabel.Name = "vehiculos_NroPlacaLabel";
             vehiculos_NroPlacaLabel.Size = new System.Drawing.Size(120, 16);
             vehiculos_NroPlacaLabel.TabIndex = 10;
@@ -157,7 +157,7 @@
             // 
             cedula_ClienteLabel.AutoSize = true;
             cedula_ClienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            cedula_ClienteLabel.Location = new System.Drawing.Point(166, 137);
+            cedula_ClienteLabel.Location = new System.Drawing.Point(27, 109);
             cedula_ClienteLabel.Name = "cedula_ClienteLabel";
             cedula_ClienteLabel.Size = new System.Drawing.Size(117, 16);
             cedula_ClienteLabel.TabIndex = 12;
@@ -167,7 +167,7 @@
             // 
             fecha_InicioLabel.AutoSize = true;
             fecha_InicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            fecha_InicioLabel.Location = new System.Drawing.Point(12, 294);
+            fecha_InicioLabel.Location = new System.Drawing.Point(12, 316);
             fecha_InicioLabel.Name = "fecha_InicioLabel";
             fecha_InicioLabel.Size = new System.Drawing.Size(101, 16);
             fecha_InicioLabel.TabIndex = 16;
@@ -177,7 +177,7 @@
             // 
             fecha_FinalizacionLabel.AutoSize = true;
             fecha_FinalizacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            fecha_FinalizacionLabel.Location = new System.Drawing.Point(3, 339);
+            fecha_FinalizacionLabel.Location = new System.Drawing.Point(3, 361);
             fecha_FinalizacionLabel.Name = "fecha_FinalizacionLabel";
             fecha_FinalizacionLabel.Size = new System.Drawing.Size(141, 16);
             fecha_FinalizacionLabel.TabIndex = 18;
@@ -187,7 +187,7 @@
             // 
             estatusLabel.AutoSize = true;
             estatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            estatusLabel.Location = new System.Drawing.Point(41, 381);
+            estatusLabel.Location = new System.Drawing.Point(41, 403);
             estatusLabel.Name = "estatusLabel";
             estatusLabel.Size = new System.Drawing.Size(54, 16);
             estatusLabel.TabIndex = 20;
@@ -197,7 +197,7 @@
             // 
             rutaLabel.AutoSize = true;
             rutaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            rutaLabel.Location = new System.Drawing.Point(32, 85);
+            rutaLabel.Location = new System.Drawing.Point(157, 109);
             rutaLabel.Name = "rutaLabel";
             rutaLabel.Size = new System.Drawing.Size(92, 16);
             rutaLabel.TabIndex = 22;
@@ -207,7 +207,7 @@
             // 
             dias_ViajeLabel.AutoSize = true;
             dias_ViajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            dias_ViajeLabel.Location = new System.Drawing.Point(32, 136);
+            dias_ViajeLabel.Location = new System.Drawing.Point(157, 160);
             dias_ViajeLabel.Name = "dias_ViajeLabel";
             dias_ViajeLabel.Size = new System.Drawing.Size(91, 16);
             dias_ViajeLabel.TabIndex = 24;
@@ -217,7 +217,7 @@
             // 
             distanciaLabel.AutoSize = true;
             distanciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            distanciaLabel.Location = new System.Drawing.Point(32, 191);
+            distanciaLabel.Location = new System.Drawing.Point(157, 220);
             distanciaLabel.Name = "distanciaLabel";
             distanciaLabel.Size = new System.Drawing.Size(106, 16);
             distanciaLabel.TabIndex = 26;
@@ -227,7 +227,7 @@
             // 
             paradasLabel.AutoSize = true;
             paradasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            paradasLabel.Location = new System.Drawing.Point(32, 233);
+            paradasLabel.Location = new System.Drawing.Point(157, 262);
             paradasLabel.Name = "paradasLabel";
             paradasLabel.Size = new System.Drawing.Size(116, 16);
             paradasLabel.TabIndex = 30;
@@ -237,7 +237,7 @@
             // 
             tasa_USDLabel.AutoSize = true;
             tasa_USDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            tasa_USDLabel.Location = new System.Drawing.Point(229, 285);
+            tasa_USDLabel.Location = new System.Drawing.Point(229, 319);
             tasa_USDLabel.Name = "tasa_USDLabel";
             tasa_USDLabel.Size = new System.Drawing.Size(74, 16);
             tasa_USDLabel.TabIndex = 32;
@@ -277,16 +277,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(565, 39);
+            this.label1.Location = new System.Drawing.Point(34, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(338, 25);
+            this.label1.Size = new System.Drawing.Size(230, 25);
             this.label1.TabIndex = 5;
-            this.label1.Text = "LISTA DE ÓRDENES DE VIAJE";
+            this.label1.Text = "ÓRDENES DE VIAJE";
             // 
             // orden_ViajeDataGridView
             // 
             this.orden_ViajeDataGridView.AllowUserToDeleteRows = false;
             this.orden_ViajeDataGridView.AutoGenerateColumns = false;
+            this.orden_ViajeDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.orden_ViajeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.orden_ViajeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDOrdenes_Viaje,
@@ -308,7 +309,7 @@
             this.orden_ViajeDataGridView.Location = new System.Drawing.Point(446, 89);
             this.orden_ViajeDataGridView.Name = "orden_ViajeDataGridView";
             this.orden_ViajeDataGridView.ReadOnly = true;
-            this.orden_ViajeDataGridView.Size = new System.Drawing.Size(826, 220);
+            this.orden_ViajeDataGridView.Size = new System.Drawing.Size(826, 256);
             this.orden_ViajeDataGridView.TabIndex = 6;
             this.orden_ViajeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orden_ViajeDataGridView_CellContentClick);
             // 
@@ -410,6 +411,13 @@
             this.Estatus.Name = "Estatus";
             this.Estatus.ReadOnly = true;
             // 
+            // Incidencias
+            // 
+            this.Incidencias.DataPropertyName = "Incidencias";
+            this.Incidencias.HeaderText = "Incidencias";
+            this.Incidencias.Name = "Incidencias";
+            this.Incidencias.ReadOnly = true;
+            // 
             // orden_ViajeBindingSource
             // 
             this.orden_ViajeBindingSource.DataMember = "Orden_Viaje";
@@ -441,7 +449,7 @@
             // iDOrdenes_ViajeTextBox
             // 
             this.iDOrdenes_ViajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "IDOrdenes_Viaje", true));
-            this.iDOrdenes_ViajeTextBox.Location = new System.Drawing.Point(32, 58);
+            this.iDOrdenes_ViajeTextBox.Location = new System.Drawing.Point(32, 80);
             this.iDOrdenes_ViajeTextBox.Name = "iDOrdenes_ViajeTextBox";
             this.iDOrdenes_ViajeTextBox.ReadOnly = true;
             this.iDOrdenes_ViajeTextBox.Size = new System.Drawing.Size(109, 20);
@@ -452,7 +460,7 @@
             this.fecha_InicioDateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.fecha_InicioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orden_ViajeBindingSource, "Fecha_Inicio", true));
             this.fecha_InicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_InicioDateTimePicker.Location = new System.Drawing.Point(15, 316);
+            this.fecha_InicioDateTimePicker.Location = new System.Drawing.Point(15, 338);
             this.fecha_InicioDateTimePicker.Name = "fecha_InicioDateTimePicker";
             this.fecha_InicioDateTimePicker.Size = new System.Drawing.Size(109, 20);
             this.fecha_InicioDateTimePicker.TabIndex = 17;
@@ -463,7 +471,7 @@
             this.fecha_FinalizacionDateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.fecha_FinalizacionDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orden_ViajeBindingSource, "Fecha_Finalizacion", true));
             this.fecha_FinalizacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_FinalizacionDateTimePicker.Location = new System.Drawing.Point(15, 358);
+            this.fecha_FinalizacionDateTimePicker.Location = new System.Drawing.Point(15, 380);
             this.fecha_FinalizacionDateTimePicker.Name = "fecha_FinalizacionDateTimePicker";
             this.fecha_FinalizacionDateTimePicker.Size = new System.Drawing.Size(112, 20);
             this.fecha_FinalizacionDateTimePicker.TabIndex = 19;
@@ -471,7 +479,7 @@
             // dias_ViajeTextBox
             // 
             this.dias_ViajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Dias_Viaje", true));
-            this.dias_ViajeTextBox.Location = new System.Drawing.Point(35, 158);
+            this.dias_ViajeTextBox.Location = new System.Drawing.Point(160, 182);
             this.dias_ViajeTextBox.Name = "dias_ViajeTextBox";
             this.dias_ViajeTextBox.ReadOnly = true;
             this.dias_ViajeTextBox.Size = new System.Drawing.Size(106, 20);
@@ -480,7 +488,7 @@
             // distanciaTextBox
             // 
             this.distanciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Distancia", true));
-            this.distanciaTextBox.Location = new System.Drawing.Point(32, 210);
+            this.distanciaTextBox.Location = new System.Drawing.Point(157, 239);
             this.distanciaTextBox.Name = "distanciaTextBox";
             this.distanciaTextBox.ReadOnly = true;
             this.distanciaTextBox.Size = new System.Drawing.Size(109, 20);
@@ -489,7 +497,7 @@
             // paradasTextBox
             // 
             this.paradasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Paradas", true));
-            this.paradasTextBox.Location = new System.Drawing.Point(35, 252);
+            this.paradasTextBox.Location = new System.Drawing.Point(160, 281);
             this.paradasTextBox.Name = "paradasTextBox";
             this.paradasTextBox.ReadOnly = true;
             this.paradasTextBox.Size = new System.Drawing.Size(109, 20);
@@ -498,7 +506,7 @@
             // tasa_USDTextBox
             // 
             this.tasa_USDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Tasa_USD", true));
-            this.tasa_USDTextBox.Location = new System.Drawing.Point(211, 304);
+            this.tasa_USDTextBox.Location = new System.Drawing.Point(211, 338);
             this.tasa_USDTextBox.Name = "tasa_USDTextBox";
             this.tasa_USDTextBox.Size = new System.Drawing.Size(109, 20);
             this.tasa_USDTextBox.TabIndex = 33;
@@ -526,7 +534,7 @@
             "Atrasada",
             "Completada",
             "Cancelada"});
-            this.EstatusComboBox.Location = new System.Drawing.Point(17, 399);
+            this.EstatusComboBox.Location = new System.Drawing.Point(17, 421);
             this.EstatusComboBox.Name = "EstatusComboBox";
             this.EstatusComboBox.Size = new System.Drawing.Size(109, 21);
             this.EstatusComboBox.TabIndex = 36;
@@ -538,7 +546,7 @@
             this.ClienteComboBox.DataSource = this.clienteBindingSource;
             this.ClienteComboBox.DisplayMember = "Cedula";
             this.ClienteComboBox.FormattingEnabled = true;
-            this.ClienteComboBox.Location = new System.Drawing.Point(171, 158);
+            this.ClienteComboBox.Location = new System.Drawing.Point(32, 130);
             this.ClienteComboBox.Name = "ClienteComboBox";
             this.ClienteComboBox.Size = new System.Drawing.Size(107, 21);
             this.ClienteComboBox.TabIndex = 37;
@@ -557,7 +565,7 @@
             this.RutaComboBox.DataSource = this.rutasBindingSource;
             this.RutaComboBox.DisplayMember = "Nombre_Ruta";
             this.RutaComboBox.FormattingEnabled = true;
-            this.RutaComboBox.Location = new System.Drawing.Point(32, 104);
+            this.RutaComboBox.Location = new System.Drawing.Point(157, 128);
             this.RutaComboBox.Name = "RutaComboBox";
             this.RutaComboBox.Size = new System.Drawing.Size(109, 21);
             this.RutaComboBox.TabIndex = 38;
@@ -577,7 +585,7 @@
             this.ChoferComboBox.DataSource = this.choferBindingSource;
             this.ChoferComboBox.DisplayMember = "Cedula";
             this.ChoferComboBox.FormattingEnabled = true;
-            this.ChoferComboBox.Location = new System.Drawing.Point(171, 65);
+            this.ChoferComboBox.Location = new System.Drawing.Point(28, 239);
             this.ChoferComboBox.Name = "ChoferComboBox";
             this.ChoferComboBox.Size = new System.Drawing.Size(107, 21);
             this.ChoferComboBox.TabIndex = 39;
@@ -595,7 +603,7 @@
             this.PlacaComboBox.DataSource = this.vehiculoBindingSource;
             this.PlacaComboBox.DisplayMember = "NroPlaca";
             this.PlacaComboBox.FormattingEnabled = true;
-            this.PlacaComboBox.Location = new System.Drawing.Point(171, 108);
+            this.PlacaComboBox.Location = new System.Drawing.Point(28, 282);
             this.PlacaComboBox.Name = "PlacaComboBox";
             this.PlacaComboBox.Size = new System.Drawing.Size(107, 21);
             this.PlacaComboBox.TabIndex = 40;
@@ -665,7 +673,7 @@
             this.groupBox1.Controls.Add(this.montobs);
             this.groupBox1.Controls.Add(BS);
             this.groupBox1.Controls.Add(this.montousd);
-            this.groupBox1.Location = new System.Drawing.Point(154, 330);
+            this.groupBox1.Location = new System.Drawing.Point(154, 364);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(270, 93);
             this.groupBox1.TabIndex = 46;
@@ -680,7 +688,7 @@
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(1122, 338);
+            this.salir.Location = new System.Drawing.Point(856, 364);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -696,7 +704,7 @@
             this.modificar.FlatAppearance.BorderSize = 2;
             this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificar.Location = new System.Drawing.Point(796, 338);
+            this.modificar.Location = new System.Drawing.Point(680, 364);
             this.modificar.Name = "modificar";
             this.modificar.RadioBorde = 20;
             this.modificar.Size = new System.Drawing.Size(150, 40);
@@ -712,7 +720,7 @@
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar.Location = new System.Drawing.Point(430, 338);
+            this.agregar.Location = new System.Drawing.Point(503, 365);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);
@@ -725,17 +733,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(164, 191);
+            this.label2.Location = new System.Drawing.Point(25, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 16);
+            this.label2.Size = new System.Drawing.Size(125, 16);
             this.label2.TabIndex = 47;
-            this.label2.Text = "Nombre del Cliente";
+            this.label2.Text = "Nombre del Cliente:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // NombreCliente
             // 
             this.NombreCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Nombre_Cliente", true));
-            this.NombreCliente.Location = new System.Drawing.Point(171, 210);
+            this.NombreCliente.Location = new System.Drawing.Point(32, 182);
             this.NombreCliente.Name = "NombreCliente";
             this.NombreCliente.ReadOnly = true;
             this.NombreCliente.Size = new System.Drawing.Size(107, 20);
@@ -745,24 +753,17 @@
             // IncidenciasTextBox
             // 
             this.IncidenciasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Incidencias", true));
-            this.IncidenciasTextBox.Location = new System.Drawing.Point(306, 67);
+            this.IncidenciasTextBox.Location = new System.Drawing.Point(309, 128);
             this.IncidenciasTextBox.Multiline = true;
             this.IncidenciasTextBox.Name = "IncidenciasTextBox";
             this.IncidenciasTextBox.Size = new System.Drawing.Size(109, 72);
             this.IncidenciasTextBox.TabIndex = 49;
             // 
-            // Incidencias
-            // 
-            this.Incidencias.DataPropertyName = "Incidencias";
-            this.Incidencias.HeaderText = "Incidencias";
-            this.Incidencias.Name = "Incidencias";
-            this.Incidencias.ReadOnly = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label3.Location = new System.Drawing.Point(321, 48);
+            this.label3.Location = new System.Drawing.Point(324, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 50;
@@ -771,11 +772,11 @@
             // 
             // agginci
             // 
-            this.agginci.Location = new System.Drawing.Point(17, 426);
+            this.agginci.Location = new System.Drawing.Point(17, 448);
             this.agginci.Name = "agginci";
             this.agginci.Size = new System.Drawing.Size(108, 23);
             this.agginci.TabIndex = 51;
-            this.agginci.Text = "agregar incidencia";
+            this.agginci.Text = "Agregar incidencia";
             this.agginci.UseVisualStyleBackColor = true;
             this.agginci.Click += new System.EventHandler(this.agginci_Click);
             // 
@@ -784,7 +785,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1284, 446);
+            this.ClientSize = new System.Drawing.Size(1284, 482);
             this.Controls.Add(this.agginci);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.IncidenciasTextBox);
