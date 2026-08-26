@@ -46,6 +46,8 @@ namespace AppTesis
             this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
             //this.orden_ViajeTableAdapter.ScalarQuery();
             BsRadio.Checked = true;
+            label3.Hide();
+            IncidenciasTextBox.Hide();
 
 
 
@@ -264,8 +266,9 @@ namespace AppTesis
                     string estatus = EstatusComboBox.Text;
                     decimal.TryParse(tasa_USDTextBox.Text, out decimal tasa);
                     decimal.TryParse(montobs.Text, out decimal monto);
+                    string incidencias = IncidenciasTextBox.Text;
 
-                    this.orden_ViajeTableAdapter.modify(ruta,dias,distancia,paradas,chofer,placa,cliente,nombre,inicio,final,tasa,monto,estatus, id);
+                    this.orden_ViajeTableAdapter.modify(ruta,dias,distancia,paradas,chofer,placa,cliente,nombre,inicio,final,tasa,monto,estatus,incidencias, id);
                     this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
                     montobs.Text = "0,00";
                     montousd.Text = "0,00";
@@ -572,6 +575,28 @@ namespace AppTesis
             catch (Exception ex)
             {
                 MessageBox.Show("Error al actualizar la ruta: " + ex.Message);
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agginci_Click(object sender, EventArgs e)
+        {
+            if (label3.Visible) {
+                label3.Hide();
+                IncidenciasTextBox.Clear();
+                IncidenciasTextBox.Hide();
+                agginci.Text = "Agregar Incidencia";
+            }
+            else if(!label3.Visible)
+            {
+                label3.Show();
+                IncidenciasTextBox.Show();
+                agginci.Text = "Quitar Incidencia";
+
             }
         }
 

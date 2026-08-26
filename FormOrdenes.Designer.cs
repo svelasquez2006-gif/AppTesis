@@ -94,6 +94,10 @@
             this.agregar = new BotonRedondo();
             this.label2 = new System.Windows.Forms.Label();
             this.NombreCliente = new System.Windows.Forms.TextBox();
+            this.IncidenciasTextBox = new System.Windows.Forms.TextBox();
+            this.Incidencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.agginci = new System.Windows.Forms.Button();
             iDOrdenes_ViajeLabel = new System.Windows.Forms.Label();
             cedula_ChoferLabel = new System.Windows.Forms.Label();
             vehiculos_NroPlacaLabel = new System.Windows.Forms.Label();
@@ -298,12 +302,13 @@
             this.Fecha_Finalizacion,
             this.Tasa_USD,
             this.Pago_BS,
-            this.Estatus});
+            this.Estatus,
+            this.Incidencias});
             this.orden_ViajeDataGridView.DataSource = this.orden_ViajeBindingSource;
-            this.orden_ViajeDataGridView.Location = new System.Drawing.Point(430, 90);
+            this.orden_ViajeDataGridView.Location = new System.Drawing.Point(446, 89);
             this.orden_ViajeDataGridView.Name = "orden_ViajeDataGridView";
             this.orden_ViajeDataGridView.ReadOnly = true;
-            this.orden_ViajeDataGridView.Size = new System.Drawing.Size(842, 220);
+            this.orden_ViajeDataGridView.Size = new System.Drawing.Size(826, 220);
             this.orden_ViajeDataGridView.TabIndex = 6;
             this.orden_ViajeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orden_ViajeDataGridView_CellContentClick);
             // 
@@ -515,11 +520,11 @@
             this.EstatusComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Estatus", true));
             this.EstatusComboBox.FormattingEnabled = true;
             this.EstatusComboBox.Items.AddRange(new object[] {
-            "Completada",
-            "En Curso",
-            "Atrasada",
             "Pendiente a Realizar",
             "Pendiente por Pago",
+            "En Curso",
+            "Atrasada",
+            "Completada",
             "Cancelada"});
             this.EstatusComboBox.Location = new System.Drawing.Point(17, 399);
             this.EstatusComboBox.Name = "EstatusComboBox";
@@ -737,12 +742,52 @@
             this.NombreCliente.TabIndex = 48;
             this.NombreCliente.TextChanged += new System.EventHandler(this.NombreCliente_TextChanged);
             // 
+            // IncidenciasTextBox
+            // 
+            this.IncidenciasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Incidencias", true));
+            this.IncidenciasTextBox.Location = new System.Drawing.Point(306, 67);
+            this.IncidenciasTextBox.Multiline = true;
+            this.IncidenciasTextBox.Name = "IncidenciasTextBox";
+            this.IncidenciasTextBox.Size = new System.Drawing.Size(109, 72);
+            this.IncidenciasTextBox.TabIndex = 49;
+            // 
+            // Incidencias
+            // 
+            this.Incidencias.DataPropertyName = "Incidencias";
+            this.Incidencias.HeaderText = "Incidencias";
+            this.Incidencias.Name = "Incidencias";
+            this.Incidencias.ReadOnly = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label3.Location = new System.Drawing.Point(321, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 16);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "Incidencias";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // agginci
+            // 
+            this.agginci.Location = new System.Drawing.Point(17, 426);
+            this.agginci.Name = "agginci";
+            this.agginci.Size = new System.Drawing.Size(108, 23);
+            this.agginci.TabIndex = 51;
+            this.agginci.Text = "agregar incidencia";
+            this.agginci.UseVisualStyleBackColor = true;
+            this.agginci.Click += new System.EventHandler(this.agginci_Click);
+            // 
             // Formordenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1284, 446);
+            this.Controls.Add(this.agginci);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.IncidenciasTextBox);
             this.Controls.Add(this.NombreCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
@@ -845,5 +890,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox NombreCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Incidencias;
+        private System.Windows.Forms.TextBox IncidenciasTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button agginci;
     }
 }

@@ -1745,6 +1745,8 @@ namespace AppTesis {
             
             private global::System.Data.DataColumn columnNombre_Cliente;
             
+            private global::System.Data.DataColumn columnIncidencias;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public Orden_ViajeDataTable() {
@@ -1892,6 +1894,14 @@ namespace AppTesis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public global::System.Data.DataColumn IncidenciasColumn {
+                get {
+                    return this.columnIncidencias;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1927,7 +1937,7 @@ namespace AppTesis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public Orden_ViajeRow AddOrden_ViajeRow(ChoferRow parentChoferRowByFK_Orden_Viaje_Chofer, VehiculoRow parentVehiculoRowByFK_Orden_Viaje_Vehiculo, ClienteRow parentClienteRowByFK_Orden_Viaje_Cliente, System.DateTime Fecha_Inicio, System.DateTime Fecha_Finalizacion, string Estatus, RutasRow parentRutasRowByFK_Orden_Viaje_Rutas, int Dias_Viaje, decimal Distancia, string Paradas, string Tasa_USD, decimal Pago_BS, string Nombre_Cliente) {
+            public Orden_ViajeRow AddOrden_ViajeRow(ChoferRow parentChoferRowByFK_Orden_Viaje_Chofer, VehiculoRow parentVehiculoRowByFK_Orden_Viaje_Vehiculo, ClienteRow parentClienteRowByFK_Orden_Viaje_Cliente, System.DateTime Fecha_Inicio, System.DateTime Fecha_Finalizacion, string Estatus, RutasRow parentRutasRowByFK_Orden_Viaje_Rutas, int Dias_Viaje, decimal Distancia, string Paradas, string Tasa_USD, decimal Pago_BS, string Nombre_Cliente, string Incidencias) {
                 Orden_ViajeRow rowOrden_ViajeRow = ((Orden_ViajeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1943,7 +1953,8 @@ namespace AppTesis {
                         Paradas,
                         Tasa_USD,
                         Pago_BS,
-                        Nombre_Cliente};
+                        Nombre_Cliente,
+                        Incidencias};
                 if ((parentChoferRowByFK_Orden_Viaje_Chofer != null)) {
                     columnValuesArray[1] = parentChoferRowByFK_Orden_Viaje_Chofer[0];
                 }
@@ -1999,6 +2010,7 @@ namespace AppTesis {
                 this.columnTasa_USD = base.Columns["Tasa_USD"];
                 this.columnPago_BS = base.Columns["Pago_BS"];
                 this.columnNombre_Cliente = base.Columns["Nombre_Cliente"];
+                this.columnIncidencias = base.Columns["Incidencias"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2032,6 +2044,8 @@ namespace AppTesis {
                 base.Columns.Add(this.columnPago_BS);
                 this.columnNombre_Cliente = new global::System.Data.DataColumn("Nombre_Cliente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre_Cliente);
+                this.columnIncidencias = new global::System.Data.DataColumn("Incidencias", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIncidencias);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDOrdenes_Viaje}, true));
                 this.columnIDOrdenes_Viaje.AutoIncrement = true;
@@ -2054,6 +2068,7 @@ namespace AppTesis {
                 this.columnParadas.MaxLength = 450;
                 this.columnTasa_USD.MaxLength = 10;
                 this.columnNombre_Cliente.MaxLength = 30;
+                this.columnIncidencias.MaxLength = 400;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4886,6 +4901,22 @@ namespace AppTesis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public string Incidencias {
+                get {
+                    try {
+                        return ((string)(this[this.tableOrden_Viaje.IncidenciasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Incidencias\' de la tabla \'Orden_Viaje\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrden_Viaje.IncidenciasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public ChoferRow ChoferRow {
                 get {
                     return ((ChoferRow)(this.GetParentRow(this.Table.ParentRelations["FK_Orden_Viaje_Chofer"])));
@@ -5010,6 +5041,18 @@ namespace AppTesis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public void SetNombre_ClienteNull() {
                 this[this.tableOrden_Viaje.Nombre_ClienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public bool IsIncidenciasNull() {
+                return this.IsNull(this.tableOrden_Viaje.IncidenciasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public void SetIncidenciasNull() {
+                this[this.tableOrden_Viaje.IncidenciasColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -8645,10 +8688,11 @@ SELECT CodMantenimiento, NroPlaca, FechaMantenimiento, Anotaciones FROM Mantenim
             tableMapping.ColumnMappings.Add("Tasa_USD", "Tasa_USD");
             tableMapping.ColumnMappings.Add("Pago_BS", "Pago_BS");
             tableMapping.ColumnMappings.Add("Nombre_Cliente", "Nombre_Cliente");
+            tableMapping.ColumnMappings.Add("Incidencias", "Incidencias");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Orden_Viaje] WHERE (([IDOrdenes_Viaje] = @Original_IDOrdenes_Viaje) AND ((@IsNull_Ruta = 1 AND [Ruta] IS NULL) OR ([Ruta] = @Original_Ruta)) AND ([Dias_Viaje] = @Original_Dias_Viaje) AND ([Distancia] = @Original_Distancia) AND ((@IsNull_Paradas = 1 AND [Paradas] IS NULL) OR ([Paradas] = @Original_Paradas)) AND ([Cedula_Chofer] = @Original_Cedula_Chofer) AND ([Vehiculos_NroPlaca] = @Original_Vehiculos_NroPlaca) AND ([Cedula_Cliente] = @Original_Cedula_Cliente) AND ((@IsNull_Fecha_Inicio = 1 AND [Fecha_Inicio] IS NULL) OR ([Fecha_Inicio] = @Original_Fecha_Inicio)) AND ((@IsNull_Fecha_Finalizacion = 1 AND [Fecha_Finalizacion] IS NULL) OR ([Fecha_Finalizacion] = @Original_Fecha_Finalizacion)) AND ((@IsNull_Tasa_USD = 1 AND [Tasa_USD] IS NULL) OR ([Tasa_USD] = @Original_Tasa_USD)) AND ((@IsNull_Pago_BS = 1 AND [Pago_BS] IS NULL) OR ([Pago_BS] = @Original_Pago_BS)) AND ([Estatus] = @Original_Estatus) AND ((@IsNull_Nombre_Cliente = 1 AND [Nombre_Cliente] IS NULL) OR ([Nombre_Cliente] = @Original_Nombre_Cliente)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Orden_Viaje] WHERE (([IDOrdenes_Viaje] = @Original_IDOrdenes_Viaje) AND ((@IsNull_Ruta = 1 AND [Ruta] IS NULL) OR ([Ruta] = @Original_Ruta)) AND ([Dias_Viaje] = @Original_Dias_Viaje) AND ([Distancia] = @Original_Distancia) AND ((@IsNull_Paradas = 1 AND [Paradas] IS NULL) OR ([Paradas] = @Original_Paradas)) AND ([Cedula_Chofer] = @Original_Cedula_Chofer) AND ([Vehiculos_NroPlaca] = @Original_Vehiculos_NroPlaca) AND ([Cedula_Cliente] = @Original_Cedula_Cliente) AND ((@IsNull_Fecha_Inicio = 1 AND [Fecha_Inicio] IS NULL) OR ([Fecha_Inicio] = @Original_Fecha_Inicio)) AND ((@IsNull_Fecha_Finalizacion = 1 AND [Fecha_Finalizacion] IS NULL) OR ([Fecha_Finalizacion] = @Original_Fecha_Finalizacion)) AND ((@IsNull_Tasa_USD = 1 AND [Tasa_USD] IS NULL) OR ([Tasa_USD] = @Original_Tasa_USD)) AND ((@IsNull_Pago_BS = 1 AND [Pago_BS] IS NULL) OR ([Pago_BS] = @Original_Pago_BS)) AND ([Estatus] = @Original_Estatus) AND ((@IsNull_Nombre_Cliente = 1 AND [Nombre_Cliente] IS NULL) OR ([Nombre_Cliente] = @Original_Nombre_Cliente)) AND ((@IsNull_Incidencias = 1 AND [Incidencias] IS NULL) OR ([Incidencias] = @Original_Incidencias)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDOrdenes_Viaje", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDOrdenes_Viaje", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ruta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ruta", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8671,10 +8715,12 @@ SELECT CodMantenimiento, NroPlaca, FechaMantenimiento, Anotaciones FROM Mantenim
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_Cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre_Cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_Cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Incidencias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Incidencias", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Incidencias", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Incidencias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Orden_Viaje] ([Ruta], [Dias_Viaje], [Distancia], [Paradas], [Cedula_Chofer], [Vehiculos_NroPlaca], [Cedula_Cliente], [Fecha_Inicio], [Fecha_Finalizacion], [Tasa_USD], [Pago_BS], [Estatus], [Nombre_Cliente]) VALUES (@Ruta, @Dias_Viaje, @Distancia, @Paradas, @Cedula_Chofer, @Vehiculos_NroPlaca, @Cedula_Cliente, @Fecha_Inicio, @Fecha_Finalizacion, @Tasa_USD, @Pago_BS, @Estatus, @Nombre_Cliente);
-SELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Vehiculos_NroPlaca, Cedula_Cliente, Fecha_Inicio, Fecha_Finalizacion, Tasa_USD, Pago_BS, Estatus, Nombre_Cliente FROM Orden_Viaje WHERE (IDOrdenes_Viaje = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Orden_Viaje] ([Ruta], [Dias_Viaje], [Distancia], [Paradas], [Cedula_Chofer], [Vehiculos_NroPlaca], [Cedula_Cliente], [Fecha_Inicio], [Fecha_Finalizacion], [Tasa_USD], [Pago_BS], [Estatus], [Nombre_Cliente], [Incidencias]) VALUES (@Ruta, @Dias_Viaje, @Distancia, @Paradas, @Cedula_Chofer, @Vehiculos_NroPlaca, @Cedula_Cliente, @Fecha_Inicio, @Fecha_Finalizacion, @Tasa_USD, @Pago_BS, @Estatus, @Nombre_Cliente, @Incidencias);
+SELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Vehiculos_NroPlaca, Cedula_Cliente, Fecha_Inicio, Fecha_Finalizacion, Tasa_USD, Pago_BS, Estatus, Nombre_Cliente, Incidencias FROM Orden_Viaje WHERE (IDOrdenes_Viaje = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ruta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ruta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dias_Viaje", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dias_Viaje", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8689,6 +8735,7 @@ SELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Veh
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pago_BS", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Pago_BS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre_Cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_Cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Incidencias", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Incidencias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [Orden_Viaje] SET [Ruta] = @Ruta, [Dias_Viaje] = @Dias_Viaje, [Distancia] " +
@@ -8696,22 +8743,24 @@ SELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Veh
                 "_NroPlaca] = @Vehiculos_NroPlaca, [Cedula_Cliente] = @Cedula_Cliente, [Fecha_Ini" +
                 "cio] = @Fecha_Inicio, [Fecha_Finalizacion] = @Fecha_Finalizacion, [Tasa_USD] = @" +
                 "Tasa_USD, [Pago_BS] = @Pago_BS, [Estatus] = @Estatus, [Nombre_Cliente] = @Nombre" +
-                "_Cliente WHERE (([IDOrdenes_Viaje] = @Original_IDOrdenes_Viaje) AND ((@IsNull_Ru" +
-                "ta = 1 AND [Ruta] IS NULL) OR ([Ruta] = @Original_Ruta)) AND ([Dias_Viaje] = @Or" +
-                "iginal_Dias_Viaje) AND ([Distancia] = @Original_Distancia) AND ((@IsNull_Paradas" +
-                " = 1 AND [Paradas] IS NULL) OR ([Paradas] = @Original_Paradas)) AND ([Cedula_Cho" +
-                "fer] = @Original_Cedula_Chofer) AND ([Vehiculos_NroPlaca] = @Original_Vehiculos_" +
-                "NroPlaca) AND ([Cedula_Cliente] = @Original_Cedula_Cliente) AND ((@IsNull_Fecha_" +
-                "Inicio = 1 AND [Fecha_Inicio] IS NULL) OR ([Fecha_Inicio] = @Original_Fecha_Inic" +
-                "io)) AND ((@IsNull_Fecha_Finalizacion = 1 AND [Fecha_Finalizacion] IS NULL) OR (" +
-                "[Fecha_Finalizacion] = @Original_Fecha_Finalizacion)) AND ((@IsNull_Tasa_USD = 1" +
-                " AND [Tasa_USD] IS NULL) OR ([Tasa_USD] = @Original_Tasa_USD)) AND ((@IsNull_Pag" +
-                "o_BS = 1 AND [Pago_BS] IS NULL) OR ([Pago_BS] = @Original_Pago_BS)) AND ([Estatu" +
-                "s] = @Original_Estatus) AND ((@IsNull_Nombre_Cliente = 1 AND [Nombre_Cliente] IS" +
-                " NULL) OR ([Nombre_Cliente] = @Original_Nombre_Cliente)));\r\nSELECT IDOrdenes_Via" +
-                "je, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Vehiculos_NroPlaca, Ced" +
-                "ula_Cliente, Fecha_Inicio, Fecha_Finalizacion, Tasa_USD, Pago_BS, Estatus, Nombr" +
-                "e_Cliente FROM Orden_Viaje WHERE (IDOrdenes_Viaje = @IDOrdenes_Viaje)";
+                "_Cliente, [Incidencias] = @Incidencias WHERE (([IDOrdenes_Viaje] = @Original_IDO" +
+                "rdenes_Viaje) AND ((@IsNull_Ruta = 1 AND [Ruta] IS NULL) OR ([Ruta] = @Original_" +
+                "Ruta)) AND ([Dias_Viaje] = @Original_Dias_Viaje) AND ([Distancia] = @Original_Di" +
+                "stancia) AND ((@IsNull_Paradas = 1 AND [Paradas] IS NULL) OR ([Paradas] = @Origi" +
+                "nal_Paradas)) AND ([Cedula_Chofer] = @Original_Cedula_Chofer) AND ([Vehiculos_Nr" +
+                "oPlaca] = @Original_Vehiculos_NroPlaca) AND ([Cedula_Cliente] = @Original_Cedula" +
+                "_Cliente) AND ((@IsNull_Fecha_Inicio = 1 AND [Fecha_Inicio] IS NULL) OR ([Fecha_" +
+                "Inicio] = @Original_Fecha_Inicio)) AND ((@IsNull_Fecha_Finalizacion = 1 AND [Fec" +
+                "ha_Finalizacion] IS NULL) OR ([Fecha_Finalizacion] = @Original_Fecha_Finalizacio" +
+                "n)) AND ((@IsNull_Tasa_USD = 1 AND [Tasa_USD] IS NULL) OR ([Tasa_USD] = @Origina" +
+                "l_Tasa_USD)) AND ((@IsNull_Pago_BS = 1 AND [Pago_BS] IS NULL) OR ([Pago_BS] = @O" +
+                "riginal_Pago_BS)) AND ([Estatus] = @Original_Estatus) AND ((@IsNull_Nombre_Clien" +
+                "te = 1 AND [Nombre_Cliente] IS NULL) OR ([Nombre_Cliente] = @Original_Nombre_Cli" +
+                "ente)) AND ((@IsNull_Incidencias = 1 AND [Incidencias] IS NULL) OR ([Incidencias" +
+                "] = @Original_Incidencias)));\r\nSELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distanc" +
+                "ia, Paradas, Cedula_Chofer, Vehiculos_NroPlaca, Cedula_Cliente, Fecha_Inicio, Fe" +
+                "cha_Finalizacion, Tasa_USD, Pago_BS, Estatus, Nombre_Cliente, Incidencias FROM O" +
+                "rden_Viaje WHERE (IDOrdenes_Viaje = @IDOrdenes_Viaje)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ruta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ruta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dias_Viaje", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dias_Viaje", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8726,6 +8775,7 @@ SELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Veh
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pago_BS", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Pago_BS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre_Cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_Cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Incidencias", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Incidencias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDOrdenes_Viaje", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDOrdenes_Viaje", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ruta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ruta", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ruta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ruta", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8747,6 +8797,8 @@ SELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Veh
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_Cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre_Cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_Cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Incidencias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Incidencias", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Incidencias", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Incidencias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDOrdenes_Viaje", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDOrdenes_Viaje", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -8765,7 +8817,7 @@ SELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Veh
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Vehi" +
                 "culos_NroPlaca, Cedula_Cliente, Fecha_Inicio, Fecha_Finalizacion, Tasa_USD, Pago" +
-                "_BS, Estatus, Nombre_Cliente FROM Orden_Viaje";
+                "_BS, Estatus, Nombre_Cliente, Incidencias FROM Orden_Viaje";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -8791,7 +8843,7 @@ SELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Veh
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = @"UPDATE       Orden_Viaje
 SET                Ruta = @Ruta, Dias_Viaje = @Dias_Viaje, Distancia = @Distancia, Paradas = @Paradas, Cedula_Chofer = @Cedula_Chofer, Vehiculos_NroPlaca = @Vehiculos_NroPlaca, Cedula_Cliente = @Cedula_Cliente, 
-                         Nombre_Cliente = @Nombre_Cliente, Fecha_Inicio = @Fecha_Inicio, Fecha_Finalizacion = @Fecha_Finalizacion, Tasa_USD = @Tasa_USD, Pago_BS = @Pago_BS, Estatus = @Estatus
+                         Nombre_Cliente = @Nombre_Cliente, Fecha_Inicio = @Fecha_Inicio, Fecha_Finalizacion = @Fecha_Finalizacion, Tasa_USD = @Tasa_USD, Pago_BS = @Pago_BS, Estatus = @Estatus, Incidencias = @Incidencias
 WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ruta", global::System.Data.SqlDbType.VarChar, 150, global::System.Data.ParameterDirection.Input, 0, 0, "Ruta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8807,6 +8859,7 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tasa_USD", global::System.Data.SqlDbType.Decimal, 10, global::System.Data.ParameterDirection.Input, 18, 2, "Tasa_USD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pago_BS", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 2, "Pago_BS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estatus", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Incidencias", global::System.Data.SqlDbType.VarChar, 400, global::System.Data.ParameterDirection.Input, 0, 0, "Incidencias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDOrdenes_Viaje", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDOrdenes_Viaje", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -8867,7 +8920,7 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IDOrdenes_Viaje, string Original_Ruta, int Original_Dias_Viaje, decimal Original_Distancia, string Original_Paradas, string Original_Cedula_Chofer, string Original_Vehiculos_NroPlaca, string Original_Cedula_Cliente, global::System.Nullable<global::System.DateTime> Original_Fecha_Inicio, global::System.Nullable<global::System.DateTime> Original_Fecha_Finalizacion, string Original_Tasa_USD, global::System.Nullable<decimal> Original_Pago_BS, string Original_Estatus, string Original_Nombre_Cliente) {
+        public virtual int Delete(int Original_IDOrdenes_Viaje, string Original_Ruta, int Original_Dias_Viaje, decimal Original_Distancia, string Original_Paradas, string Original_Cedula_Chofer, string Original_Vehiculos_NroPlaca, string Original_Cedula_Cliente, global::System.Nullable<global::System.DateTime> Original_Fecha_Inicio, global::System.Nullable<global::System.DateTime> Original_Fecha_Finalizacion, string Original_Tasa_USD, global::System.Nullable<decimal> Original_Pago_BS, string Original_Estatus, string Original_Nombre_Cliente, string Original_Incidencias) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IDOrdenes_Viaje));
             if ((Original_Ruta == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -8951,6 +9004,14 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_Nombre_Cliente));
             }
+            if ((Original_Incidencias == null)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_Incidencias));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8971,7 +9032,7 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Ruta, int Dias_Viaje, decimal Distancia, string Paradas, string Cedula_Chofer, string Vehiculos_NroPlaca, string Cedula_Cliente, global::System.Nullable<global::System.DateTime> Fecha_Inicio, global::System.Nullable<global::System.DateTime> Fecha_Finalizacion, string Tasa_USD, global::System.Nullable<decimal> Pago_BS, string Estatus, string Nombre_Cliente) {
+        public virtual int Insert(string Ruta, int Dias_Viaje, decimal Distancia, string Paradas, string Cedula_Chofer, string Vehiculos_NroPlaca, string Cedula_Cliente, global::System.Nullable<global::System.DateTime> Fecha_Inicio, global::System.Nullable<global::System.DateTime> Fecha_Finalizacion, string Tasa_USD, global::System.Nullable<decimal> Pago_BS, string Estatus, string Nombre_Cliente, string Incidencias) {
             if ((Ruta == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -9040,6 +9101,12 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Nombre_Cliente));
             }
+            if ((Incidencias == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(Incidencias));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9074,6 +9141,7 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
                     global::System.Nullable<decimal> Pago_BS, 
                     string Estatus, 
                     string Nombre_Cliente, 
+                    string Incidencias, 
                     int Original_IDOrdenes_Viaje, 
                     string Original_Ruta, 
                     int Original_Dias_Viaje, 
@@ -9088,6 +9156,7 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
                     global::System.Nullable<decimal> Original_Pago_BS, 
                     string Original_Estatus, 
                     string Original_Nombre_Cliente, 
+                    string Original_Incidencias, 
                     int IDOrdenes_Viaje) {
             if ((Ruta == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -9157,90 +9226,104 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Nombre_Cliente));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_IDOrdenes_Viaje));
+            if ((Incidencias == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Incidencias));
+            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_IDOrdenes_Viaje));
             if ((Original_Ruta == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Ruta));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Ruta));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Dias_Viaje));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((decimal)(Original_Distancia));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Dias_Viaje));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((decimal)(Original_Distancia));
             if ((Original_Paradas == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Paradas));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Paradas));
             }
             if ((Original_Cedula_Chofer == null)) {
                 throw new global::System.ArgumentNullException("Original_Cedula_Chofer");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Cedula_Chofer));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Cedula_Chofer));
             }
             if ((Original_Vehiculos_NroPlaca == null)) {
                 throw new global::System.ArgumentNullException("Original_Vehiculos_NroPlaca");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Vehiculos_NroPlaca));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Vehiculos_NroPlaca));
             }
             if ((Original_Cedula_Cliente == null)) {
                 throw new global::System.ArgumentNullException("Original_Cedula_Cliente");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Cedula_Cliente));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_Cedula_Cliente));
             }
             if ((Original_Fecha_Inicio.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((System.DateTime)(Original_Fecha_Inicio.Value));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((System.DateTime)(Original_Fecha_Inicio.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             if ((Original_Fecha_Finalizacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_Fecha_Finalizacion.Value));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((System.DateTime)(Original_Fecha_Finalizacion.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             if ((Original_Tasa_USD == null)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Tasa_USD));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_Tasa_USD));
             }
             if ((Original_Pago_BS.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((decimal)(Original_Pago_BS.Value));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((decimal)(Original_Pago_BS.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             if ((Original_Estatus == null)) {
                 throw new global::System.ArgumentNullException("Original_Estatus");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_Estatus));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_Estatus));
             }
             if ((Original_Nombre_Cliente == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_Nombre_Cliente));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_Nombre_Cliente));
             }
-            this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(IDOrdenes_Viaje));
+            if ((Original_Incidencias == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_Incidencias));
+            }
+            this.Adapter.UpdateCommand.Parameters[37].Value = ((int)(IDOrdenes_Viaje));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9275,6 +9358,7 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
                     global::System.Nullable<decimal> Pago_BS, 
                     string Estatus, 
                     string Nombre_Cliente, 
+                    string Incidencias, 
                     int Original_IDOrdenes_Viaje, 
                     string Original_Ruta, 
                     int Original_Dias_Viaje, 
@@ -9288,8 +9372,9 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
                     string Original_Tasa_USD, 
                     global::System.Nullable<decimal> Original_Pago_BS, 
                     string Original_Estatus, 
-                    string Original_Nombre_Cliente) {
-            return this.Update(Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Vehiculos_NroPlaca, Cedula_Cliente, Fecha_Inicio, Fecha_Finalizacion, Tasa_USD, Pago_BS, Estatus, Nombre_Cliente, Original_IDOrdenes_Viaje, Original_Ruta, Original_Dias_Viaje, Original_Distancia, Original_Paradas, Original_Cedula_Chofer, Original_Vehiculos_NroPlaca, Original_Cedula_Cliente, Original_Fecha_Inicio, Original_Fecha_Finalizacion, Original_Tasa_USD, Original_Pago_BS, Original_Estatus, Original_Nombre_Cliente, Original_IDOrdenes_Viaje);
+                    string Original_Nombre_Cliente, 
+                    string Original_Incidencias) {
+            return this.Update(Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Vehiculos_NroPlaca, Cedula_Cliente, Fecha_Inicio, Fecha_Finalizacion, Tasa_USD, Pago_BS, Estatus, Nombre_Cliente, Incidencias, Original_IDOrdenes_Viaje, Original_Ruta, Original_Dias_Viaje, Original_Distancia, Original_Paradas, Original_Cedula_Chofer, Original_Vehiculos_NroPlaca, Original_Cedula_Cliente, Original_Fecha_Inicio, Original_Fecha_Finalizacion, Original_Tasa_USD, Original_Pago_BS, Original_Estatus, Original_Nombre_Cliente, Original_Incidencias, Original_IDOrdenes_Viaje);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9387,7 +9472,7 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int modify(string Ruta, int Dias_Viaje, decimal Distancia, string Paradas, string Cedula_Chofer, string Vehiculos_NroPlaca, string Cedula_Cliente, string Nombre_Cliente, global::System.Nullable<global::System.DateTime> Fecha_Inicio, global::System.Nullable<global::System.DateTime> Fecha_Finalizacion, global::System.Nullable<decimal> Tasa_USD, global::System.Nullable<decimal> Pago_BS, string Estatus, int Original_IDOrdenes_Viaje) {
+        public virtual int modify(string Ruta, int Dias_Viaje, decimal Distancia, string Paradas, string Cedula_Chofer, string Vehiculos_NroPlaca, string Cedula_Cliente, string Nombre_Cliente, global::System.Nullable<global::System.DateTime> Fecha_Inicio, global::System.Nullable<global::System.DateTime> Fecha_Finalizacion, global::System.Nullable<decimal> Tasa_USD, global::System.Nullable<decimal> Pago_BS, string Estatus, string Incidencias, int Original_IDOrdenes_Viaje) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Ruta == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -9457,7 +9542,13 @@ WHERE        (IDOrdenes_Viaje = @Original_IDOrdenes_Viaje)";
             else {
                 command.Parameters[12].Value = ((string)(Estatus));
             }
-            command.Parameters[13].Value = ((int)(Original_IDOrdenes_Viaje));
+            if ((Incidencias == null)) {
+                command.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[13].Value = ((string)(Incidencias));
+            }
+            command.Parameters[14].Value = ((int)(Original_IDOrdenes_Viaje));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
