@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,14 +31,15 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
             cedulaTextBox.MaxLength = 8;
-            
+
 
 
         }
 
         private void agregar_Click(object sender, EventArgs e)
         {
-            bool existe = ExisteUsuario(usuarioTextBox.Text.Trim(),cedulaTextBox.Text.Trim());
+            bool existe = ExisteUsuario(usuarioTextBox.Text.Trim(), cedulaTextBox.Text.Trim());
+            bool emailvalido = ValidarCorreo.EsEmailValido(correoTextBox.Text);
 
             List<string> camposVacios = new List<string>();
 
@@ -57,10 +59,16 @@ namespace AppTesis
                 MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-
-            else if(existe )
+            
+            else if (!emailvalido)
             {
-                MessageBox.Show("Ya Esxiste este Usuario, Porfavor Ingrese Otro","Usuario Existente",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("El correo ingresado no es válido. Por favor verifícalo.","Formato Invalido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+
+            else if (existe)
+            {
+                MessageBox.Show("Ya Esxiste este Usuario, Porfavor Ingrese Otro", "Usuario Existente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             else
@@ -112,7 +120,8 @@ namespace AppTesis
 
         private void modificar_Click(object sender, EventArgs e)
         {
-            bool existe = ExisteUsuario(usuarioTextBox.Text.Trim(),cedulaTextBox.Text);
+            bool existe = ExisteUsuario(usuarioTextBox.Text.Trim(), cedulaTextBox.Text);
+            bool emailvalido = ValidarCorreo.EsEmailValido(correoTextBox.Text);
 
             List<string> camposVacios = new List<string>();
 
@@ -130,6 +139,11 @@ namespace AppTesis
             {
                 string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
                 MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!emailvalido)
+            {
+                MessageBox.Show("El correo ingresado no es válido. Por favor verifícalo.", "Formato Invalido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
 
@@ -198,7 +212,7 @@ namespace AppTesis
             try
             {
                 // Llamamos al método pasando solo los 2 argumentos que te pide: usuario y contraseña
-                string resultado = this.usuarioTableAdapter.ExistUsuario(usuario, cedula)?.ToString()??"";
+                string resultado = this.usuarioTableAdapter.ExistUsuario(usuario, cedula)?.ToString() ?? "";
 
                 // Si la base de datos encontró coincidencia, el resultado no será nulo ni vacío
                 if (!string.IsNullOrEmpty(resultado))

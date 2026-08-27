@@ -64,6 +64,7 @@ namespace AppTesis
         private void agregar_Click(object sender, EventArgs e)
         {
             List<string> camposVacios = new List<string>();
+            bool emailvalido = ValidarCorreo.EsEmailValido(correoTextBox.Text);
 
             foreach (Control c in this.Controls)
             {
@@ -79,6 +80,11 @@ namespace AppTesis
             {
                 string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
                 MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!emailvalido)
+            {
+                MessageBox.Show("El correo ingresado no es válido. Por favor verifícalo.", "Formato Invalido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             else if(cedulaTextBox.Text.Length<7)
@@ -139,6 +145,7 @@ namespace AppTesis
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
             List<string> camposVacios = new List<string>();
+            bool emailvalido = ValidarCorreo.EsEmailValido(correoTextBox.Text);
 
             foreach (Control c in this.Controls)
             {
@@ -154,6 +161,10 @@ namespace AppTesis
             {
                 string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
                 MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (!emailvalido)
+            {
+                MessageBox.Show("El correo ingresado no es válido. Por favor verifícalo.", "Formato Invalido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             else if (cedulaTextBox.Text.Length < 7)
