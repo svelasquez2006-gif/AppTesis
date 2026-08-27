@@ -36,17 +36,9 @@
             System.Windows.Forms.Label contrasenaLabel;
             System.Windows.Forms.Label correoLabel;
             System.Windows.Forms.Label jerarquiaLabel;
+            System.Windows.Forms.Label label2;
             this.label1 = new System.Windows.Forms.Label();
             this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
@@ -57,6 +49,17 @@
             this.salir = new BotonRedondo();
             this.modificar = new BotonRedondo();
             this.agregar = new BotonRedondo();
+            this.EstadoComboBox = new System.Windows.Forms.ComboBox();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager1 = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             cedulaLabel = new System.Windows.Forms.Label();
@@ -66,6 +69,7 @@
             contrasenaLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
             jerarquiaLabel = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
@@ -75,7 +79,7 @@
             // 
             cedulaLabel.AutoSize = true;
             cedulaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cedulaLabel.Location = new System.Drawing.Point(42, 68);
+            cedulaLabel.Location = new System.Drawing.Point(42, 16);
             cedulaLabel.Name = "cedulaLabel";
             cedulaLabel.Size = new System.Drawing.Size(53, 16);
             cedulaLabel.TabIndex = 6;
@@ -85,7 +89,7 @@
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(41, 107);
+            nombreLabel.Location = new System.Drawing.Point(41, 55);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(59, 16);
             nombreLabel.TabIndex = 8;
@@ -95,7 +99,7 @@
             // 
             apellidoLabel.AutoSize = true;
             apellidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            apellidoLabel.Location = new System.Drawing.Point(41, 147);
+            apellidoLabel.Location = new System.Drawing.Point(41, 95);
             apellidoLabel.Name = "apellidoLabel";
             apellidoLabel.Size = new System.Drawing.Size(60, 16);
             apellidoLabel.TabIndex = 10;
@@ -105,7 +109,7 @@
             // 
             usuarioLabel.AutoSize = true;
             usuarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usuarioLabel.Location = new System.Drawing.Point(42, 185);
+            usuarioLabel.Location = new System.Drawing.Point(42, 133);
             usuarioLabel.Name = "usuarioLabel";
             usuarioLabel.Size = new System.Drawing.Size(57, 16);
             usuarioLabel.TabIndex = 12;
@@ -115,7 +119,7 @@
             // 
             contrasenaLabel.AutoSize = true;
             contrasenaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contrasenaLabel.Location = new System.Drawing.Point(35, 223);
+            contrasenaLabel.Location = new System.Drawing.Point(35, 171);
             contrasenaLabel.Name = "contrasenaLabel";
             contrasenaLabel.Size = new System.Drawing.Size(79, 16);
             contrasenaLabel.TabIndex = 14;
@@ -125,7 +129,7 @@
             // 
             correoLabel.AutoSize = true;
             correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            correoLabel.Location = new System.Drawing.Point(42, 262);
+            correoLabel.Location = new System.Drawing.Point(42, 210);
             correoLabel.Name = "correoLabel";
             correoLabel.Size = new System.Drawing.Size(51, 16);
             correoLabel.TabIndex = 16;
@@ -135,7 +139,7 @@
             // 
             jerarquiaLabel.AutoSize = true;
             jerarquiaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            jerarquiaLabel.Location = new System.Drawing.Point(37, 301);
+            jerarquiaLabel.Location = new System.Drawing.Point(37, 249);
             jerarquiaLabel.Name = "jerarquiaLabel";
             jerarquiaLabel.Size = new System.Drawing.Size(67, 16);
             jerarquiaLabel.TabIndex = 18;
@@ -164,7 +168,8 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.dataGridViewTextBoxColumn7,
+            this.Estado});
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
             this.usuarioDataGridView.Location = new System.Drawing.Point(140, 102);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
@@ -172,70 +177,11 @@
             this.usuarioDataGridView.Size = new System.Drawing.Size(744, 220);
             this.usuarioDataGridView.TabIndex = 5;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Cedula";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cedula";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellido";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Usuario";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Usuario";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Contrasena";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Contrasena";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Correo";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Correo";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Jerarquia";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Jerarquia";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.dataBaseDataSet;
-            // 
-            // dataBaseDataSet
-            // 
-            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
-            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cedulaTextBox
             // 
             this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Cedula", true));
             this.cedulaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cedulaTextBox.Location = new System.Drawing.Point(17, 84);
+            this.cedulaTextBox.Location = new System.Drawing.Point(17, 32);
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(100, 22);
             this.cedulaTextBox.TabIndex = 7;
@@ -245,7 +191,7 @@
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Nombre", true));
             this.nombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTextBox.Location = new System.Drawing.Point(17, 123);
+            this.nombreTextBox.Location = new System.Drawing.Point(17, 71);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 22);
             this.nombreTextBox.TabIndex = 9;
@@ -254,7 +200,7 @@
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Apellido", true));
             this.apellidoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellidoTextBox.Location = new System.Drawing.Point(17, 163);
+            this.apellidoTextBox.Location = new System.Drawing.Point(17, 111);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(100, 22);
             this.apellidoTextBox.TabIndex = 11;
@@ -263,7 +209,7 @@
             // 
             this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Usuario", true));
             this.usuarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuarioTextBox.Location = new System.Drawing.Point(17, 201);
+            this.usuarioTextBox.Location = new System.Drawing.Point(17, 149);
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(100, 22);
             this.usuarioTextBox.TabIndex = 13;
@@ -272,7 +218,7 @@
             // 
             this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Contrasena", true));
             this.contrasenaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contrasenaTextBox.Location = new System.Drawing.Point(17, 239);
+            this.contrasenaTextBox.Location = new System.Drawing.Point(17, 187);
             this.contrasenaTextBox.Name = "contrasenaTextBox";
             this.contrasenaTextBox.Size = new System.Drawing.Size(100, 22);
             this.contrasenaTextBox.TabIndex = 15;
@@ -281,7 +227,7 @@
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Correo", true));
             this.correoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.correoTextBox.Location = new System.Drawing.Point(17, 278);
+            this.correoTextBox.Location = new System.Drawing.Point(17, 226);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(100, 22);
             this.correoTextBox.TabIndex = 17;
@@ -295,7 +241,7 @@
             "Jefe",
             "Secretario",
             "Empleado"});
-            this.jerarquiacomboBox.Location = new System.Drawing.Point(17, 317);
+            this.jerarquiacomboBox.Location = new System.Drawing.Point(17, 265);
             this.jerarquiacomboBox.Name = "jerarquiacomboBox";
             this.jerarquiacomboBox.Size = new System.Drawing.Size(100, 24);
             this.jerarquiacomboBox.TabIndex = 19;
@@ -348,6 +294,94 @@
             this.agregar.UseVisualStyleBackColor = false;
             this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(42, 292);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(53, 16);
+            label2.TabIndex = 20;
+            label2.Text = "Estado:";
+            // 
+            // EstadoComboBox
+            // 
+            this.EstadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Estado", true));
+            this.EstadoComboBox.FormattingEnabled = true;
+            this.EstadoComboBox.Items.AddRange(new object[] {
+            "Activo",
+            "Bloqueado"});
+            this.EstadoComboBox.Location = new System.Drawing.Point(17, 311);
+            this.EstadoComboBox.Name = "EstadoComboBox";
+            this.EstadoComboBox.Size = new System.Drawing.Size(100, 21);
+            this.EstadoComboBox.TabIndex = 21;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.dataBaseDataSet;
+            // 
+            // dataBaseDataSet
+            // 
+            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
+            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Cedula";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cedula";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellido";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Apellido";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Usuario";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Usuario";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Contrasena";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Contrasena";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Correo";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Correo";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Jerarquia";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Jerarquia";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
@@ -357,6 +391,7 @@
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.ChoferTableAdapter = null;
             this.tableAdapterManager1.ClienteTableAdapter = null;
+            this.tableAdapterManager1.EmpresasSubcontratadaTableAdapter = null;
             this.tableAdapterManager1.MantenimientoTableAdapter = null;
             this.tableAdapterManager1.Orden_ViajeTableAdapter = null;
             this.tableAdapterManager1.RegistroAccionesTableAdapter = null;
@@ -371,6 +406,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(907, 433);
+            this.Controls.Add(this.EstadoComboBox);
+            this.Controls.Add(label2);
             this.Controls.Add(this.jerarquiacomboBox);
             this.Controls.Add(cedulaLabel);
             this.Controls.Add(this.cedulaTextBox);
@@ -425,5 +462,7 @@
         private System.Windows.Forms.TextBox contrasenaTextBox;
         private System.Windows.Forms.TextBox correoTextBox;
         private System.Windows.Forms.ComboBox jerarquiacomboBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.ComboBox EstadoComboBox;
     }
 }

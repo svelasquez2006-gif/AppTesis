@@ -163,7 +163,8 @@ namespace AppTesis
                     string contrasena = contrasenaTextBox.Text.Trim();
                     string correo = correoTextBox.Text.Trim();
                     string jerarquia = jerarquiacomboBox.Text;
-                    this.usuarioTableAdapter.modify(nombre, apellido, usuario, contrasena, correo, jerarquia, cedula);
+                    string estado = EstadoComboBox.Text;
+                    this.usuarioTableAdapter.modify(nombre, apellido, usuario, contrasena, correo, jerarquia,estado, cedula);
                     usuarioDataGridView.Refresh();
                 }
 
