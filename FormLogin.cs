@@ -70,39 +70,51 @@ namespace AppTesis
                     bool esvalido = ValidarUsuario(usuario, contra);
                     if(esvalido)
                     {
-                        MessageBox.Show($"Inicio de Sesion Exitoso, Bienvenido {usuario}","Inicio de Sesion Exitoso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        var estado = this.usuarioTableAdapter.GetDataByUsuario(usuario);
 
-
-                        try
+                        var fila = estado.Rows[0]["Estado"].ToString();
+                        if(fila!="Bloqueado")
                         {
-                            // 1. Desactivamos las restricciones del DataSet
-                            
 
-                            // 2. Llenamos la tabla normalmente
-                            var dtUsuario = this.usuarioTableAdapter.GetDataByUsuario(usuario);
-                            if (dtUsuario.Rows.Count > 0)
+                            MessageBox.Show($"Inicio de Sesion Exitoso, Bienvenido {usuario}", "Inicio de Sesion Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                            try
                             {
-                                // 3. Guardamos los datos en la clase estática de sesión
-                                SesionUsuario.Nombre = dtUsuario.Rows[0]["Nombre"].ToString();
-                                SesionUsuario.Apellido = dtUsuario.Rows[0]["Apellido"].ToString();
-                                SesionUsuario.Jerarquia = dtUsuario.Rows[0]["Jerarquia"].ToString();
-                                SesionUsuario.Cedula = dtUsuario.Rows[0]["Cedula"].ToString();
+                                // 1. Desactivamos las restricciones del DataSet
+
+
+                                // 2. Llenamos la tabla normalmente
+                                var dtUsuario = this.usuarioTableAdapter.GetDataByUsuario(usuario);
+                                if (dtUsuario.Rows.Count > 0)
+                                {
+                                    // 3. Guardamos los datos en la clase estática de sesión
+                                    SesionUsuario.Nombre = dtUsuario.Rows[0]["Nombre"].ToString();
+                                    SesionUsuario.Apellido = dtUsuario.Rows[0]["Apellido"].ToString();
+                                    SesionUsuario.Jerarquia = dtUsuario.Rows[0]["Jerarquia"].ToString();
+                                    SesionUsuario.Cedula = dtUsuario.Rows[0]["Cedula"].ToString();
+                                }
                             }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error al cargar datos: " + ex.Message);
+                            }
+
+
+
+
+
+                            this.Hide();
+                            FormPrincipal Principal = new FormPrincipal();
+                            Principal.Show();
+                            intentos = 0;
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show("Error al cargar datos: " + ex.Message);
+                            MessageBox.Show("Este Usuario esta Bloqueado, Porfavor Contacte con un Administrador para desbloquear la cuenta","Usuario Bloqueado", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                         }
-
-                        
-
-
-
-                        this.Hide();
-                        FormPrincipal Principal = new FormPrincipal();
-                        Principal.Show();
-                        intentos=0;
                     }
+
                     else 
                     {
                         int restantes = (max_intentos - 1) - intentos;
@@ -116,6 +128,7 @@ namespace AppTesis
                         if (intentos == max_intentos)
                         {
                             MessageBox.Show("Demasiados Intentos de Inicio de Sesion, Luego de Este mensaje sera expulsado del programa", "Demasiados Intentos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.usuarioTableAdapter.BlockUser(usuario);
                             Application.Exit();
                         }
                     }

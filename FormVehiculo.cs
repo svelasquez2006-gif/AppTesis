@@ -36,10 +36,25 @@ namespace AppTesis
 
         private void agregar_Click(object sender, EventArgs e)
         {
-            if(nroPlacaTextBox.Text==""|| marcaTextBox.Text==""||modeloTextBox.Text==""||AñoDatePicker.Text==""||colorTextBox.Text==""|| estatuscombobox.Text == "")
+            List<string> camposVacios = new List<string>();
+
+            foreach (Control c in this.Controls)
             {
-                MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (c is System.Windows.Forms.TextBox textBox && string.IsNullOrEmpty(textBox.Text))
+                {
+                    // Agrega el nombre del campo a la lista
+                    camposVacios.Add(textBox.Name);
+                }
             }
+
+            // Si la lista tiene elementos, muestra el mensaje
+            if (camposVacios.Count > 0)
+            {
+                string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
+                MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
             else if (nroPlacaTextBox.Text.Length < 7)
             {
                 MessageBox.Show("el numero de placa no puede tener menos de 7 digitos", "Verificar placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -50,7 +65,7 @@ namespace AppTesis
                 try
                 {
                     string placa = nroPlacaTextBox.Text;
-                    string marca = marcaTextBox.Text;
+                    string marca = MarcaComboBox.Text;
                     string modelo = modeloTextBox.Text;
                     string tipo_vehiculo = TipoComboBox.Text;
                     int.TryParse(AñoDatePicker.Text, out int anio);
@@ -113,17 +128,32 @@ namespace AppTesis
 
         private void modificar_Click(object sender, EventArgs e)
         {
-            if (nroPlacaTextBox.Text == "" || marcaTextBox.Text == "" || modeloTextBox.Text == "" || AñoDatePicker.Text == "" || colorTextBox.Text == "" || estatuscombobox.Text == "")
+            List<string> camposVacios = new List<string>();
+
+            foreach (Control c in this.Controls)
             {
-                MessageBox.Show("no se pueden enviar campos vacios", "campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (c is System.Windows.Forms.TextBox textBox && string.IsNullOrEmpty(textBox.Text))
+                {
+                    // Agrega el nombre del campo a la lista
+                    camposVacios.Add(textBox.Name);
+                }
             }
+
+            // Si la lista tiene elementos, muestra el mensaje
+            if (camposVacios.Count > 0)
+            {
+                string mensaje = "Los siguientes campos están vacíos:\n" + string.Join("\n", camposVacios);
+                MessageBox.Show(mensaje, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
             else
             {
                 try
                 {
                     string placa = nroPlacaTextBox.Text;
                     string tipo_vehiculo = TipoComboBox.Text;
-                    string marca = marcaTextBox.Text;
+                    string marca = MarcaComboBox.Text;
                     string modelo = modeloTextBox.Text;
                     int.TryParse(AñoDatePicker.Text, out int anio);
                     string color = colorTextBox.Text;

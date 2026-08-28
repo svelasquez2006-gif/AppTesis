@@ -54,12 +54,12 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nroPlacaTextBox = new System.Windows.Forms.TextBox();
-            this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.modeloTextBox = new System.Windows.Forms.TextBox();
             this.colorTextBox = new System.Windows.Forms.TextBox();
             this.estatuscombobox = new System.Windows.Forms.ComboBox();
             this.AñoDatePicker = new System.Windows.Forms.DateTimePicker();
             this.TipoComboBox = new System.Windows.Forms.ComboBox();
+            this.MarcaComboBox = new System.Windows.Forms.ComboBox();
             nroPlacaLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             modeloLabel = new System.Windows.Forms.Label();
@@ -324,14 +324,6 @@
             this.nroPlacaTextBox.Size = new System.Drawing.Size(156, 20);
             this.nroPlacaTextBox.TabIndex = 8;
             // 
-            // marcaTextBox
-            // 
-            this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Marca", true));
-            this.marcaTextBox.Location = new System.Drawing.Point(116, 128);
-            this.marcaTextBox.Name = "marcaTextBox";
-            this.marcaTextBox.Size = new System.Drawing.Size(156, 20);
-            this.marcaTextBox.TabIndex = 10;
-            // 
             // modeloTextBox
             // 
             this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Modelo", true));
@@ -351,6 +343,7 @@
             // estatuscombobox
             // 
             this.estatuscombobox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Estatus", true));
+            this.estatuscombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.estatuscombobox.FormattingEnabled = true;
             this.estatuscombobox.Items.AddRange(new object[] {
             "Disponible",
@@ -373,16 +366,36 @@
             // TipoComboBox
             // 
             this.TipoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Tipo_Vehiculo", true));
+            this.TipoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoComboBox.FormattingEnabled = true;
             this.TipoComboBox.Items.AddRange(new object[] {
             "Autobus",
             "Camioneta",
-            "Automovil",
-            "Trailer"});
+            "Automovil"});
             this.TipoComboBox.Location = new System.Drawing.Point(116, 102);
             this.TipoComboBox.Name = "TipoComboBox";
             this.TipoComboBox.Size = new System.Drawing.Size(156, 21);
             this.TipoComboBox.TabIndex = 22;
+            // 
+            // MarcaComboBox
+            // 
+            this.MarcaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Marca", true));
+            this.MarcaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MarcaComboBox.FormattingEnabled = true;
+            this.MarcaComboBox.Items.AddRange(new object[] {
+            "Toyota",
+            "Nissan",
+            "Encava",
+            "Chevrolet",
+            "Ford",
+            "JAC ",
+            "Yutong",
+            "Changan",
+            "Otros"});
+            this.MarcaComboBox.Location = new System.Drawing.Point(116, 129);
+            this.MarcaComboBox.Name = "MarcaComboBox";
+            this.MarcaComboBox.Size = new System.Drawing.Size(156, 21);
+            this.MarcaComboBox.TabIndex = 23;
             // 
             // Formvehiculos
             // 
@@ -390,6 +403,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1116, 415);
+            this.Controls.Add(this.MarcaComboBox);
             this.Controls.Add(this.TipoComboBox);
             this.Controls.Add(tipo_VehiculoLabel);
             this.Controls.Add(this.AñoDatePicker);
@@ -397,7 +411,6 @@
             this.Controls.Add(nroPlacaLabel);
             this.Controls.Add(this.nroPlacaTextBox);
             this.Controls.Add(marcaLabel);
-            this.Controls.Add(this.marcaTextBox);
             this.Controls.Add(modeloLabel);
             this.Controls.Add(this.modeloTextBox);
             this.Controls.Add(anioLabel);
@@ -433,7 +446,6 @@
         private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView vehiculoDataGridView;
         private System.Windows.Forms.TextBox nroPlacaTextBox;
-        private System.Windows.Forms.TextBox marcaTextBox;
         private System.Windows.Forms.TextBox modeloTextBox;
         private System.Windows.Forms.TextBox colorTextBox;
         private System.Windows.Forms.ComboBox estatuscombobox;
@@ -446,5 +458,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.ComboBox MarcaComboBox;
     }
 }

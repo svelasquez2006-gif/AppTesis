@@ -221,6 +221,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ChoferTableAdapter = null;
             this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.EmpresasSubcontratadaTableAdapter = null;
             this.tableAdapterManager.MantenimientoTableAdapter = this.mantenimientoTableAdapter;
             this.tableAdapterManager.Orden_ViajeTableAdapter = null;
             this.tableAdapterManager.RegistroAccionesTableAdapter = null;
@@ -326,6 +327,7 @@
             this.PlacaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource, "NroPlaca", true));
             this.PlacaComboBox.DataSource = this.vehiculoBindingSource;
             this.PlacaComboBox.DisplayMember = "NroPlaca";
+            this.PlacaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PlacaComboBox.FormattingEnabled = true;
             this.PlacaComboBox.Location = new System.Drawing.Point(204, 121);
             this.PlacaComboBox.Name = "PlacaComboBox";

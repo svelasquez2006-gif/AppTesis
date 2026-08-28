@@ -22,14 +22,16 @@ namespace AppTesis
 
         private void FormChoferes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.EmpresasSubcontratada' Puede moverla o quitarla según sea necesario.
+            this.empresasSubcontratadaTableAdapter.Fill(this.dataBaseDataSet.EmpresasSubcontratada);
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Rutas' Puede moverla o quitarla según sea necesario.
             this.rutasTableAdapter.Fill(this.dataBaseDataSet.Rutas);
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Chofer' Puede moverla o quitarla según sea necesario.
             this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
-            Filtro.SelectedItem = "<Selecionar>";
             telefonoTextBox.MaxLength = 7;     
             cedulaTextBox.MaxLength = 8;
             experienciaTextBox.MaxLength = 2;
+            fecha_NacimientoDateTimePicker.Value= new DateTime(2008,8,27);
 
         }
 
@@ -116,8 +118,22 @@ namespace AppTesis
                     string ruta = RutaComboBox.Text;
                     string estatus = estatuscombobox.Text;
                     string afiliacion = AfiliacionComboBox.Text;
-                    this.choferTableAdapter.add(cedula, nombre, apellido,fechaNacimiento,ed, telefono, correo, licencia,experiencia, dirreccion,ruta, estatus,afiliacion);
-                    this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
+
+                    int resultado = ed - experiencia;
+
+                    if (resultado < 18)
+                    {
+                        MessageBox.Show("La diferencia entre la edad y la experiencia no puede ser menor a 18 años.",
+                                        "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        // Opcional: Limpiar o ajustar el valor del campo
+                        experienciaTextBox.Focus();
+                    }
+                    else
+                    {
+                        this.choferTableAdapter.add(cedula, nombre, apellido, fechaNacimiento, ed, telefono, correo, licencia, experiencia, dirreccion, ruta, estatus, afiliacion);
+                        this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
+                    }
 
                 }
                 catch (NullReferenceException)
@@ -197,8 +213,22 @@ namespace AppTesis
                     string ruta = RutaComboBox.Text;
                     string estatus = estatuscombobox.Text;
                     string afiliacion = AfiliacionComboBox.Text;
-                    this.choferTableAdapter.modify(nombre, apellido,fechaNacimiento,ed, telefono, correo, licencia ,experiencia, dirreccion,ruta, estatus,afiliacion, cedula);
-                    this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
+
+                    int resultado = ed - experiencia;
+
+                    if (resultado < 18)
+                    {
+                        MessageBox.Show("La diferencia entre la edad y la experiencia no puede ser menor a 18 años.",
+                                        "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        // Opcional: Limpiar o ajustar el valor del campo
+                        experienciaTextBox.Focus();
+                    }
+                    else
+                    {
+                        this.choferTableAdapter.modify(nombre, apellido, fechaNacimiento, ed, telefono, correo, licencia, experiencia, dirreccion, ruta, estatus, afiliacion, cedula);
+                        this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
+                    }
 
                 }
 
@@ -271,6 +301,15 @@ namespace AppTesis
             if (fechaNacimiento.Date > fechaActual.AddYears(-edad))
             {
                 edad--;
+            
+                
+            }
+
+            if (edad < 18)
+            {
+                MessageBox.Show("La edad no puede ser menor a 18 años", "Validacion de edad", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                fecha_NacimientoDateTimePicker.Value = DateTime.Today.AddYears(-18);
+                return;
             }
 
             // El resultado está en la variable 'edad'
@@ -312,6 +351,11 @@ namespace AppTesis
                     telefonoTextBox.Clear();
                 }
             }
+        }
+
+        private void edadTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

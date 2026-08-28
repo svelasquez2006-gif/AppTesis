@@ -526,6 +526,7 @@
             // EstatusComboBox
             // 
             this.EstatusComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Estatus", true));
+            this.EstatusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EstatusComboBox.FormattingEnabled = true;
             this.EstatusComboBox.Items.AddRange(new object[] {
             "Pendiente a Realizar",
@@ -545,6 +546,7 @@
             this.ClienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Cedula_Cliente", true));
             this.ClienteComboBox.DataSource = this.clienteBindingSource;
             this.ClienteComboBox.DisplayMember = "Cedula";
+            this.ClienteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ClienteComboBox.FormattingEnabled = true;
             this.ClienteComboBox.Location = new System.Drawing.Point(32, 130);
             this.ClienteComboBox.Name = "ClienteComboBox";
@@ -564,6 +566,7 @@
             this.RutaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Ruta", true));
             this.RutaComboBox.DataSource = this.rutasBindingSource;
             this.RutaComboBox.DisplayMember = "Nombre_Ruta";
+            this.RutaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RutaComboBox.FormattingEnabled = true;
             this.RutaComboBox.Location = new System.Drawing.Point(157, 128);
             this.RutaComboBox.Name = "RutaComboBox";
@@ -584,6 +587,7 @@
             this.ChoferComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Cedula_Chofer", true));
             this.ChoferComboBox.DataSource = this.choferBindingSource;
             this.ChoferComboBox.DisplayMember = "Cedula";
+            this.ChoferComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ChoferComboBox.FormattingEnabled = true;
             this.ChoferComboBox.Location = new System.Drawing.Point(28, 239);
             this.ChoferComboBox.Name = "ChoferComboBox";
@@ -602,6 +606,7 @@
             this.PlacaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Vehiculos_NroPlaca", true));
             this.PlacaComboBox.DataSource = this.vehiculoBindingSource;
             this.PlacaComboBox.DisplayMember = "NroPlaca";
+            this.PlacaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PlacaComboBox.FormattingEnabled = true;
             this.PlacaComboBox.Location = new System.Drawing.Point(28, 282);
             this.PlacaComboBox.Name = "PlacaComboBox";
