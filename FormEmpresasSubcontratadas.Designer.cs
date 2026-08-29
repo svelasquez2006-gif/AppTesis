@@ -42,9 +42,6 @@
             System.Windows.Forms.Label direccionLabel;
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
-            this.empresasSubcontratadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.empresasSubcontratadaTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.EmpresasSubcontratadaTableAdapter();
             this.rifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +53,9 @@
             this.fechafinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empresasSubcontratadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
+            this.empresasSubcontratadaTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.EmpresasSubcontratadaTableAdapter();
             this.RifTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.EstadoComboBox = new System.Windows.Forms.ComboBox();
@@ -72,6 +72,9 @@
             this.salir = new BotonRedondo();
             this.modificar = new BotonRedondo();
             this.agregar = new BotonRedondo();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
             rifLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -84,9 +87,120 @@
             labelCalificación = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresasSubcontratadaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // rifLabel
+            // 
+            rifLabel.AutoSize = true;
+            rifLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            rifLabel.Location = new System.Drawing.Point(51, 110);
+            rifLabel.Name = "rifLabel";
+            rifLabel.Size = new System.Drawing.Size(31, 16);
+            rifLabel.TabIndex = 8;
+            rifLabel.Text = "RIF:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(23, 161);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(59, 16);
+            nombreLabel.TabIndex = 10;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(24, 215);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(53, 16);
+            label2.TabIndex = 22;
+            label2.Text = "Estado:";
+            // 
+            // telefonoLabel
+            // 
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            telefonoLabel.Location = new System.Drawing.Point(219, 109);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new System.Drawing.Size(75, 20);
+            telefonoLabel.TabIndex = 36;
+            telefonoLabel.Text = "Telefono:";
+            // 
+            // correoLabel
+            // 
+            correoLabel.AutoSize = true;
+            correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            correoLabel.Location = new System.Drawing.Point(243, 161);
+            correoLabel.Name = "correoLabel";
+            correoLabel.Size = new System.Drawing.Size(51, 16);
+            correoLabel.TabIndex = 39;
+            correoLabel.Text = "Correo:";
+            // 
+            // lblNombreRepresentante
+            // 
+            lblNombreRepresentante.AutoSize = true;
+            lblNombreRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblNombreRepresentante.Location = new System.Drawing.Point(231, 215);
+            lblNombreRepresentante.Name = "lblNombreRepresentante";
+            lblNombreRepresentante.Size = new System.Drawing.Size(151, 16);
+            lblNombreRepresentante.TabIndex = 41;
+            lblNombreRepresentante.Text = "Nombre Representante:";
+            // 
+            // lblTelefRepresentante
+            // 
+            lblTelefRepresentante.AutoSize = true;
+            lblTelefRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblTelefRepresentante.Location = new System.Drawing.Point(501, 111);
+            lblTelefRepresentante.Name = "lblTelefRepresentante";
+            lblTelefRepresentante.Size = new System.Drawing.Size(186, 20);
+            lblTelefRepresentante.TabIndex = 43;
+            lblTelefRepresentante.Text = "Teléfono Representante:";
+            // 
+            // fecha_InicioLabel
+            // 
+            fecha_InicioLabel.AutoSize = true;
+            fecha_InicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            fecha_InicioLabel.Location = new System.Drawing.Point(536, 150);
+            fecha_InicioLabel.Name = "fecha_InicioLabel";
+            fecha_InicioLabel.Size = new System.Drawing.Size(101, 16);
+            fecha_InicioLabel.TabIndex = 46;
+            fecha_InicioLabel.Text = "Fecha de Inicio:";
+            // 
+            // fecha_FinalizacionLabel
+            // 
+            fecha_FinalizacionLabel.AutoSize = true;
+            fecha_FinalizacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            fecha_FinalizacionLabel.Location = new System.Drawing.Point(527, 195);
+            fecha_FinalizacionLabel.Name = "fecha_FinalizacionLabel";
+            fecha_FinalizacionLabel.Size = new System.Drawing.Size(141, 16);
+            fecha_FinalizacionLabel.TabIndex = 48;
+            fecha_FinalizacionLabel.Text = "Fecha de Finalizacion:";
+            // 
+            // labelCalificación
+            // 
+            labelCalificación.AutoSize = true;
+            labelCalificación.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            labelCalificación.Location = new System.Drawing.Point(676, 175);
+            labelCalificación.Name = "labelCalificación";
+            labelCalificación.Size = new System.Drawing.Size(79, 16);
+            labelCalificación.TabIndex = 50;
+            labelCalificación.Text = "Calificación:";
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            direccionLabel.Location = new System.Drawing.Point(689, 216);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(67, 16);
+            direccionLabel.TabIndex = 52;
+            direccionLabel.Text = "Dirección:";
             // 
             // label1
             // 
@@ -119,20 +233,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1197, 150);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // dataBaseDataSet
-            // 
-            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
-            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // empresasSubcontratadaBindingSource
-            // 
-            this.empresasSubcontratadaBindingSource.DataMember = "EmpresasSubcontratada";
-            this.empresasSubcontratadaBindingSource.DataSource = this.dataBaseDataSet;
-            // 
-            // empresasSubcontratadaTableAdapter
-            // 
-            this.empresasSubcontratadaTableAdapter.ClearBeforeFill = true;
             // 
             // rifDataGridViewTextBoxColumn
             // 
@@ -200,15 +300,19 @@
             this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
             this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
             // 
-            // rifLabel
+            // empresasSubcontratadaBindingSource
             // 
-            rifLabel.AutoSize = true;
-            rifLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rifLabel.Location = new System.Drawing.Point(51, 110);
-            rifLabel.Name = "rifLabel";
-            rifLabel.Size = new System.Drawing.Size(31, 16);
-            rifLabel.TabIndex = 8;
-            rifLabel.Text = "RIF:";
+            this.empresasSubcontratadaBindingSource.DataMember = "EmpresasSubcontratada";
+            this.empresasSubcontratadaBindingSource.DataSource = this.dataBaseDataSet;
+            // 
+            // dataBaseDataSet
+            // 
+            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
+            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // empresasSubcontratadaTableAdapter
+            // 
+            this.empresasSubcontratadaTableAdapter.ClearBeforeFill = true;
             // 
             // RifTextBox
             // 
@@ -217,16 +321,6 @@
             this.RifTextBox.Name = "RifTextBox";
             this.RifTextBox.Size = new System.Drawing.Size(100, 22);
             this.RifTextBox.TabIndex = 9;
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(23, 161);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(59, 16);
-            nombreLabel.TabIndex = 10;
-            nombreLabel.Text = "Nombre:";
             // 
             // nombreTextBox
             // 
@@ -247,16 +341,6 @@
             this.EstadoComboBox.Name = "EstadoComboBox";
             this.EstadoComboBox.Size = new System.Drawing.Size(100, 21);
             this.EstadoComboBox.TabIndex = 23;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(24, 215);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(53, 16);
-            label2.TabIndex = 22;
-            label2.Text = "Estado:";
             // 
             // CodigoTelfComboBox
             // 
@@ -280,32 +364,12 @@
             this.CodigoTelfComboBox.Size = new System.Drawing.Size(50, 21);
             this.CodigoTelfComboBox.TabIndex = 38;
             // 
-            // telefonoLabel
-            // 
-            telefonoLabel.AutoSize = true;
-            telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoLabel.Location = new System.Drawing.Point(219, 109);
-            telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(75, 20);
-            telefonoLabel.TabIndex = 36;
-            telefonoLabel.Text = "Telefono:";
-            // 
             // telefonoTextBox
             // 
             this.telefonoTextBox.Location = new System.Drawing.Point(356, 109);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(87, 20);
             this.telefonoTextBox.TabIndex = 37;
-            // 
-            // correoLabel
-            // 
-            correoLabel.AutoSize = true;
-            correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            correoLabel.Location = new System.Drawing.Point(243, 161);
-            correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(51, 16);
-            correoLabel.TabIndex = 39;
-            correoLabel.Text = "Correo:";
             // 
             // correoTextBox
             // 
@@ -314,16 +378,6 @@
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(100, 22);
             this.correoTextBox.TabIndex = 40;
-            // 
-            // lblNombreRepresentante
-            // 
-            lblNombreRepresentante.AutoSize = true;
-            lblNombreRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblNombreRepresentante.Location = new System.Drawing.Point(231, 215);
-            lblNombreRepresentante.Name = "lblNombreRepresentante";
-            lblNombreRepresentante.Size = new System.Drawing.Size(151, 16);
-            lblNombreRepresentante.TabIndex = 41;
-            lblNombreRepresentante.Text = "Nombre Representante:";
             // 
             // textBox1
             // 
@@ -355,32 +409,12 @@
             this.comboBoxTelfRepre.Size = new System.Drawing.Size(50, 21);
             this.comboBoxTelfRepre.TabIndex = 45;
             // 
-            // lblTelefRepresentante
-            // 
-            lblTelefRepresentante.AutoSize = true;
-            lblTelefRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblTelefRepresentante.Location = new System.Drawing.Point(501, 111);
-            lblTelefRepresentante.Name = "lblTelefRepresentante";
-            lblTelefRepresentante.Size = new System.Drawing.Size(186, 20);
-            lblTelefRepresentante.TabIndex = 43;
-            lblTelefRepresentante.Text = "Teléfono Representante:";
-            // 
             // textBoxTelfRepre
             // 
             this.textBoxTelfRepre.Location = new System.Drawing.Point(754, 113);
             this.textBoxTelfRepre.Name = "textBoxTelfRepre";
             this.textBoxTelfRepre.Size = new System.Drawing.Size(87, 20);
             this.textBoxTelfRepre.TabIndex = 44;
-            // 
-            // fecha_InicioLabel
-            // 
-            fecha_InicioLabel.AutoSize = true;
-            fecha_InicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            fecha_InicioLabel.Location = new System.Drawing.Point(536, 150);
-            fecha_InicioLabel.Name = "fecha_InicioLabel";
-            fecha_InicioLabel.Size = new System.Drawing.Size(101, 16);
-            fecha_InicioLabel.TabIndex = 46;
-            fecha_InicioLabel.Text = "Fecha de Inicio:";
             // 
             // fecha_InicioDateTimePicker
             // 
@@ -391,16 +425,6 @@
             this.fecha_InicioDateTimePicker.Size = new System.Drawing.Size(109, 20);
             this.fecha_InicioDateTimePicker.TabIndex = 47;
             // 
-            // fecha_FinalizacionLabel
-            // 
-            fecha_FinalizacionLabel.AutoSize = true;
-            fecha_FinalizacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            fecha_FinalizacionLabel.Location = new System.Drawing.Point(527, 195);
-            fecha_FinalizacionLabel.Name = "fecha_FinalizacionLabel";
-            fecha_FinalizacionLabel.Size = new System.Drawing.Size(141, 16);
-            fecha_FinalizacionLabel.TabIndex = 48;
-            fecha_FinalizacionLabel.Text = "Fecha de Finalizacion:";
-            // 
             // fecha_FinalizacionDateTimePicker
             // 
             this.fecha_FinalizacionDateTimePicker.CustomFormat = "yyyy/MM/dd";
@@ -410,16 +434,6 @@
             this.fecha_FinalizacionDateTimePicker.Size = new System.Drawing.Size(112, 20);
             this.fecha_FinalizacionDateTimePicker.TabIndex = 49;
             // 
-            // labelCalificación
-            // 
-            labelCalificación.AutoSize = true;
-            labelCalificación.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            labelCalificación.Location = new System.Drawing.Point(676, 175);
-            labelCalificación.Name = "labelCalificación";
-            labelCalificación.Size = new System.Drawing.Size(79, 16);
-            labelCalificación.TabIndex = 50;
-            labelCalificación.Text = "Calificación:";
-            // 
             // textBoxCalificación
             // 
             this.textBoxCalificación.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -427,16 +441,6 @@
             this.textBoxCalificación.Name = "textBoxCalificación";
             this.textBoxCalificación.Size = new System.Drawing.Size(100, 22);
             this.textBoxCalificación.TabIndex = 51;
-            // 
-            // direccionLabel
-            // 
-            direccionLabel.AutoSize = true;
-            direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionLabel.Location = new System.Drawing.Point(689, 216);
-            direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(67, 16);
-            direccionLabel.TabIndex = 52;
-            direccionLabel.Text = "Dirección:";
             // 
             // direccionTextBox
             // 
@@ -490,12 +494,40 @@
             this.agregar.Text = "Agregar Empresa";
             this.agregar.UseVisualStyleBackColor = false;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripLblDev,
+            this.ToolStripLblDev2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 518);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1232, 22);
+            this.statusStrip1.TabIndex = 57;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // ToolStripLblDev
+            // 
+            this.ToolStripLblDev.Name = "ToolStripLblDev";
+            this.ToolStripLblDev.Size = new System.Drawing.Size(1015, 17);
+            this.ToolStripLblDev.Spring = true;
+            this.ToolStripLblDev.Text = "Desarrollado por:";
+            this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ToolStripLblDev2
+            // 
+            this.ToolStripLblDev2.Name = "ToolStripLblDev2";
+            this.ToolStripLblDev2.Size = new System.Drawing.Size(202, 17);
+            this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
+            this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FormEmpresasSubcontratadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1232, 490);
+            this.ClientSize = new System.Drawing.Size(1232, 540);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.modificar);
             this.Controls.Add(this.agregar);
@@ -529,8 +561,10 @@
             this.Text = "FormEmpresasSubcontratadas";
             this.Load += new System.EventHandler(this.FormEmpresasSubcontratadas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresasSubcontratadaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,5 +604,8 @@
         private BotonRedondo salir;
         private BotonRedondo modificar;
         private BotonRedondo agregar;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
     }
 }
