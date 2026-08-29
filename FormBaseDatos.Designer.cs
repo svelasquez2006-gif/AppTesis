@@ -101,6 +101,7 @@
             this.Controls.Add(this.Respaldar);
             this.Name = "FormBaseDatos";
             this.Text = "FormBaseDatos";
+            this.Load += new System.EventHandler(this.FormBaseDatos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

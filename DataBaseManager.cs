@@ -18,7 +18,7 @@ namespace AppTesis
         public SqlServerBackupService(string servidor, string baseDatos)
         {
             _nombreBaseDatos = baseDatos;
-            _connectionStringMaster = $"Server={servidor};Database=master;Trusted_Connection=False;";
+            _connectionStringMaster = $"Server={servidor};Database=master;Trusted_Connection=True;";
         }
 
         public bool Respaldar(string rutaDestino)

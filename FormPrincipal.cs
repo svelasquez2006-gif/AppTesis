@@ -20,7 +20,9 @@ namespace AppTesis
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Orden_Viaje' Puede moverla o quitarla según sea necesario.
-            
+            this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
+            // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Orden_Viaje' Puede moverla o quitarla según sea necesario.
+
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Mantenimiento' Puede moverla o quitarla según sea necesario.
             this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
 
@@ -138,6 +140,24 @@ namespace AppTesis
 
         private void labelHora_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.orden_ViajeTableAdapter.FillBy(this.dataBaseDataSet.Orden_Viaje);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }

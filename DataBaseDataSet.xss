@@ -9,7 +9,7 @@
     <Shape ID="DesignTable:Chofer" ZOrder="8" X="402" Y="13" Height="343" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:Cliente" ZOrder="4" X="354" Y="369" Height="267" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:Mantenimiento" ZOrder="7" X="619" Y="611" Height="210" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
-    <Shape ID="DesignTable:Orden_Viaje" ZOrder="3" X="41" Y="82" Height="343" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:Orden_Viaje" ZOrder="3" X="41" Y="82" Height="362" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:Usuario" ZOrder="1" X="1026" Y="31" Height="362" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:Vehiculo" ZOrder="6" X="41" Y="572" Height="286" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:RegistroAcciones" ZOrder="10" X="933" Y="394" Height="229" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
@@ -45,15 +45,15 @@
       <RoutePoints>
         <Point>
           <X>354</X>
-          <Y>433</Y>
+          <Y>452</Y>
         </Point>
         <Point>
           <X>238</X>
-          <Y>433</Y>
+          <Y>452</Y>
         </Point>
         <Point>
           <X>238</X>
-          <Y>425</Y>
+          <Y>444</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -65,7 +65,7 @@
         </Point>
         <Point>
           <X>191</X>
-          <Y>425</Y>
+          <Y>444</Y>
         </Point>
       </RoutePoints>
     </Connector>

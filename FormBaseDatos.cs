@@ -27,9 +27,9 @@ namespace AppTesis
 
         private void Respaldar_Click(object sender, EventArgs e)
         {
-            var backupService = new SqlServerBackupService("localhost", "DataBase");
+            var backupService = new SqlServerBackupService("localhost\\SQLEXPRESS", "DataBase");
 
-            string rutaBak = @"C:\Public\Backups\DataBase.mdf";
+            string rutaBak = @"C:\Public\Backups\DataBase.bak";
             if (backupService.Respaldar(rutaBak))
             {
                 MessageBox.Show("Respaldo completado con éxito.","operacion exitosa",MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -38,13 +38,18 @@ namespace AppTesis
 
         private void Restaurar_Click(object sender, EventArgs e)
         {
-            var backupService = new SqlServerBackupService("localhost", "DataBase");
+            var backupService = new SqlServerBackupService("localhost\\SQLEXPRESS", "DataBase");
 
-            string rutaBak = @"C:\Backups\DataBase.mdf";
+            string rutaBak = @"C:\Backups\DataBase.bak";
             if (backupService.Restaurar(rutaBak))
             {
                 MessageBox.Show("Restauracion completada con éxito.", "operacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void FormBaseDatos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

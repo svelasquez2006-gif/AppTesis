@@ -40,75 +40,65 @@
             this.btnVehículos = new System.Windows.Forms.Button();
             this.buttonChoferes = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.codMantenimientoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nroPlacaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaMantenimientoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anotacionesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tasaUSDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costeBSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.labelHora = new System.Windows.Forms.Label();
             this.labelRol = new System.Windows.Forms.Label();
             this.labelUser = new System.Windows.Forms.Label();
             this.mantenimientoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.MantenimientoTableAdapter();
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
+            this.orden_ViajeDataGridView = new System.Windows.Forms.DataGridView();
+            this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
-            this.codMantenimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nroPlacaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaMantenimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tasa_USD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coste_BS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anotacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDOrdenesViajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dias_Viaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Distancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Origen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paradas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diasViajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distanciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paradasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cedulaChoferDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehiculosNroPlacaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cedulaClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaFinalizacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pago_BS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.labelHora = new System.Windows.Forms.Label();
-            this.labelRol = new System.Windows.Forms.Label();
-            this.labelUser = new System.Windows.Forms.Label();
-            this.mantenimientoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.MantenimientoTableAdapter();
-            this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
-            this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tasaUSDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagoBSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.incidenciasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMenú.SuspendLayout();
             this.panelContenedor.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantenimientoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
-            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenú
@@ -268,9 +258,36 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(166, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1018, 701);
+            this.panelContenedor.Size = new System.Drawing.Size(1035, 701);
             this.panelContenedor.TabIndex = 1;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripLblDev,
+            this.ToolStripLblDev2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 679);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1035, 22);
+            this.statusStrip1.TabIndex = 24;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // ToolStripLblDev
+            // 
+            this.ToolStripLblDev.Name = "ToolStripLblDev";
+            this.ToolStripLblDev.Size = new System.Drawing.Size(801, 17);
+            this.ToolStripLblDev.Spring = true;
+            this.ToolStripLblDev.Text = "Desarrollado por:";
+            this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ToolStripLblDev2
+            // 
+            this.ToolStripLblDev2.Name = "ToolStripLblDev2";
+            this.ToolStripLblDev2.Size = new System.Drawing.Size(202, 17);
+            this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
+            this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel3
             // 
@@ -284,22 +301,78 @@
             this.panel3.Size = new System.Drawing.Size(475, 222);
             this.panel3.TabIndex = 5;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Image = global::AppTesis.Properties.Resources._6900514;
+            this.pictureBox2.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 43);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codMantenimientoDataGridViewTextBoxColumn,
-            this.nroPlacaDataGridViewTextBoxColumn,
-            this.fechaMantenimientoDataGridViewTextBoxColumn,
-            this.Tasa_USD,
-            this.Coste_BS,
-            this.anotacionesDataGridViewTextBoxColumn});
+            this.codMantenimientoDataGridViewTextBoxColumn1,
+            this.nroPlacaDataGridViewTextBoxColumn1,
+            this.fechaMantenimientoDataGridViewTextBoxColumn1,
+            this.anotacionesDataGridViewTextBoxColumn1,
+            this.tasaUSDDataGridViewTextBoxColumn1,
+            this.costeBSDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.mantenimientoBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(14, 56);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(449, 150);
             this.dataGridView2.TabIndex = 4;
+            // 
+            // codMantenimientoDataGridViewTextBoxColumn1
+            // 
+            this.codMantenimientoDataGridViewTextBoxColumn1.DataPropertyName = "CodMantenimiento";
+            this.codMantenimientoDataGridViewTextBoxColumn1.HeaderText = "CodMantenimiento";
+            this.codMantenimientoDataGridViewTextBoxColumn1.Name = "codMantenimientoDataGridViewTextBoxColumn1";
+            this.codMantenimientoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nroPlacaDataGridViewTextBoxColumn1
+            // 
+            this.nroPlacaDataGridViewTextBoxColumn1.DataPropertyName = "NroPlaca";
+            this.nroPlacaDataGridViewTextBoxColumn1.HeaderText = "NroPlaca";
+            this.nroPlacaDataGridViewTextBoxColumn1.Name = "nroPlacaDataGridViewTextBoxColumn1";
+            this.nroPlacaDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // fechaMantenimientoDataGridViewTextBoxColumn1
+            // 
+            this.fechaMantenimientoDataGridViewTextBoxColumn1.DataPropertyName = "FechaMantenimiento";
+            this.fechaMantenimientoDataGridViewTextBoxColumn1.HeaderText = "FechaMantenimiento";
+            this.fechaMantenimientoDataGridViewTextBoxColumn1.Name = "fechaMantenimientoDataGridViewTextBoxColumn1";
+            this.fechaMantenimientoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // anotacionesDataGridViewTextBoxColumn1
+            // 
+            this.anotacionesDataGridViewTextBoxColumn1.DataPropertyName = "Anotaciones";
+            this.anotacionesDataGridViewTextBoxColumn1.HeaderText = "Anotaciones";
+            this.anotacionesDataGridViewTextBoxColumn1.Name = "anotacionesDataGridViewTextBoxColumn1";
+            this.anotacionesDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // tasaUSDDataGridViewTextBoxColumn1
+            // 
+            this.tasaUSDDataGridViewTextBoxColumn1.DataPropertyName = "Tasa_USD";
+            this.tasaUSDDataGridViewTextBoxColumn1.HeaderText = "Tasa_USD";
+            this.tasaUSDDataGridViewTextBoxColumn1.Name = "tasaUSDDataGridViewTextBoxColumn1";
+            this.tasaUSDDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // costeBSDataGridViewTextBoxColumn
+            // 
+            this.costeBSDataGridViewTextBoxColumn.DataPropertyName = "Coste_BS";
+            this.costeBSDataGridViewTextBoxColumn.HeaderText = "Coste_BS";
+            this.costeBSDataGridViewTextBoxColumn.Name = "costeBSDataGridViewTextBoxColumn";
+            this.costeBSDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // mantenimientoBindingSource
             // 
@@ -325,43 +398,24 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.orden_ViajeDataGridView);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(505, 391);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(475, 222);
+            this.panel2.Size = new System.Drawing.Size(483, 226);
             this.panel2.TabIndex = 4;
             // 
-            // dataGridView1
+            // pictureBox1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDOrdenesViajeDataGridViewTextBoxColumn,
-            this.Ruta,
-            this.Dias_Viaje,
-            this.Distancia,
-            this.Paradas,
-            this.cedulaChoferDataGridViewTextBoxColumn,
-            this.vehiculosNroPlacaDataGridViewTextBoxColumn,
-            this.cedulaClienteDataGridViewTextBoxColumn,
-            this.fechaInicioDataGridViewTextBoxColumn,
-            this.fechaFinalizacionDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn1,
-            this.Pago_BS,
-            this.estatusDataGridViewTextBoxColumn,
-            this.Origen});
-            this.dataGridView1.DataSource = this.orden_ViajeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(449, 150);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // orden_ViajeBindingSource
-            // 
-            this.orden_ViajeBindingSource.DataMember = "Orden_Viaje";
-            this.orden_ViajeBindingSource.DataSource = this.dataBaseDataSet;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::AppTesis.Properties.Resources._5670281;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -386,6 +440,26 @@
             this.panel1.Size = new System.Drawing.Size(952, 222);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AppTesis.Properties.Resources.Logo_Luis_Velásquez_Transportes_Empresa_removebg_preview;
+            this.pictureBox3.Location = new System.Drawing.Point(28, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(258, 185);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBoxUser
+            // 
+            this.pictureBoxUser.Image = global::AppTesis.Properties.Resources.Icon_User;
+            this.pictureBoxUser.Location = new System.Drawing.Point(376, 17);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(51, 50);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxUser.TabIndex = 3;
+            this.pictureBoxUser.TabStop = false;
             // 
             // labelHora
             // 
@@ -430,91 +504,161 @@
             this.tableAdapterManager.ClienteTableAdapter = null;
             this.tableAdapterManager.EmpresasSubcontratadaTableAdapter = null;
             this.tableAdapterManager.MantenimientoTableAdapter = this.mantenimientoTableAdapter;
-            this.tableAdapterManager.Orden_ViajeTableAdapter = this.orden_ViajeTableAdapter;
             this.tableAdapterManager.RegistroAccionesTableAdapter = null;
             this.tableAdapterManager.RutasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             this.tableAdapterManager.VehiculoTableAdapter = null;
             // 
+            // orden_ViajeDataGridView
+            // 
+            this.orden_ViajeDataGridView.AllowUserToAddRows = false;
+            this.orden_ViajeDataGridView.AllowUserToDeleteRows = false;
+            this.orden_ViajeDataGridView.AutoGenerateColumns = false;
+            this.orden_ViajeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orden_ViajeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDOrdenesViajeDataGridViewTextBoxColumn,
+            this.rutaDataGridViewTextBoxColumn,
+            this.diasViajeDataGridViewTextBoxColumn,
+            this.distanciaDataGridViewTextBoxColumn,
+            this.paradasDataGridViewTextBoxColumn,
+            this.cedulaChoferDataGridViewTextBoxColumn,
+            this.vehiculosNroPlacaDataGridViewTextBoxColumn,
+            this.cedulaClienteDataGridViewTextBoxColumn,
+            this.nombreClienteDataGridViewTextBoxColumn,
+            this.fechaInicioDataGridViewTextBoxColumn,
+            this.fechaFinalizacionDataGridViewTextBoxColumn,
+            this.estatusDataGridViewTextBoxColumn,
+            this.tasaUSDDataGridViewTextBoxColumn,
+            this.pagoBSDataGridViewTextBoxColumn,
+            this.incidenciasDataGridViewTextBoxColumn});
+            this.orden_ViajeDataGridView.DataSource = this.orden_ViajeBindingSource;
+            this.orden_ViajeDataGridView.Location = new System.Drawing.Point(14, 56);
+            this.orden_ViajeDataGridView.Name = "orden_ViajeDataGridView";
+            this.orden_ViajeDataGridView.ReadOnly = true;
+            this.orden_ViajeDataGridView.Size = new System.Drawing.Size(461, 152);
+            this.orden_ViajeDataGridView.TabIndex = 25;
+            // 
+            // orden_ViajeBindingSource
+            // 
+            this.orden_ViajeBindingSource.DataMember = "Orden_Viaje";
+            this.orden_ViajeBindingSource.DataSource = this.dataBaseDataSet;
+            // 
             // orden_ViajeTableAdapter
             // 
             this.orden_ViajeTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox2
+            // iDOrdenesViajeDataGridViewTextBoxColumn
             // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Image = global::AppTesis.Properties.Resources._6900514;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 43);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.iDOrdenesViajeDataGridViewTextBoxColumn.DataPropertyName = "IDOrdenes_Viaje";
+            this.iDOrdenesViajeDataGridViewTextBoxColumn.HeaderText = "Codigo de Viaje";
+            this.iDOrdenesViajeDataGridViewTextBoxColumn.Name = "iDOrdenesViajeDataGridViewTextBoxColumn";
+            this.iDOrdenesViajeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // pictureBox1
+            // rutaDataGridViewTextBoxColumn
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::AppTesis.Properties.Resources._5670281;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.rutaDataGridViewTextBoxColumn.DataPropertyName = "Ruta";
+            this.rutaDataGridViewTextBoxColumn.HeaderText = "Ruta del Viaje";
+            this.rutaDataGridViewTextBoxColumn.Name = "rutaDataGridViewTextBoxColumn";
+            this.rutaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // pictureBox3
+            // diasViajeDataGridViewTextBoxColumn
             // 
-            this.pictureBox3.Image = global::AppTesis.Properties.Resources.Logo_Luis_Velásquez_Transportes_Empresa_removebg_preview;
-            this.pictureBox3.Location = new System.Drawing.Point(28, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(258, 185);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.diasViajeDataGridViewTextBoxColumn.DataPropertyName = "Dias_Viaje";
+            this.diasViajeDataGridViewTextBoxColumn.HeaderText = "Dias en Viaje";
+            this.diasViajeDataGridViewTextBoxColumn.Name = "diasViajeDataGridViewTextBoxColumn";
+            this.diasViajeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // pictureBoxUser
+            // distanciaDataGridViewTextBoxColumn
             // 
-            this.pictureBoxUser.Image = global::AppTesis.Properties.Resources.Icon_User;
-            this.pictureBoxUser.Location = new System.Drawing.Point(376, 17);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(51, 50);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxUser.TabIndex = 3;
-            this.pictureBoxUser.TabStop = false;
+            this.distanciaDataGridViewTextBoxColumn.DataPropertyName = "Distancia";
+            this.distanciaDataGridViewTextBoxColumn.HeaderText = "Distancia del Viaje en Km";
+            this.distanciaDataGridViewTextBoxColumn.Name = "distanciaDataGridViewTextBoxColumn";
+            this.distanciaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // statusStrip1
+            // paradasDataGridViewTextBoxColumn
             // 
-            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripLblDev,
-            this.ToolStripLblDev2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 679);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1018, 22);
-            this.statusStrip1.TabIndex = 24;
-            this.statusStrip1.Text = "statusStrip1";
+            this.paradasDataGridViewTextBoxColumn.DataPropertyName = "Paradas";
+            this.paradasDataGridViewTextBoxColumn.HeaderText = "Paradas";
+            this.paradasDataGridViewTextBoxColumn.Name = "paradasDataGridViewTextBoxColumn";
+            this.paradasDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // ToolStripLblDev
+            // cedulaChoferDataGridViewTextBoxColumn
             // 
-            this.ToolStripLblDev.Name = "ToolStripLblDev";
-            this.ToolStripLblDev.Size = new System.Drawing.Size(770, 17);
-            this.ToolStripLblDev.Spring = true;
-            this.ToolStripLblDev.Text = "Desarrollado por:";
-            this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cedulaChoferDataGridViewTextBoxColumn.DataPropertyName = "Cedula_Chofer";
+            this.cedulaChoferDataGridViewTextBoxColumn.HeaderText = "Cedula del Chofer";
+            this.cedulaChoferDataGridViewTextBoxColumn.Name = "cedulaChoferDataGridViewTextBoxColumn";
+            this.cedulaChoferDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // ToolStripLblDev2
+            // vehiculosNroPlacaDataGridViewTextBoxColumn
             // 
-            this.ToolStripLblDev2.Name = "ToolStripLblDev2";
-            this.ToolStripLblDev2.Size = new System.Drawing.Size(202, 17);
-            this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
-            this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.vehiculosNroPlacaDataGridViewTextBoxColumn.DataPropertyName = "Vehiculos_NroPlaca";
+            this.vehiculosNroPlacaDataGridViewTextBoxColumn.HeaderText = "Placa del Vehiculo";
+            this.vehiculosNroPlacaDataGridViewTextBoxColumn.Name = "vehiculosNroPlacaDataGridViewTextBoxColumn";
+            this.vehiculosNroPlacaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cedulaClienteDataGridViewTextBoxColumn
+            // 
+            this.cedulaClienteDataGridViewTextBoxColumn.DataPropertyName = "Cedula_Cliente";
+            this.cedulaClienteDataGridViewTextBoxColumn.HeaderText = "Cedula del Cliente";
+            this.cedulaClienteDataGridViewTextBoxColumn.Name = "cedulaClienteDataGridViewTextBoxColumn";
+            this.cedulaClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreClienteDataGridViewTextBoxColumn
+            // 
+            this.nombreClienteDataGridViewTextBoxColumn.DataPropertyName = "Nombre_Cliente";
+            this.nombreClienteDataGridViewTextBoxColumn.HeaderText = "Nombre del Cliente";
+            this.nombreClienteDataGridViewTextBoxColumn.Name = "nombreClienteDataGridViewTextBoxColumn";
+            this.nombreClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaInicioDataGridViewTextBoxColumn
+            // 
+            this.fechaInicioDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Inicio";
+            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "Fecha de Inicio";
+            this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
+            this.fechaInicioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaFinalizacionDataGridViewTextBoxColumn
+            // 
+            this.fechaFinalizacionDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Finalizacion";
+            this.fechaFinalizacionDataGridViewTextBoxColumn.HeaderText = "Fecha de Finalizacion";
+            this.fechaFinalizacionDataGridViewTextBoxColumn.Name = "fechaFinalizacionDataGridViewTextBoxColumn";
+            this.fechaFinalizacionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estatusDataGridViewTextBoxColumn
+            // 
+            this.estatusDataGridViewTextBoxColumn.DataPropertyName = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.HeaderText = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.Name = "estatusDataGridViewTextBoxColumn";
+            this.estatusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tasaUSDDataGridViewTextBoxColumn
+            // 
+            this.tasaUSDDataGridViewTextBoxColumn.DataPropertyName = "Tasa_USD";
+            this.tasaUSDDataGridViewTextBoxColumn.HeaderText = "Tasa USD";
+            this.tasaUSDDataGridViewTextBoxColumn.Name = "tasaUSDDataGridViewTextBoxColumn";
+            this.tasaUSDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pagoBSDataGridViewTextBoxColumn
+            // 
+            this.pagoBSDataGridViewTextBoxColumn.DataPropertyName = "Pago_BS";
+            this.pagoBSDataGridViewTextBoxColumn.HeaderText = "Pago en BS";
+            this.pagoBSDataGridViewTextBoxColumn.Name = "pagoBSDataGridViewTextBoxColumn";
+            this.pagoBSDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // incidenciasDataGridViewTextBoxColumn
+            // 
+            this.incidenciasDataGridViewTextBoxColumn.DataPropertyName = "Incidencias";
+            this.incidenciasDataGridViewTextBoxColumn.HeaderText = "Incidencias";
+            this.incidenciasDataGridViewTextBoxColumn.Name = "incidenciasDataGridViewTextBoxColumn";
+            this.incidenciasDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 701);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1201, 701);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenú);
             this.Name = "FormPrincipal";
@@ -524,23 +668,23 @@
             this.panelMenú.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantenimientoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -565,44 +709,45 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private DataBaseDataSet dataBaseDataSet;
         private System.Windows.Forms.BindingSource mantenimientoBindingSource;
         private DataBaseDataSetTableAdapters.MantenimientoTableAdapter mantenimientoTableAdapter;
         private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter orden_ViajeTableAdapter;
-        private System.Windows.Forms.BindingSource orden_ViajeBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn distanciaEsperadaKmDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn destinoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button rutas;
         private System.Windows.Forms.Button Usuarios;
         private System.Windows.Forms.Button Reportes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codMantenimientoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nroPlacaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaMantenimientoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tasa_USD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coste_BS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn anotacionesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDOrdenesViajeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dias_Viaje;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Distancia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Origen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Paradas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedulaChoferDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vehiculosNroPlacaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedulaClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaFinalizacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pago_BS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
         private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codMantenimientoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nroPlacaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaMantenimientoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn anotacionesDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tasaUSDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costeBSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView orden_ViajeDataGridView;
+        private System.Windows.Forms.BindingSource orden_ViajeBindingSource;
+        private DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter orden_ViajeTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDOrdenesViajeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rutaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diasViajeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn distanciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paradasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cedulaChoferDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehiculosNroPlacaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cedulaClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaFinalizacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tasaUSDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pagoBSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn incidenciasDataGridViewTextBoxColumn;
     }
 }
 

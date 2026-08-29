@@ -561,6 +561,15 @@ SELECT IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Veh
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.Orden_Viaje" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        IDOrdenes_Viaje, Ruta, Dias_Viaje, Distancia, Paradas, Cedula_Chofer, Vehiculos_NroPlaca, Cedula_Cliente, Fecha_Inicio, Fecha_Finalizacion, Tasa_USD, Pago_BS, Estatus, Nombre_Cliente, Incidencias
+FROM            Orden_Viaje</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="modify" Modifier="Public" Name="modify" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="modify">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -1570,7 +1579,7 @@ WHERE        (rif = @Original_rif);
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Estado" msprop:Generator_UserColumnName="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" minOccurs="0">
+              <xs:element name="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_UserColumnName="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
@@ -1807,11 +1816,11 @@ WHERE        (rif = @Original_rif);
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Mantenimiento_Vehiculo" msdata:parent="Vehiculo" msdata:child="Mantenimiento" msdata:parentkey="NroPlaca" msdata:childkey="NroPlaca" msprop:Generator_UserParentTable="Vehiculo" msprop:Generator_UserChildTable="Mantenimiento" msprop:Generator_RelationVarName="relationFK_Mantenimiento_Vehiculo" msprop:Generator_ChildPropName="GetMantenimientoRows" msprop:Generator_UserRelationName="FK_Mantenimiento_Vehiculo" msprop:Generator_ParentPropName="VehiculoRow" />
-      <msdata:Relationship name="FK_Orden_Viaje_Chofer" msdata:parent="Chofer" msdata:child="Orden_Viaje" msdata:parentkey="Cedula" msdata:childkey="Cedula_Chofer" msprop:Generator_UserParentTable="Chofer" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Chofer" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_ParentPropName="ChoferRow" msprop:Generator_UserRelationName="FK_Orden_Viaje_Chofer" />
-      <msdata:Relationship name="FK_Orden_Viaje_Cliente" msdata:parent="Cliente" msdata:child="Orden_Viaje" msdata:parentkey="Cedula" msdata:childkey="Cedula_Cliente" msprop:Generator_UserParentTable="Cliente" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Cliente" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_ParentPropName="ClienteRow" msprop:Generator_UserRelationName="FK_Orden_Viaje_Cliente" />
-      <msdata:Relationship name="FK_Orden_Viaje_Vehiculo" msdata:parent="Vehiculo" msdata:child="Orden_Viaje" msdata:parentkey="NroPlaca" msdata:childkey="Vehiculos_NroPlaca" msprop:Generator_UserParentTable="Vehiculo" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Vehiculo" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_UserRelationName="FK_Orden_Viaje_Vehiculo" msprop:Generator_ParentPropName="VehiculoRow" />
-      <msdata:Relationship name="FK_Orden_Viaje_Rutas" msdata:parent="Rutas" msdata:child="Orden_Viaje" msdata:parentkey="Nombre_Ruta" msdata:childkey="Ruta" msprop:Generator_UserParentTable="Rutas" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Rutas" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_ParentPropName="RutasRow" msprop:Generator_UserRelationName="FK_Orden_Viaje_Rutas" />
+      <msdata:Relationship name="FK_Mantenimiento_Vehiculo" msdata:parent="Vehiculo" msdata:child="Mantenimiento" msdata:parentkey="NroPlaca" msdata:childkey="NroPlaca" msprop:Generator_UserParentTable="Vehiculo" msprop:Generator_UserChildTable="Mantenimiento" msprop:Generator_RelationVarName="relationFK_Mantenimiento_Vehiculo" msprop:Generator_ChildPropName="GetMantenimientoRows" msprop:Generator_ParentPropName="VehiculoRow" msprop:Generator_UserRelationName="FK_Mantenimiento_Vehiculo" />
+      <msdata:Relationship name="FK_Orden_Viaje_Chofer" msdata:parent="Chofer" msdata:child="Orden_Viaje" msdata:parentkey="Cedula" msdata:childkey="Cedula_Chofer" msprop:Generator_UserParentTable="Chofer" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Chofer" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_UserRelationName="FK_Orden_Viaje_Chofer" msprop:Generator_ParentPropName="ChoferRow" />
+      <msdata:Relationship name="FK_Orden_Viaje_Cliente" msdata:parent="Cliente" msdata:child="Orden_Viaje" msdata:parentkey="Cedula" msdata:childkey="Cedula_Cliente" msprop:Generator_UserParentTable="Cliente" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Cliente" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_UserRelationName="FK_Orden_Viaje_Cliente" msprop:Generator_ParentPropName="ClienteRow" />
+      <msdata:Relationship name="FK_Orden_Viaje_Vehiculo" msdata:parent="Vehiculo" msdata:child="Orden_Viaje" msdata:parentkey="NroPlaca" msdata:childkey="Vehiculos_NroPlaca" msprop:Generator_UserParentTable="Vehiculo" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Vehiculo" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_ParentPropName="VehiculoRow" msprop:Generator_UserRelationName="FK_Orden_Viaje_Vehiculo" />
+      <msdata:Relationship name="FK_Orden_Viaje_Rutas" msdata:parent="Rutas" msdata:child="Orden_Viaje" msdata:parentkey="Nombre_Ruta" msdata:childkey="Ruta" msprop:Generator_UserParentTable="Rutas" msprop:Generator_UserChildTable="Orden_Viaje" msprop:Generator_RelationVarName="relationFK_Orden_Viaje_Rutas" msprop:Generator_ChildPropName="GetOrden_ViajeRows" msprop:Generator_UserRelationName="FK_Orden_Viaje_Rutas" msprop:Generator_ParentPropName="RutasRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

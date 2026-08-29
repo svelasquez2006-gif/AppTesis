@@ -44,6 +44,7 @@
             System.Windows.Forms.Label pago_BSLabel;
             System.Windows.Forms.Label BS;
             System.Windows.Forms.Label USD;
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.orden_ViajeDataGridView = new System.Windows.Forms.DataGridView();
             this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -87,7 +88,6 @@
             this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dias_Viaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Distancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Origen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paradas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cedula_Chofer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vehiculos_NroPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,7 +121,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.choferBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // iDOrdenes_ViajeLabel
@@ -274,6 +273,13 @@
             USD.TabIndex = 45;
             USD.Text = "Monto en Usd:";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 497);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1284, 22);
+            this.statusStrip1.TabIndex = 0;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -295,7 +301,6 @@
             this.Ruta,
             this.Dias_Viaje,
             this.Distancia,
-            this.Origen,
             this.Paradas,
             this.Cedula_Chofer,
             this.Vehiculos_NroPlaca,
@@ -709,13 +714,6 @@
             this.Distancia.Name = "Distancia";
             this.Distancia.ReadOnly = true;
             // 
-            // Origen
-            // 
-            this.Origen.DataPropertyName = "Origen";
-            this.Origen.HeaderText = "Origen";
-            this.Origen.Name = "Origen";
-            this.Origen.ReadOnly = true;
-            // 
             // Paradas
             // 
             this.Paradas.DataPropertyName = "Paradas";
@@ -840,8 +838,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -889,11 +885,11 @@
         private System.Windows.Forms.TextBox IncidenciasTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button agginci;
+        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDOrdenes_Viaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dias_Viaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Distancia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Origen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paradas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cedula_Chofer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vehiculos_NroPlaca;
@@ -904,6 +900,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Pago_BS;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Incidencias;
-        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
