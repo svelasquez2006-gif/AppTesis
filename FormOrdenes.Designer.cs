@@ -904,5 +904,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Pago_BS;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Incidencias;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

@@ -599,9 +599,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pago_BS;
         private System.Windows.Forms.DataGridViewTextBoxColumn estatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button rutas;
-        private System.Windows.Forms.Button Usuarios;
-        private System.Windows.Forms.Button Reportes;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
