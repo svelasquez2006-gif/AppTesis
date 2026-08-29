@@ -289,5 +289,10 @@ namespace AppTesis
         {
 
         }
+
+        private void correoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

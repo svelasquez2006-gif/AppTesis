@@ -46,21 +46,6 @@
             System.Windows.Forms.Label USD;
             this.label1 = new System.Windows.Forms.Label();
             this.orden_ViajeDataGridView = new System.Windows.Forms.DataGridView();
-            this.IDOrdenes_Viaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dias_Viaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Distancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Origen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paradas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cedula_Chofer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vehiculos_NroPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cedula_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Finalizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tasa_USD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pago_BS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Incidencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
@@ -98,9 +83,21 @@
             this.IncidenciasTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.agginci = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.IDOrdenes_Viaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dias_Viaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Distancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Origen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Paradas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedula_Chofer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vehiculos_NroPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedula_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Finalizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tasa_USD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pago_BS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Incidencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             iDOrdenes_ViajeLabel = new System.Windows.Forms.Label();
             cedula_ChoferLabel = new System.Windows.Forms.Label();
             vehiculos_NroPlacaLabel = new System.Windows.Forms.Label();
@@ -131,11 +128,11 @@
             // 
             iDOrdenes_ViajeLabel.AutoSize = true;
             iDOrdenes_ViajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            iDOrdenes_ViajeLabel.Location = new System.Drawing.Point(29, 61);
+            iDOrdenes_ViajeLabel.Location = new System.Drawing.Point(25, 61);
             iDOrdenes_ViajeLabel.Name = "iDOrdenes_ViajeLabel";
-            iDOrdenes_ViajeLabel.Size = new System.Drawing.Size(77, 16);
+            iDOrdenes_ViajeLabel.Size = new System.Drawing.Size(125, 16);
             iDOrdenes_ViajeLabel.TabIndex = 6;
-            iDOrdenes_ViajeLabel.Text = "ID del viaje:";
+            iDOrdenes_ViajeLabel.Text = "Codigo de la orden:";
             // 
             // cedula_ChoferLabel
             // 
@@ -316,111 +313,6 @@
             this.orden_ViajeDataGridView.Size = new System.Drawing.Size(826, 256);
             this.orden_ViajeDataGridView.TabIndex = 6;
             this.orden_ViajeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orden_ViajeDataGridView_CellContentClick);
-            // 
-            // IDOrdenes_Viaje
-            // 
-            this.IDOrdenes_Viaje.DataPropertyName = "IDOrdenes_Viaje";
-            this.IDOrdenes_Viaje.HeaderText = "ID de la orden";
-            this.IDOrdenes_Viaje.Name = "IDOrdenes_Viaje";
-            this.IDOrdenes_Viaje.ReadOnly = true;
-            // 
-            // Ruta
-            // 
-            this.Ruta.DataPropertyName = "Ruta";
-            this.Ruta.HeaderText = "Ruta del viaje";
-            this.Ruta.Name = "Ruta";
-            this.Ruta.ReadOnly = true;
-            // 
-            // Dias_Viaje
-            // 
-            this.Dias_Viaje.DataPropertyName = "Dias_Viaje";
-            this.Dias_Viaje.HeaderText = "Dias de viaje";
-            this.Dias_Viaje.Name = "Dias_Viaje";
-            this.Dias_Viaje.ReadOnly = true;
-            // 
-            // Distancia
-            // 
-            this.Distancia.DataPropertyName = "Distancia";
-            this.Distancia.HeaderText = "Distancia en Km";
-            this.Distancia.Name = "Distancia";
-            this.Distancia.ReadOnly = true;
-            // 
-            // Origen
-            // 
-            this.Origen.DataPropertyName = "Origen";
-            this.Origen.HeaderText = "Origen";
-            this.Origen.Name = "Origen";
-            this.Origen.ReadOnly = true;
-            // 
-            // Paradas
-            // 
-            this.Paradas.DataPropertyName = "Paradas";
-            this.Paradas.HeaderText = "Paradas";
-            this.Paradas.Name = "Paradas";
-            this.Paradas.ReadOnly = true;
-            // 
-            // Cedula_Chofer
-            // 
-            this.Cedula_Chofer.DataPropertyName = "Cedula_Chofer";
-            this.Cedula_Chofer.HeaderText = "Cedula del chofer";
-            this.Cedula_Chofer.Name = "Cedula_Chofer";
-            this.Cedula_Chofer.ReadOnly = true;
-            // 
-            // Vehiculos_NroPlaca
-            // 
-            this.Vehiculos_NroPlaca.DataPropertyName = "Vehiculos_NroPlaca";
-            this.Vehiculos_NroPlaca.HeaderText = "Placa del vehiculo";
-            this.Vehiculos_NroPlaca.Name = "Vehiculos_NroPlaca";
-            this.Vehiculos_NroPlaca.ReadOnly = true;
-            // 
-            // Cedula_Cliente
-            // 
-            this.Cedula_Cliente.DataPropertyName = "Cedula_Cliente";
-            this.Cedula_Cliente.HeaderText = "Cedula del cliente";
-            this.Cedula_Cliente.Name = "Cedula_Cliente";
-            this.Cedula_Cliente.ReadOnly = true;
-            // 
-            // Fecha_Inicio
-            // 
-            this.Fecha_Inicio.DataPropertyName = "Fecha_Inicio";
-            this.Fecha_Inicio.HeaderText = "Fecha de inicio";
-            this.Fecha_Inicio.Name = "Fecha_Inicio";
-            this.Fecha_Inicio.ReadOnly = true;
-            // 
-            // Fecha_Finalizacion
-            // 
-            this.Fecha_Finalizacion.DataPropertyName = "Fecha_Finalizacion";
-            this.Fecha_Finalizacion.HeaderText = "Fecha de finalizacion ";
-            this.Fecha_Finalizacion.Name = "Fecha_Finalizacion";
-            this.Fecha_Finalizacion.ReadOnly = true;
-            // 
-            // Tasa_USD
-            // 
-            this.Tasa_USD.DataPropertyName = "Tasa_USD";
-            this.Tasa_USD.HeaderText = "Tasa USD";
-            this.Tasa_USD.Name = "Tasa_USD";
-            this.Tasa_USD.ReadOnly = true;
-            // 
-            // Pago_BS
-            // 
-            this.Pago_BS.DataPropertyName = "Pago_BS";
-            this.Pago_BS.HeaderText = "Pago en BS";
-            this.Pago_BS.Name = "Pago_BS";
-            this.Pago_BS.ReadOnly = true;
-            // 
-            // Estatus
-            // 
-            this.Estatus.DataPropertyName = "Estatus";
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.Name = "Estatus";
-            this.Estatus.ReadOnly = true;
-            // 
-            // Incidencias
-            // 
-            this.Incidencias.DataPropertyName = "Incidencias";
-            this.Incidencias.HeaderText = "Incidencias";
-            this.Incidencias.Name = "Incidencias";
-            this.Incidencias.ReadOnly = true;
             // 
             // orden_ViajeBindingSource
             // 
@@ -789,32 +681,110 @@
             this.agginci.UseVisualStyleBackColor = true;
             this.agginci.Click += new System.EventHandler(this.agginci_Click);
             // 
-            // statusStrip1
+            // IDOrdenes_Viaje
             // 
-            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripLblDev,
-            this.ToolStripLblDev2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 497);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1284, 22);
-            this.statusStrip1.TabIndex = 52;
-            this.statusStrip1.Text = "statusStrip1";
+            this.IDOrdenes_Viaje.DataPropertyName = "IDOrdenes_Viaje";
+            this.IDOrdenes_Viaje.HeaderText = "Codigo de la orden";
+            this.IDOrdenes_Viaje.Name = "IDOrdenes_Viaje";
+            this.IDOrdenes_Viaje.ReadOnly = true;
             // 
-            // ToolStripLblDev
+            // Ruta
             // 
-            this.ToolStripLblDev.Name = "ToolStripLblDev";
-            this.ToolStripLblDev.Size = new System.Drawing.Size(1067, 17);
-            this.ToolStripLblDev.Spring = true;
-            this.ToolStripLblDev.Text = "Desarrollado por:";
-            this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Ruta.DataPropertyName = "Ruta";
+            this.Ruta.HeaderText = "Ruta del viaje";
+            this.Ruta.Name = "Ruta";
+            this.Ruta.ReadOnly = true;
             // 
-            // ToolStripLblDev2
+            // Dias_Viaje
             // 
-            this.ToolStripLblDev2.Name = "ToolStripLblDev2";
-            this.ToolStripLblDev2.Size = new System.Drawing.Size(202, 17);
-            this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
-            this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Dias_Viaje.DataPropertyName = "Dias_Viaje";
+            this.Dias_Viaje.HeaderText = "Dias de viaje";
+            this.Dias_Viaje.Name = "Dias_Viaje";
+            this.Dias_Viaje.ReadOnly = true;
+            // 
+            // Distancia
+            // 
+            this.Distancia.DataPropertyName = "Distancia";
+            this.Distancia.HeaderText = "Distancia en Km";
+            this.Distancia.Name = "Distancia";
+            this.Distancia.ReadOnly = true;
+            // 
+            // Origen
+            // 
+            this.Origen.DataPropertyName = "Origen";
+            this.Origen.HeaderText = "Origen";
+            this.Origen.Name = "Origen";
+            this.Origen.ReadOnly = true;
+            // 
+            // Paradas
+            // 
+            this.Paradas.DataPropertyName = "Paradas";
+            this.Paradas.HeaderText = "Paradas";
+            this.Paradas.Name = "Paradas";
+            this.Paradas.ReadOnly = true;
+            // 
+            // Cedula_Chofer
+            // 
+            this.Cedula_Chofer.DataPropertyName = "Cedula_Chofer";
+            this.Cedula_Chofer.HeaderText = "Cedula del chofer";
+            this.Cedula_Chofer.Name = "Cedula_Chofer";
+            this.Cedula_Chofer.ReadOnly = true;
+            // 
+            // Vehiculos_NroPlaca
+            // 
+            this.Vehiculos_NroPlaca.DataPropertyName = "Vehiculos_NroPlaca";
+            this.Vehiculos_NroPlaca.HeaderText = "Placa del vehiculo";
+            this.Vehiculos_NroPlaca.Name = "Vehiculos_NroPlaca";
+            this.Vehiculos_NroPlaca.ReadOnly = true;
+            // 
+            // Cedula_Cliente
+            // 
+            this.Cedula_Cliente.DataPropertyName = "Cedula_Cliente";
+            this.Cedula_Cliente.HeaderText = "Cedula del cliente";
+            this.Cedula_Cliente.Name = "Cedula_Cliente";
+            this.Cedula_Cliente.ReadOnly = true;
+            // 
+            // Fecha_Inicio
+            // 
+            this.Fecha_Inicio.DataPropertyName = "Fecha_Inicio";
+            this.Fecha_Inicio.HeaderText = "Fecha de inicio";
+            this.Fecha_Inicio.Name = "Fecha_Inicio";
+            this.Fecha_Inicio.ReadOnly = true;
+            // 
+            // Fecha_Finalizacion
+            // 
+            this.Fecha_Finalizacion.DataPropertyName = "Fecha_Finalizacion";
+            this.Fecha_Finalizacion.HeaderText = "Fecha de finalizacion ";
+            this.Fecha_Finalizacion.Name = "Fecha_Finalizacion";
+            this.Fecha_Finalizacion.ReadOnly = true;
+            // 
+            // Tasa_USD
+            // 
+            this.Tasa_USD.DataPropertyName = "Tasa_USD";
+            this.Tasa_USD.HeaderText = "Tasa USD";
+            this.Tasa_USD.Name = "Tasa_USD";
+            this.Tasa_USD.ReadOnly = true;
+            // 
+            // Pago_BS
+            // 
+            this.Pago_BS.DataPropertyName = "Pago_BS";
+            this.Pago_BS.HeaderText = "Pago en BS";
+            this.Pago_BS.Name = "Pago_BS";
+            this.Pago_BS.ReadOnly = true;
+            // 
+            // Estatus
+            // 
+            this.Estatus.DataPropertyName = "Estatus";
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
+            // 
+            // Incidencias
+            // 
+            this.Incidencias.DataPropertyName = "Incidencias";
+            this.Incidencias.HeaderText = "Incidencias";
+            this.Incidencias.Name = "Incidencias";
+            this.Incidencias.ReadOnly = true;
             // 
             // Formordenes
             // 
@@ -913,13 +883,18 @@
         private System.Windows.Forms.RadioButton UsdRadio;
         private System.Windows.Forms.RadioButton BsRadio;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Destino;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox NombreCliente;
+        private System.Windows.Forms.TextBox IncidenciasTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button agginci;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDOrdenes_Viaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dias_Viaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Distancia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Origen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paradas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Destino;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cedula_Chofer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vehiculos_NroPlaca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cedula_Cliente;
@@ -928,14 +903,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tasa_USD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pago_BS;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox NombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Incidencias;
-        private System.Windows.Forms.TextBox IncidenciasTextBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button agginci;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
-        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
     }
 }

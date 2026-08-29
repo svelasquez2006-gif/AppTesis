@@ -79,7 +79,9 @@ namespace AppTesis
         private void Usuarios_Click(object sender, EventArgs e)
         {
 
-            
+            this.Hide();
+            FormBaseDatos bas = new FormBaseDatos();
+            bas.Show();
 
         }
 

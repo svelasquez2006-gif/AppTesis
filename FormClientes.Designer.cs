@@ -297,6 +297,7 @@
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(100, 20);
             this.correoTextBox.TabIndex = 28;
+            this.correoTextBox.TextChanged += new System.EventHandler(this.correoTextBox_TextChanged);
             // 
             // botonRedondo1
             // 
@@ -325,6 +326,7 @@
             // TipoComboBox
             // 
             this.TipoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Tipo_Cliente", true));
+            this.TipoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoComboBox.FormattingEnabled = true;
             this.TipoComboBox.Items.AddRange(new object[] {
             "Natural",
@@ -337,6 +339,7 @@
             // 
             // CodigoTelfComboBox
             // 
+            this.CodigoTelfComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CodigoTelfComboBox.FormattingEnabled = true;
             this.CodigoTelfComboBox.Items.AddRange(new object[] {
             "0412",
