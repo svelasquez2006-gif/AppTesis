@@ -60,6 +60,9 @@
             this.AñoDatePicker = new System.Windows.Forms.DateTimePicker();
             this.TipoComboBox = new System.Windows.Forms.ComboBox();
             this.MarcaComboBox = new System.Windows.Forms.ComboBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
             nroPlacaLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             modeloLabel = new System.Windows.Forms.Label();
@@ -70,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoDataGridView)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // nroPlacaLabel
@@ -397,12 +401,40 @@
             this.MarcaComboBox.Size = new System.Drawing.Size(156, 21);
             this.MarcaComboBox.TabIndex = 23;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripLblDev,
+            this.ToolStripLblDev2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 435);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1116, 22);
+            this.statusStrip1.TabIndex = 25;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // ToolStripLblDev
+            // 
+            this.ToolStripLblDev.Name = "ToolStripLblDev";
+            this.ToolStripLblDev.Size = new System.Drawing.Size(899, 17);
+            this.ToolStripLblDev.Spring = true;
+            this.ToolStripLblDev.Text = "Desarrollado por:";
+            this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ToolStripLblDev2
+            // 
+            this.ToolStripLblDev2.Name = "ToolStripLblDev2";
+            this.ToolStripLblDev2.Size = new System.Drawing.Size(202, 17);
+            this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
+            this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Formvehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1116, 415);
+            this.ClientSize = new System.Drawing.Size(1116, 457);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.MarcaComboBox);
             this.Controls.Add(this.TipoComboBox);
             this.Controls.Add(tipo_VehiculoLabel);
@@ -429,6 +461,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoDataGridView)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,5 +493,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.ComboBox MarcaComboBox;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
     }
 }

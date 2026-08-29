@@ -178,6 +178,12 @@
     <Compile Include="clientes.Designer.cs">
       <DependentUpon>clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEmpresasSubcontratadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmpresasSubcontratadas.Designer.cs">
+      <DependentUpon>FormEmpresasSubcontratadas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRutas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpresasSubcontratadas.resx">
+      <DependentUpon>FormEmpresasSubcontratadas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMantenimiento.resx">
       <DependentUpon>FormMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +394,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images-_2_.ico" />
+    <None Include="Resources\Logo Luis Velásquez Transportes Empresa.png" />
+    <None Include="Resources\Logo_Luis_Velásquez_Transportes_Empresa-removebg-preview.png" />
     <None Include="Resources\6900514.png" />
     <None Include="Resources\Icon User.png" />
   </ItemGroup>

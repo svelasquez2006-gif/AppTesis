@@ -32,8 +32,6 @@
             this.login = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.iniciar_sesion = new BotonRedondo();
-            this.salir = new BotonRedondo();
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
             this.contrasenaTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,8 +39,14 @@
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.salir = new BotonRedondo();
+            this.iniciar_sesion = new BotonRedondo();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // login
@@ -50,7 +54,7 @@
             this.login.AutoSize = true;
             this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login.Location = new System.Drawing.Point(88, 42);
+            this.login.Location = new System.Drawing.Point(79, 36);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(326, 42);
             this.login.TabIndex = 0;
@@ -78,39 +82,6 @@
             this.label3.Text = "Contraseña:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // iniciar_sesion
-            // 
-            this.iniciar_sesion.BackColor = System.Drawing.Color.Green;
-            this.iniciar_sesion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iniciar_sesion.FlatAppearance.BorderSize = 2;
-            this.iniciar_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iniciar_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iniciar_sesion.ForeColor = System.Drawing.Color.White;
-            this.iniciar_sesion.Location = new System.Drawing.Point(35, 195);
-            this.iniciar_sesion.Name = "iniciar_sesion";
-            this.iniciar_sesion.RadioBorde = 20;
-            this.iniciar_sesion.Size = new System.Drawing.Size(188, 40);
-            this.iniciar_sesion.TabIndex = 8;
-            this.iniciar_sesion.Text = "Iniciar Sesion";
-            this.iniciar_sesion.UseVisualStyleBackColor = false;
-            this.iniciar_sesion.Click += new System.EventHandler(this.botonRedondo1_Click);
-            // 
-            // salir
-            // 
-            this.salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.ForeColor = System.Drawing.Color.White;
-            this.salir.Location = new System.Drawing.Point(274, 195);
-            this.salir.Name = "salir";
-            this.salir.RadioBorde = 20;
-            this.salir.Size = new System.Drawing.Size(173, 40);
-            this.salir.TabIndex = 9;
-            this.salir.Text = "Salir";
-            this.salir.UseVisualStyleBackColor = false;
-            this.salir.Click += new System.EventHandler(this.salir_Click);
-            // 
             // usuarioTextBox
             // 
             this.usuarioTextBox.Location = new System.Drawing.Point(231, 108);
@@ -131,7 +102,7 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(366, 145);
+            this.label1.Location = new System.Drawing.Point(366, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 33);
             this.label1.TabIndex = 22;
@@ -157,18 +128,82 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ChoferTableAdapter = null;
             this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.EmpresasSubcontratadaTableAdapter = null;
             this.tableAdapterManager.MantenimientoTableAdapter = null;
             this.tableAdapterManager.Orden_ViajeTableAdapter = null;
+            this.tableAdapterManager.RegistroAccionesTableAdapter = null;
+            this.tableAdapterManager.RutasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             this.tableAdapterManager.VehiculoTableAdapter = null;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripLblDev,
+            this.ToolStripLblDev2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 285);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(482, 22);
+            this.statusStrip1.TabIndex = 23;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // ToolStripLblDev
+            // 
+            this.ToolStripLblDev.Name = "ToolStripLblDev";
+            this.ToolStripLblDev.Size = new System.Drawing.Size(265, 17);
+            this.ToolStripLblDev.Spring = true;
+            this.ToolStripLblDev.Text = "Desarrollado por:";
+            this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ToolStripLblDev2
+            // 
+            this.ToolStripLblDev2.Name = "ToolStripLblDev2";
+            this.ToolStripLblDev2.Size = new System.Drawing.Size(202, 17);
+            this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
+            this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // salir
+            // 
+            this.salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salir.ForeColor = System.Drawing.Color.White;
+            this.salir.Location = new System.Drawing.Point(274, 195);
+            this.salir.Name = "salir";
+            this.salir.RadioBorde = 20;
+            this.salir.Size = new System.Drawing.Size(173, 40);
+            this.salir.TabIndex = 9;
+            this.salir.Text = "Salir";
+            this.salir.UseVisualStyleBackColor = false;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
+            // 
+            // iniciar_sesion
+            // 
+            this.iniciar_sesion.BackColor = System.Drawing.Color.Green;
+            this.iniciar_sesion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.iniciar_sesion.FlatAppearance.BorderSize = 2;
+            this.iniciar_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iniciar_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iniciar_sesion.ForeColor = System.Drawing.Color.White;
+            this.iniciar_sesion.Location = new System.Drawing.Point(35, 195);
+            this.iniciar_sesion.Name = "iniciar_sesion";
+            this.iniciar_sesion.RadioBorde = 20;
+            this.iniciar_sesion.Size = new System.Drawing.Size(188, 40);
+            this.iniciar_sesion.TabIndex = 8;
+            this.iniciar_sesion.Text = "Iniciar Sesión";
+            this.iniciar_sesion.UseVisualStyleBackColor = false;
+            this.iniciar_sesion.Click += new System.EventHandler(this.botonRedondo1_Click);
             // 
             // Formlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(477, 259);
+            this.ClientSize = new System.Drawing.Size(482, 307);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.usuarioTextBox);
             this.Controls.Add(this.contrasenaTextBox);
@@ -182,6 +217,8 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +238,8 @@
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private DataBaseDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
     }
 }

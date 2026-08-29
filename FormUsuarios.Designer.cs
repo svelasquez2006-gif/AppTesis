@@ -62,6 +62,9 @@
             this.EstadoComboBox = new System.Windows.Forms.ComboBox();
             this.usuarioTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager1 = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
             cedulaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
@@ -73,13 +76,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cedulaLabel
             // 
             cedulaLabel.AutoSize = true;
             cedulaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cedulaLabel.Location = new System.Drawing.Point(42, 16);
+            cedulaLabel.Location = new System.Drawing.Point(46, 84);
             cedulaLabel.Name = "cedulaLabel";
             cedulaLabel.Size = new System.Drawing.Size(53, 16);
             cedulaLabel.TabIndex = 6;
@@ -89,7 +93,7 @@
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(41, 55);
+            nombreLabel.Location = new System.Drawing.Point(45, 123);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(59, 16);
             nombreLabel.TabIndex = 8;
@@ -99,7 +103,7 @@
             // 
             apellidoLabel.AutoSize = true;
             apellidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            apellidoLabel.Location = new System.Drawing.Point(41, 95);
+            apellidoLabel.Location = new System.Drawing.Point(45, 163);
             apellidoLabel.Name = "apellidoLabel";
             apellidoLabel.Size = new System.Drawing.Size(60, 16);
             apellidoLabel.TabIndex = 10;
@@ -109,7 +113,7 @@
             // 
             usuarioLabel.AutoSize = true;
             usuarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usuarioLabel.Location = new System.Drawing.Point(42, 133);
+            usuarioLabel.Location = new System.Drawing.Point(46, 201);
             usuarioLabel.Name = "usuarioLabel";
             usuarioLabel.Size = new System.Drawing.Size(57, 16);
             usuarioLabel.TabIndex = 12;
@@ -119,7 +123,7 @@
             // 
             contrasenaLabel.AutoSize = true;
             contrasenaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contrasenaLabel.Location = new System.Drawing.Point(35, 171);
+            contrasenaLabel.Location = new System.Drawing.Point(39, 239);
             contrasenaLabel.Name = "contrasenaLabel";
             contrasenaLabel.Size = new System.Drawing.Size(79, 16);
             contrasenaLabel.TabIndex = 14;
@@ -129,7 +133,7 @@
             // 
             correoLabel.AutoSize = true;
             correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            correoLabel.Location = new System.Drawing.Point(42, 210);
+            correoLabel.Location = new System.Drawing.Point(46, 278);
             correoLabel.Name = "correoLabel";
             correoLabel.Size = new System.Drawing.Size(51, 16);
             correoLabel.TabIndex = 16;
@@ -139,7 +143,7 @@
             // 
             jerarquiaLabel.AutoSize = true;
             jerarquiaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            jerarquiaLabel.Location = new System.Drawing.Point(37, 249);
+            jerarquiaLabel.Location = new System.Drawing.Point(41, 317);
             jerarquiaLabel.Name = "jerarquiaLabel";
             jerarquiaLabel.Size = new System.Drawing.Size(67, 16);
             jerarquiaLabel.TabIndex = 18;
@@ -149,7 +153,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(42, 292);
+            label2.Location = new System.Drawing.Point(46, 360);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(53, 16);
             label2.TabIndex = 20;
@@ -159,11 +163,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(366, 32);
+            this.label1.Location = new System.Drawing.Point(11, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 25);
+            this.label1.Size = new System.Drawing.Size(128, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "LISTA DE USUARIOS";
+            this.label1.Text = "USUARIOS";
             // 
             // usuarioDataGridView
             // 
@@ -181,10 +185,10 @@
             this.dataGridViewTextBoxColumn7,
             this.Estado});
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            this.usuarioDataGridView.Location = new System.Drawing.Point(140, 102);
+            this.usuarioDataGridView.Location = new System.Drawing.Point(142, 84);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
             this.usuarioDataGridView.ReadOnly = true;
-            this.usuarioDataGridView.Size = new System.Drawing.Size(744, 220);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(744, 316);
             this.usuarioDataGridView.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
@@ -257,7 +261,7 @@
             // 
             this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Cedula", true));
             this.cedulaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cedulaTextBox.Location = new System.Drawing.Point(17, 32);
+            this.cedulaTextBox.Location = new System.Drawing.Point(21, 100);
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(100, 22);
             this.cedulaTextBox.TabIndex = 7;
@@ -267,7 +271,7 @@
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Nombre", true));
             this.nombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTextBox.Location = new System.Drawing.Point(17, 71);
+            this.nombreTextBox.Location = new System.Drawing.Point(21, 139);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 22);
             this.nombreTextBox.TabIndex = 9;
@@ -276,7 +280,7 @@
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Apellido", true));
             this.apellidoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellidoTextBox.Location = new System.Drawing.Point(17, 111);
+            this.apellidoTextBox.Location = new System.Drawing.Point(21, 179);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(100, 22);
             this.apellidoTextBox.TabIndex = 11;
@@ -285,7 +289,7 @@
             // 
             this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Usuario", true));
             this.usuarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuarioTextBox.Location = new System.Drawing.Point(17, 149);
+            this.usuarioTextBox.Location = new System.Drawing.Point(21, 217);
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(100, 22);
             this.usuarioTextBox.TabIndex = 13;
@@ -294,7 +298,7 @@
             // 
             this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Contrasena", true));
             this.contrasenaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contrasenaTextBox.Location = new System.Drawing.Point(17, 187);
+            this.contrasenaTextBox.Location = new System.Drawing.Point(21, 255);
             this.contrasenaTextBox.Name = "contrasenaTextBox";
             this.contrasenaTextBox.Size = new System.Drawing.Size(100, 22);
             this.contrasenaTextBox.TabIndex = 15;
@@ -303,7 +307,7 @@
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Correo", true));
             this.correoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.correoTextBox.Location = new System.Drawing.Point(17, 226);
+            this.correoTextBox.Location = new System.Drawing.Point(21, 294);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(100, 22);
             this.correoTextBox.TabIndex = 17;
@@ -317,7 +321,7 @@
             "Jefe",
             "Secretario",
             "Empleado"});
-            this.jerarquiacomboBox.Location = new System.Drawing.Point(17, 265);
+            this.jerarquiacomboBox.Location = new System.Drawing.Point(21, 333);
             this.jerarquiacomboBox.Name = "jerarquiacomboBox";
             this.jerarquiacomboBox.Size = new System.Drawing.Size(100, 24);
             this.jerarquiacomboBox.TabIndex = 19;
@@ -329,7 +333,7 @@
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(438, 358);
+            this.salir.Location = new System.Drawing.Point(641, 429);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -345,7 +349,7 @@
             this.modificar.FlatAppearance.BorderSize = 2;
             this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificar.Location = new System.Drawing.Point(227, 358);
+            this.modificar.Location = new System.Drawing.Point(430, 429);
             this.modificar.Name = "modificar";
             this.modificar.RadioBorde = 20;
             this.modificar.Size = new System.Drawing.Size(150, 40);
@@ -361,7 +365,7 @@
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar.Location = new System.Drawing.Point(17, 358);
+            this.agregar.Location = new System.Drawing.Point(220, 429);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);
@@ -378,7 +382,7 @@
             this.EstadoComboBox.Items.AddRange(new object[] {
             "Activo",
             "Bloqueado"});
-            this.EstadoComboBox.Location = new System.Drawing.Point(17, 311);
+            this.EstadoComboBox.Location = new System.Drawing.Point(21, 379);
             this.EstadoComboBox.Name = "EstadoComboBox";
             this.EstadoComboBox.Size = new System.Drawing.Size(100, 21);
             this.EstadoComboBox.TabIndex = 21;
@@ -401,12 +405,40 @@
             this.tableAdapterManager1.UsuarioTableAdapter = this.usuarioTableAdapter;
             this.tableAdapterManager1.VehiculoTableAdapter = null;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripLblDev,
+            this.ToolStripLblDev2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 520);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(907, 22);
+            this.statusStrip1.TabIndex = 25;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // ToolStripLblDev
+            // 
+            this.ToolStripLblDev.Name = "ToolStripLblDev";
+            this.ToolStripLblDev.Size = new System.Drawing.Size(690, 17);
+            this.ToolStripLblDev.Spring = true;
+            this.ToolStripLblDev.Text = "Desarrollado por:";
+            this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ToolStripLblDev2
+            // 
+            this.ToolStripLblDev2.Name = "ToolStripLblDev2";
+            this.ToolStripLblDev2.Size = new System.Drawing.Size(202, 17);
+            this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
+            this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(907, 433);
+            this.ClientSize = new System.Drawing.Size(907, 542);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.EstadoComboBox);
             this.Controls.Add(label2);
             this.Controls.Add(this.jerarquiacomboBox);
@@ -434,6 +466,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,5 +499,8 @@
         private System.Windows.Forms.ComboBox jerarquiacomboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.ComboBox EstadoComboBox;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
     }
 }

@@ -50,6 +50,9 @@
             this.modificar = new BotonRedondo();
             this.salir = new BotonRedondo();
             this.agregar = new BotonRedondo();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
             nombre_RutaLabel = new System.Windows.Forms.Label();
             dias_ViajeLabel = new System.Windows.Forms.Label();
             distancia_kmLabel = new System.Windows.Forms.Label();
@@ -57,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rutasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rutasDataGridView)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // nombre_RutaLabel
@@ -73,7 +77,7 @@
             // 
             dias_ViajeLabel.AutoSize = true;
             dias_ViajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dias_ViajeLabel.Location = new System.Drawing.Point(3, 143);
+            dias_ViajeLabel.Location = new System.Drawing.Point(26, 143);
             dias_ViajeLabel.Name = "dias_ViajeLabel";
             dias_ViajeLabel.Size = new System.Drawing.Size(106, 20);
             dias_ViajeLabel.TabIndex = 20;
@@ -83,7 +87,7 @@
             // 
             distancia_kmLabel.AutoSize = true;
             distancia_kmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            distancia_kmLabel.Location = new System.Drawing.Point(8, 193);
+            distancia_kmLabel.Location = new System.Drawing.Point(4, 192);
             distancia_kmLabel.Name = "distancia_kmLabel";
             distancia_kmLabel.Size = new System.Drawing.Size(126, 20);
             distancia_kmLabel.TabIndex = 22;
@@ -93,7 +97,7 @@
             // 
             paradasLabel.AutoSize = true;
             paradasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            paradasLabel.Location = new System.Drawing.Point(40, 231);
+            paradasLabel.Location = new System.Drawing.Point(58, 231);
             paradasLabel.Name = "paradasLabel";
             paradasLabel.Size = new System.Drawing.Size(72, 20);
             paradasLabel.TabIndex = 26;
@@ -241,7 +245,7 @@
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(398, 411);
+            this.salir.Location = new System.Drawing.Point(400, 411);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -266,12 +270,40 @@
             this.agregar.UseVisualStyleBackColor = false;
             this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripLblDev,
+            this.ToolStripLblDev2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 488);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(717, 22);
+            this.statusStrip1.TabIndex = 33;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // ToolStripLblDev
+            // 
+            this.ToolStripLblDev.Name = "ToolStripLblDev";
+            this.ToolStripLblDev.Size = new System.Drawing.Size(500, 17);
+            this.ToolStripLblDev.Spring = true;
+            this.ToolStripLblDev.Text = "Desarrollado por:";
+            this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ToolStripLblDev2
+            // 
+            this.ToolStripLblDev2.Name = "ToolStripLblDev2";
+            this.ToolStripLblDev2.Size = new System.Drawing.Size(202, 17);
+            this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
+            this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FormRutas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(717, 467);
+            this.ClientSize = new System.Drawing.Size(717, 510);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.modificar);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.agregar);
@@ -291,6 +323,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rutasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rutasDataGridView)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +351,8 @@
         private BotonRedondo modificar;
         private BotonRedondo salir;
         private BotonRedondo agregar;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
     }
 }

@@ -140,7 +140,7 @@ namespace AppTesis
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
+            
 
 
 

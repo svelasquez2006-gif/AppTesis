@@ -89,5 +89,25 @@ namespace AppTesis.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Luis_Velásquez_Transportes_Empresa {
+            get {
+                object obj = ResourceManager.GetObject("Logo Luis Velásquez Transportes Empresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Luis_Velásquez_Transportes_Empresa_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Luis_Velásquez_Transportes_Empresa-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
