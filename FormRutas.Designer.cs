@@ -63,7 +63,7 @@
             // 
             nombre_RutaLabel.AutoSize = true;
             nombre_RutaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            nombre_RutaLabel.Location = new System.Drawing.Point(4, 103);
+            nombre_RutaLabel.Location = new System.Drawing.Point(5, 80);
             nombre_RutaLabel.Name = "nombre_RutaLabel";
             nombre_RutaLabel.Size = new System.Drawing.Size(130, 20);
             nombre_RutaLabel.TabIndex = 18;
@@ -73,7 +73,7 @@
             // 
             dias_ViajeLabel.AutoSize = true;
             dias_ViajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dias_ViajeLabel.Location = new System.Drawing.Point(3, 143);
+            dias_ViajeLabel.Location = new System.Drawing.Point(4, 120);
             dias_ViajeLabel.Name = "dias_ViajeLabel";
             dias_ViajeLabel.Size = new System.Drawing.Size(106, 20);
             dias_ViajeLabel.TabIndex = 20;
@@ -83,7 +83,7 @@
             // 
             distancia_kmLabel.AutoSize = true;
             distancia_kmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            distancia_kmLabel.Location = new System.Drawing.Point(8, 193);
+            distancia_kmLabel.Location = new System.Drawing.Point(9, 170);
             distancia_kmLabel.Name = "distancia_kmLabel";
             distancia_kmLabel.Size = new System.Drawing.Size(126, 20);
             distancia_kmLabel.TabIndex = 22;
@@ -93,7 +93,7 @@
             // 
             paradasLabel.AutoSize = true;
             paradasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            paradasLabel.Location = new System.Drawing.Point(40, 231);
+            paradasLabel.Location = new System.Drawing.Point(41, 208);
             paradasLabel.Name = "paradasLabel";
             paradasLabel.Size = new System.Drawing.Size(72, 20);
             paradasLabel.TabIndex = 26;
@@ -140,7 +140,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn5});
             this.rutasDataGridView.DataSource = this.rutasBindingSource;
-            this.rutasDataGridView.Location = new System.Drawing.Point(257, 105);
+            this.rutasDataGridView.Location = new System.Drawing.Point(260, 33);
             this.rutasDataGridView.Name = "rutasDataGridView";
             this.rutasDataGridView.ReadOnly = true;
             this.rutasDataGridView.Size = new System.Drawing.Size(445, 220);
@@ -178,7 +178,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 37);
+            this.label1.Location = new System.Drawing.Point(73, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 18;
@@ -187,7 +187,7 @@
             // nombre_RutaTextBox
             // 
             this.nombre_RutaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "Nombre_Ruta", true));
-            this.nombre_RutaTextBox.Location = new System.Drawing.Point(139, 105);
+            this.nombre_RutaTextBox.Location = new System.Drawing.Point(140, 82);
             this.nombre_RutaTextBox.Name = "nombre_RutaTextBox";
             this.nombre_RutaTextBox.Size = new System.Drawing.Size(100, 20);
             this.nombre_RutaTextBox.TabIndex = 19;
@@ -195,7 +195,7 @@
             // dias_ViajeTextBox
             // 
             this.dias_ViajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "Dias_Viaje", true));
-            this.dias_ViajeTextBox.Location = new System.Drawing.Point(138, 145);
+            this.dias_ViajeTextBox.Location = new System.Drawing.Point(139, 122);
             this.dias_ViajeTextBox.Name = "dias_ViajeTextBox";
             this.dias_ViajeTextBox.Size = new System.Drawing.Size(100, 20);
             this.dias_ViajeTextBox.TabIndex = 21;
@@ -204,7 +204,7 @@
             // distancia_kmTextBox
             // 
             this.distancia_kmTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "Distancia_km", true));
-            this.distancia_kmTextBox.Location = new System.Drawing.Point(138, 194);
+            this.distancia_kmTextBox.Location = new System.Drawing.Point(139, 171);
             this.distancia_kmTextBox.Name = "distancia_kmTextBox";
             this.distancia_kmTextBox.Size = new System.Drawing.Size(100, 20);
             this.distancia_kmTextBox.TabIndex = 23;
@@ -213,7 +213,7 @@
             // paradasTextBox
             // 
             this.paradasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "Paradas", true));
-            this.paradasTextBox.Location = new System.Drawing.Point(138, 233);
+            this.paradasTextBox.Location = new System.Drawing.Point(139, 210);
             this.paradasTextBox.Name = "paradasTextBox";
             this.paradasTextBox.Size = new System.Drawing.Size(100, 20);
             this.paradasTextBox.TabIndex = 27;
@@ -225,10 +225,10 @@
             this.modificar.FlatAppearance.BorderSize = 2;
             this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificar.Location = new System.Drawing.Point(524, 358);
+            this.modificar.Location = new System.Drawing.Point(277, 279);
             this.modificar.Name = "modificar";
             this.modificar.RadioBorde = 20;
-            this.modificar.Size = new System.Drawing.Size(150, 40);
+            this.modificar.Size = new System.Drawing.Size(186, 40);
             this.modificar.TabIndex = 32;
             this.modificar.Text = "Modificar Ruta";
             this.modificar.UseVisualStyleBackColor = false;
@@ -241,10 +241,10 @@
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(398, 411);
+            this.salir.Location = new System.Drawing.Point(524, 279);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
-            this.salir.Size = new System.Drawing.Size(150, 40);
+            this.salir.Size = new System.Drawing.Size(171, 40);
             this.salir.TabIndex = 31;
             this.salir.Text = "Cancelar";
             this.salir.UseVisualStyleBackColor = false;
@@ -257,10 +257,10 @@
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar.Location = new System.Drawing.Point(279, 358);
+            this.agregar.Location = new System.Drawing.Point(26, 279);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
-            this.agregar.Size = new System.Drawing.Size(150, 40);
+            this.agregar.Size = new System.Drawing.Size(186, 40);
             this.agregar.TabIndex = 30;
             this.agregar.Text = "Agregar Ruta";
             this.agregar.UseVisualStyleBackColor = false;
@@ -271,7 +271,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(717, 467);
+            this.ClientSize = new System.Drawing.Size(717, 337);
             this.Controls.Add(this.modificar);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.agregar);

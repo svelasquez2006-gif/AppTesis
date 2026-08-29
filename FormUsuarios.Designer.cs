@@ -311,6 +311,7 @@
             // jerarquiacomboBox
             // 
             this.jerarquiacomboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Jerarquia", true));
+            this.jerarquiacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.jerarquiacomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jerarquiacomboBox.FormattingEnabled = true;
             this.jerarquiacomboBox.Items.AddRange(new object[] {
