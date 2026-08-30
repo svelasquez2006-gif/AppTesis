@@ -1,4 +1,5 @@
-﻿using MySqlX.XDevAPI.Common;
+﻿using Mysqlx;
+using MySqlX.XDevAPI.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,18 +7,23 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
+using System.Globalization;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Globalization;
-using System.Text.RegularExpressions;
+
 
 namespace AppTesis
 {
     public partial class Formordenes : Form
+
     {
+        private static readonly HttpClient _httpClient = new HttpClient();
+
         // Bandera para evitar que la conversión se ejecute al seleccionar filas en el DataGrid
         private bool esCargaDeDatos = false;
         public Formordenes()
@@ -32,7 +38,7 @@ namespace AppTesis
 
         }
 
-        private void Formordenes_Load(object sender, EventArgs e)
+        private async void  Formordenes_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Cliente' Puede moverla o quitarla según sea necesario.
             this.clienteTableAdapter.Fill(this.dataBaseDataSet.Cliente);
@@ -49,6 +55,32 @@ namespace AppTesis
             label3.Hide();
             IncidenciasTextBox.Hide();
 
+            dataBaseDataSet.Orden_Viaje.IDOrdenes_ViajeColumn.AllowDBNull = true;
+            orden_ViajeBindingSource.AddNew();
+
+
+
+            ExtractorTasaCambio servicioTasa = new ExtractorTasaCambio(_httpClient);
+            try
+            {
+                tasa_USDTextBox.Text = "Cargando...";
+
+                // Llama a la lógica híbrida tolerante a fallos
+                decimal tasaBcv = await servicioTasa.ObtenerTasaBcvAsync();
+
+                // Muestra solo el monto numérico limpio
+                tasa_USDTextBox.Text = tasaBcv.ToString("F2");
+            }
+            catch (Exception ex)
+            {
+                tasa_USDTextBox.Text = "0,00";
+                tasa_USDTextBox.ReadOnly = false;
+                MessageBox.Show(ex.Message, "Error General de Servidores", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+
 
 
 
@@ -61,6 +93,9 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
+
+            orden_ViajeBindingSource.CancelEdit();
+
             this.Close();
             FormPrincipal principal = new FormPrincipal();
             principal.Show();
@@ -122,9 +157,18 @@ namespace AppTesis
                     decimal.TryParse(tasa_USDTextBox.Text, out decimal tasa);
                     decimal.TryParse(montobs.Text, out decimal monto);
 
+                    orden_ViajeBindingSource.EndEdit();
 
                     this.orden_ViajeTableAdapter.add(ruta,dias,distancia,paradas,chofer, placa, cliente,nombre , inicio, final, tasa,monto,estatus);
                     this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
+
+
+                    dataBaseDataSet.AcceptChanges();
+                    orden_ViajeBindingSource.AddNew();
+
+                    montobs.Text = "0,00";
+                    montousd.Text = "0,00";
+
                 }
 
                 catch (SqlException ex)
@@ -270,6 +314,10 @@ namespace AppTesis
 
                     this.orden_ViajeTableAdapter.modify(ruta,dias,distancia,paradas,chofer,placa,cliente,nombre,inicio,final,tasa,monto,estatus,incidencias, id);
                     this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
+
+                    dataBaseDataSet.AcceptChanges();
+                    orden_ViajeBindingSource.AddNew();
+
                     montobs.Text = "0,00";
                     montousd.Text = "0,00";
 
@@ -598,6 +646,14 @@ namespace AppTesis
                 agginci.Text = "Quitar Incidencia";
 
             }
+        }
+
+        private void orden_ViajeDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+
+            // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
+            orden_ViajeBindingSource.CancelEdit();
         }
 
 

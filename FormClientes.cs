@@ -30,22 +30,9 @@ namespace AppTesis
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Cliente' Puede moverla o quitarla según sea necesario.
             this.clienteTableAdapter.Fill(this.dataBaseDataSet.Cliente);
-
-            if (TipoComboBox.Text=="Natural")
-            {
-
-                cedulaTextBox.MaxLength = 8;
-            }
-            else if (TipoComboBox.Text == "Jurdica")
-            {
-                cedulaTextBox.MaxLength = 9;
-            }
             telefonoTextBox.MaxLength = 7;
-
-
-
-
-
+            clienteBindingSource.AddNew();
+            dataBaseDataSet.Cliente.CedulaColumn.AllowDBNull = true;
 
         }
 
@@ -101,8 +88,14 @@ namespace AppTesis
                     string dirreccion = DirrecionTextBox.Text;
                     string tipo = TipoComboBox.Text;
 
+                    clienteBindingSource.EndEdit();
+
                     this.clienteTableAdapter.add(cedula, nombre, apellido, telefono, correo,dirreccion,tipo);
                     this.clienteTableAdapter.Fill(this.dataBaseDataSet.Cliente);
+
+
+                    dataBaseDataSet.AcceptChanges();
+                    clienteBindingSource.AddNew();
                 }
                 catch (NullReferenceException)
                 {
@@ -131,6 +124,7 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
+            clienteBindingSource.CancelEdit();
             this.Hide();
             Formordenes ordenes = new Formordenes();
         }
@@ -187,8 +181,15 @@ namespace AppTesis
                     string dirreccion = DirrecionTextBox.Text;
                     string tipo = TipoComboBox.Text;
 
+                    clienteBindingSource.EndEdit();
+
                     this.clienteTableAdapter.modify( nombre, apellido, telefono, correo,dirreccion,tipo,cedula);
+
                     this.clienteTableAdapter.Fill(this.dataBaseDataSet.Cliente);
+
+
+                    dataBaseDataSet.AcceptChanges();
+                    clienteBindingSource.AddNew();
                 }
                 catch (Exception ex)
 
@@ -230,6 +231,7 @@ namespace AppTesis
 
         private void clienteDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex >= 0)
             {
                 // 2. Obtener la fila actual
@@ -273,6 +275,19 @@ namespace AppTesis
                 labelced.Text = "Rif:";
                 LabelApellido.Text = "Forma  \nSocietaria:";
             }
+
+            string tipoPersona = TipoComboBox.Text.Trim();
+
+
+
+            if (tipoPersona.Equals("Natural", StringComparison.OrdinalIgnoreCase))
+            {
+                cedulaTextBox.MaxLength = 8;
+            }
+            else if (tipoPersona.Equals("Juridica", StringComparison.OrdinalIgnoreCase))
+            {
+                cedulaTextBox.MaxLength = 9;
+            }
         }
 
         private void cedulaLabel_Click(object sender, EventArgs e)
@@ -293,6 +308,25 @@ namespace AppTesis
         private void correoTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TipoComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void clienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void clienteDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+
+            // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
+            clienteBindingSource.CancelEdit();
         }
     }
 }

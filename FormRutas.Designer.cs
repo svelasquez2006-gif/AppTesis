@@ -67,7 +67,7 @@
             // 
             nombre_RutaLabel.AutoSize = true;
             nombre_RutaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            nombre_RutaLabel.Location = new System.Drawing.Point(5, 80);
+            nombre_RutaLabel.Location = new System.Drawing.Point(0, 80);
             nombre_RutaLabel.Name = "nombre_RutaLabel";
             nombre_RutaLabel.Size = new System.Drawing.Size(130, 20);
             nombre_RutaLabel.TabIndex = 18;
@@ -77,7 +77,7 @@
             // 
             dias_ViajeLabel.AutoSize = true;
             dias_ViajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dias_ViajeLabel.Location = new System.Drawing.Point(26, 143);
+            dias_ViajeLabel.Location = new System.Drawing.Point(24, 122);
             dias_ViajeLabel.Name = "dias_ViajeLabel";
             dias_ViajeLabel.Size = new System.Drawing.Size(106, 20);
             dias_ViajeLabel.TabIndex = 20;
@@ -87,7 +87,7 @@
             // 
             distancia_kmLabel.AutoSize = true;
             distancia_kmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            distancia_kmLabel.Location = new System.Drawing.Point(4, 192);
+            distancia_kmLabel.Location = new System.Drawing.Point(4, 171);
             distancia_kmLabel.Name = "distancia_kmLabel";
             distancia_kmLabel.Size = new System.Drawing.Size(126, 20);
             distancia_kmLabel.TabIndex = 22;
@@ -97,7 +97,7 @@
             // 
             paradasLabel.AutoSize = true;
             paradasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            paradasLabel.Location = new System.Drawing.Point(58, 231);
+            paradasLabel.Location = new System.Drawing.Point(58, 210);
             paradasLabel.Name = "paradasLabel";
             paradasLabel.Size = new System.Drawing.Size(72, 20);
             paradasLabel.TabIndex = 26;
@@ -149,6 +149,7 @@
             this.rutasDataGridView.ReadOnly = true;
             this.rutasDataGridView.Size = new System.Drawing.Size(445, 220);
             this.rutasDataGridView.TabIndex = 1;
+            this.rutasDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.rutasDataGridView_DataError);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -229,7 +230,7 @@
             this.modificar.FlatAppearance.BorderSize = 2;
             this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificar.Location = new System.Drawing.Point(277, 279);
+            this.modificar.Location = new System.Drawing.Point(274, 279);
             this.modificar.Name = "modificar";
             this.modificar.RadioBorde = 20;
             this.modificar.Size = new System.Drawing.Size(186, 40);
@@ -245,7 +246,7 @@
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(400, 411);
+            this.salir.Location = new System.Drawing.Point(520, 279);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(171, 40);
@@ -261,7 +262,7 @@
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar.Location = new System.Drawing.Point(26, 279);
+            this.agregar.Location = new System.Drawing.Point(28, 279);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(186, 40);
@@ -276,7 +277,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripLblDev,
             this.ToolStripLblDev2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 488);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 344);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(717, 22);
             this.statusStrip1.TabIndex = 33;
@@ -302,7 +303,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(717, 510);
+            this.ClientSize = new System.Drawing.Size(717, 366);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.modificar);
             this.Controls.Add(this.salir);

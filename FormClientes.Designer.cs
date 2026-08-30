@@ -197,6 +197,7 @@
             // 
             // clienteDataGridView
             // 
+            this.clienteDataGridView.AllowUserToAddRows = false;
             this.clienteDataGridView.AutoGenerateColumns = false;
             this.clienteDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -214,6 +215,8 @@
             this.clienteDataGridView.Size = new System.Drawing.Size(746, 238);
             this.clienteDataGridView.TabIndex = 19;
             this.clienteDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clienteDataGridView_CellClick);
+            this.clienteDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clienteDataGridView_CellContentClick);
+            this.clienteDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.clienteDataGridView_DataError);
             // 
             // Cedula
             // 
@@ -336,6 +339,7 @@
             this.TipoComboBox.Size = new System.Drawing.Size(100, 21);
             this.TipoComboBox.TabIndex = 34;
             this.TipoComboBox.SelectedIndexChanged += new System.EventHandler(this.TipoComboBox_SelectedIndexChanged);
+            this.TipoComboBox.SelectionChangeCommitted += new System.EventHandler(this.TipoComboBox_SelectionChangeCommitted);
             // 
             // CodigoTelfComboBox
             // 

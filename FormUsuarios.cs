@@ -31,6 +31,8 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
             cedulaTextBox.MaxLength = 8;
+            dataBaseDataSet.Usuario.CedulaColumn.AllowDBNull = true;
+            usuarioBindingSource.AddNew();
 
 
 
@@ -83,9 +85,16 @@ namespace AppTesis
                     string contrasena = contrasenaTextBox.Text.Trim();
                     string correo = correoTextBox.Text.Trim();
                     string jerarquia = jerarquiacomboBox.Text;
+
+                    usuarioBindingSource.EndEdit();
+
                     this.usuarioTableAdapter.add(cedula, nombre, apellido, usuario, contrasena, correo, jerarquia);
                     this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
-                    usuarioDataGridView.Refresh();
+
+
+                    dataBaseDataSet.AcceptChanges();
+                    usuarioBindingSource.AddNew();
+
                 }
                 //valores nulos 
                 catch (NullReferenceException)
@@ -113,6 +122,7 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
+            usuarioBindingSource.CancelEdit();
             this.Close();
             FormPrincipal principal = new FormPrincipal();
             principal.Show();
@@ -164,8 +174,14 @@ namespace AppTesis
                     string correo = correoTextBox.Text.Trim();
                     string jerarquia = jerarquiacomboBox.Text;
                     string estado = EstadoComboBox.Text;
+
+                    usuarioBindingSource.EndEdit();
+
                     this.usuarioTableAdapter.modify(nombre, apellido, usuario, contrasena, correo, jerarquia,estado, cedula);
-                    usuarioDataGridView.Refresh();
+                    this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario)
+                        ;
+                    dataBaseDataSet.AcceptChanges();
+                    usuarioBindingSource.AddNew();
                 }
 
                 //Valor nulos
@@ -230,6 +246,16 @@ namespace AppTesis
                 MessageBox.Show("Error de conexión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+        }
+
+        private void usuarioDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+            e.ThrowException = false;
+
+            // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
+            usuarioBindingSource.CancelEdit();
+
         }
     }
 }

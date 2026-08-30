@@ -13209,7 +13209,7 @@ WHERE        (rif = @Original_rif);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int add(string rif, string Nombre, string direccion, string Telefono, string Correo, string NombreRepresentante, string TelefonoRepresentante, string FechaInicio, string Fechafinal, string Calificacion, string Estado) {
+        public virtual int add(string rif, string Nombre, string direccion, string Telefono, string Correo, string NombreRepresentante, string TelefonoRepresentante, global::System.Nullable<global::System.DateTime> FechaInicio, global::System.Nullable<global::System.DateTime> Fechafinal, string Calificacion, string Estado) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((rif == null)) {
                 throw new global::System.ArgumentNullException("rif");
@@ -13253,17 +13253,17 @@ WHERE        (rif = @Original_rif);
             else {
                 command.Parameters[6].Value = ((string)(TelefonoRepresentante));
             }
-            if ((FechaInicio == null)) {
+            if ((FechaInicio.HasValue == true)) {
+                command.Parameters[7].Value = ((System.DateTime)(FechaInicio.Value));
+            }
+            else {
                 command.Parameters[7].Value = global::System.DBNull.Value;
             }
-            else {
-                command.Parameters[7].Value = ((string)(FechaInicio));
+            if ((Fechafinal.HasValue == true)) {
+                command.Parameters[8].Value = ((System.DateTime)(Fechafinal.Value));
             }
-            if ((Fechafinal == null)) {
+            else {
                 command.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[8].Value = ((string)(Fechafinal));
             }
             if ((Calificacion == null)) {
                 command.Parameters[9].Value = global::System.DBNull.Value;
@@ -13298,7 +13298,7 @@ WHERE        (rif = @Original_rif);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int modify(string Nombre, string direccion, string Telefono, string Correo, string NombreRepresentante, string TelefonoRepresentante, string FechaInicio, string Fechafinal, string Calificacion, string Estado, string Original_rif) {
+        public virtual int modify(string Nombre, string direccion, string Telefono, string Correo, string NombreRepresentante, string TelefonoRepresentante, global::System.Nullable<global::System.DateTime> FechaInicio, global::System.Nullable<global::System.DateTime> Fechafinal, string Calificacion, string Estado, string Original_rif) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Nombre == null)) {
                 throw new global::System.ArgumentNullException("Nombre");
@@ -13336,17 +13336,17 @@ WHERE        (rif = @Original_rif);
             else {
                 command.Parameters[5].Value = ((string)(TelefonoRepresentante));
             }
-            if ((FechaInicio == null)) {
+            if ((FechaInicio.HasValue == true)) {
+                command.Parameters[6].Value = ((System.DateTime)(FechaInicio.Value));
+            }
+            else {
                 command.Parameters[6].Value = global::System.DBNull.Value;
             }
-            else {
-                command.Parameters[6].Value = ((string)(FechaInicio));
+            if ((Fechafinal.HasValue == true)) {
+                command.Parameters[7].Value = ((System.DateTime)(Fechafinal.Value));
             }
-            if ((Fechafinal == null)) {
+            else {
                 command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[7].Value = ((string)(Fechafinal));
             }
             if ((Calificacion == null)) {
                 command.Parameters[8].Value = global::System.DBNull.Value;

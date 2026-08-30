@@ -30,6 +30,8 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Vehiculo' Puede moverla o quitarla según sea necesario.
             this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
             nroPlacaTextBox.MaxLength = 7;
+            dataBaseDataSet.Vehiculo.NroPlacaColumn.AllowDBNull = true;
+            vehiculoBindingSource.AddNew();
             
 
         }
@@ -71,8 +73,14 @@ namespace AppTesis
                     int.TryParse(AñoDatePicker.Text, out int anio);
                     string color = colorTextBox.Text;
                     string estatus = estatuscombobox.Text;
+
+                    vehiculoBindingSource.EndEdit();
+
                     this.vehiculoTableAdapter.add(placa,tipo_vehiculo, marca, modelo, anio, color, estatus);
                     this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
+
+                    dataBaseDataSet.AcceptChanges();
+                    vehiculoBindingSource.AddNew();
                 }
                 catch (NullReferenceException)
                 {
@@ -101,6 +109,7 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
+            vehiculoBindingSource.CancelEdit();
             this.Close();
             FormPrincipal principal = new FormPrincipal();
             principal.Show();
@@ -108,6 +117,7 @@ namespace AppTesis
 
         private void mantenimiento_Click(object sender, EventArgs e)
         {
+            vehiculoBindingSource.CancelEdit();
             this.Hide();
             FormMantenimiento mantenimiento = new FormMantenimiento();
             mantenimiento.Show();
@@ -158,7 +168,14 @@ namespace AppTesis
                     int.TryParse(AñoDatePicker.Text, out int anio);
                     string color = colorTextBox.Text;
                     string estatus = estatuscombobox.Text;
+
+                    vehiculoBindingSource.EndEdit();
+
                     this.vehiculoTableAdapter.modify(tipo_vehiculo, marca, modelo, anio, color, estatus,placa);
+                    this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
+
+                    dataBaseDataSet.AcceptChanges();
+                    vehiculoBindingSource.AddNew();
                 }
                 catch (SqlException ex)
                 {

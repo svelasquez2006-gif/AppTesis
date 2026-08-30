@@ -190,6 +190,7 @@
             this.usuarioDataGridView.ReadOnly = true;
             this.usuarioDataGridView.Size = new System.Drawing.Size(744, 316);
             this.usuarioDataGridView.TabIndex = 5;
+            this.usuarioDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.usuarioDataGridView_DataError);
             // 
             // dataGridViewTextBoxColumn1
             // 

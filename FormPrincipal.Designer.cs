@@ -56,19 +56,7 @@
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
-            this.labelHora = new System.Windows.Forms.Label();
-            this.labelRol = new System.Windows.Forms.Label();
-            this.labelUser = new System.Windows.Forms.Label();
-            this.mantenimientoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.MantenimientoTableAdapter();
-            this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.orden_ViajeDataGridView = new System.Windows.Forms.DataGridView();
-            this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
             this.iDOrdenesViajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diasViajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +72,19 @@
             this.tasaUSDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagoBSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incidenciasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orden_ViajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.labelHora = new System.Windows.Forms.Label();
+            this.labelRol = new System.Windows.Forms.Label();
+            this.labelUser = new System.Windows.Forms.Label();
+            this.mantenimientoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.MantenimientoTableAdapter();
+            this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
+            this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
+            this.EmpresasSUB = new System.Windows.Forms.Button();
             this.panelMenú.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -93,18 +94,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.mantenimientoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenú
             // 
             this.panelMenú.AutoScroll = true;
             this.panelMenú.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panelMenú.Controls.Add(this.EmpresasSUB);
             this.panelMenú.Controls.Add(this.Usuarios);
             this.panelMenú.Controls.Add(this.Reportes);
             this.panelMenú.Controls.Add(this.rutas);
@@ -127,9 +129,9 @@
             this.Usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Usuarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuarios.ForeColor = System.Drawing.Color.White;
-            this.Usuarios.Location = new System.Drawing.Point(0, 386);
+            this.Usuarios.Location = new System.Drawing.Point(0, 466);
             this.Usuarios.Name = "Usuarios";
-            this.Usuarios.Size = new System.Drawing.Size(166, 79);
+            this.Usuarios.Size = new System.Drawing.Size(149, 79);
             this.Usuarios.TabIndex = 8;
             this.Usuarios.Text = "Gestionar Usuarios";
             this.Usuarios.UseVisualStyleBackColor = true;
@@ -141,9 +143,9 @@
             this.Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reportes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reportes.ForeColor = System.Drawing.Color.White;
-            this.Reportes.Location = new System.Drawing.Point(0, 465);
+            this.Reportes.Location = new System.Drawing.Point(0, 545);
             this.Reportes.Name = "Reportes";
-            this.Reportes.Size = new System.Drawing.Size(166, 66);
+            this.Reportes.Size = new System.Drawing.Size(149, 66);
             this.Reportes.TabIndex = 7;
             this.Reportes.Text = "Reportes";
             this.Reportes.UseVisualStyleBackColor = true;
@@ -157,7 +159,7 @@
             this.rutas.ForeColor = System.Drawing.Color.White;
             this.rutas.Location = new System.Drawing.Point(0, 304);
             this.rutas.Name = "rutas";
-            this.rutas.Size = new System.Drawing.Size(166, 81);
+            this.rutas.Size = new System.Drawing.Size(149, 81);
             this.rutas.TabIndex = 6;
             this.rutas.Text = "Rutas";
             this.rutas.UseVisualStyleBackColor = true;
@@ -171,7 +173,7 @@
             this.Clientes.ForeColor = System.Drawing.Color.White;
             this.Clientes.Location = new System.Drawing.Point(0, 231);
             this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(166, 73);
+            this.Clientes.Size = new System.Drawing.Size(149, 73);
             this.Clientes.TabIndex = 5;
             this.Clientes.Text = "Clientes";
             this.Clientes.UseVisualStyleBackColor = true;
@@ -183,9 +185,9 @@
             this.Basededatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Basededatos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Basededatos.ForeColor = System.Drawing.Color.White;
-            this.Basededatos.Location = new System.Drawing.Point(0, 531);
+            this.Basededatos.Location = new System.Drawing.Point(0, 611);
             this.Basededatos.Name = "Basededatos";
-            this.Basededatos.Size = new System.Drawing.Size(166, 79);
+            this.Basededatos.Size = new System.Drawing.Size(149, 79);
             this.Basededatos.TabIndex = 4;
             this.Basededatos.Text = "Base de Datos";
             this.Basededatos.UseVisualStyleBackColor = true;
@@ -198,9 +200,9 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(0, 610);
+            this.btnSalir.Location = new System.Drawing.Point(0, 690);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(166, 91);
+            this.btnSalir.Size = new System.Drawing.Size(149, 91);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Cerrar sesión";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -214,7 +216,7 @@
             this.c.ForeColor = System.Drawing.Color.White;
             this.c.Location = new System.Drawing.Point(0, 152);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(166, 79);
+            this.c.Size = new System.Drawing.Size(149, 79);
             this.c.TabIndex = 2;
             this.c.Text = "Órdenes de viaje";
             this.c.UseVisualStyleBackColor = true;
@@ -228,7 +230,7 @@
             this.btnVehículos.ForeColor = System.Drawing.Color.White;
             this.btnVehículos.Location = new System.Drawing.Point(0, 79);
             this.btnVehículos.Name = "btnVehículos";
-            this.btnVehículos.Size = new System.Drawing.Size(166, 73);
+            this.btnVehículos.Size = new System.Drawing.Size(149, 73);
             this.btnVehículos.TabIndex = 1;
             this.btnVehículos.Text = "Vehículos";
             this.btnVehículos.UseVisualStyleBackColor = true;
@@ -242,7 +244,7 @@
             this.buttonChoferes.ForeColor = System.Drawing.Color.White;
             this.buttonChoferes.Location = new System.Drawing.Point(0, 0);
             this.buttonChoferes.Name = "buttonChoferes";
-            this.buttonChoferes.Size = new System.Drawing.Size(166, 79);
+            this.buttonChoferes.Size = new System.Drawing.Size(149, 79);
             this.buttonChoferes.TabIndex = 0;
             this.buttonChoferes.Text = "Choferes";
             this.buttonChoferes.UseVisualStyleBackColor = true;
@@ -277,7 +279,7 @@
             // ToolStripLblDev
             // 
             this.ToolStripLblDev.Name = "ToolStripLblDev";
-            this.ToolStripLblDev.Size = new System.Drawing.Size(801, 17);
+            this.ToolStripLblDev.Size = new System.Drawing.Size(818, 17);
             this.ToolStripLblDev.Spring = true;
             this.ToolStripLblDev.Text = "Desarrollado por:";
             this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -406,110 +408,6 @@
             this.panel2.Size = new System.Drawing.Size(483, 226);
             this.panel2.TabIndex = 4;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::AppTesis.Properties.Resources._5670281;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 30);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "HISTÓRICO DE VIAJES";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBoxUser);
-            this.panel1.Controls.Add(this.labelHora);
-            this.panel1.Controls.Add(this.labelRol);
-            this.panel1.Controls.Add(this.labelUser);
-            this.panel1.Location = new System.Drawing.Point(28, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(952, 222);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::AppTesis.Properties.Resources.Logo_Luis_Velásquez_Transportes_Empresa_removebg_preview;
-            this.pictureBox3.Location = new System.Drawing.Point(28, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(258, 185);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBoxUser
-            // 
-            this.pictureBoxUser.Image = global::AppTesis.Properties.Resources.Icon_User;
-            this.pictureBoxUser.Location = new System.Drawing.Point(376, 17);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(51, 50);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxUser.TabIndex = 3;
-            this.pictureBoxUser.TabStop = false;
-            // 
-            // labelHora
-            // 
-            this.labelHora.AutoSize = true;
-            this.labelHora.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHora.Location = new System.Drawing.Point(813, 186);
-            this.labelHora.Name = "labelHora";
-            this.labelHora.Size = new System.Drawing.Size(127, 30);
-            this.labelHora.TabIndex = 2;
-            this.labelHora.Text = "13/08/2026";
-            this.labelHora.Click += new System.EventHandler(this.labelHora_Click);
-            // 
-            // labelRol
-            // 
-            this.labelRol.AutoSize = true;
-            this.labelRol.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRol.Location = new System.Drawing.Point(386, 74);
-            this.labelRol.Name = "labelRol";
-            this.labelRol.Size = new System.Drawing.Size(247, 30);
-            this.labelRol.TabIndex = 1;
-            this.labelRol.Text = "Administrador principal";
-            // 
-            // labelUser
-            // 
-            this.labelUser.AutoSize = true;
-            this.labelUser.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUser.Location = new System.Drawing.Point(430, 21);
-            this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(153, 37);
-            this.labelUser.TabIndex = 0;
-            this.labelUser.Text = "Juan Pérez";
-            this.labelUser.Click += new System.EventHandler(this.labelUser_Click);
-            // 
-            // mantenimientoTableAdapter
-            // 
-            this.mantenimientoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ChoferTableAdapter = null;
-            this.tableAdapterManager.ClienteTableAdapter = null;
-            this.tableAdapterManager.EmpresasSubcontratadaTableAdapter = null;
-            this.tableAdapterManager.MantenimientoTableAdapter = this.mantenimientoTableAdapter;
-            this.tableAdapterManager.RegistroAccionesTableAdapter = null;
-            this.tableAdapterManager.RutasTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
-            this.tableAdapterManager.VehiculoTableAdapter = null;
-            // 
             // orden_ViajeDataGridView
             // 
             this.orden_ViajeDataGridView.AllowUserToAddRows = false;
@@ -538,15 +436,6 @@
             this.orden_ViajeDataGridView.ReadOnly = true;
             this.orden_ViajeDataGridView.Size = new System.Drawing.Size(461, 152);
             this.orden_ViajeDataGridView.TabIndex = 25;
-            // 
-            // orden_ViajeBindingSource
-            // 
-            this.orden_ViajeBindingSource.DataMember = "Orden_Viaje";
-            this.orden_ViajeBindingSource.DataSource = this.dataBaseDataSet;
-            // 
-            // orden_ViajeTableAdapter
-            // 
-            this.orden_ViajeTableAdapter.ClearBeforeFill = true;
             // 
             // iDOrdenesViajeDataGridViewTextBoxColumn
             // 
@@ -653,6 +542,134 @@
             this.incidenciasDataGridViewTextBoxColumn.Name = "incidenciasDataGridViewTextBoxColumn";
             this.incidenciasDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // orden_ViajeBindingSource
+            // 
+            this.orden_ViajeBindingSource.DataMember = "Orden_Viaje";
+            this.orden_ViajeBindingSource.DataSource = this.dataBaseDataSet;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::AppTesis.Properties.Resources._5670281;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(68, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(232, 30);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "HISTÓRICO DE VIAJES";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBoxUser);
+            this.panel1.Controls.Add(this.labelHora);
+            this.panel1.Controls.Add(this.labelRol);
+            this.panel1.Controls.Add(this.labelUser);
+            this.panel1.Location = new System.Drawing.Point(28, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(952, 222);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AppTesis.Properties.Resources.Logo_Luis_Velásquez_Transportes_Empresa_removebg_preview;
+            this.pictureBox3.Location = new System.Drawing.Point(28, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(258, 185);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBoxUser
+            // 
+            this.pictureBoxUser.Image = global::AppTesis.Properties.Resources.Icon_User;
+            this.pictureBoxUser.Location = new System.Drawing.Point(376, 17);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(51, 50);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxUser.TabIndex = 3;
+            this.pictureBoxUser.TabStop = false;
+            // 
+            // labelHora
+            // 
+            this.labelHora.AutoSize = true;
+            this.labelHora.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHora.Location = new System.Drawing.Point(813, 186);
+            this.labelHora.Name = "labelHora";
+            this.labelHora.Size = new System.Drawing.Size(127, 30);
+            this.labelHora.TabIndex = 2;
+            this.labelHora.Text = "13/08/2026";
+            this.labelHora.Click += new System.EventHandler(this.labelHora_Click);
+            // 
+            // labelRol
+            // 
+            this.labelRol.AutoSize = true;
+            this.labelRol.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRol.Location = new System.Drawing.Point(386, 74);
+            this.labelRol.Name = "labelRol";
+            this.labelRol.Size = new System.Drawing.Size(247, 30);
+            this.labelRol.TabIndex = 1;
+            this.labelRol.Text = "Administrador principal";
+            // 
+            // labelUser
+            // 
+            this.labelUser.AutoSize = true;
+            this.labelUser.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUser.Location = new System.Drawing.Point(430, 21);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(153, 37);
+            this.labelUser.TabIndex = 0;
+            this.labelUser.Text = "Juan Pérez";
+            this.labelUser.Click += new System.EventHandler(this.labelUser_Click);
+            // 
+            // mantenimientoTableAdapter
+            // 
+            this.mantenimientoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ChoferTableAdapter = null;
+            this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.EmpresasSubcontratadaTableAdapter = null;
+            this.tableAdapterManager.MantenimientoTableAdapter = this.mantenimientoTableAdapter;
+            this.tableAdapterManager.Orden_ViajeTableAdapter = null;
+            this.tableAdapterManager.RegistroAccionesTableAdapter = null;
+            this.tableAdapterManager.RutasTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            this.tableAdapterManager.VehiculoTableAdapter = null;
+            // 
+            // orden_ViajeTableAdapter
+            // 
+            this.orden_ViajeTableAdapter.ClearBeforeFill = true;
+            // 
+            // EmpresasSUB
+            // 
+            this.EmpresasSUB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EmpresasSUB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpresasSUB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpresasSUB.ForeColor = System.Drawing.Color.White;
+            this.EmpresasSUB.Location = new System.Drawing.Point(0, 385);
+            this.EmpresasSUB.Name = "EmpresasSUB";
+            this.EmpresasSUB.Size = new System.Drawing.Size(149, 81);
+            this.EmpresasSUB.TabIndex = 9;
+            this.EmpresasSUB.Text = "Empresas Subcontratadas\r\n";
+            this.EmpresasSUB.UseVisualStyleBackColor = true;
+            this.EmpresasSUB.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -678,13 +695,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orden_ViajeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -748,6 +765,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tasaUSDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pagoBSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn incidenciasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button EmpresasSUB;
     }
 }
 

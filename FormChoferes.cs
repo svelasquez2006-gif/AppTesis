@@ -31,7 +31,10 @@ namespace AppTesis
             telefonoTextBox.MaxLength = 7;     
             cedulaTextBox.MaxLength = 8;
             experienciaTextBox.MaxLength = 2;
+
             fecha_NacimientoDateTimePicker.Value= new DateTime(2008,8,27);
+            dataBaseDataSet.Chofer.CedulaColumn.AllowDBNull = true;
+            choferBindingSource.AddNew();
 
         }
 
@@ -131,8 +134,13 @@ namespace AppTesis
                     }
                     else
                     {
+                        choferBindingSource.EndEdit();
+
                         this.choferTableAdapter.add(cedula, nombre, apellido, fechaNacimiento, ed, telefono, correo, licencia, experiencia, dirreccion, ruta, estatus, afiliacion);
                         this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
+
+                        dataBaseDataSet.AcceptChanges();
+                        choferBindingSource.AddNew();
                     }
 
                 }
@@ -226,8 +234,13 @@ namespace AppTesis
                     }
                     else
                     {
+                        choferBindingSource.EndEdit();
+
                         this.choferTableAdapter.modify(nombre, apellido, fechaNacimiento, ed, telefono, correo, licencia, experiencia, dirreccion, ruta, estatus, afiliacion, cedula);
                         this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
+
+                        dataBaseDataSet.AcceptChanges();
+                        choferBindingSource.AddNew();
                     }
 
                 }
@@ -252,6 +265,7 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
+            choferBindingSource.CancelEdit();
             this.Close();
             FormPrincipal princpal = new FormPrincipal();
             princpal.Show();
@@ -356,6 +370,27 @@ namespace AppTesis
         private void edadTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvChoferes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvChoferes_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+
+            // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
+            choferBindingSource.CancelEdit();
+        }
+
+        private void experienciaTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloquea la tecla para que no se escriba en el TextBox
+            }
         }
     }
 }

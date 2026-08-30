@@ -36,10 +36,10 @@
             System.Windows.Forms.Label correoLabel;
             System.Windows.Forms.Label lblNombreRepresentante;
             System.Windows.Forms.Label lblTelefRepresentante;
-            System.Windows.Forms.Label fecha_InicioLabel;
-            System.Windows.Forms.Label fecha_FinalizacionLabel;
             System.Windows.Forms.Label labelCalificación;
             System.Windows.Forms.Label direccionLabel;
+            System.Windows.Forms.Label fechaInicioLabel;
+            System.Windows.Forms.Label fechafinalLabel;
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.rifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,19 +55,15 @@
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empresasSubcontratadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
-            this.empresasSubcontratadaTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.EmpresasSubcontratadaTableAdapter();
             this.RifTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.EstadoComboBox = new System.Windows.Forms.ComboBox();
             this.CodigoTelfComboBox = new System.Windows.Forms.ComboBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NombreRepresentanteTextBox = new System.Windows.Forms.TextBox();
             this.comboBoxTelfRepre = new System.Windows.Forms.ComboBox();
             this.textBoxTelfRepre = new System.Windows.Forms.TextBox();
-            this.fecha_InicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.fecha_FinalizacionDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.textBoxCalificación = new System.Windows.Forms.TextBox();
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.salir = new BotonRedondo();
             this.modificar = new BotonRedondo();
@@ -75,6 +71,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.CalificacionComboBox = new System.Windows.Forms.ComboBox();
+            this.empresasSubcontratadaTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.EmpresasSubcontratadaTableAdapter();
+            this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
+            this.fechaInicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.fechafinalDateTimePicker = new System.Windows.Forms.DateTimePicker();
             rifLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -82,10 +83,10 @@
             correoLabel = new System.Windows.Forms.Label();
             lblNombreRepresentante = new System.Windows.Forms.Label();
             lblTelefRepresentante = new System.Windows.Forms.Label();
-            fecha_InicioLabel = new System.Windows.Forms.Label();
-            fecha_FinalizacionLabel = new System.Windows.Forms.Label();
             labelCalificación = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
+            fechaInicioLabel = new System.Windows.Forms.Label();
+            fechafinalLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresasSubcontratadaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
@@ -162,31 +163,11 @@
             lblTelefRepresentante.TabIndex = 43;
             lblTelefRepresentante.Text = "Teléfono Representante:";
             // 
-            // fecha_InicioLabel
-            // 
-            fecha_InicioLabel.AutoSize = true;
-            fecha_InicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            fecha_InicioLabel.Location = new System.Drawing.Point(536, 150);
-            fecha_InicioLabel.Name = "fecha_InicioLabel";
-            fecha_InicioLabel.Size = new System.Drawing.Size(101, 16);
-            fecha_InicioLabel.TabIndex = 46;
-            fecha_InicioLabel.Text = "Fecha de Inicio:";
-            // 
-            // fecha_FinalizacionLabel
-            // 
-            fecha_FinalizacionLabel.AutoSize = true;
-            fecha_FinalizacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            fecha_FinalizacionLabel.Location = new System.Drawing.Point(527, 195);
-            fecha_FinalizacionLabel.Name = "fecha_FinalizacionLabel";
-            fecha_FinalizacionLabel.Size = new System.Drawing.Size(141, 16);
-            fecha_FinalizacionLabel.TabIndex = 48;
-            fecha_FinalizacionLabel.Text = "Fecha de Finalizacion:";
-            // 
             // labelCalificación
             // 
             labelCalificación.AutoSize = true;
             labelCalificación.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            labelCalificación.Location = new System.Drawing.Point(676, 175);
+            labelCalificación.Location = new System.Drawing.Point(701, 175);
             labelCalificación.Name = "labelCalificación";
             labelCalificación.Size = new System.Drawing.Size(79, 16);
             labelCalificación.TabIndex = 50;
@@ -202,6 +183,26 @@
             direccionLabel.TabIndex = 52;
             direccionLabel.Text = "Dirección:";
             // 
+            // fechaInicioLabel
+            // 
+            fechaInicioLabel.AutoSize = true;
+            fechaInicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            fechaInicioLabel.Location = new System.Drawing.Point(558, 151);
+            fechaInicioLabel.Name = "fechaInicioLabel";
+            fechaInicioLabel.Size = new System.Drawing.Size(82, 16);
+            fechaInicioLabel.TabIndex = 58;
+            fechaInicioLabel.Text = "Fecha Inicio:";
+            // 
+            // fechafinalLabel
+            // 
+            fechafinalLabel.AutoSize = true;
+            fechafinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            fechafinalLabel.Location = new System.Drawing.Point(558, 203);
+            fechafinalLabel.Name = "fechafinalLabel";
+            fechafinalLabel.Size = new System.Drawing.Size(72, 16);
+            fechafinalLabel.TabIndex = 59;
+            fechafinalLabel.Text = "Fechafinal:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -214,7 +215,10 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.rifDataGridViewTextBoxColumn,
@@ -229,76 +233,90 @@
             this.calificacionDataGridViewTextBoxColumn,
             this.estadoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.empresasSubcontratadaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 316);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 315);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1197, 150);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1141, 150);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
             // rifDataGridViewTextBoxColumn
             // 
             this.rifDataGridViewTextBoxColumn.DataPropertyName = "rif";
-            this.rifDataGridViewTextBoxColumn.HeaderText = "rif";
+            this.rifDataGridViewTextBoxColumn.HeaderText = "Rif de la empresa";
             this.rifDataGridViewTextBoxColumn.Name = "rifDataGridViewTextBoxColumn";
+            this.rifDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre de la Empresa";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // direccionDataGridViewTextBoxColumn
             // 
             this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion de la Empresa";
             this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telefonoDataGridViewTextBoxColumn
             // 
             this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono de la Empresa";
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // correoDataGridViewTextBoxColumn
             // 
             this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
-            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo de la Empresa";
             this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            this.correoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nombreRepresentanteDataGridViewTextBoxColumn
             // 
             this.nombreRepresentanteDataGridViewTextBoxColumn.DataPropertyName = "NombreRepresentante";
-            this.nombreRepresentanteDataGridViewTextBoxColumn.HeaderText = "NombreRepresentante";
+            this.nombreRepresentanteDataGridViewTextBoxColumn.HeaderText = "Nombre del Representante";
             this.nombreRepresentanteDataGridViewTextBoxColumn.Name = "nombreRepresentanteDataGridViewTextBoxColumn";
+            this.nombreRepresentanteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telefonoRepresentanteDataGridViewTextBoxColumn
             // 
             this.telefonoRepresentanteDataGridViewTextBoxColumn.DataPropertyName = "TelefonoRepresentante";
-            this.telefonoRepresentanteDataGridViewTextBoxColumn.HeaderText = "TelefonoRepresentante";
+            this.telefonoRepresentanteDataGridViewTextBoxColumn.HeaderText = "Telefono del Representante";
             this.telefonoRepresentanteDataGridViewTextBoxColumn.Name = "telefonoRepresentanteDataGridViewTextBoxColumn";
+            this.telefonoRepresentanteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // fechaInicioDataGridViewTextBoxColumn
             // 
             this.fechaInicioDataGridViewTextBoxColumn.DataPropertyName = "FechaInicio";
-            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "FechaInicio";
+            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "Inicio del Contrato";
             this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
+            this.fechaInicioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // fechafinalDataGridViewTextBoxColumn
             // 
             this.fechafinalDataGridViewTextBoxColumn.DataPropertyName = "Fechafinal";
-            this.fechafinalDataGridViewTextBoxColumn.HeaderText = "Fechafinal";
+            this.fechafinalDataGridViewTextBoxColumn.HeaderText = "Finalizacion del Contrato";
             this.fechafinalDataGridViewTextBoxColumn.Name = "fechafinalDataGridViewTextBoxColumn";
+            this.fechafinalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // calificacionDataGridViewTextBoxColumn
             // 
             this.calificacionDataGridViewTextBoxColumn.DataPropertyName = "Calificacion";
             this.calificacionDataGridViewTextBoxColumn.HeaderText = "Calificacion";
             this.calificacionDataGridViewTextBoxColumn.Name = "calificacionDataGridViewTextBoxColumn";
+            this.calificacionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // estadoDataGridViewTextBoxColumn
             // 
             this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
             this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
             this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // empresasSubcontratadaBindingSource
             // 
@@ -310,12 +328,9 @@
             this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
             this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // empresasSubcontratadaTableAdapter
-            // 
-            this.empresasSubcontratadaTableAdapter.ClearBeforeFill = true;
-            // 
             // RifTextBox
             // 
+            this.RifTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "rif", true));
             this.RifTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RifTextBox.Location = new System.Drawing.Point(88, 108);
             this.RifTextBox.Name = "RifTextBox";
@@ -324,6 +339,7 @@
             // 
             // nombreTextBox
             // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "Nombre", true));
             this.nombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreTextBox.Location = new System.Drawing.Point(88, 159);
             this.nombreTextBox.Name = "nombreTextBox";
@@ -332,11 +348,12 @@
             // 
             // EstadoComboBox
             // 
+            this.EstadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "Estado", true));
             this.EstadoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EstadoComboBox.FormattingEnabled = true;
             this.EstadoComboBox.Items.AddRange(new object[] {
-            "Activo",
-            "Bloqueado"});
+            "Vigente",
+            "Expirado"});
             this.EstadoComboBox.Location = new System.Drawing.Point(88, 215);
             this.EstadoComboBox.Name = "EstadoComboBox";
             this.EstadoComboBox.Size = new System.Drawing.Size(100, 21);
@@ -370,22 +387,25 @@
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(87, 20);
             this.telefonoTextBox.TabIndex = 37;
+            this.telefonoTextBox.TextChanged += new System.EventHandler(this.telefonoTextBox_TextChanged);
             // 
             // correoTextBox
             // 
+            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "Correo", true));
             this.correoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correoTextBox.Location = new System.Drawing.Point(300, 159);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(100, 22);
             this.correoTextBox.TabIndex = 40;
             // 
-            // textBox1
+            // NombreRepresentanteTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(388, 215);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 42;
+            this.NombreRepresentanteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "NombreRepresentante", true));
+            this.NombreRepresentanteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreRepresentanteTextBox.Location = new System.Drawing.Point(388, 215);
+            this.NombreRepresentanteTextBox.Name = "NombreRepresentanteTextBox";
+            this.NombreRepresentanteTextBox.Size = new System.Drawing.Size(100, 22);
+            this.NombreRepresentanteTextBox.TabIndex = 42;
             // 
             // comboBoxTelfRepre
             // 
@@ -415,35 +435,11 @@
             this.textBoxTelfRepre.Name = "textBoxTelfRepre";
             this.textBoxTelfRepre.Size = new System.Drawing.Size(87, 20);
             this.textBoxTelfRepre.TabIndex = 44;
-            // 
-            // fecha_InicioDateTimePicker
-            // 
-            this.fecha_InicioDateTimePicker.CustomFormat = "yyyy/MM/dd";
-            this.fecha_InicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_InicioDateTimePicker.Location = new System.Drawing.Point(539, 172);
-            this.fecha_InicioDateTimePicker.Name = "fecha_InicioDateTimePicker";
-            this.fecha_InicioDateTimePicker.Size = new System.Drawing.Size(109, 20);
-            this.fecha_InicioDateTimePicker.TabIndex = 47;
-            // 
-            // fecha_FinalizacionDateTimePicker
-            // 
-            this.fecha_FinalizacionDateTimePicker.CustomFormat = "yyyy/MM/dd";
-            this.fecha_FinalizacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_FinalizacionDateTimePicker.Location = new System.Drawing.Point(539, 214);
-            this.fecha_FinalizacionDateTimePicker.Name = "fecha_FinalizacionDateTimePicker";
-            this.fecha_FinalizacionDateTimePicker.Size = new System.Drawing.Size(112, 20);
-            this.fecha_FinalizacionDateTimePicker.TabIndex = 49;
-            // 
-            // textBoxCalificación
-            // 
-            this.textBoxCalificación.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCalificación.Location = new System.Drawing.Point(762, 173);
-            this.textBoxCalificación.Name = "textBoxCalificación";
-            this.textBoxCalificación.Size = new System.Drawing.Size(100, 22);
-            this.textBoxCalificación.TabIndex = 51;
+            this.textBoxTelfRepre.TextChanged += new System.EventHandler(this.textBoxTelfRepre_TextChanged);
             // 
             // direccionTextBox
             // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "direccion", true));
             this.direccionTextBox.Location = new System.Drawing.Point(762, 215);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(100, 20);
@@ -463,6 +459,7 @@
             this.salir.TabIndex = 56;
             this.salir.Text = "Volver al Menú";
             this.salir.UseVisualStyleBackColor = false;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
             // modificar
             // 
@@ -478,6 +475,7 @@
             this.modificar.TabIndex = 55;
             this.modificar.Text = "Modificar Empresa";
             this.modificar.UseVisualStyleBackColor = false;
+            this.modificar.Click += new System.EventHandler(this.modificar_Click);
             // 
             // agregar
             // 
@@ -493,6 +491,7 @@
             this.agregar.TabIndex = 54;
             this.agregar.Text = "Agregar Empresa";
             this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
             // statusStrip1
             // 
@@ -502,14 +501,14 @@
             this.ToolStripLblDev2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 518);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1232, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1240, 22);
             this.statusStrip1.TabIndex = 57;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // ToolStripLblDev
             // 
             this.ToolStripLblDev.Name = "ToolStripLblDev";
-            this.ToolStripLblDev.Size = new System.Drawing.Size(1015, 17);
+            this.ToolStripLblDev.Size = new System.Drawing.Size(1023, 17);
             this.ToolStripLblDev.Spring = true;
             this.ToolStripLblDev.Text = "Desarrollado por:";
             this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -521,12 +520,76 @@
             this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
             this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // CalificacionComboBox
+            // 
+            this.CalificacionComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "Calificacion", true));
+            this.CalificacionComboBox.FormattingEnabled = true;
+            this.CalificacionComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.CalificacionComboBox.Location = new System.Drawing.Point(786, 174);
+            this.CalificacionComboBox.Name = "CalificacionComboBox";
+            this.CalificacionComboBox.Size = new System.Drawing.Size(35, 21);
+            this.CalificacionComboBox.TabIndex = 58;
+            // 
+            // empresasSubcontratadaTableAdapter
+            // 
+            this.empresasSubcontratadaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ChoferTableAdapter = null;
+            this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.EmpresasSubcontratadaTableAdapter = this.empresasSubcontratadaTableAdapter;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.Orden_ViajeTableAdapter = null;
+            this.tableAdapterManager.RegistroAccionesTableAdapter = null;
+            this.tableAdapterManager.RutasTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            this.tableAdapterManager.VehiculoTableAdapter = null;
+            // 
+            // fechaInicioDateTimePicker
+            // 
+            this.fechaInicioDateTimePicker.CustomFormat = "yyyy/MM/dd";
+            this.fechaInicioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.empresasSubcontratadaBindingSource, "FechaInicio", true));
+            this.fechaInicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fechaInicioDateTimePicker.Location = new System.Drawing.Point(544, 175);
+            this.fechaInicioDateTimePicker.Name = "fechaInicioDateTimePicker";
+            this.fechaInicioDateTimePicker.Size = new System.Drawing.Size(111, 20);
+            this.fechaInicioDateTimePicker.TabIndex = 59;
+            this.fechaInicioDateTimePicker.ValueChanged += new System.EventHandler(this.fechaInicioDateTimePicker_ValueChanged);
+            // 
+            // fechafinalDateTimePicker
+            // 
+            this.fechafinalDateTimePicker.CustomFormat = "yyyy/MM/dd";
+            this.fechafinalDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.empresasSubcontratadaBindingSource, "Fechafinal", true));
+            this.fechafinalDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fechafinalDateTimePicker.Location = new System.Drawing.Point(544, 222);
+            this.fechafinalDateTimePicker.Name = "fechafinalDateTimePicker";
+            this.fechafinalDateTimePicker.Size = new System.Drawing.Size(111, 20);
+            this.fechafinalDateTimePicker.TabIndex = 60;
+            // 
             // FormEmpresasSubcontratadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1232, 540);
+            this.ClientSize = new System.Drawing.Size(1240, 540);
+            this.Controls.Add(fechafinalLabel);
+            this.Controls.Add(this.fechafinalDateTimePicker);
+            this.Controls.Add(fechaInicioLabel);
+            this.Controls.Add(this.fechaInicioDateTimePicker);
+            this.Controls.Add(this.CalificacionComboBox);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.modificar);
@@ -534,16 +597,11 @@
             this.Controls.Add(direccionLabel);
             this.Controls.Add(this.direccionTextBox);
             this.Controls.Add(labelCalificación);
-            this.Controls.Add(this.textBoxCalificación);
-            this.Controls.Add(fecha_InicioLabel);
-            this.Controls.Add(this.fecha_InicioDateTimePicker);
-            this.Controls.Add(fecha_FinalizacionLabel);
-            this.Controls.Add(this.fecha_FinalizacionDateTimePicker);
             this.Controls.Add(this.comboBoxTelfRepre);
             this.Controls.Add(lblTelefRepresentante);
             this.Controls.Add(this.textBoxTelfRepre);
             this.Controls.Add(lblNombreRepresentante);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NombreRepresentanteTextBox);
             this.Controls.Add(correoLabel);
             this.Controls.Add(this.correoTextBox);
             this.Controls.Add(this.CodigoTelfComboBox);
@@ -577,6 +635,23 @@
         private DataBaseDataSet dataBaseDataSet;
         private System.Windows.Forms.BindingSource empresasSubcontratadaBindingSource;
         private DataBaseDataSetTableAdapters.EmpresasSubcontratadaTableAdapter empresasSubcontratadaTableAdapter;
+        private System.Windows.Forms.TextBox RifTextBox;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.ComboBox EstadoComboBox;
+        private System.Windows.Forms.ComboBox CodigoTelfComboBox;
+        private System.Windows.Forms.TextBox telefonoTextBox;
+        private System.Windows.Forms.TextBox correoTextBox;
+        private System.Windows.Forms.TextBox NombreRepresentanteTextBox;
+        private System.Windows.Forms.ComboBox comboBoxTelfRepre;
+        private System.Windows.Forms.TextBox textBoxTelfRepre;
+        private System.Windows.Forms.TextBox direccionTextBox;
+        private BotonRedondo salir;
+        private BotonRedondo modificar;
+        private BotonRedondo agregar;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
+        private System.Windows.Forms.ComboBox CalificacionComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn rifDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
@@ -588,24 +663,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechafinalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn calificacionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox RifTextBox;
-        private System.Windows.Forms.TextBox nombreTextBox;
-        private System.Windows.Forms.ComboBox EstadoComboBox;
-        private System.Windows.Forms.ComboBox CodigoTelfComboBox;
-        private System.Windows.Forms.TextBox telefonoTextBox;
-        private System.Windows.Forms.TextBox correoTextBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBoxTelfRepre;
-        private System.Windows.Forms.TextBox textBoxTelfRepre;
-        private System.Windows.Forms.DateTimePicker fecha_InicioDateTimePicker;
-        private System.Windows.Forms.DateTimePicker fecha_FinalizacionDateTimePicker;
-        private System.Windows.Forms.TextBox textBoxCalificación;
-        private System.Windows.Forms.TextBox direccionTextBox;
-        private BotonRedondo salir;
-        private BotonRedondo modificar;
-        private BotonRedondo agregar;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
-        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
+        private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DateTimePicker fechaInicioDateTimePicker;
+        private System.Windows.Forms.DateTimePicker fechafinalDateTimePicker;
     }
 }

@@ -6,15 +6,18 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace AppTesis
 {
     public partial class FormMantenimiento : Form
     {
+        private static readonly HttpClient _httpClient = new HttpClient();
         public FormMantenimiento()
         {
             InitializeComponent();
@@ -26,14 +29,35 @@ namespace AppTesis
 
         }
 
-        private void FormMantenimiento_Load(object sender, EventArgs e)
+        private async void FormMantenimiento_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Vehiculo' Puede moverla o quitarla según sea necesario.
             this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Mantenimiento' Puede moverla o quitarla según sea necesario.
             this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
+            dataBaseDataSet.Mantenimiento.CodMantenimientoColumn.AllowDBNull = true;
+            mantenimientoBindingSource.AddNew();
             BsRadio.Checked = true;
-            
+
+
+            ExtractorTasaCambio servicioTasa = new ExtractorTasaCambio(_httpClient);
+            try
+            {
+                tasa_USDTextBox.Text = "Cargando...";
+
+                // Llama a la lógica híbrida tolerante a fallos
+                decimal tasaBcv = await servicioTasa.ObtenerTasaBcvAsync();
+
+                // Muestra solo el monto numérico limpio
+                tasa_USDTextBox.Text = tasaBcv.ToString("F2");
+            }
+            catch (Exception ex)
+            {
+                tasa_USDTextBox.Text = "0,00";
+                tasa_USDTextBox.ReadOnly= false;
+                MessageBox.Show(ex.Message, "Error General de Servidores,Se habilitara el Campo tasa usd para que pueda agregarlo manualmente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
         }
 
@@ -70,9 +94,15 @@ namespace AppTesis
                     string anotaciones = anotacionesTextBox.Text;
                     decimal.TryParse(tasa_USDTextBox.Text,out decimal tasa);
                     decimal.TryParse(montobs.Text, out decimal coste);
+
+                    mantenimientoBindingSource.EndEdit();
+
                     this.mantenimientoTableAdapter.add(placa, fecha, anotaciones,tasa,coste);
                     this.vehiculoTableAdapter.addMantenimiento(fecha, placa);
                     this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
+
+                    dataBaseDataSet.AcceptChanges();
+                    mantenimientoBindingSource.AddNew();
 
                 }
 
@@ -102,6 +132,7 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
+            mantenimientoBindingSource.CancelEdit();
             this.Close();
             Formvehiculos vehiculos = new Formvehiculos();
             vehiculos.Show();
@@ -297,6 +328,15 @@ namespace AppTesis
             }
 
             if (!char.IsDigit(e.KeyChar)) e.Handled = true; // Bloquea letras y símbolos
+
+        }
+
+        private void mantenimientoDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+
+            // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
+            mantenimientoBindingSource.CancelEdit();
 
         }
     }

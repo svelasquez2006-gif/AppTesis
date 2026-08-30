@@ -23,7 +23,9 @@ namespace AppTesis
         {
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Rutas' Puede moverla o quitarla según sea necesario.
             this.rutasTableAdapter.Fill(this.dataBaseDataSet.Rutas);
-
+            dias_ViajeTextBox.MaxLength = 2;
+            rutasBindingSource.AddNew();
+            dataBaseDataSet.Rutas.Nombre_RutaColumn.AllowDBNull = true;
         }
 
         private void rutasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
+            rutasBindingSource.CancelEdit();
             this.Hide();
             FormPrincipal principal = new FormPrincipal();
             principal.Show();
@@ -73,8 +76,14 @@ namespace AppTesis
 
                     string paradas = paradasTextBox.Text;
 
+
+                    rutasBindingSource.EndEdit();
+
                     this.rutasTableAdapter.add(Ruta,dias,distancia,paradas);
                     this.rutasTableAdapter.Fill(this.dataBaseDataSet.Rutas);
+
+                    dataBaseDataSet.AcceptChanges();
+                    rutasBindingSource.AddNew();
                     
                 }
                 catch (NullReferenceException)
@@ -170,8 +179,13 @@ namespace AppTesis
 
                     string paradas = paradasTextBox.Text;
 
+                    rutasBindingSource.EndEdit();
+
                     this.rutasTableAdapter.modify(dias, distancia, paradas, Ruta);
                     this.rutasTableAdapter.Fill(this.dataBaseDataSet.Rutas);
+
+                    dataBaseDataSet.AcceptChanges();
+                    rutasBindingSource.AddNew();
 
                 }
                 catch (NullReferenceException)
@@ -197,6 +211,14 @@ namespace AppTesis
                 }
 
             }
+        }
+
+        private void rutasDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+
+            // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
+            rutasBindingSource.CancelEdit();
         }
     }
 }

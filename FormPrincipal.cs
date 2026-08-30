@@ -89,8 +89,9 @@ namespace AppTesis
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormCliente insertar=new FormCliente();
-            insertar.ShowDialog();
+            insertar.Show();
         }
 
         private void mantenimientoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -159,6 +160,13 @@ namespace AppTesis
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormEmpresasSubcontratadas sub = new FormEmpresasSubcontratadas();
+            sub.Show();
         }
     }
 }

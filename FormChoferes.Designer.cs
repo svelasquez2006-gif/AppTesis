@@ -276,6 +276,8 @@
             this.dgvChoferes.Size = new System.Drawing.Size(831, 333);
             this.dgvChoferes.TabIndex = 5;
             this.dgvChoferes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChoferes_CellClick);
+            this.dgvChoferes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChoferes_CellContentClick);
+            this.dgvChoferes.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvChoferes_DataError);
             // 
             // Cedula
             // 
@@ -556,6 +558,7 @@
             this.experienciaTextBox.Size = new System.Drawing.Size(100, 22);
             this.experienciaTextBox.TabIndex = 36;
             this.experienciaTextBox.TextChanged += new System.EventHandler(this.experienciaTextBox_TextChanged);
+            this.experienciaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.experienciaTextBox_KeyPress);
             // 
             // RutaComboBox
             // 
