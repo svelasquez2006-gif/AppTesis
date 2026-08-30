@@ -388,6 +388,27 @@ namespace AppTesis
                         // Asignamos el valor exacto al instante
                         string conversionStr = Math.Round(resultadoBs, 2).ToString("0.00");
                         if (montobs.Text != conversionStr) montobs.Text = conversionStr;
+
+
+                        //Dolares
+                        decimal ivausd = Math.Round(montoUSD * 0.16m);
+                        IVAUSD.Text = ivausd.ToString("0.00");
+
+                        decimal gtf = Math.Round(montoUSD * 0.03m);
+                        gtftextbox.Text = gtf.ToString("0.00");
+
+                        decimal totalusd =Math.Round( montoUSD + ivausd + gtf);
+                        TotalUSD.Text= totalusd.ToString("0.00");
+
+
+                        //bolivares
+                        decimal ivabs = Math.Round(resultadoBs * 0.16m,2);
+                        IVAbs.Text = ivabs.ToString("0.00");
+
+                        string totalbs = Math.Round(resultadoBs + ivabs,2).ToString("0.00");
+                        TotalBs.Text = totalbs;
+
+
                     }
                     else if (string.IsNullOrWhiteSpace(montousd.Text))
                     {
@@ -408,6 +429,27 @@ namespace AppTesis
                         // Asignamos el valor exacto al instante (ejemplo: 750 / 750 = 1.00)
                         string conversionStr = Math.Round(resultadoUsd, 2).ToString("0.00");
                         if (montousd.Text != conversionStr) montousd.Text = conversionStr;
+
+
+                        //bolivares
+                        decimal ivabs = Math.Round(montoBs * 0.16m);
+                        IVAbs.Text = ivabs.ToString("0.00");
+
+                        decimal totalbs = Math.Round(montoBs + ivabs );
+                        TotalBs.Text = totalbs.ToString("0,00");
+
+
+                        //dolares
+                        decimal ivausd = Math.Round(resultadoUsd * 0.16m, 2);
+                        IVAUSD.Text = ivausd.ToString("0.00");
+
+                        decimal gtf = Math.Round(resultadoUsd * 0.03m);
+                        gtftextbox.Text = gtf.ToString();
+
+                        string totalusd = Math.Round(resultadoUsd + ivausd + gtf , 2).ToString("0.00");
+                        TotalUSD.Text = totalusd;
+
+
                     }
                     else if (string.IsNullOrWhiteSpace(montobs.Text))
                     {
@@ -510,6 +552,7 @@ namespace AppTesis
         {
 
             CalcularConversion();
+
         }
 
         private void tasa_USDTextBox_TextChanged(object sender, EventArgs e)

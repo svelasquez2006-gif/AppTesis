@@ -67,5 +67,19 @@ namespace AppTesis
             clientes cli = new clientes();
             cli.Show();
         }
+
+        private void reportesUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            usuarios usu = new usuarios();
+            usu.Show();
+        }
+
+        private void reportesAccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            acciones acc = new acciones();
+            acc.Show();
+        }
     }
 }
