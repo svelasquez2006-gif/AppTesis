@@ -786,38 +786,38 @@
                                         <TablixMember />
                                       </TablixMembers>
                                       <Visibility>
-                                        <Hidden>true</Hidden>
-                                        <ToggleItem>Estatus</ToggleItem>
+                                        <Hidden>false</Hidden>
+                                        
                                       </Visibility>
                                     </TablixMember>
                                   </TablixMembers>
                                   <Visibility>
-                                    <Hidden>true</Hidden>
-                                    <ToggleItem>UltimoMantenimiento</ToggleItem>
+                                    <Hidden>false</Hidden>
+                                    
                                   </Visibility>
                                 </TablixMember>
                               </TablixMembers>
                               <Visibility>
-                                <Hidden>true</Hidden>
-                                <ToggleItem>Color</ToggleItem>
+                                <Hidden>false</Hidden>
+                                
                               </Visibility>
                             </TablixMember>
                           </TablixMembers>
                           <Visibility>
-                            <Hidden>true</Hidden>
-                            <ToggleItem>Modelo</ToggleItem>
+                            <Hidden>false</Hidden>
+                            
                           </Visibility>
                         </TablixMember>
                       </TablixMembers>
                       <Visibility>
-                        <Hidden>true</Hidden>
-                        <ToggleItem>Marca</ToggleItem>
+                        <Hidden>false</Hidden>
+                        
                       </Visibility>
                     </TablixMember>
                   </TablixMembers>
                   <Visibility>
-                    <Hidden>true</Hidden>
-                    <ToggleItem>NroPlaca</ToggleItem>
+                    <Hidden>false</Hidden>
+                    
                   </Visibility>
                 </TablixMember>
               </TablixMembers>

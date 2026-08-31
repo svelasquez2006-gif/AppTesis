@@ -127,6 +127,8 @@ namespace AppTesis
             clienteBindingSource.CancelEdit();
             this.Hide();
             Formordenes ordenes = new Formordenes();
+            FormPrincipal principal = new FormPrincipal();
+            principal.Show();
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)

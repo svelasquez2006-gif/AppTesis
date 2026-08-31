@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.reportesDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesAccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteFlotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteChoferesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,9 +40,6 @@
             this.reportesRutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesAccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,29 @@
             this.menuStrip1.Size = new System.Drawing.Size(304, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // reportesDelSistemaToolStripMenuItem
+            // 
+            this.reportesDelSistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportesUsuarioToolStripMenuItem,
+            this.reportesAccionesToolStripMenuItem});
+            this.reportesDelSistemaToolStripMenuItem.Name = "reportesDelSistemaToolStripMenuItem";
+            this.reportesDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
+            this.reportesDelSistemaToolStripMenuItem.Text = "Reportes del Sistema";
+            // 
+            // reportesUsuarioToolStripMenuItem
+            // 
+            this.reportesUsuarioToolStripMenuItem.Name = "reportesUsuarioToolStripMenuItem";
+            this.reportesUsuarioToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.reportesUsuarioToolStripMenuItem.Text = "Reportes Usuarios";
+            this.reportesUsuarioToolStripMenuItem.Click += new System.EventHandler(this.reportesUsuarioToolStripMenuItem_Click);
+            // 
+            // reportesAccionesToolStripMenuItem
+            // 
+            this.reportesAccionesToolStripMenuItem.Name = "reportesAccionesToolStripMenuItem";
+            this.reportesAccionesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.reportesAccionesToolStripMenuItem.Text = "Reportes Acciones";
+            this.reportesAccionesToolStripMenuItem.Click += new System.EventHandler(this.reportesAccionesToolStripMenuItem_Click);
             // 
             // reporteFlotaToolStripMenuItem
             // 
@@ -115,29 +138,6 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // reportesDelSistemaToolStripMenuItem
-            // 
-            this.reportesDelSistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportesUsuarioToolStripMenuItem,
-            this.reportesAccionesToolStripMenuItem});
-            this.reportesDelSistemaToolStripMenuItem.Name = "reportesDelSistemaToolStripMenuItem";
-            this.reportesDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
-            this.reportesDelSistemaToolStripMenuItem.Text = "Reportes del Sistema";
-            // 
-            // reportesUsuarioToolStripMenuItem
-            // 
-            this.reportesUsuarioToolStripMenuItem.Name = "reportesUsuarioToolStripMenuItem";
-            this.reportesUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reportesUsuarioToolStripMenuItem.Text = "Reportes Usuarios";
-            this.reportesUsuarioToolStripMenuItem.Click += new System.EventHandler(this.reportesUsuarioToolStripMenuItem_Click);
-            // 
-            // reportesAccionesToolStripMenuItem
-            // 
-            this.reportesAccionesToolStripMenuItem.Name = "reportesAccionesToolStripMenuItem";
-            this.reportesAccionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reportesAccionesToolStripMenuItem.Text = "Reportes Acciones";
-            this.reportesAccionesToolStripMenuItem.Click += new System.EventHandler(this.reportesAccionesToolStripMenuItem_Click);
             // 
             // Reportes
             // 

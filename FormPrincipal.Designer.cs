@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenú = new System.Windows.Forms.Panel();
+            this.EmpresasSUB = new System.Windows.Forms.Button();
             this.Usuarios = new System.Windows.Forms.Button();
             this.Reportes = new System.Windows.Forms.Button();
             this.rutas = new System.Windows.Forms.Button();
@@ -84,7 +85,6 @@
             this.mantenimientoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.MantenimientoTableAdapter();
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.orden_ViajeTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.Orden_ViajeTableAdapter();
-            this.EmpresasSUB = new System.Windows.Forms.Button();
             this.panelMenú.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -122,6 +122,20 @@
             this.panelMenú.Size = new System.Drawing.Size(166, 701);
             this.panelMenú.TabIndex = 0;
             this.panelMenú.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenú_Paint);
+            // 
+            // EmpresasSUB
+            // 
+            this.EmpresasSUB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EmpresasSUB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpresasSUB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpresasSUB.ForeColor = System.Drawing.Color.White;
+            this.EmpresasSUB.Location = new System.Drawing.Point(0, 385);
+            this.EmpresasSUB.Name = "EmpresasSUB";
+            this.EmpresasSUB.Size = new System.Drawing.Size(149, 81);
+            this.EmpresasSUB.TabIndex = 9;
+            this.EmpresasSUB.Text = "Empresas Subcontratadas\r\n";
+            this.EmpresasSUB.UseVisualStyleBackColor = true;
+            this.EmpresasSUB.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Usuarios
             // 
@@ -655,20 +669,6 @@
             // orden_ViajeTableAdapter
             // 
             this.orden_ViajeTableAdapter.ClearBeforeFill = true;
-            // 
-            // EmpresasSUB
-            // 
-            this.EmpresasSUB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.EmpresasSUB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EmpresasSUB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmpresasSUB.ForeColor = System.Drawing.Color.White;
-            this.EmpresasSUB.Location = new System.Drawing.Point(0, 385);
-            this.EmpresasSUB.Name = "EmpresasSUB";
-            this.EmpresasSUB.Size = new System.Drawing.Size(149, 81);
-            this.EmpresasSUB.TabIndex = 9;
-            this.EmpresasSUB.Text = "Empresas Subcontratadas\r\n";
-            this.EmpresasSUB.UseVisualStyleBackColor = true;
-            this.EmpresasSUB.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // FormPrincipal
             // 
