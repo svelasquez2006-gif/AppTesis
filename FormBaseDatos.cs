@@ -27,23 +27,23 @@ namespace AppTesis
 
         private void Respaldar_Click(object sender, EventArgs e)
         {
-            var backupService = new SqlServerBackupService("localhost\\SQLEXPRESS", "DataBase");
+            var backupService = new SqlServerBackupService("localhost", "DataBase");
 
             string rutaBak = @"C:\Backups\DataBase.bak";
             if (backupService.Respaldar(rutaBak))
             {
-                MessageBox.Show("Respaldo completado con éxito.","operacion exitosa",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Respaldo completado con éxito.","operación exitosa",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
         private void Restaurar_Click(object sender, EventArgs e)
         {
-            var backupService = new SqlServerBackupService("localhost\\SQLEXPRESS", "DataBase");
+            var backupService = new SqlServerBackupService("localhost", "DataBase");
 
-            string rutaBak = @"C:\Backups\DataBase.bak";
+            string rutaBak = @"C:\Public\Backups\DataBase.bak";
             if (backupService.Restaurar(rutaBak))
             {
-                MessageBox.Show("Restauracion completada con éxito.", "operacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Restauración completada con éxito.", "operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

@@ -264,5 +264,15 @@ namespace AppTesis
             // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
             empresasSubcontratadaBindingSource.CancelEdit();
         }
+
+        private void correoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxTelfRepre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -593,32 +593,32 @@
                                 <TablixMember>
                                   <Group Name="Detalles" />
                                   <Visibility>
-                                    <Hidden>true</Hidden>
-                                    <ToggleItem>Coste_BS</ToggleItem>
+                                    <Hidden>false</Hidden>
+                                    
                                   </Visibility>
                                 </TablixMember>
                               </TablixMembers>
                               <Visibility>
-                                <Hidden>true</Hidden>
-                                <ToggleItem>Tasa_USD</ToggleItem>
+                                <Hidden>false</Hidden>
+                                
                               </Visibility>
                             </TablixMember>
                           </TablixMembers>
                           <Visibility>
-                            <Hidden>true</Hidden>
-                            <ToggleItem>Anotaciones</ToggleItem>
+                            <Hidden>false</Hidden>
+                            
                           </Visibility>
                         </TablixMember>
                       </TablixMembers>
                       <Visibility>
-                        <Hidden>true</Hidden>
-                        <ToggleItem>NroPlaca</ToggleItem>
+                        <Hidden>false</Hidden>
+                        
                       </Visibility>
                     </TablixMember>
                   </TablixMembers>
                   <Visibility>
-                    <Hidden>true</Hidden>
-                    <ToggleItem>CodMantenimiento</ToggleItem>
+                    <Hidden>false</Hidden>
+                    
                   </Visibility>
                 </TablixMember>
               </TablixMembers>

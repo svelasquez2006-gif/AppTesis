@@ -1175,68 +1175,68 @@
                                                         <TablixMember>
                                                           <Group Name="Detalles" />
                                                           <Visibility>
-                                                            <Hidden>true</Hidden>
-                                                            <ToggleItem>Afiliacion</ToggleItem>
+                                                            <Hidden>false</Hidden>
+                                                            
                                                           </Visibility>
                                                         </TablixMember>
                                                       </TablixMembers>
                                                       <Visibility>
-                                                        <Hidden>true</Hidden>
-                                                        <ToggleItem>Ruta_Asignada</ToggleItem>
+                                                        <Hidden>false</Hidden>
+                                                        
                                                       </Visibility>
                                                     </TablixMember>
                                                   </TablixMembers>
                                                   <Visibility>
-                                                    <Hidden>true</Hidden>
-                                                    <ToggleItem>Direccion</ToggleItem>
+                                                    <Hidden>false</Hidden>
+                                                    
                                                   </Visibility>
                                                 </TablixMember>
                                               </TablixMembers>
                                               <Visibility>
-                                                <Hidden>true</Hidden>
-                                                <ToggleItem>Correo</ToggleItem>
+                                                <Hidden>false</Hidden>
+                                                
                                               </Visibility>
                                             </TablixMember>
                                           </TablixMembers>
                                           <Visibility>
-                                            <Hidden>true</Hidden>
-                                            <ToggleItem>Telefono</ToggleItem>
+                                            <Hidden>false</Hidden>
+                                            
                                           </Visibility>
                                         </TablixMember>
                                       </TablixMembers>
                                       <Visibility>
-                                        <Hidden>true</Hidden>
-                                        <ToggleItem>Apellido</ToggleItem>
+                                        <Hidden>false</Hidden>
+                                        
                                       </Visibility>
                                     </TablixMember>
                                   </TablixMembers>
                                   <Visibility>
-                                    <Hidden>true</Hidden>
-                                    <ToggleItem>Grado_Licencia</ToggleItem>
+                                    <Hidden>false</Hidden>
+                                    
                                   </Visibility>
                                 </TablixMember>
                               </TablixMembers>
                               <Visibility>
-                                <Hidden>true</Hidden>
-                                <ToggleItem>Experiencia</ToggleItem>
+                                <Hidden>false</Hidden>
+                                
                               </Visibility>
                             </TablixMember>
                           </TablixMembers>
                           <Visibility>
-                            <Hidden>true</Hidden>
-                            <ToggleItem>Edad</ToggleItem>
+                            <Hidden>false</Hidden>
+                            
                           </Visibility>
                         </TablixMember>
                       </TablixMembers>
                       <Visibility>
-                        <Hidden>true</Hidden>
-                        <ToggleItem>Nombre</ToggleItem>
+                        <Hidden>false</Hidden>
+                        
                       </Visibility>
                     </TablixMember>
                   </TablixMembers>
                   <Visibility>
-                    <Hidden>true</Hidden>
-                    <ToggleItem>Cedula</ToggleItem>
+                    <Hidden>false</Hidden>
+                    
                   </Visibility>
                 </TablixMember>
               </TablixMembers>

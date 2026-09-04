@@ -1271,68 +1271,68 @@
                                                             <TablixMember />
                                                           </TablixMembers>
                                                           <Visibility>
-                                                            <Hidden>true</Hidden>
-                                                            <ToggleItem>Tasa_USD</ToggleItem>
+                                                            <Hidden>false</Hidden>
+                                                            
                                                           </Visibility>
                                                         </TablixMember>
                                                       </TablixMembers>
                                                       <Visibility>
-                                                        <Hidden>true</Hidden>
-                                                        <ToggleItem>Cedula_Cliente</ToggleItem>
+                                                        <Hidden>false</Hidden>
+                                                        
                                                       </Visibility>
                                                     </TablixMember>
                                                   </TablixMembers>
                                                   <Visibility>
-                                                    <Hidden>true</Hidden>
-                                                    <ToggleItem>Vehiculos_NroPlaca</ToggleItem>
+                                                    <Hidden>false</Hidden>
+                                                    
                                                   </Visibility>
                                                 </TablixMember>
                                               </TablixMembers>
                                               <Visibility>
-                                                <Hidden>true</Hidden>
-                                                <ToggleItem>Cedula_Chofer</ToggleItem>
+                                                <Hidden>false</Hidden>
+                                                
                                               </Visibility>
                                             </TablixMember>
                                           </TablixMembers>
                                           <Visibility>
-                                            <Hidden>true</Hidden>
-                                            <ToggleItem>Destino</ToggleItem>
+                                            <Hidden>false</Hidden>
+                                            
                                           </Visibility>
                                         </TablixMember>
                                       </TablixMembers>
                                       <Visibility>
-                                        <Hidden>true</Hidden>
-                                        <ToggleItem>Paradas</ToggleItem>
+                                        <Hidden>false</Hidden>
+                                        
                                       </Visibility>
                                     </TablixMember>
                                   </TablixMembers>
                                   <Visibility>
-                                    <Hidden>true</Hidden>
-                                    <ToggleItem>Origen</ToggleItem>
+                                    <Hidden>false</Hidden>
+                                    
                                   </Visibility>
                                 </TablixMember>
                               </TablixMembers>
                               <Visibility>
-                                <Hidden>true</Hidden>
-                                <ToggleItem>Distancia</ToggleItem>
+                                <Hidden>false</Hidden>
+                                
                               </Visibility>
                             </TablixMember>
                           </TablixMembers>
                           <Visibility>
-                            <Hidden>true</Hidden>
-                            <ToggleItem>Dias_Viaje</ToggleItem>
+                            <Hidden>false</Hidden>
+                            
                           </Visibility>
                         </TablixMember>
                       </TablixMembers>
                       <Visibility>
-                        <Hidden>true</Hidden>
-                        <ToggleItem>Ruta</ToggleItem>
+                        <Hidden>false</Hidden>
+                        
                       </Visibility>
                     </TablixMember>
                   </TablixMembers>
                   <Visibility>
-                    <Hidden>true</Hidden>
-                    <ToggleItem>IDOrdenes_Viaje</ToggleItem>
+                    <Hidden>false</Hidden>
+                    
                   </Visibility>
                 </TablixMember>
               </TablixMembers>

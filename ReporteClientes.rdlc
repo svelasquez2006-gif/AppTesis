@@ -690,38 +690,38 @@
                                     <TablixMember>
                                       <Group Name="Detalles" />
                                       <Visibility>
-                                        <Hidden>true</Hidden>
-                                        <ToggleItem>Tipo_Cliente</ToggleItem>
+                                        <Hidden>false</Hidden>
+                                        
                                       </Visibility>
                                     </TablixMember>
                                   </TablixMembers>
                                   <Visibility>
-                                    <Hidden>true</Hidden>
-                                    <ToggleItem>Direccion</ToggleItem>
+                                    <Hidden>false</Hidden>
+                                    
                                   </Visibility>
                                 </TablixMember>
                               </TablixMembers>
                               <Visibility>
-                                <Hidden>true</Hidden>
-                                <ToggleItem>Correo</ToggleItem>
+                                <Hidden>false</Hidden>
+                                
                               </Visibility>
                             </TablixMember>
                           </TablixMembers>
                           <Visibility>
-                            <Hidden>true</Hidden>
-                            <ToggleItem>Telefono</ToggleItem>
+                            <Hidden>false</Hidden>
+                            
                           </Visibility>
                         </TablixMember>
                       </TablixMembers>
                       <Visibility>
-                        <Hidden>true</Hidden>
-                        <ToggleItem>Apellido</ToggleItem>
+                        <Hidden>false</Hidden>
+                        
                       </Visibility>
                     </TablixMember>
                   </TablixMembers>
                   <Visibility>
-                    <Hidden>true</Hidden>
-                    <ToggleItem>Nombre</ToggleItem>
+                    <Hidden>false</Hidden>
+                    
                   </Visibility>
                 </TablixMember>
               </TablixMembers>
