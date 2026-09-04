@@ -329,7 +329,6 @@
             // TipoComboBox
             // 
             this.TipoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Tipo_Cliente", true));
-            this.TipoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoComboBox.FormattingEnabled = true;
             this.TipoComboBox.Items.AddRange(new object[] {
             "Natural",

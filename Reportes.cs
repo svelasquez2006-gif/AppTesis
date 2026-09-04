@@ -81,5 +81,10 @@ namespace AppTesis
             acciones acc = new acciones();
             acc.Show();
         }
+
+        private void reportesDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

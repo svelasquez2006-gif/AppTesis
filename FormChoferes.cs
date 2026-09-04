@@ -390,5 +390,15 @@ namespace AppTesis
                 e.Handled = true; // Bloquea la tecla para que no se escriba en el TextBox
             }
         }
+
+        private void nombreTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utiles.SoloLetras(e);
+        }
+
+        private void apellidoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utiles.SoloLetras(e);
+        }
     }
 }
