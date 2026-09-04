@@ -274,5 +274,10 @@ namespace AppTesis
         {
 
         }
+
+        private void NombreRepresentanteTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utiles.SoloLetras(e);
+        }
     }
 }

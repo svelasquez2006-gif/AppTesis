@@ -344,6 +344,7 @@
             this.colorTextBox.Name = "colorTextBox";
             this.colorTextBox.Size = new System.Drawing.Size(156, 20);
             this.colorTextBox.TabIndex = 16;
+            this.colorTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.colorTextBox_KeyPress);
             // 
             // estatuscombobox
             // 

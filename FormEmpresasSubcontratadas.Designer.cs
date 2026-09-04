@@ -194,6 +194,96 @@
             lblEstado.Size = new System.Drawing.Size(100, 23);
             lblEstado.TabIndex = 0;
             // 
+            // calificacionLabel
+            // 
+            calificacionLabel.AutoSize = true;
+            calificacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            calificacionLabel.Location = new System.Drawing.Point(717, 165);
+            calificacionLabel.Name = "calificacionLabel";
+            calificacionLabel.Size = new System.Drawing.Size(93, 20);
+            calificacionLabel.TabIndex = 60;
+            calificacionLabel.Text = "Calificacion:";
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            direccionLabel.Location = new System.Drawing.Point(664, 114);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(79, 20);
+            direccionLabel.TabIndex = 60;
+            direccionLabel.Text = "Direccion:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            nombreLabel.Location = new System.Drawing.Point(8, 158);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(69, 20);
+            nombreLabel.TabIndex = 60;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // rifLabel
+            // 
+            rifLabel.AutoSize = true;
+            rifLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            rifLabel.Location = new System.Drawing.Point(37, 106);
+            rifLabel.Name = "rifLabel";
+            rifLabel.Size = new System.Drawing.Size(26, 20);
+            rifLabel.TabIndex = 60;
+            rifLabel.Text = "rif:";
+            // 
+            // estadoLabel
+            // 
+            estadoLabel.AutoSize = true;
+            estadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            estadoLabel.Location = new System.Drawing.Point(12, 215);
+            estadoLabel.Name = "estadoLabel";
+            estadoLabel.Size = new System.Drawing.Size(64, 20);
+            estadoLabel.TabIndex = 60;
+            estadoLabel.Text = "Estado:";
+            // 
+            // correoLabel
+            // 
+            correoLabel.AutoSize = true;
+            correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            correoLabel.Location = new System.Drawing.Point(211, 165);
+            correoLabel.Name = "correoLabel";
+            correoLabel.Size = new System.Drawing.Size(61, 20);
+            correoLabel.TabIndex = 60;
+            correoLabel.Text = "Correo:";
+            // 
+            // nombreRepresentanteLabel
+            // 
+            nombreRepresentanteLabel.AutoSize = true;
+            nombreRepresentanteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            nombreRepresentanteLabel.Location = new System.Drawing.Point(218, 198);
+            nombreRepresentanteLabel.Name = "nombreRepresentanteLabel";
+            nombreRepresentanteLabel.Size = new System.Drawing.Size(124, 40);
+            nombreRepresentanteLabel.TabIndex = 60;
+            nombreRepresentanteLabel.Text = "Nombre del\r\n Representante:";
+            // 
+            // fechaInicioLabel
+            // 
+            fechaInicioLabel.AutoSize = true;
+            fechaInicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            fechaInicioLabel.Location = new System.Drawing.Point(513, 94);
+            fechaInicioLabel.Name = "fechaInicioLabel";
+            fechaInicioLabel.Size = new System.Drawing.Size(117, 40);
+            fechaInicioLabel.TabIndex = 60;
+            fechaInicioLabel.Text = "Fecha de Inicio\r\ndel Contrato:";
+            // 
+            // fechafinalLabel
+            // 
+            fechafinalLabel.AutoSize = true;
+            fechafinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            fechafinalLabel.Location = new System.Drawing.Point(495, 172);
+            fechafinalLabel.Name = "fechafinalLabel";
+            fechafinalLabel.Size = new System.Drawing.Size(157, 40);
+            fechafinalLabel.TabIndex = 60;
+            fechafinalLabel.Text = "Fecha de finalilazion \r\ndel contrato:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -398,6 +488,7 @@
             this.NombreRepresentanteTextBox.Name = "NombreRepresentanteTextBox";
             this.NombreRepresentanteTextBox.Size = new System.Drawing.Size(135, 22);
             this.NombreRepresentanteTextBox.TabIndex = 42;
+            this.NombreRepresentanteTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreRepresentanteTextBox_KeyPress);
             // 
             // comboBoxTelfRepre
             // 
@@ -571,96 +662,6 @@
             this.fechafinalDateTimePicker.Name = "fechafinalDateTimePicker";
             this.fechafinalDateTimePicker.Size = new System.Drawing.Size(111, 20);
             this.fechafinalDateTimePicker.TabIndex = 60;
-            // 
-            // calificacionLabel
-            // 
-            calificacionLabel.AutoSize = true;
-            calificacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            calificacionLabel.Location = new System.Drawing.Point(717, 165);
-            calificacionLabel.Name = "calificacionLabel";
-            calificacionLabel.Size = new System.Drawing.Size(93, 20);
-            calificacionLabel.TabIndex = 60;
-            calificacionLabel.Text = "Calificacion:";
-            // 
-            // direccionLabel
-            // 
-            direccionLabel.AutoSize = true;
-            direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            direccionLabel.Location = new System.Drawing.Point(664, 114);
-            direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(79, 20);
-            direccionLabel.TabIndex = 60;
-            direccionLabel.Text = "Direccion:";
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            nombreLabel.Location = new System.Drawing.Point(8, 158);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(69, 20);
-            nombreLabel.TabIndex = 60;
-            nombreLabel.Text = "Nombre:";
-            // 
-            // rifLabel
-            // 
-            rifLabel.AutoSize = true;
-            rifLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            rifLabel.Location = new System.Drawing.Point(37, 106);
-            rifLabel.Name = "rifLabel";
-            rifLabel.Size = new System.Drawing.Size(26, 20);
-            rifLabel.TabIndex = 60;
-            rifLabel.Text = "rif:";
-            // 
-            // estadoLabel
-            // 
-            estadoLabel.AutoSize = true;
-            estadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            estadoLabel.Location = new System.Drawing.Point(12, 215);
-            estadoLabel.Name = "estadoLabel";
-            estadoLabel.Size = new System.Drawing.Size(64, 20);
-            estadoLabel.TabIndex = 60;
-            estadoLabel.Text = "Estado:";
-            // 
-            // correoLabel
-            // 
-            correoLabel.AutoSize = true;
-            correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            correoLabel.Location = new System.Drawing.Point(211, 165);
-            correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(61, 20);
-            correoLabel.TabIndex = 60;
-            correoLabel.Text = "Correo:";
-            // 
-            // nombreRepresentanteLabel
-            // 
-            nombreRepresentanteLabel.AutoSize = true;
-            nombreRepresentanteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            nombreRepresentanteLabel.Location = new System.Drawing.Point(218, 198);
-            nombreRepresentanteLabel.Name = "nombreRepresentanteLabel";
-            nombreRepresentanteLabel.Size = new System.Drawing.Size(124, 40);
-            nombreRepresentanteLabel.TabIndex = 60;
-            nombreRepresentanteLabel.Text = "Nombre del\r\n Representante:";
-            // 
-            // fechaInicioLabel
-            // 
-            fechaInicioLabel.AutoSize = true;
-            fechaInicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            fechaInicioLabel.Location = new System.Drawing.Point(513, 94);
-            fechaInicioLabel.Name = "fechaInicioLabel";
-            fechaInicioLabel.Size = new System.Drawing.Size(117, 40);
-            fechaInicioLabel.TabIndex = 60;
-            fechaInicioLabel.Text = "Fecha de Inicio\r\ndel Contrato:";
-            // 
-            // fechafinalLabel
-            // 
-            fechafinalLabel.AutoSize = true;
-            fechafinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            fechafinalLabel.Location = new System.Drawing.Point(495, 172);
-            fechafinalLabel.Name = "fechafinalLabel";
-            fechafinalLabel.Size = new System.Drawing.Size(157, 40);
-            fechafinalLabel.TabIndex = 60;
-            fechafinalLabel.Text = "Fecha de finalilazion \r\ndel contrato:";
             // 
             // FormEmpresasSubcontratadas
             // 

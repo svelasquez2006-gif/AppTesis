@@ -198,6 +198,9 @@ namespace AppTesis
 
         }
 
-
+        private void colorTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utiles.SoloLetras(e);
+        }
     }
 }
