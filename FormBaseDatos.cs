@@ -29,7 +29,7 @@ namespace AppTesis
         {
             var backupService = new SqlServerBackupService("localhost\\SQLEXPRESS", "DataBase");
 
-            string rutaBak = @"C:\Public\Backups\DataBase.bak";
+            string rutaBak = @"C:\Backups\DataBase.bak";
             if (backupService.Respaldar(rutaBak))
             {
                 MessageBox.Show("Respaldo completado con éxito.","operacion exitosa",MessageBoxButtons.OK,MessageBoxIcon.Information);

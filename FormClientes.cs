@@ -31,6 +31,7 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Cliente' Puede moverla o quitarla según sea necesario.
             this.clienteTableAdapter.Fill(this.dataBaseDataSet.Cliente);
             telefonoTextBox.MaxLength = 7;
+            cedulaTextBox.ReadOnly= true;
             clienteBindingSource.AddNew();
             dataBaseDataSet.Cliente.CedulaColumn.AllowDBNull = true;
 
@@ -126,7 +127,9 @@ namespace AppTesis
         {
             clienteBindingSource.CancelEdit();
             this.Hide();
-            Formordenes ordenes = new Formordenes();
+            FormPrincipal prin = new FormPrincipal();
+            prin.Show();
+
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)
@@ -264,6 +267,16 @@ namespace AppTesis
 
         private void TipoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (TipoComboBox.SelectedIndex == -1)
+            {
+                cedulaTextBox.ReadOnly= true;
+            }
+            else
+            {
+                cedulaTextBox.ReadOnly= false;
+            }
+
+
             if (TipoComboBox.Text=="Natural")
             {
                 labelced.Text = "Cedula:";

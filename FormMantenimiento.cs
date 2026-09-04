@@ -35,7 +35,7 @@ namespace AppTesis
             this.vehiculoTableAdapter.Fill(this.dataBaseDataSet.Vehiculo);
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Mantenimiento' Puede moverla o quitarla según sea necesario.
             this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
-            dataBaseDataSet.Mantenimiento.CodMantenimientoColumn.AllowDBNull = true;
+
             mantenimientoBindingSource.AddNew();
             BsRadio.Checked = true;
 
@@ -95,14 +95,12 @@ namespace AppTesis
                     decimal.TryParse(tasa_USDTextBox.Text,out decimal tasa);
                     decimal.TryParse(montobs.Text, out decimal coste);
 
-                    mantenimientoBindingSource.EndEdit();
+
 
                     this.mantenimientoTableAdapter.add(placa, fecha, anotaciones,tasa,coste);
                     this.vehiculoTableAdapter.addMantenimiento(fecha, placa);
                     this.mantenimientoTableAdapter.Fill(this.dataBaseDataSet.Mantenimiento);
 
-                    dataBaseDataSet.AcceptChanges();
-                    mantenimientoBindingSource.AddNew();
 
                 }
 
@@ -132,7 +130,7 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
-            mantenimientoBindingSource.CancelEdit();
+
             this.Close();
             Formvehiculos vehiculos = new Formvehiculos();
             vehiculos.Show();
@@ -333,10 +331,7 @@ namespace AppTesis
 
         private void mantenimientoDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            e.ThrowException = false;
 
-            // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
-            mantenimientoBindingSource.CancelEdit();
 
         }
     }

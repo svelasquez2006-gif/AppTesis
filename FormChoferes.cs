@@ -33,7 +33,7 @@ namespace AppTesis
             experienciaTextBox.MaxLength = 2;
 
             fecha_NacimientoDateTimePicker.Value= new DateTime(2008,8,27);
-            dataBaseDataSet.Chofer.CedulaColumn.AllowDBNull = true;
+ 
             choferBindingSource.AddNew();
 
         }
@@ -134,13 +134,12 @@ namespace AppTesis
                     }
                     else
                     {
-                        choferBindingSource.EndEdit();
+
 
                         this.choferTableAdapter.add(cedula, nombre, apellido, fechaNacimiento, ed, telefono, correo, licencia, experiencia, dirreccion, ruta, estatus, afiliacion);
                         this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
 
-                        dataBaseDataSet.AcceptChanges();
-                        choferBindingSource.AddNew();
+
                     }
 
                 }
@@ -234,13 +233,12 @@ namespace AppTesis
                     }
                     else
                     {
-                        choferBindingSource.EndEdit();
+
 
                         this.choferTableAdapter.modify(nombre, apellido, fechaNacimiento, ed, telefono, correo, licencia, experiencia, dirreccion, ruta, estatus, afiliacion, cedula);
                         this.choferTableAdapter.Fill(this.dataBaseDataSet.Chofer);
 
-                        dataBaseDataSet.AcceptChanges();
-                        choferBindingSource.AddNew();
+
                     }
 
                 }
@@ -265,7 +263,7 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
-            choferBindingSource.CancelEdit();
+
             this.Close();
             FormPrincipal princpal = new FormPrincipal();
             princpal.Show();

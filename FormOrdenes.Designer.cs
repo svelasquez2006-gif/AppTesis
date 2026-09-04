@@ -98,6 +98,11 @@
             this.UsdRadio = new System.Windows.Forms.RadioButton();
             this.BsRadio = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TotalUSD = new System.Windows.Forms.TextBox();
+            this.TotalBs = new System.Windows.Forms.TextBox();
+            this.gtftextbox = new System.Windows.Forms.TextBox();
+            this.IVAbs = new System.Windows.Forms.TextBox();
+            this.IVAUSD = new System.Windows.Forms.TextBox();
             this.salir = new BotonRedondo();
             this.modificar = new BotonRedondo();
             this.agregar = new BotonRedondo();
@@ -106,11 +111,6 @@
             this.IncidenciasTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.agginci = new System.Windows.Forms.Button();
-            this.IVAbs = new System.Windows.Forms.TextBox();
-            this.IVAUSD = new System.Windows.Forms.TextBox();
-            this.gtftextbox = new System.Windows.Forms.TextBox();
-            this.TotalBs = new System.Windows.Forms.TextBox();
-            this.TotalUSD = new System.Windows.Forms.TextBox();
             iDOrdenes_ViajeLabel = new System.Windows.Forms.Label();
             cedula_ChoferLabel = new System.Windows.Forms.Label();
             vehiculos_NroPlacaLabel = new System.Windows.Forms.Label();
@@ -293,6 +293,86 @@
             USD.Size = new System.Drawing.Size(93, 16);
             USD.TabIndex = 45;
             USD.Text = "Monto en Usd:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            label4.Location = new System.Drawing.Point(202, 32);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(62, 16);
+            label4.TabIndex = 46;
+            label4.Text = "IVA(16%)";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            label5.Location = new System.Drawing.Point(185, 58);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(14, 16);
+            label5.TabIndex = 49;
+            label5.Text = "+";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            label6.Location = new System.Drawing.Point(185, 82);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(14, 16);
+            label6.TabIndex = 50;
+            label6.Text = "+";
+            // 
+            // gtfplus
+            // 
+            gtfplus.AutoSize = true;
+            gtfplus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            gtfplus.Location = new System.Drawing.Point(280, 84);
+            gtfplus.Name = "gtfplus";
+            gtfplus.Size = new System.Drawing.Size(14, 16);
+            gtfplus.TabIndex = 51;
+            gtfplus.Text = "+";
+            // 
+            // gtflabel
+            // 
+            gtflabel.AutoSize = true;
+            gtflabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            gtflabel.Location = new System.Drawing.Point(297, 32);
+            gtflabel.Name = "gtflabel";
+            gtflabel.Size = new System.Drawing.Size(61, 16);
+            gtflabel.TabIndex = 52;
+            gtflabel.Text = "GTF(3%)";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            label9.Location = new System.Drawing.Point(400, 32);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(51, 16);
+            label9.TabIndex = 54;
+            label9.Text = "TOTAL";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            label10.Location = new System.Drawing.Point(362, 80);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(14, 16);
+            label10.TabIndex = 55;
+            label10.Text = "=";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            label11.Location = new System.Drawing.Point(362, 55);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(14, 16);
+            label11.TabIndex = 56;
+            label11.Text = "=";
             // 
             // statusStrip1
             // 
@@ -527,13 +607,13 @@
             // 
             // tasa_USDTextBox
             // 
-            this.tasa_USDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Tasa_USD", true));
             this.tasa_USDTextBox.Location = new System.Drawing.Point(220, 341);
             this.tasa_USDTextBox.Name = "tasa_USDTextBox";
             this.tasa_USDTextBox.ReadOnly = true;
             this.tasa_USDTextBox.Size = new System.Drawing.Size(109, 20);
             this.tasa_USDTextBox.TabIndex = 33;
             this.tasa_USDTextBox.TextChanged += new System.EventHandler(this.tasa_USDTextBox_TextChanged);
+            this.tasa_USDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tasa_USDTextBox_KeyPress);
             // 
             // montobs
             // 
@@ -722,6 +802,47 @@
             this.groupBox1.Text = "Moneda";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // TotalUSD
+            // 
+            this.TotalUSD.Location = new System.Drawing.Point(384, 80);
+            this.TotalUSD.Name = "TotalUSD";
+            this.TotalUSD.ReadOnly = true;
+            this.TotalUSD.Size = new System.Drawing.Size(84, 20);
+            this.TotalUSD.TabIndex = 58;
+            // 
+            // TotalBs
+            // 
+            this.TotalBs.Location = new System.Drawing.Point(384, 57);
+            this.TotalBs.Name = "TotalBs";
+            this.TotalBs.ReadOnly = true;
+            this.TotalBs.Size = new System.Drawing.Size(84, 20);
+            this.TotalBs.TabIndex = 57;
+            // 
+            // gtftextbox
+            // 
+            this.gtftextbox.Location = new System.Drawing.Point(300, 80);
+            this.gtftextbox.Name = "gtftextbox";
+            this.gtftextbox.ReadOnly = true;
+            this.gtftextbox.Size = new System.Drawing.Size(56, 20);
+            this.gtftextbox.TabIndex = 53;
+            // 
+            // IVAbs
+            // 
+            this.IVAbs.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Pago_BS", true));
+            this.IVAbs.Location = new System.Drawing.Point(205, 57);
+            this.IVAbs.Name = "IVAbs";
+            this.IVAbs.ReadOnly = true;
+            this.IVAbs.Size = new System.Drawing.Size(69, 20);
+            this.IVAbs.TabIndex = 47;
+            // 
+            // IVAUSD
+            // 
+            this.IVAUSD.Location = new System.Drawing.Point(205, 82);
+            this.IVAUSD.Name = "IVAUSD";
+            this.IVAUSD.ReadOnly = true;
+            this.IVAUSD.Size = new System.Drawing.Size(69, 20);
+            this.IVAUSD.TabIndex = 48;
+            // 
             // salir
             // 
             this.salir.BackColor = System.Drawing.Color.IndianRed;
@@ -799,6 +920,7 @@
             this.IncidenciasTextBox.Name = "IncidenciasTextBox";
             this.IncidenciasTextBox.Size = new System.Drawing.Size(109, 72);
             this.IncidenciasTextBox.TabIndex = 49;
+            this.IncidenciasTextBox.Tag = "omitir";
             // 
             // label3
             // 
@@ -820,127 +942,6 @@
             this.agginci.Text = "Agregar incidencia";
             this.agginci.UseVisualStyleBackColor = true;
             this.agginci.Click += new System.EventHandler(this.agginci_Click);
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            label4.Location = new System.Drawing.Point(202, 32);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(62, 16);
-            label4.TabIndex = 46;
-            label4.Text = "IVA(16%)";
-            // 
-            // IVAbs
-            // 
-            this.IVAbs.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orden_ViajeBindingSource, "Pago_BS", true));
-            this.IVAbs.Location = new System.Drawing.Point(205, 57);
-            this.IVAbs.Name = "IVAbs";
-            this.IVAbs.ReadOnly = true;
-            this.IVAbs.Size = new System.Drawing.Size(69, 20);
-            this.IVAbs.TabIndex = 47;
-            // 
-            // IVAUSD
-            // 
-            this.IVAUSD.Location = new System.Drawing.Point(205, 82);
-            this.IVAUSD.Name = "IVAUSD";
-            this.IVAUSD.ReadOnly = true;
-            this.IVAUSD.Size = new System.Drawing.Size(69, 20);
-            this.IVAUSD.TabIndex = 48;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            label5.Location = new System.Drawing.Point(185, 58);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(14, 16);
-            label5.TabIndex = 49;
-            label5.Text = "+";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            label6.Location = new System.Drawing.Point(185, 82);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(14, 16);
-            label6.TabIndex = 50;
-            label6.Text = "+";
-            // 
-            // gtfplus
-            // 
-            gtfplus.AutoSize = true;
-            gtfplus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            gtfplus.Location = new System.Drawing.Point(280, 84);
-            gtfplus.Name = "gtfplus";
-            gtfplus.Size = new System.Drawing.Size(14, 16);
-            gtfplus.TabIndex = 51;
-            gtfplus.Text = "+";
-            // 
-            // gtflabel
-            // 
-            gtflabel.AutoSize = true;
-            gtflabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            gtflabel.Location = new System.Drawing.Point(297, 32);
-            gtflabel.Name = "gtflabel";
-            gtflabel.Size = new System.Drawing.Size(61, 16);
-            gtflabel.TabIndex = 52;
-            gtflabel.Text = "GTF(3%)";
-            // 
-            // gtftextbox
-            // 
-            this.gtftextbox.Location = new System.Drawing.Point(300, 80);
-            this.gtftextbox.Name = "gtftextbox";
-            this.gtftextbox.ReadOnly = true;
-            this.gtftextbox.Size = new System.Drawing.Size(56, 20);
-            this.gtftextbox.TabIndex = 53;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            label9.Location = new System.Drawing.Point(400, 32);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(51, 16);
-            label9.TabIndex = 54;
-            label9.Text = "TOTAL";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            label10.Location = new System.Drawing.Point(362, 80);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(14, 16);
-            label10.TabIndex = 55;
-            label10.Text = "=";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            label11.Location = new System.Drawing.Point(362, 55);
-            label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(14, 16);
-            label11.TabIndex = 56;
-            label11.Text = "=";
-            // 
-            // TotalBs
-            // 
-            this.TotalBs.Location = new System.Drawing.Point(384, 57);
-            this.TotalBs.Name = "TotalBs";
-            this.TotalBs.ReadOnly = true;
-            this.TotalBs.Size = new System.Drawing.Size(84, 20);
-            this.TotalBs.TabIndex = 57;
-            // 
-            // TotalUSD
-            // 
-            this.TotalUSD.Location = new System.Drawing.Point(384, 80);
-            this.TotalUSD.Name = "TotalUSD";
-            this.TotalUSD.ReadOnly = true;
-            this.TotalUSD.Size = new System.Drawing.Size(84, 20);
-            this.TotalUSD.TabIndex = 58;
             // 
             // Formordenes
             // 

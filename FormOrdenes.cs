@@ -50,13 +50,13 @@ namespace AppTesis
             this.rutasTableAdapter.Fill(this.dataBaseDataSet.Rutas);
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Orden_Viaje' Puede moverla o quitarla según sea necesario.
             this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
-            //this.orden_ViajeTableAdapter.ScalarQuery();
+
+
+            orden_ViajeBindingSource.AddNew();
             BsRadio.Checked = true;
             label3.Hide();
             IncidenciasTextBox.Hide();
 
-            dataBaseDataSet.Orden_Viaje.IDOrdenes_ViajeColumn.AllowDBNull = true;
-            orden_ViajeBindingSource.AddNew();
 
 
 
@@ -73,7 +73,7 @@ namespace AppTesis
             }
             catch (Exception ex)
             {
-                tasa_USDTextBox.Text = "0,00";
+                tasa_USDTextBox.Text = "0.00";
                 tasa_USDTextBox.ReadOnly = false;
                 MessageBox.Show(ex.Message, "Error General de Servidores", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -94,7 +94,6 @@ namespace AppTesis
         private void salir_Click(object sender, EventArgs e)
         {
 
-            orden_ViajeBindingSource.CancelEdit();
 
             this.Close();
             FormPrincipal principal = new FormPrincipal();
@@ -107,7 +106,7 @@ namespace AppTesis
 
             foreach (Control c in this.Controls)
             {
-                if (c is TextBox textBox && string.IsNullOrEmpty(textBox.Text))
+                if (c is TextBox textBox && string.IsNullOrEmpty(textBox.Text) && c.Tag != "omitir")
                 {
                     // Agrega el nombre del campo a la lista
                     camposVacios.Add(textBox.Name);
@@ -157,14 +156,10 @@ namespace AppTesis
                     decimal.TryParse(tasa_USDTextBox.Text, out decimal tasa);
                     decimal.TryParse(montobs.Text, out decimal monto);
 
-                    orden_ViajeBindingSource.EndEdit();
 
                     this.orden_ViajeTableAdapter.add(ruta,dias,distancia,paradas,chofer, placa, cliente,nombre , inicio, final, tasa,monto,estatus);
                     this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
 
-
-                    dataBaseDataSet.AcceptChanges();
-                    orden_ViajeBindingSource.AddNew();
 
                     montobs.Text = "0,00";
                     montousd.Text = "0,00";
@@ -263,7 +258,7 @@ namespace AppTesis
 
             foreach (Control c in this.Controls)
             {
-                if (c is TextBox textBox && string.IsNullOrEmpty(textBox.Text))
+                if (c is TextBox textBox && string.IsNullOrEmpty(textBox.Text) && c.Tag != "omitir")
                 {
                     // Agrega el nombre del campo a la lista
                     camposVacios.Add(textBox.Name);
@@ -315,8 +310,7 @@ namespace AppTesis
                     this.orden_ViajeTableAdapter.modify(ruta,dias,distancia,paradas,chofer,placa,cliente,nombre,inicio,final,tasa,monto,estatus,incidencias, id);
                     this.orden_ViajeTableAdapter.Fill(this.dataBaseDataSet.Orden_Viaje);
 
-                    dataBaseDataSet.AcceptChanges();
-                    orden_ViajeBindingSource.AddNew();
+
 
                     montobs.Text = "0,00";
                     montousd.Text = "0,00";
@@ -557,27 +551,7 @@ namespace AppTesis
 
         private void tasa_USDTextBox_TextChanged(object sender, EventArgs e)
         {
-            string textoOriginal = tasa_USDTextBox.Text;
-
-            // 1. Remueve cualquier caracter que no sea dígito ni coma
-            string limpio = Regex.Replace(textoOriginal, @"[^\d,]", "");
-
-            // 2. Si hay más de una coma, conserva solo la primera
-            int primerComa = limpio.IndexOf(',');
-            if (primerComa != -1)
-            {
-                // Mantiene todo hasta la primera coma y elimina comas adicionales del resto
-                string parteEntera = limpio.Substring(0, primerComa + 1);
-                string parteDecimal = limpio.Substring(primerComa + 1).Replace(",", "");
-                limpio = parteEntera + parteDecimal;
-            }
-
-            // 3. Si cambió el texto, lo actualiza
-            if (tasa_USDTextBox.Text != limpio)
-            {
-                tasa_USDTextBox.Text = limpio;
-                tasa_USDTextBox.SelectionStart = tasa_USDTextBox.Text.Length;
-            }
+ 
         }
 
         private void montobs_KeyPress(object sender, KeyPressEventArgs e)
@@ -697,6 +671,22 @@ namespace AppTesis
 
             // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
             orden_ViajeBindingSource.CancelEdit();
+        }
+
+        private void tasa_USDTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+
+            if (char.IsControl(e.KeyChar)) return;
+
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+            {
+                e.KeyChar = ',';
+                if (txt.Text.Contains(",")) e.Handled = true; // Si ya hay coma, la bloquea
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true; // Bloquea letras y símbolos
         }
 
 

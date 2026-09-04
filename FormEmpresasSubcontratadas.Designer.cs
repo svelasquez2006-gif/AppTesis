@@ -42,17 +42,6 @@
             System.Windows.Forms.Label fechafinalLabel;
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreRepresentanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoRepresentanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechafinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empresasSubcontratadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.RifTextBox = new System.Windows.Forms.TextBox();
@@ -76,6 +65,17 @@
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.fechaInicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.fechafinalDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.rif = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreRepresentante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelefonoRepresentante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             rifLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -221,17 +221,17 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.rifDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.direccionDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn,
-            this.correoDataGridViewTextBoxColumn,
-            this.nombreRepresentanteDataGridViewTextBoxColumn,
-            this.telefonoRepresentanteDataGridViewTextBoxColumn,
-            this.fechaInicioDataGridViewTextBoxColumn,
-            this.fechafinalDataGridViewTextBoxColumn,
-            this.calificacionDataGridViewTextBoxColumn,
-            this.estadoDataGridViewTextBoxColumn});
+            this.rif,
+            this.Nombre,
+            this.direccion,
+            this.Telefono,
+            this.Correo,
+            this.NombreRepresentante,
+            this.TelefonoRepresentante,
+            this.FechaInicio,
+            this.FechaFinal,
+            this.Calificacion,
+            this.Estado});
             this.dataGridView1.DataSource = this.empresasSubcontratadaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(43, 315);
             this.dataGridView1.Name = "dataGridView1";
@@ -240,83 +240,6 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
-            // 
-            // rifDataGridViewTextBoxColumn
-            // 
-            this.rifDataGridViewTextBoxColumn.DataPropertyName = "rif";
-            this.rifDataGridViewTextBoxColumn.HeaderText = "Rif de la empresa";
-            this.rifDataGridViewTextBoxColumn.Name = "rifDataGridViewTextBoxColumn";
-            this.rifDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre de la Empresa";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion de la Empresa";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono de la Empresa";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // correoDataGridViewTextBoxColumn
-            // 
-            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
-            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo de la Empresa";
-            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
-            this.correoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreRepresentanteDataGridViewTextBoxColumn
-            // 
-            this.nombreRepresentanteDataGridViewTextBoxColumn.DataPropertyName = "NombreRepresentante";
-            this.nombreRepresentanteDataGridViewTextBoxColumn.HeaderText = "Nombre del Representante";
-            this.nombreRepresentanteDataGridViewTextBoxColumn.Name = "nombreRepresentanteDataGridViewTextBoxColumn";
-            this.nombreRepresentanteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonoRepresentanteDataGridViewTextBoxColumn
-            // 
-            this.telefonoRepresentanteDataGridViewTextBoxColumn.DataPropertyName = "TelefonoRepresentante";
-            this.telefonoRepresentanteDataGridViewTextBoxColumn.HeaderText = "Telefono del Representante";
-            this.telefonoRepresentanteDataGridViewTextBoxColumn.Name = "telefonoRepresentanteDataGridViewTextBoxColumn";
-            this.telefonoRepresentanteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaInicioDataGridViewTextBoxColumn
-            // 
-            this.fechaInicioDataGridViewTextBoxColumn.DataPropertyName = "FechaInicio";
-            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "Inicio del Contrato";
-            this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
-            this.fechaInicioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechafinalDataGridViewTextBoxColumn
-            // 
-            this.fechafinalDataGridViewTextBoxColumn.DataPropertyName = "Fechafinal";
-            this.fechafinalDataGridViewTextBoxColumn.HeaderText = "Finalizacion del Contrato";
-            this.fechafinalDataGridViewTextBoxColumn.Name = "fechafinalDataGridViewTextBoxColumn";
-            this.fechafinalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // calificacionDataGridViewTextBoxColumn
-            // 
-            this.calificacionDataGridViewTextBoxColumn.DataPropertyName = "Calificacion";
-            this.calificacionDataGridViewTextBoxColumn.HeaderText = "Calificacion";
-            this.calificacionDataGridViewTextBoxColumn.Name = "calificacionDataGridViewTextBoxColumn";
-            this.calificacionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // empresasSubcontratadaBindingSource
             // 
@@ -579,6 +502,83 @@
             this.fechafinalDateTimePicker.Size = new System.Drawing.Size(111, 20);
             this.fechafinalDateTimePicker.TabIndex = 60;
             // 
+            // rif
+            // 
+            this.rif.DataPropertyName = "rif";
+            this.rif.HeaderText = "Rif de la empresa";
+            this.rif.Name = "rif";
+            this.rif.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre de la Empresa";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.HeaderText = "Direccion de la Empresa";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono de la Empresa";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "Correo";
+            this.Correo.HeaderText = "Correo de la Empresa";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            // 
+            // NombreRepresentante
+            // 
+            this.NombreRepresentante.DataPropertyName = "NombreRepresentante";
+            this.NombreRepresentante.HeaderText = "Nombre del Representante";
+            this.NombreRepresentante.Name = "NombreRepresentante";
+            this.NombreRepresentante.ReadOnly = true;
+            // 
+            // TelefonoRepresentante
+            // 
+            this.TelefonoRepresentante.DataPropertyName = "TelefonoRepresentante";
+            this.TelefonoRepresentante.HeaderText = "Telefono del Representante";
+            this.TelefonoRepresentante.Name = "TelefonoRepresentante";
+            this.TelefonoRepresentante.ReadOnly = true;
+            // 
+            // FechaInicio
+            // 
+            this.FechaInicio.DataPropertyName = "FechaInicio";
+            this.FechaInicio.HeaderText = "Inicio del Contrato";
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
+            // 
+            // FechaFinal
+            // 
+            this.FechaFinal.DataPropertyName = "Fechafinal";
+            this.FechaFinal.HeaderText = "Finalizacion del Contrato";
+            this.FechaFinal.Name = "FechaFinal";
+            this.FechaFinal.ReadOnly = true;
+            // 
+            // Calificacion
+            // 
+            this.Calificacion.DataPropertyName = "Calificacion";
+            this.Calificacion.HeaderText = "Calificacion";
+            this.Calificacion.Name = "Calificacion";
+            this.Calificacion.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // FormEmpresasSubcontratadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -652,19 +652,19 @@
         private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
         private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
         private System.Windows.Forms.ComboBox CalificacionComboBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rifDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreRepresentanteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoRepresentanteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechafinalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calificacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DateTimePicker fechaInicioDateTimePicker;
         private System.Windows.Forms.DateTimePicker fechafinalDateTimePicker;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rif;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreRepresentante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelefonoRepresentante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaFinal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Calificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

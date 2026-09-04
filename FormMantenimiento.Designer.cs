@@ -45,6 +45,12 @@
             this.mantenimientoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.MantenimientoTableAdapter();
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.mantenimientoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tasa_USD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coste_BS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaMantenimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.anotacionesTextBox = new System.Windows.Forms.TextBox();
             this.codMantenimientoTextBox = new System.Windows.Forms.TextBox();
@@ -57,12 +63,6 @@
             this.BsRadio = new System.Windows.Forms.RadioButton();
             this.montobs = new System.Windows.Forms.TextBox();
             this.montousd = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tasa_USD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coste_BS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             nroPlacaLabel = new System.Windows.Forms.Label();
             fechaMantenimientoLabel = new System.Windows.Forms.Label();
             anotacionesLabel = new System.Windows.Forms.Label();
@@ -235,6 +235,7 @@
             this.mantenimientoDataGridView.AllowUserToAddRows = false;
             this.mantenimientoDataGridView.AllowUserToDeleteRows = false;
             this.mantenimientoDataGridView.AutoGenerateColumns = false;
+            this.mantenimientoDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.mantenimientoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mantenimientoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -251,6 +252,48 @@
             this.mantenimientoDataGridView.TabIndex = 23;
             this.mantenimientoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mantenimientoDataGridView_CellContentClick);
             this.mantenimientoDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.mantenimientoDataGridView_DataError);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CodMantenimiento";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo Mantenimiento";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NroPlaca";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Numero de Placa";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "FechaMantenimiento";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Fecha cuando se realizo el mantenimiento";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Anotaciones";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Anotaciones";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // Tasa_USD
+            // 
+            this.Tasa_USD.DataPropertyName = "Tasa_USD";
+            this.Tasa_USD.HeaderText = "Tasa USD";
+            this.Tasa_USD.Name = "Tasa_USD";
+            this.Tasa_USD.ReadOnly = true;
+            // 
+            // Coste_BS
+            // 
+            this.Coste_BS.DataPropertyName = "Coste_BS";
+            this.Coste_BS.HeaderText = "Coste BS";
+            this.Coste_BS.Name = "Coste_BS";
+            this.Coste_BS.ReadOnly = true;
             // 
             // fechaMantenimientoDateTimePicker
             // 
@@ -307,7 +350,6 @@
             // 
             // tasa_USDTextBox
             // 
-            this.tasa_USDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mantenimientoBindingSource, "Tasa_USD", true));
             this.tasa_USDTextBox.Location = new System.Drawing.Point(204, 181);
             this.tasa_USDTextBox.Name = "tasa_USDTextBox";
             this.tasa_USDTextBox.ReadOnly = true;
@@ -374,48 +416,6 @@
             this.montousd.TabIndex = 42;
             this.montousd.TextChanged += new System.EventHandler(this.montousd_TextChanged);
             this.montousd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.montousd_KeyPress);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CodMantenimiento";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo Mantenimiento";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NroPlaca";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Numero de Placa";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "FechaMantenimiento";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Fecha cuando se realizo el mantenimiento";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Anotaciones";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Anotaciones";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // Tasa_USD
-            // 
-            this.Tasa_USD.DataPropertyName = "Tasa_USD";
-            this.Tasa_USD.HeaderText = "Tasa USD";
-            this.Tasa_USD.Name = "Tasa_USD";
-            this.Tasa_USD.ReadOnly = true;
-            // 
-            // Coste_BS
-            // 
-            this.Coste_BS.DataPropertyName = "Coste_BS";
-            this.Coste_BS.HeaderText = "Coste BS";
-            this.Coste_BS.Name = "Coste_BS";
-            this.Coste_BS.ReadOnly = true;
             // 
             // FormMantenimiento
             // 

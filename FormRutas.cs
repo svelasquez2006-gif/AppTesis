@@ -220,5 +220,10 @@ namespace AppTesis
             // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
             rutasBindingSource.CancelEdit();
         }
+
+        private void rutasDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

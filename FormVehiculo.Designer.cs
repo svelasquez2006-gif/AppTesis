@@ -270,6 +270,7 @@
             this.vehiculoDataGridView.ReadOnly = true;
             this.vehiculoDataGridView.Size = new System.Drawing.Size(736, 318);
             this.vehiculoDataGridView.TabIndex = 7;
+            this.vehiculoDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.vehiculoDataGridView_DataError);
             // 
             // dataGridViewTextBoxColumn1
             // 

@@ -29,9 +29,9 @@ namespace AppTesis
             labelUser.Text = $"{SesionUsuario.Nombre} {SesionUsuario.Apellido}";
             labelRol.Text = SesionUsuario.Jerarquia;
             labelHora.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            string jefe = "Jefe";
-            string secre = "Secretario";
-            if (SesionUsuario.Jerarquia != jefe && SesionUsuario.Jerarquia != secre && SesionUsuario.Jerarquia!= "Developer")
+            string prohibido1 = "Empleado";
+            string prohibido2 = "Test";
+            if (SesionUsuario.Jerarquia == prohibido1 && SesionUsuario.Jerarquia == prohibido2)
             {
                 Basededatos.Hide();
                 Usuarios.Hide();

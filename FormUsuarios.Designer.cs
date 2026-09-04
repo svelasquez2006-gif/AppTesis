@@ -38,15 +38,6 @@
             System.Windows.Forms.Label jerarquiaLabel;
             System.Windows.Forms.Label label2;
             this.label1 = new System.Windows.Forms.Label();
-            this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
@@ -56,15 +47,24 @@
             this.contrasenaTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.jerarquiacomboBox = new System.Windows.Forms.ComboBox();
-            this.salir = new BotonRedondo();
-            this.modificar = new BotonRedondo();
-            this.agregar = new BotonRedondo();
             this.EstadoComboBox = new System.Windows.Forms.ComboBox();
-            this.usuarioTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.UsuarioTableAdapter();
-            this.tableAdapterManager1 = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.usuarioTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.UsuarioTableAdapter();
+            this.tableAdapterManager1 = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
+            this.clienteDataGridView = new System.Windows.Forms.DataGridView();
+            this.cedulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contrasenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jerarquiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salir = new BotonRedondo();
+            this.modificar = new BotonRedondo();
+            this.agregar = new BotonRedondo();
             cedulaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
@@ -73,10 +73,10 @@
             correoLabel = new System.Windows.Forms.Label();
             jerarquiaLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // cedulaLabel
@@ -169,85 +169,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "USUARIOS";
             // 
-            // usuarioDataGridView
-            // 
-            this.usuarioDataGridView.AllowUserToAddRows = false;
-            this.usuarioDataGridView.AllowUserToDeleteRows = false;
-            this.usuarioDataGridView.AutoGenerateColumns = false;
-            this.usuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usuarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.Estado});
-            this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            this.usuarioDataGridView.Location = new System.Drawing.Point(142, 84);
-            this.usuarioDataGridView.Name = "usuarioDataGridView";
-            this.usuarioDataGridView.ReadOnly = true;
-            this.usuarioDataGridView.Size = new System.Drawing.Size(744, 316);
-            this.usuarioDataGridView.TabIndex = 5;
-            this.usuarioDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.usuarioDataGridView_DataError);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Cedula";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cedula";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellido";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Usuario";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Usuario";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Contrasena";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Contrasena";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Correo";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Correo";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Jerarquia";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Jerarquia";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataMember = "Usuario";
@@ -328,6 +249,144 @@
             this.jerarquiacomboBox.Size = new System.Drawing.Size(100, 24);
             this.jerarquiacomboBox.TabIndex = 19;
             // 
+            // EstadoComboBox
+            // 
+            this.EstadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Estado", true));
+            this.EstadoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EstadoComboBox.FormattingEnabled = true;
+            this.EstadoComboBox.Items.AddRange(new object[] {
+            "Activo",
+            "Bloqueado"});
+            this.EstadoComboBox.Location = new System.Drawing.Point(21, 379);
+            this.EstadoComboBox.Name = "EstadoComboBox";
+            this.EstadoComboBox.Size = new System.Drawing.Size(100, 21);
+            this.EstadoComboBox.TabIndex = 21;
+            this.EstadoComboBox.SelectedIndexChanged += new System.EventHandler(this.EstadoComboBox_SelectedIndexChanged);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripLblDev,
+            this.ToolStripLblDev2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 520);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(907, 22);
+            this.statusStrip1.TabIndex = 25;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // ToolStripLblDev
+            // 
+            this.ToolStripLblDev.Name = "ToolStripLblDev";
+            this.ToolStripLblDev.Size = new System.Drawing.Size(690, 17);
+            this.ToolStripLblDev.Spring = true;
+            this.ToolStripLblDev.Text = "Desarrollado por:";
+            this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ToolStripLblDev2
+            // 
+            this.ToolStripLblDev2.Name = "ToolStripLblDev2";
+            this.ToolStripLblDev2.Size = new System.Drawing.Size(202, 17);
+            this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
+            this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.ChoferTableAdapter = null;
+            this.tableAdapterManager1.ClienteTableAdapter = null;
+            this.tableAdapterManager1.EmpresasSubcontratadaTableAdapter = null;
+            this.tableAdapterManager1.MantenimientoTableAdapter = null;
+            this.tableAdapterManager1.Orden_ViajeTableAdapter = null;
+            this.tableAdapterManager1.RegistroAccionesTableAdapter = null;
+            this.tableAdapterManager1.RutasTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.UsuarioTableAdapter = this.usuarioTableAdapter;
+            this.tableAdapterManager1.VehiculoTableAdapter = null;
+            // 
+            // clienteDataGridView
+            // 
+            this.clienteDataGridView.AllowUserToAddRows = false;
+            this.clienteDataGridView.AllowUserToDeleteRows = false;
+            this.clienteDataGridView.AutoGenerateColumns = false;
+            this.clienteDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cedulaDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.apellidoDataGridViewTextBoxColumn,
+            this.usuarioDataGridViewTextBoxColumn,
+            this.contrasenaDataGridViewTextBoxColumn,
+            this.correoDataGridViewTextBoxColumn,
+            this.jerarquiaDataGridViewTextBoxColumn,
+            this.estadoDataGridViewTextBoxColumn});
+            this.clienteDataGridView.DataSource = this.usuarioBindingSource;
+            this.clienteDataGridView.Location = new System.Drawing.Point(156, 84);
+            this.clienteDataGridView.Name = "clienteDataGridView";
+            this.clienteDataGridView.ReadOnly = true;
+            this.clienteDataGridView.Size = new System.Drawing.Size(723, 316);
+            this.clienteDataGridView.TabIndex = 26;
+            // 
+            // cedulaDataGridViewTextBoxColumn
+            // 
+            this.cedulaDataGridViewTextBoxColumn.DataPropertyName = "Cedula";
+            this.cedulaDataGridViewTextBoxColumn.HeaderText = "Cedula";
+            this.cedulaDataGridViewTextBoxColumn.Name = "cedulaDataGridViewTextBoxColumn";
+            this.cedulaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidoDataGridViewTextBoxColumn
+            // 
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usuarioDataGridViewTextBoxColumn
+            // 
+            this.usuarioDataGridViewTextBoxColumn.DataPropertyName = "Usuario";
+            this.usuarioDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.usuarioDataGridViewTextBoxColumn.Name = "usuarioDataGridViewTextBoxColumn";
+            this.usuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // contrasenaDataGridViewTextBoxColumn
+            // 
+            this.contrasenaDataGridViewTextBoxColumn.DataPropertyName = "Contrasena";
+            this.contrasenaDataGridViewTextBoxColumn.HeaderText = "Contrasena";
+            this.contrasenaDataGridViewTextBoxColumn.Name = "contrasenaDataGridViewTextBoxColumn";
+            this.contrasenaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // correoDataGridViewTextBoxColumn
+            // 
+            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            this.correoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jerarquiaDataGridViewTextBoxColumn
+            // 
+            this.jerarquiaDataGridViewTextBoxColumn.DataPropertyName = "Jerarquia";
+            this.jerarquiaDataGridViewTextBoxColumn.HeaderText = "Jerarquia";
+            this.jerarquiaDataGridViewTextBoxColumn.Name = "jerarquiaDataGridViewTextBoxColumn";
+            this.jerarquiaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // salir
             // 
             this.salir.BackColor = System.Drawing.Color.IndianRed;
@@ -376,70 +435,13 @@
             this.agregar.UseVisualStyleBackColor = false;
             this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
-            // EstadoComboBox
-            // 
-            this.EstadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Estado", true));
-            this.EstadoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.EstadoComboBox.FormattingEnabled = true;
-            this.EstadoComboBox.Items.AddRange(new object[] {
-            "Activo",
-            "Bloqueado"});
-            this.EstadoComboBox.Location = new System.Drawing.Point(21, 379);
-            this.EstadoComboBox.Name = "EstadoComboBox";
-            this.EstadoComboBox.Size = new System.Drawing.Size(100, 21);
-            this.EstadoComboBox.TabIndex = 21;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.ChoferTableAdapter = null;
-            this.tableAdapterManager1.ClienteTableAdapter = null;
-            this.tableAdapterManager1.EmpresasSubcontratadaTableAdapter = null;
-            this.tableAdapterManager1.MantenimientoTableAdapter = null;
-            this.tableAdapterManager1.Orden_ViajeTableAdapter = null;
-            this.tableAdapterManager1.RegistroAccionesTableAdapter = null;
-            this.tableAdapterManager1.RutasTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager1.UsuarioTableAdapter = this.usuarioTableAdapter;
-            this.tableAdapterManager1.VehiculoTableAdapter = null;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripLblDev,
-            this.ToolStripLblDev2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 520);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(907, 22);
-            this.statusStrip1.TabIndex = 25;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // ToolStripLblDev
-            // 
-            this.ToolStripLblDev.Name = "ToolStripLblDev";
-            this.ToolStripLblDev.Size = new System.Drawing.Size(690, 17);
-            this.ToolStripLblDev.Spring = true;
-            this.ToolStripLblDev.Text = "Desarrollado por:";
-            this.ToolStripLblDev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ToolStripLblDev2
-            // 
-            this.ToolStripLblDev2.Name = "ToolStripLblDev2";
-            this.ToolStripLblDev2.Size = new System.Drawing.Size(202, 17);
-            this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
-            this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(907, 542);
+            this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.EstadoComboBox);
             this.Controls.Add(label2);
@@ -457,7 +459,6 @@
             this.Controls.Add(correoLabel);
             this.Controls.Add(this.correoTextBox);
             this.Controls.Add(jerarquiaLabel);
-            this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.modificar);
             this.Controls.Add(this.agregar);
@@ -465,11 +466,11 @@
             this.Name = "FormUsuarios";
             this.Text = "Gestionar Usuarios";
             this.Load += new System.EventHandler(this.FormUsuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,17 +482,8 @@
         private BotonRedondo modificar;
         private BotonRedondo salir;
         private DataBaseDataSet dataBaseDataSet;
-        private System.Windows.Forms.BindingSource usuarioBindingSource;
         private DataBaseDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.DataGridView usuarioDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.TextBox cedulaTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox apellidoTextBox;
@@ -499,10 +491,19 @@
         private System.Windows.Forms.TextBox contrasenaTextBox;
         private System.Windows.Forms.TextBox correoTextBox;
         private System.Windows.Forms.ComboBox jerarquiacomboBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.ComboBox EstadoComboBox;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
         private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private System.Windows.Forms.DataGridView clienteDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cedulaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contrasenaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jerarquiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
     }
 }

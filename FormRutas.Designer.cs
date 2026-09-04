@@ -149,6 +149,7 @@
             this.rutasDataGridView.ReadOnly = true;
             this.rutasDataGridView.Size = new System.Drawing.Size(445, 220);
             this.rutasDataGridView.TabIndex = 1;
+            this.rutasDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rutasDataGridView_CellContentClick);
             this.rutasDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.rutasDataGridView_DataError);
             // 
             // dataGridViewTextBoxColumn1

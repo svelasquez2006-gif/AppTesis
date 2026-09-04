@@ -23,7 +23,7 @@ namespace AppTesis
         private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
 
-
+            this.Validate();
         }
 
         private void FormUsuarios_Load(object sender, EventArgs e)
@@ -31,8 +31,12 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
             cedulaTextBox.MaxLength = 8;
-            dataBaseDataSet.Usuario.CedulaColumn.AllowDBNull = true;
-            usuarioBindingSource.AddNew();
+
+
+
+
+
+
 
 
 
@@ -79,22 +83,22 @@ namespace AppTesis
                 {
 
                     string cedula = cedulaTextBox.Text;
-                    string nombre = nombreTextBox.Text.Trim();
-                    string apellido = apellidoTextBox.Text.Trim();
-                    string usuario = usuarioTextBox.Text.Trim();
-                    string contrasena = contrasenaTextBox.Text.Trim();
-                    string correo = correoTextBox.Text.Trim();
+                    string nombre = nombreTextBox.Text;
+                    string apellido = apellidoTextBox.Text;
+                    string usuario = usuarioTextBox.Text;
+                    string contrasena = contrasenaTextBox.Text;
+                    string correo = correoTextBox.Text;
                     string jerarquia = jerarquiacomboBox.Text;
 
-                    usuarioBindingSource.EndEdit();
 
                     this.usuarioTableAdapter.add(cedula, nombre, apellido, usuario, contrasena, correo, jerarquia);
                     this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
 
 
-                    dataBaseDataSet.AcceptChanges();
-                    usuarioBindingSource.AddNew();
 
+
+                    jerarquiacomboBox.SelectedIndex = -1; // O asigna el valor por defecto que prefieras
+                    EstadoComboBox.SelectedIndex = -1;
                 }
                 //valores nulos 
                 catch (NullReferenceException)
@@ -122,7 +126,7 @@ namespace AppTesis
 
         private void salir_Click(object sender, EventArgs e)
         {
-            usuarioBindingSource.CancelEdit();
+
             this.Close();
             FormPrincipal principal = new FormPrincipal();
             principal.Show();
@@ -167,21 +171,24 @@ namespace AppTesis
                 {
 
                     string cedula = cedulaTextBox.Text;
-                    string nombre = nombreTextBox.Text.Trim();
-                    string apellido = apellidoTextBox.Text.Trim();
-                    string usuario = usuarioTextBox.Text.Trim();
-                    string contrasena = contrasenaTextBox.Text.Trim();
-                    string correo = correoTextBox.Text.Trim();
+                    string nombre = nombreTextBox.Text;
+                    string apellido = apellidoTextBox.Text;
+                    string usuario = usuarioTextBox.Text;
+                    string contrasena = contrasenaTextBox.Text;
+                    string correo = correoTextBox.Text;
                     string jerarquia = jerarquiacomboBox.Text;
                     string estado = EstadoComboBox.Text;
 
-                    usuarioBindingSource.EndEdit();
+
 
                     this.usuarioTableAdapter.modify(nombre, apellido, usuario, contrasena, correo, jerarquia,estado, cedula);
-                    this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario)
-                        ;
-                    dataBaseDataSet.AcceptChanges();
-                    usuarioBindingSource.AddNew();
+                    this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
+
+                    
+
+
+
+
                 }
 
                 //Valor nulos
@@ -253,9 +260,24 @@ namespace AppTesis
 
             e.ThrowException = false;
 
-            // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
-            usuarioBindingSource.CancelEdit();
+            
+             usuarioBindingSource.CancelEdit();
 
+        }
+
+        private void EstadoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuarioDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void usuarioDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+ 
         }
     }
 }
