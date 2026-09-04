@@ -89,7 +89,7 @@ namespace AppTesis
                 {
                     if (ex.Number == 2627 || ex.Number == 2601)
                     {
-                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Intentas ingresar una placa que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
@@ -178,7 +178,7 @@ namespace AppTesis
                 {
                     if (ex.Number == 2627 || ex.Number == 2601)
                     {
-                        MessageBox.Show("Intentas ingresar un valor que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Intentas ingresar una placa que ya fue registrado en la base de datos.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
