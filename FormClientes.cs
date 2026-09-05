@@ -31,6 +31,7 @@ namespace AppTesis
             // TODO: esta línea de código carga datos en la tabla 'dataBaseDataSet.Cliente' Puede moverla o quitarla según sea necesario.
             this.clienteTableAdapter.Fill(this.dataBaseDataSet.Cliente);
             telefonoTextBox.MaxLength = 7;
+
             cedulaTextBox.ReadOnly= true;
             clienteBindingSource.AddNew();
             dataBaseDataSet.Cliente.CedulaColumn.AllowDBNull = true;
@@ -281,6 +282,10 @@ namespace AppTesis
             {
                 labelced.Text = "Cedula:";
                 LabelApellido.Text = "Apellido:";
+                if (cedulaTextBox.Text.Length > 8)
+                {
+                    cedulaTextBox.Clear();
+                }
                 
             }
             else

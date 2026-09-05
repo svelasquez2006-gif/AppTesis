@@ -46,13 +46,6 @@
             this.vehiculoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.VehiculoTableAdapter();
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.vehiculoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nroPlacaTextBox = new System.Windows.Forms.TextBox();
             this.modeloTextBox = new System.Windows.Forms.TextBox();
             this.colorTextBox = new System.Windows.Forms.TextBox();
@@ -63,6 +56,14 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_Vehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             nroPlacaLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             modeloLabel = new System.Windows.Forms.Label();
@@ -258,6 +259,7 @@
             this.vehiculoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vehiculoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.Tipo_Vehiculo,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
@@ -271,55 +273,6 @@
             this.vehiculoDataGridView.Size = new System.Drawing.Size(736, 318);
             this.vehiculoDataGridView.TabIndex = 7;
             this.vehiculoDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.vehiculoDataGridView_DataError);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "NroPlaca";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Numero de Placa";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Marca";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Marca";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Modelo";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Modelo";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Anio";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Año";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Color";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Color";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "UltimoMantenimiento";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Fecha del Ultimo Mantenimiento";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Estatus";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Estatus";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // nroPlacaTextBox
             // 
@@ -430,6 +383,62 @@
             this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
             this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "NroPlaca";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Numero de Placa";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // Tipo_Vehiculo
+            // 
+            this.Tipo_Vehiculo.DataPropertyName = "Tipo_Vehiculo";
+            this.Tipo_Vehiculo.HeaderText = "Tipo de Vehiculo";
+            this.Tipo_Vehiculo.Name = "Tipo_Vehiculo";
+            this.Tipo_Vehiculo.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Marca";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Marca";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Modelo";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Modelo";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Anio";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Año";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Color";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Color";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "UltimoMantenimiento";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Fecha del Ultimo Mantenimiento";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Estatus";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Estatus";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
             // Formvehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,16 +496,17 @@
         private System.Windows.Forms.ComboBox estatuscombobox;
         private System.Windows.Forms.DateTimePicker AñoDatePicker;
         private System.Windows.Forms.ComboBox TipoComboBox;
+        private System.Windows.Forms.ComboBox MarcaComboBox;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
+        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Vehiculo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.ComboBox MarcaComboBox;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
-        private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
     }
 }
