@@ -27,7 +27,7 @@ namespace AppTesis
 
         private void Respaldar_Click(object sender, EventArgs e)
         {
-            var backupService = new SqlServerBackupService("localhost\\SQLEXPRESS", "DataBase");
+            var backupService = new SqlServerBackupService("localhost", "DataBase");
 
             string rutaBak = @"C:\Backups\DataBase.bak";
             if (backupService.Respaldar(rutaBak))
@@ -38,7 +38,7 @@ namespace AppTesis
 
         private void Restaurar_Click(object sender, EventArgs e)
         {
-            var backupService = new SqlServerBackupService("localhost\\SQLEXPRESS", "DataBase");
+            var backupService = new SqlServerBackupService("localhost", "DataBase");
 
             string rutaBak = @"C:\Public\Backups\DataBase.bak";
             if (backupService.Restaurar(rutaBak))

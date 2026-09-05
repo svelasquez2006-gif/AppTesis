@@ -115,7 +115,7 @@
             // 
             telefonoLabel.AutoSize = true;
             telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoLabel.Location = new System.Drawing.Point(211, 109);
+            telefonoLabel.Location = new System.Drawing.Point(5, 234);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(75, 20);
             telefonoLabel.TabIndex = 36;
@@ -125,7 +125,7 @@
             // 
             lblTelefRepresentante.AutoSize = true;
             lblTelefRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblTelefRepresentante.Location = new System.Drawing.Point(666, 198);
+            lblTelefRepresentante.Location = new System.Drawing.Point(210, 171);
             lblTelefRepresentante.Name = "lblTelefRepresentante";
             lblTelefRepresentante.Size = new System.Drawing.Size(120, 40);
             lblTelefRepresentante.TabIndex = 43;
@@ -198,27 +198,27 @@
             // 
             calificacionLabel.AutoSize = true;
             calificacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            calificacionLabel.Location = new System.Drawing.Point(717, 165);
+            calificacionLabel.Location = new System.Drawing.Point(757, 76);
             calificacionLabel.Name = "calificacionLabel";
             calificacionLabel.Size = new System.Drawing.Size(93, 20);
             calificacionLabel.TabIndex = 60;
-            calificacionLabel.Text = "Calificacion:";
+            calificacionLabel.Text = "Calificación:";
             // 
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
             direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            direccionLabel.Location = new System.Drawing.Point(664, 114);
+            direccionLabel.Location = new System.Drawing.Point(517, 76);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(79, 20);
             direccionLabel.TabIndex = 60;
-            direccionLabel.Text = "Direccion:";
+            direccionLabel.Text = "Dirección:";
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            nombreLabel.Location = new System.Drawing.Point(8, 158);
+            nombreLabel.Location = new System.Drawing.Point(5, 126);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(69, 20);
             nombreLabel.TabIndex = 60;
@@ -228,17 +228,17 @@
             // 
             rifLabel.AutoSize = true;
             rifLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            rifLabel.Location = new System.Drawing.Point(37, 106);
+            rifLabel.Location = new System.Drawing.Point(34, 74);
             rifLabel.Name = "rifLabel";
-            rifLabel.Size = new System.Drawing.Size(26, 20);
+            rifLabel.Size = new System.Drawing.Size(40, 20);
             rifLabel.TabIndex = 60;
-            rifLabel.Text = "rif:";
+            rifLabel.Text = "RIF:";
             // 
             // estadoLabel
             // 
             estadoLabel.AutoSize = true;
             estadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            estadoLabel.Location = new System.Drawing.Point(12, 215);
+            estadoLabel.Location = new System.Drawing.Point(9, 183);
             estadoLabel.Name = "estadoLabel";
             estadoLabel.Size = new System.Drawing.Size(64, 20);
             estadoLabel.TabIndex = 60;
@@ -248,7 +248,7 @@
             // 
             correoLabel.AutoSize = true;
             correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            correoLabel.Location = new System.Drawing.Point(211, 165);
+            correoLabel.Location = new System.Drawing.Point(269, 74);
             correoLabel.Name = "correoLabel";
             correoLabel.Size = new System.Drawing.Size(61, 20);
             correoLabel.TabIndex = 60;
@@ -258,7 +258,7 @@
             // 
             nombreRepresentanteLabel.AutoSize = true;
             nombreRepresentanteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            nombreRepresentanteLabel.Location = new System.Drawing.Point(218, 198);
+            nombreRepresentanteLabel.Location = new System.Drawing.Point(214, 115);
             nombreRepresentanteLabel.Name = "nombreRepresentanteLabel";
             nombreRepresentanteLabel.Size = new System.Drawing.Size(124, 40);
             nombreRepresentanteLabel.TabIndex = 60;
@@ -268,7 +268,7 @@
             // 
             fechaInicioLabel.AutoSize = true;
             fechaInicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            fechaInicioLabel.Location = new System.Drawing.Point(513, 94);
+            fechaInicioLabel.Location = new System.Drawing.Point(517, 115);
             fechaInicioLabel.Name = "fechaInicioLabel";
             fechaInicioLabel.Size = new System.Drawing.Size(117, 40);
             fechaInicioLabel.TabIndex = 60;
@@ -278,11 +278,11 @@
             // 
             fechafinalLabel.AutoSize = true;
             fechafinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            fechafinalLabel.Location = new System.Drawing.Point(495, 172);
+            fechafinalLabel.Location = new System.Drawing.Point(517, 191);
             fechafinalLabel.Name = "fechafinalLabel";
-            fechafinalLabel.Size = new System.Drawing.Size(157, 40);
+            fechafinalLabel.Size = new System.Drawing.Size(162, 40);
             fechafinalLabel.TabIndex = 60;
-            fechafinalLabel.Text = "Fecha de finalilazion \r\ndel contrato:";
+            fechafinalLabel.Text = "Fecha de finalización \r\ndel contrato:";
             // 
             // label1
             // 
@@ -413,16 +413,18 @@
             // 
             this.RifTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "rif", true));
             this.RifTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RifTextBox.Location = new System.Drawing.Point(85, 108);
+            this.RifTextBox.Location = new System.Drawing.Point(82, 76);
+            this.RifTextBox.MaxLength = 9;
             this.RifTextBox.Name = "RifTextBox";
             this.RifTextBox.Size = new System.Drawing.Size(100, 22);
             this.RifTextBox.TabIndex = 9;
+            this.RifTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RifTextBox_KeyPress);
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "Nombre", true));
             this.nombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTextBox.Location = new System.Drawing.Point(85, 159);
+            this.nombreTextBox.Location = new System.Drawing.Point(82, 127);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 22);
             this.nombreTextBox.TabIndex = 11;
@@ -435,7 +437,7 @@
             this.EstadoComboBox.Items.AddRange(new object[] {
             "Vigente",
             "Expirado"});
-            this.EstadoComboBox.Location = new System.Drawing.Point(85, 215);
+            this.EstadoComboBox.Location = new System.Drawing.Point(82, 183);
             this.EstadoComboBox.Name = "EstadoComboBox";
             this.EstadoComboBox.Size = new System.Drawing.Size(100, 21);
             this.EstadoComboBox.TabIndex = 23;
@@ -457,14 +459,14 @@
             "0261",
             "0268",
             "0281"});
-            this.CodigoTelfComboBox.Location = new System.Drawing.Point(292, 108);
+            this.CodigoTelfComboBox.Location = new System.Drawing.Point(86, 233);
             this.CodigoTelfComboBox.Name = "CodigoTelfComboBox";
             this.CodigoTelfComboBox.Size = new System.Drawing.Size(50, 21);
             this.CodigoTelfComboBox.TabIndex = 38;
             // 
             // telefonoTextBox
             // 
-            this.telefonoTextBox.Location = new System.Drawing.Point(348, 109);
+            this.telefonoTextBox.Location = new System.Drawing.Point(142, 234);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(87, 20);
             this.telefonoTextBox.TabIndex = 37;
@@ -474,7 +476,7 @@
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "Correo", true));
             this.correoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.correoTextBox.Location = new System.Drawing.Point(278, 165);
+            this.correoTextBox.Location = new System.Drawing.Point(336, 74);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(157, 22);
             this.correoTextBox.TabIndex = 40;
@@ -484,7 +486,7 @@
             // 
             this.NombreRepresentanteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "NombreRepresentante", true));
             this.NombreRepresentanteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreRepresentanteTextBox.Location = new System.Drawing.Point(348, 198);
+            this.NombreRepresentanteTextBox.Location = new System.Drawing.Point(344, 135);
             this.NombreRepresentanteTextBox.Name = "NombreRepresentanteTextBox";
             this.NombreRepresentanteTextBox.Size = new System.Drawing.Size(135, 22);
             this.NombreRepresentanteTextBox.TabIndex = 42;
@@ -507,7 +509,7 @@
             "0261",
             "0268",
             "0281"});
-            this.comboBoxTelfRepre.Location = new System.Drawing.Point(779, 209);
+            this.comboBoxTelfRepre.Location = new System.Drawing.Point(336, 193);
             this.comboBoxTelfRepre.Name = "comboBoxTelfRepre";
             this.comboBoxTelfRepre.Size = new System.Drawing.Size(50, 21);
             this.comboBoxTelfRepre.TabIndex = 45;
@@ -515,7 +517,7 @@
             // 
             // textBoxTelfRepre
             // 
-            this.textBoxTelfRepre.Location = new System.Drawing.Point(835, 210);
+            this.textBoxTelfRepre.Location = new System.Drawing.Point(392, 194);
             this.textBoxTelfRepre.Name = "textBoxTelfRepre";
             this.textBoxTelfRepre.Size = new System.Drawing.Size(87, 20);
             this.textBoxTelfRepre.TabIndex = 44;
@@ -524,7 +526,7 @@
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasSubcontratadaBindingSource, "direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(752, 114);
+            this.direccionTextBox.Location = new System.Drawing.Point(605, 76);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(133, 20);
             this.direccionTextBox.TabIndex = 53;
@@ -536,7 +538,7 @@
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(1002, 175);
+            this.salir.Location = new System.Drawing.Point(1010, 202);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -552,7 +554,7 @@
             this.modificar.FlatAppearance.BorderSize = 2;
             this.modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificar.Location = new System.Drawing.Point(1085, 110);
+            this.modificar.Location = new System.Drawing.Point(1093, 137);
             this.modificar.Name = "modificar";
             this.modificar.RadioBorde = 20;
             this.modificar.Size = new System.Drawing.Size(150, 40);
@@ -568,7 +570,7 @@
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar.Location = new System.Drawing.Point(908, 111);
+            this.agregar.Location = new System.Drawing.Point(916, 138);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
             this.agregar.Size = new System.Drawing.Size(150, 40);
@@ -619,7 +621,7 @@
             "8",
             "9",
             "10"});
-            this.CalificacionComboBox.Location = new System.Drawing.Point(816, 167);
+            this.CalificacionComboBox.Location = new System.Drawing.Point(856, 78);
             this.CalificacionComboBox.Name = "CalificacionComboBox";
             this.CalificacionComboBox.Size = new System.Drawing.Size(35, 21);
             this.CalificacionComboBox.TabIndex = 58;
@@ -647,7 +649,7 @@
             this.fechaInicioDateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.fechaInicioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.empresasSubcontratadaBindingSource, "FechaInicio", true));
             this.fechaInicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaInicioDateTimePicker.Location = new System.Drawing.Point(517, 136);
+            this.fechaInicioDateTimePicker.Location = new System.Drawing.Point(521, 157);
             this.fechaInicioDateTimePicker.Name = "fechaInicioDateTimePicker";
             this.fechaInicioDateTimePicker.Size = new System.Drawing.Size(111, 20);
             this.fechaInicioDateTimePicker.TabIndex = 59;
@@ -658,7 +660,7 @@
             this.fechafinalDateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.fechafinalDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.empresasSubcontratadaBindingSource, "Fechafinal", true));
             this.fechafinalDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechafinalDateTimePicker.Location = new System.Drawing.Point(517, 215);
+            this.fechafinalDateTimePicker.Location = new System.Drawing.Point(521, 234);
             this.fechafinalDateTimePicker.Name = "fechafinalDateTimePicker";
             this.fechafinalDateTimePicker.Size = new System.Drawing.Size(111, 20);
             this.fechafinalDateTimePicker.TabIndex = 60;

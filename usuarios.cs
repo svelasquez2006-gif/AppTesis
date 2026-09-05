@@ -27,7 +27,10 @@ namespace ControlesPersonalizados
             this.usuarioTableAdapter.Fill(this.dataBaseDataSet.Usuario);
 
             this.reportViewer2.RefreshReport();
-            
+
+            this.reportViewer2.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
+            this.reportViewer2.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.Percent;
+            this.reportViewer2.ZoomPercent = 100;
         }
 
         private void salir_Click(object sender, EventArgs e)

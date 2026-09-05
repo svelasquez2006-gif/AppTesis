@@ -86,5 +86,12 @@ namespace AppTesis
         {
 
         }
+
+        private void reporteVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            vehiculo vh = new vehiculo();
+            vh.Show();
+        }
     }
 }

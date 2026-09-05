@@ -29,38 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.usuarioTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.UsuarioTableAdapter();
             this.salir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer2
+            // usuarioBindingSource
             // 
-            this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.usuarioBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer2.LocalReport.ReportEmbeddedResource = "AppTesis.usuarios.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer2.TabIndex = 0;
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.dataBaseDataSet;
             // 
             // dataBaseDataSet
             // 
             this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
             this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usuarioBindingSource
+            // reportViewer2
             // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.dataBaseDataSet;
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.usuarioBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "AppTesis.usuarios.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(800, 348);
+            this.reportViewer2.TabIndex = 0;
             // 
             // usuarioTableAdapter
             // 
@@ -68,9 +67,9 @@
             // 
             // salir
             // 
-            this.salir.Location = new System.Drawing.Point(713, 63);
+            this.salir.Location = new System.Drawing.Point(313, 373);
             this.salir.Name = "salir";
-            this.salir.Size = new System.Drawing.Size(75, 161);
+            this.salir.Size = new System.Drawing.Size(172, 38);
             this.salir.TabIndex = 1;
             this.salir.Text = "Salir";
             this.salir.UseVisualStyleBackColor = true;
@@ -83,11 +82,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.reportViewer2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "usuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "usuarios";
             this.Load += new System.EventHandler(this.usuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

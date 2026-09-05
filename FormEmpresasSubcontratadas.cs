@@ -279,5 +279,14 @@ namespace AppTesis
         {
             utiles.SoloLetras(e);
         }
+
+        private void RifTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si no es un número, se cancela
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

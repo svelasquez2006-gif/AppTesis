@@ -66,7 +66,7 @@
             // reportesUsuarioToolStripMenuItem
             // 
             this.reportesUsuarioToolStripMenuItem.Name = "reportesUsuarioToolStripMenuItem";
-            this.reportesUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportesUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.reportesUsuarioToolStripMenuItem.Text = "Reportes Usuarios";
             this.reportesUsuarioToolStripMenuItem.Click += new System.EventHandler(this.reportesUsuarioToolStripMenuItem_Click);
             // 
@@ -88,6 +88,7 @@
             this.reporteVehiculoToolStripMenuItem.Name = "reporteVehiculoToolStripMenuItem";
             this.reporteVehiculoToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.reporteVehiculoToolStripMenuItem.Text = "Reporte Vehiculo";
+            this.reporteVehiculoToolStripMenuItem.Click += new System.EventHandler(this.reporteVehiculoToolStripMenuItem_Click);
             // 
             // reporteChoferesToolStripMenuItem
             // 

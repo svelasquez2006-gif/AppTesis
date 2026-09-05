@@ -52,7 +52,6 @@
             System.Windows.Forms.Label label9;
             System.Windows.Forms.Label label10;
             System.Windows.Forms.Label label11;
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.orden_ViajeDataGridView = new System.Windows.Forms.DataGridView();
             this.IDOrdenes_Viaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,6 +110,10 @@
             this.IncidenciasTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.agginci = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             iDOrdenes_ViajeLabel = new System.Windows.Forms.Label();
             cedula_ChoferLabel = new System.Windows.Forms.Label();
             vehiculos_NroPlacaLabel = new System.Windows.Forms.Label();
@@ -142,6 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.choferBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // iDOrdenes_ViajeLabel
@@ -373,13 +377,6 @@
             label11.Size = new System.Drawing.Size(14, 16);
             label11.TabIndex = 56;
             label11.Text = "=";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 497);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1284, 22);
-            this.statusStrip1.TabIndex = 0;
             // 
             // label1
             // 
@@ -943,12 +940,44 @@
             this.agginci.UseVisualStyleBackColor = true;
             this.agginci.Click += new System.EventHandler(this.agginci_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel3});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 514);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1284, 22);
+            this.statusStrip1.TabIndex = 53;
+            this.statusStrip1.Text = "Desarrollado por:";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(97, 17);
+            this.toolStripStatusLabel1.Text = "Desarrollado por:";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(970, 17);
+            this.toolStripStatusLabel2.Spring = true;
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(202, 17);
+            this.toolStripStatusLabel3.Text = "Sebastián Velásquez y Veider Gallardo";
+            // 
             // Formordenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1284, 519);
+            this.ClientSize = new System.Drawing.Size(1284, 536);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.agginci);
             this.Controls.Add(this.label3);
@@ -997,6 +1026,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1044,7 +1075,6 @@
         private System.Windows.Forms.TextBox IncidenciasTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button agginci;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDOrdenes_Viaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dias_Viaje;
@@ -1064,5 +1094,9 @@
         private System.Windows.Forms.TextBox gtftextbox;
         private System.Windows.Forms.TextBox TotalUSD;
         private System.Windows.Forms.TextBox TotalBs;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
     }
 }
