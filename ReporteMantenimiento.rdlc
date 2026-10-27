@@ -6,7 +6,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.75167cm</Width>
+              <Width>3cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -31,7 +31,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -75,7 +75,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>FechaMantenimiento</rd:DefaultName>
@@ -105,7 +107,7 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>2.75167cm</Size>
+                <Size>3cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox11">
                     <CanGrow>true</CanGrow>
@@ -123,7 +125,7 @@
                           </TextRun>
                         </TextRuns>
                         <Style>
-                          <TextAlign>Right</TextAlign>
+                          <TextAlign>Center</TextAlign>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
@@ -149,7 +151,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>2.75167cm</Size>
+                    <Size>2.3cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox9">
                         <CanGrow>true</CanGrow>
@@ -167,7 +169,7 @@
                               </TextRun>
                             </TextRuns>
                             <Style>
-                              <TextAlign>Right</TextAlign>
+                              <TextAlign>Center</TextAlign>
                             </Style>
                           </Paragraph>
                         </Paragraphs>
@@ -193,7 +195,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>2.75167cm</Size>
+                        <Size>3cm</Size>
                         <CellContents>
                           <Textbox Name="Textbox7">
                             <CanGrow>true</CanGrow>
@@ -211,7 +213,7 @@
                                   </TextRun>
                                 </TextRuns>
                                 <Style>
-                                  <TextAlign>Right</TextAlign>
+                                  <TextAlign>Center</TextAlign>
                                 </Style>
                               </Paragraph>
                             </Paragraphs>
@@ -237,7 +239,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>2.75167cm</Size>
+                            <Size>2.2cm</Size>
                             <CellContents>
                               <Textbox Name="Textbox5">
                                 <CanGrow>true</CanGrow>
@@ -255,7 +257,7 @@
                                       </TextRun>
                                     </TextRuns>
                                     <Style>
-                                      <TextAlign>Right</TextAlign>
+                                      <TextAlign>Center</TextAlign>
                                     </Style>
                                   </Paragraph>
                                 </Paragraphs>
@@ -281,7 +283,7 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>2.75167cm</Size>
+                                <Size>2.2cm</Size>
                                 <CellContents>
                                   <Textbox Name="Textbox3">
                                     <CanGrow>true</CanGrow>
@@ -299,7 +301,7 @@
                                           </TextRun>
                                         </TextRuns>
                                         <Style>
-                                          <TextAlign>Right</TextAlign>
+                                          <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
                                     </Paragraphs>
@@ -347,7 +349,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.75167cm</Size>
+                <Size>3cm</Size>
                 <CellContents>
                   <Textbox Name="CodMantenimiento">
                     <CanGrow>true</CanGrow>
@@ -363,7 +365,9 @@
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>CodMantenimiento</rd:DefaultName>
@@ -398,7 +402,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>2.75167cm</Size>
+                    <Size>2.3cm</Size>
                     <CellContents>
                       <Textbox Name="NroPlaca">
                         <CanGrow>true</CanGrow>
@@ -414,7 +418,9 @@
                                 </Style>
                               </TextRun>
                             </TextRuns>
-                            <Style />
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
                           </Paragraph>
                         </Paragraphs>
                         <rd:DefaultName>NroPlaca</rd:DefaultName>
@@ -434,6 +440,7 @@
                           <PaddingBottom>2pt</PaddingBottom>
                         </Style>
                       </Textbox>
+                      <rd:Selected>true</rd:Selected>
                     </CellContents>
                   </TablixHeader>
                   <TablixMembers>
@@ -449,7 +456,7 @@
                         </SortExpression>
                       </SortExpressions>
                       <TablixHeader>
-                        <Size>2.75167cm</Size>
+                        <Size>3cm</Size>
                         <CellContents>
                           <Textbox Name="Anotaciones">
                             <CanGrow>true</CanGrow>
@@ -465,7 +472,9 @@
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
-                                <Style />
+                                <Style>
+                                  <TextAlign>Center</TextAlign>
+                                </Style>
                               </Paragraph>
                             </Paragraphs>
                             <rd:DefaultName>Anotaciones</rd:DefaultName>
@@ -500,7 +509,7 @@
                             </SortExpression>
                           </SortExpressions>
                           <TablixHeader>
-                            <Size>2.75167cm</Size>
+                            <Size>2.2cm</Size>
                             <CellContents>
                               <Textbox Name="Tasa_USD">
                                 <CanGrow>true</CanGrow>
@@ -516,7 +525,9 @@
                                         </Style>
                                       </TextRun>
                                     </TextRuns>
-                                    <Style />
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
                                   </Paragraph>
                                 </Paragraphs>
                                 <rd:DefaultName>Tasa_USD</rd:DefaultName>
@@ -551,7 +562,7 @@
                                 </SortExpression>
                               </SortExpressions>
                               <TablixHeader>
-                                <Size>2.75167cm</Size>
+                                <Size>2.2cm</Size>
                                 <CellContents>
                                   <Textbox Name="Coste_BS">
                                     <CanGrow>true</CanGrow>
@@ -567,7 +578,9 @@
                                             </Style>
                                           </TextRun>
                                         </TextRuns>
-                                        <Style />
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
                                       </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Coste_BS</rd:DefaultName>
@@ -592,34 +605,14 @@
                               <TablixMembers>
                                 <TablixMember>
                                   <Group Name="Detalles" />
-                                  <Visibility>
-                                    <Hidden>false</Hidden>
-                                    
-                                  </Visibility>
                                 </TablixMember>
                               </TablixMembers>
-                              <Visibility>
-                                <Hidden>false</Hidden>
-                                
-                              </Visibility>
                             </TablixMember>
                           </TablixMembers>
-                          <Visibility>
-                            <Hidden>false</Hidden>
-                            
-                          </Visibility>
                         </TablixMember>
                       </TablixMembers>
-                      <Visibility>
-                        <Hidden>false</Hidden>
-                        
-                      </Visibility>
                     </TablixMember>
                   </TablixMembers>
-                  <Visibility>
-                    <Hidden>false</Hidden>
-                    
-                  </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
@@ -627,7 +620,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Height>1.2cm</Height>
-        <Width>16.51cm</Width>
+        <Width>15.7cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -638,7 +631,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>6.69423in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

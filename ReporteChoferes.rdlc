@@ -31,7 +31,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -75,7 +75,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Fecha_Nacimiento</rd:DefaultName>
@@ -105,7 +107,7 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>2.5cm</Size>
+                <Size>2cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox23">
                     <CanGrow>true</CanGrow>
@@ -123,7 +125,7 @@
                           </TextRun>
                         </TextRuns>
                         <Style>
-                          <TextAlign>Right</TextAlign>
+                          <TextAlign>Center</TextAlign>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
@@ -149,7 +151,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>2.5cm</Size>
+                    <Size>2cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox21">
                         <CanGrow>true</CanGrow>
@@ -167,7 +169,7 @@
                               </TextRun>
                             </TextRuns>
                             <Style>
-                              <TextAlign>Right</TextAlign>
+                              <TextAlign>Center</TextAlign>
                             </Style>
                           </Paragraph>
                         </Paragraphs>
@@ -195,14 +197,14 @@
                       <TablixHeader>
                         <Size>2.5cm</Size>
                         <CellContents>
-                          <Textbox Name="Textbox19">
+                          <Textbox Name="Textbox14">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Edad</Value>
+                                    <Value>Apellido</Value>
                                     <Style>
                                       <FontSize>11pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
@@ -211,11 +213,11 @@
                                   </TextRun>
                                 </TextRuns>
                                 <Style>
-                                  <TextAlign>Right</TextAlign>
+                                  <TextAlign>Center</TextAlign>
                                 </Style>
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox19</rd:DefaultName>
+                            <rd:DefaultName>Textbox13</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Style>None</Style>
@@ -237,16 +239,16 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>2.5cm</Size>
+                            <Size>1.7cm</Size>
                             <CellContents>
-                              <Textbox Name="Textbox17">
+                              <Textbox Name="Textbox19">
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Experiencia</Value>
+                                        <Value>Edad</Value>
                                         <Style>
                                           <FontSize>11pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
@@ -255,11 +257,11 @@
                                       </TextRun>
                                     </TextRuns>
                                     <Style>
-                                      <TextAlign>Right</TextAlign>
+                                      <TextAlign>Center</TextAlign>
                                     </Style>
                                   </Paragraph>
                                 </Paragraphs>
-                                <rd:DefaultName>Textbox17</rd:DefaultName>
+                                <rd:DefaultName>Textbox19</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Style>None</Style>
@@ -281,16 +283,16 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>2.5cm</Size>
+                                <Size>2.12cm</Size>
                                 <CellContents>
-                                  <Textbox Name="Textbox15">
+                                  <Textbox Name="Textbox17">
                                     <CanGrow>true</CanGrow>
                                     <KeepTogether>true</KeepTogether>
                                     <Paragraphs>
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>Grado Licencia</Value>
+                                            <Value>Experiencia</Value>
                                             <Style>
                                               <FontSize>11pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
@@ -299,11 +301,11 @@
                                           </TextRun>
                                         </TextRuns>
                                         <Style>
-                                          <TextAlign>Right</TextAlign>
+                                          <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
                                     </Paragraphs>
-                                    <rd:DefaultName>Textbox15</rd:DefaultName>
+                                    <rd:DefaultName>Textbox17</rd:DefaultName>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -325,16 +327,16 @@
                               <TablixMembers>
                                 <TablixMember>
                                   <TablixHeader>
-                                    <Size>2.5cm</Size>
+                                    <Size>1.7cm</Size>
                                     <CellContents>
-                                      <Textbox Name="Textbox13">
+                                      <Textbox Name="Textbox15">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>Apellido</Value>
+                                                <Value>Grado Licencia</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -343,11 +345,11 @@
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
-                                              <TextAlign>Right</TextAlign>
+                                              <TextAlign>Center</TextAlign>
                                             </Style>
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Textbox13</rd:DefaultName>
+                                        <rd:DefaultName>Textbox15</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>None</Style>
@@ -369,7 +371,7 @@
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>2.5cm</Size>
+                                        <Size>2.08cm</Size>
                                         <CellContents>
                                           <Textbox Name="Textbox11">
                                             <CanGrow>true</CanGrow>
@@ -387,7 +389,7 @@
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Right</TextAlign>
+                                                  <TextAlign>Center</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -431,7 +433,7 @@
                                                       </TextRun>
                                                     </TextRuns>
                                                     <Style>
-                                                      <TextAlign>Right</TextAlign>
+                                                      <TextAlign>Center</TextAlign>
                                                     </Style>
                                                   </Paragraph>
                                                 </Paragraphs>
@@ -475,7 +477,7 @@
                                                           </TextRun>
                                                         </TextRuns>
                                                         <Style>
-                                                          <TextAlign>Right</TextAlign>
+                                                          <TextAlign>Center</TextAlign>
                                                         </Style>
                                                       </Paragraph>
                                                     </Paragraphs>
@@ -519,7 +521,7 @@
                                                               </TextRun>
                                                             </TextRuns>
                                                             <Style>
-                                                              <TextAlign>Right</TextAlign>
+                                                              <TextAlign>Center</TextAlign>
                                                             </Style>
                                                           </Paragraph>
                                                         </Paragraphs>
@@ -563,7 +565,7 @@
                                                                   </TextRun>
                                                                 </TextRuns>
                                                                 <Style>
-                                                                  <TextAlign>Right</TextAlign>
+                                                                  <TextAlign>Center</TextAlign>
                                                                 </Style>
                                                               </Paragraph>
                                                             </Paragraphs>
@@ -623,7 +625,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.5cm</Size>
+                <Size>2cm</Size>
                 <CellContents>
                   <Textbox Name="Cedula">
                     <CanGrow>true</CanGrow>
@@ -639,7 +641,9 @@
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Cedula</rd:DefaultName>
@@ -674,7 +678,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>2.5cm</Size>
+                    <Size>2cm</Size>
                     <CellContents>
                       <Textbox Name="Nombre">
                         <CanGrow>true</CanGrow>
@@ -690,7 +694,9 @@
                                 </Style>
                               </TextRun>
                             </TextRuns>
-                            <Style />
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
                           </Paragraph>
                         </Paragraphs>
                         <rd:DefaultName>Nombre</rd:DefaultName>
@@ -714,37 +720,29 @@
                   </TablixHeader>
                   <TablixMembers>
                     <TablixMember>
-                      <Group Name="Edad">
-                        <GroupExpressions>
-                          <GroupExpression>=Fields!Edad.Value</GroupExpression>
-                        </GroupExpressions>
-                      </Group>
-                      <SortExpressions>
-                        <SortExpression>
-                          <Value>=Fields!Edad.Value</Value>
-                        </SortExpression>
-                      </SortExpressions>
                       <TablixHeader>
                         <Size>2.5cm</Size>
                         <CellContents>
-                          <Textbox Name="Edad">
+                          <Textbox Name="Apellido">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>=Fields!Edad.Value</Value>
+                                    <Value>=Fields!Apellido.Value</Value>
                                     <Style>
                                       <FontWeight>Normal</FontWeight>
                                       <Color>#333333</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
-                                <Style />
+                                <Style>
+                                  <TextAlign>Center</TextAlign>
+                                </Style>
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Edad</rd:DefaultName>
+                            <rd:DefaultName>Apellido</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Style>None</Style>
@@ -765,37 +763,39 @@
                       </TablixHeader>
                       <TablixMembers>
                         <TablixMember>
-                          <Group Name="Experiencia">
+                          <Group Name="Edad">
                             <GroupExpressions>
-                              <GroupExpression>=Fields!Experiencia.Value</GroupExpression>
+                              <GroupExpression>=Fields!Edad.Value</GroupExpression>
                             </GroupExpressions>
                           </Group>
                           <SortExpressions>
                             <SortExpression>
-                              <Value>=Fields!Experiencia.Value</Value>
+                              <Value>=Fields!Edad.Value</Value>
                             </SortExpression>
                           </SortExpressions>
                           <TablixHeader>
-                            <Size>2.5cm</Size>
+                            <Size>1.7cm</Size>
                             <CellContents>
-                              <Textbox Name="Experiencia">
+                              <Textbox Name="Edad">
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>=Fields!Experiencia.Value</Value>
+                                        <Value>=Fields!Edad.Value</Value>
                                         <Style>
                                           <FontWeight>Normal</FontWeight>
                                           <Color>#333333</Color>
                                         </Style>
                                       </TextRun>
                                     </TextRuns>
-                                    <Style />
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
                                   </Paragraph>
                                 </Paragraphs>
-                                <rd:DefaultName>Experiencia</rd:DefaultName>
+                                <rd:DefaultName>Edad</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Style>None</Style>
@@ -816,37 +816,39 @@
                           </TablixHeader>
                           <TablixMembers>
                             <TablixMember>
-                              <Group Name="Grado_Licencia">
+                              <Group Name="Experiencia">
                                 <GroupExpressions>
-                                  <GroupExpression>=Fields!Grado_Licencia.Value</GroupExpression>
+                                  <GroupExpression>=Fields!Experiencia.Value</GroupExpression>
                                 </GroupExpressions>
                               </Group>
                               <SortExpressions>
                                 <SortExpression>
-                                  <Value>=Fields!Grado_Licencia.Value</Value>
+                                  <Value>=Fields!Experiencia.Value</Value>
                                 </SortExpression>
                               </SortExpressions>
                               <TablixHeader>
-                                <Size>2.5cm</Size>
+                                <Size>2.12cm</Size>
                                 <CellContents>
-                                  <Textbox Name="Grado_Licencia">
+                                  <Textbox Name="Experiencia">
                                     <CanGrow>true</CanGrow>
                                     <KeepTogether>true</KeepTogether>
                                     <Paragraphs>
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>=Fields!Grado_Licencia.Value</Value>
+                                            <Value>=Fields!Experiencia.Value</Value>
                                             <Style>
                                               <FontWeight>Normal</FontWeight>
                                               <Color>#333333</Color>
                                             </Style>
                                           </TextRun>
                                         </TextRuns>
-                                        <Style />
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
                                       </Paragraph>
                                     </Paragraphs>
-                                    <rd:DefaultName>Grado_Licencia</rd:DefaultName>
+                                    <rd:DefaultName>Experiencia</rd:DefaultName>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -863,41 +865,44 @@
                                       <PaddingBottom>2pt</PaddingBottom>
                                     </Style>
                                   </Textbox>
+                                  <rd:Selected>true</rd:Selected>
                                 </CellContents>
                               </TablixHeader>
                               <TablixMembers>
                                 <TablixMember>
-                                  <Group Name="Apellido">
+                                  <Group Name="Grado_Licencia">
                                     <GroupExpressions>
-                                      <GroupExpression>=Fields!Apellido.Value</GroupExpression>
+                                      <GroupExpression>=Fields!Grado_Licencia.Value</GroupExpression>
                                     </GroupExpressions>
                                   </Group>
                                   <SortExpressions>
                                     <SortExpression>
-                                      <Value>=Fields!Apellido.Value</Value>
+                                      <Value>=Fields!Grado_Licencia.Value</Value>
                                     </SortExpression>
                                   </SortExpressions>
                                   <TablixHeader>
-                                    <Size>2.5cm</Size>
+                                    <Size>1.7cm</Size>
                                     <CellContents>
-                                      <Textbox Name="Apellido">
+                                      <Textbox Name="Grado_Licencia">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!Apellido.Value</Value>
+                                                <Value>=Fields!Grado_Licencia.Value</Value>
                                                 <Style>
                                                   <FontWeight>Normal</FontWeight>
                                                   <Color>#333333</Color>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style />
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Apellido</rd:DefaultName>
+                                        <rd:DefaultName>Grado_Licencia</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>None</Style>
@@ -918,88 +923,51 @@
                                   </TablixHeader>
                                   <TablixMembers>
                                     <TablixMember>
-                                      <Group Name="Telefono">
+                                      <Group Name="Apellido">
                                         <GroupExpressions>
-                                          <GroupExpression>=Fields!Telefono.Value</GroupExpression>
+                                          <GroupExpression>=Fields!Apellido.Value</GroupExpression>
                                         </GroupExpressions>
                                       </Group>
                                       <SortExpressions>
                                         <SortExpression>
-                                          <Value>=Fields!Telefono.Value</Value>
+                                          <Value>=Fields!Apellido.Value</Value>
                                         </SortExpression>
                                       </SortExpressions>
-                                      <TablixHeader>
-                                        <Size>2.5cm</Size>
-                                        <CellContents>
-                                          <Textbox Name="Telefono">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value>=Fields!Telefono.Value</Value>
-                                                    <Style>
-                                                      <FontWeight>Normal</FontWeight>
-                                                      <Color>#333333</Color>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Telefono</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <BottomBorder>
-                                                <Color>LightGrey</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <BackgroundColor>White</BackgroundColor>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixHeader>
                                       <TablixMembers>
                                         <TablixMember>
-                                          <Group Name="Correo">
+                                          <Group Name="Telefono">
                                             <GroupExpressions>
-                                              <GroupExpression>=Fields!Correo.Value</GroupExpression>
+                                              <GroupExpression>=Fields!Telefono.Value</GroupExpression>
                                             </GroupExpressions>
                                           </Group>
                                           <SortExpressions>
                                             <SortExpression>
-                                              <Value>=Fields!Correo.Value</Value>
+                                              <Value>=Fields!Telefono.Value</Value>
                                             </SortExpression>
                                           </SortExpressions>
                                           <TablixHeader>
-                                            <Size>2.5cm</Size>
+                                            <Size>2.08cm</Size>
                                             <CellContents>
-                                              <Textbox Name="Correo">
+                                              <Textbox Name="Telefono">
                                                 <CanGrow>true</CanGrow>
                                                 <KeepTogether>true</KeepTogether>
                                                 <Paragraphs>
                                                   <Paragraph>
                                                     <TextRuns>
                                                       <TextRun>
-                                                        <Value>=Fields!Correo.Value</Value>
+                                                        <Value>=Fields!Telefono.Value</Value>
                                                         <Style>
                                                           <FontWeight>Normal</FontWeight>
                                                           <Color>#333333</Color>
                                                         </Style>
                                                       </TextRun>
                                                     </TextRuns>
-                                                    <Style />
+                                                    <Style>
+                                                      <TextAlign>Center</TextAlign>
+                                                    </Style>
                                                   </Paragraph>
                                                 </Paragraphs>
-                                                <rd:DefaultName>Correo</rd:DefaultName>
+                                                <rd:DefaultName>Telefono</rd:DefaultName>
                                                 <Style>
                                                   <Border>
                                                     <Style>None</Style>
@@ -1020,37 +988,39 @@
                                           </TablixHeader>
                                           <TablixMembers>
                                             <TablixMember>
-                                              <Group Name="Direccion">
+                                              <Group Name="Correo">
                                                 <GroupExpressions>
-                                                  <GroupExpression>=Fields!Direccion.Value</GroupExpression>
+                                                  <GroupExpression>=Fields!Correo.Value</GroupExpression>
                                                 </GroupExpressions>
                                               </Group>
                                               <SortExpressions>
                                                 <SortExpression>
-                                                  <Value>=Fields!Direccion.Value</Value>
+                                                  <Value>=Fields!Correo.Value</Value>
                                                 </SortExpression>
                                               </SortExpressions>
                                               <TablixHeader>
                                                 <Size>2.5cm</Size>
                                                 <CellContents>
-                                                  <Textbox Name="Direccion">
+                                                  <Textbox Name="Correo">
                                                     <CanGrow>true</CanGrow>
                                                     <KeepTogether>true</KeepTogether>
                                                     <Paragraphs>
                                                       <Paragraph>
                                                         <TextRuns>
                                                           <TextRun>
-                                                            <Value>=Fields!Direccion.Value</Value>
+                                                            <Value>=Fields!Correo.Value</Value>
                                                             <Style>
                                                               <FontWeight>Normal</FontWeight>
                                                               <Color>#333333</Color>
                                                             </Style>
                                                           </TextRun>
                                                         </TextRuns>
-                                                        <Style />
+                                                        <Style>
+                                                          <TextAlign>Center</TextAlign>
+                                                        </Style>
                                                       </Paragraph>
                                                     </Paragraphs>
-                                                    <rd:DefaultName>Direccion</rd:DefaultName>
+                                                    <rd:DefaultName>Correo</rd:DefaultName>
                                                     <Style>
                                                       <Border>
                                                         <Style>None</Style>
@@ -1071,37 +1041,39 @@
                                               </TablixHeader>
                                               <TablixMembers>
                                                 <TablixMember>
-                                                  <Group Name="Ruta_Asignada">
+                                                  <Group Name="Direccion">
                                                     <GroupExpressions>
-                                                      <GroupExpression>=Fields!Ruta_Asignada.Value</GroupExpression>
+                                                      <GroupExpression>=Fields!Direccion.Value</GroupExpression>
                                                     </GroupExpressions>
                                                   </Group>
                                                   <SortExpressions>
                                                     <SortExpression>
-                                                      <Value>=Fields!Ruta_Asignada.Value</Value>
+                                                      <Value>=Fields!Direccion.Value</Value>
                                                     </SortExpression>
                                                   </SortExpressions>
                                                   <TablixHeader>
                                                     <Size>2.5cm</Size>
                                                     <CellContents>
-                                                      <Textbox Name="Ruta_Asignada">
+                                                      <Textbox Name="Direccion">
                                                         <CanGrow>true</CanGrow>
                                                         <KeepTogether>true</KeepTogether>
                                                         <Paragraphs>
                                                           <Paragraph>
                                                             <TextRuns>
                                                               <TextRun>
-                                                                <Value>=Fields!Ruta_Asignada.Value</Value>
+                                                                <Value>=Fields!Direccion.Value</Value>
                                                                 <Style>
                                                                   <FontWeight>Normal</FontWeight>
                                                                   <Color>#333333</Color>
                                                                 </Style>
                                                               </TextRun>
                                                             </TextRuns>
-                                                            <Style />
+                                                            <Style>
+                                                              <TextAlign>Center</TextAlign>
+                                                            </Style>
                                                           </Paragraph>
                                                         </Paragraphs>
-                                                        <rd:DefaultName>Ruta_Asignada</rd:DefaultName>
+                                                        <rd:DefaultName>Direccion</rd:DefaultName>
                                                         <Style>
                                                           <Border>
                                                             <Style>None</Style>
@@ -1122,37 +1094,39 @@
                                                   </TablixHeader>
                                                   <TablixMembers>
                                                     <TablixMember>
-                                                      <Group Name="Afiliacion">
+                                                      <Group Name="Ruta_Asignada">
                                                         <GroupExpressions>
-                                                          <GroupExpression>=Fields!Afiliacion.Value</GroupExpression>
+                                                          <GroupExpression>=Fields!Ruta_Asignada.Value</GroupExpression>
                                                         </GroupExpressions>
                                                       </Group>
                                                       <SortExpressions>
                                                         <SortExpression>
-                                                          <Value>=Fields!Afiliacion.Value</Value>
+                                                          <Value>=Fields!Ruta_Asignada.Value</Value>
                                                         </SortExpression>
                                                       </SortExpressions>
                                                       <TablixHeader>
                                                         <Size>2.5cm</Size>
                                                         <CellContents>
-                                                          <Textbox Name="Afiliacion">
+                                                          <Textbox Name="Ruta_Asignada">
                                                             <CanGrow>true</CanGrow>
                                                             <KeepTogether>true</KeepTogether>
                                                             <Paragraphs>
                                                               <Paragraph>
                                                                 <TextRuns>
                                                                   <TextRun>
-                                                                    <Value>=Fields!Afiliacion.Value</Value>
+                                                                    <Value>=Fields!Ruta_Asignada.Value</Value>
                                                                     <Style>
                                                                       <FontWeight>Normal</FontWeight>
                                                                       <Color>#333333</Color>
                                                                     </Style>
                                                                   </TextRun>
                                                                 </TextRuns>
-                                                                <Style />
+                                                                <Style>
+                                                                  <TextAlign>Center</TextAlign>
+                                                                </Style>
                                                               </Paragraph>
                                                             </Paragraphs>
-                                                            <rd:DefaultName>Afiliacion</rd:DefaultName>
+                                                            <rd:DefaultName>Ruta_Asignada</rd:DefaultName>
                                                             <Style>
                                                               <Border>
                                                                 <Style>None</Style>
@@ -1173,71 +1147,82 @@
                                                       </TablixHeader>
                                                       <TablixMembers>
                                                         <TablixMember>
-                                                          <Group Name="Detalles" />
-                                                          <Visibility>
-                                                            <Hidden>false</Hidden>
-                                                            
-                                                          </Visibility>
+                                                          <Group Name="Afiliacion">
+                                                            <GroupExpressions>
+                                                              <GroupExpression>=Fields!Afiliacion.Value</GroupExpression>
+                                                            </GroupExpressions>
+                                                          </Group>
+                                                          <SortExpressions>
+                                                            <SortExpression>
+                                                              <Value>=Fields!Afiliacion.Value</Value>
+                                                            </SortExpression>
+                                                          </SortExpressions>
+                                                          <TablixHeader>
+                                                            <Size>2.5cm</Size>
+                                                            <CellContents>
+                                                              <Textbox Name="Afiliacion">
+                                                                <CanGrow>true</CanGrow>
+                                                                <KeepTogether>true</KeepTogether>
+                                                                <Paragraphs>
+                                                                  <Paragraph>
+                                                                    <TextRuns>
+                                                                      <TextRun>
+                                                                        <Value>=Fields!Afiliacion.Value</Value>
+                                                                        <Style>
+                                                                          <FontWeight>Normal</FontWeight>
+                                                                          <Color>#333333</Color>
+                                                                        </Style>
+                                                                      </TextRun>
+                                                                    </TextRuns>
+                                                                    <Style>
+                                                                      <TextAlign>Center</TextAlign>
+                                                                    </Style>
+                                                                  </Paragraph>
+                                                                </Paragraphs>
+                                                                <rd:DefaultName>Afiliacion</rd:DefaultName>
+                                                                <Style>
+                                                                  <Border>
+                                                                    <Style>None</Style>
+                                                                  </Border>
+                                                                  <BottomBorder>
+                                                                    <Color>LightGrey</Color>
+                                                                    <Style>Solid</Style>
+                                                                    <Width>1pt</Width>
+                                                                  </BottomBorder>
+                                                                  <BackgroundColor>White</BackgroundColor>
+                                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                                  <PaddingRight>2pt</PaddingRight>
+                                                                  <PaddingTop>2pt</PaddingTop>
+                                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                                </Style>
+                                                              </Textbox>
+                                                            </CellContents>
+                                                          </TablixHeader>
+                                                          <TablixMembers>
+                                                            <TablixMember>
+                                                              <Group Name="Detalles" />
+                                                            </TablixMember>
+                                                          </TablixMembers>
                                                         </TablixMember>
                                                       </TablixMembers>
-                                                      <Visibility>
-                                                        <Hidden>false</Hidden>
-                                                        
-                                                      </Visibility>
                                                     </TablixMember>
                                                   </TablixMembers>
-                                                  <Visibility>
-                                                    <Hidden>false</Hidden>
-                                                    
-                                                  </Visibility>
                                                 </TablixMember>
                                               </TablixMembers>
-                                              <Visibility>
-                                                <Hidden>false</Hidden>
-                                                
-                                              </Visibility>
                                             </TablixMember>
                                           </TablixMembers>
-                                          <Visibility>
-                                            <Hidden>false</Hidden>
-                                            
-                                          </Visibility>
                                         </TablixMember>
                                       </TablixMembers>
-                                      <Visibility>
-                                        <Hidden>false</Hidden>
-                                        
-                                      </Visibility>
                                     </TablixMember>
                                   </TablixMembers>
-                                  <Visibility>
-                                    <Hidden>false</Hidden>
-                                    
-                                  </Visibility>
                                 </TablixMember>
                               </TablixMembers>
-                              <Visibility>
-                                <Hidden>false</Hidden>
-                                
-                              </Visibility>
                             </TablixMember>
                           </TablixMembers>
-                          <Visibility>
-                            <Hidden>false</Hidden>
-                            
-                          </Visibility>
                         </TablixMember>
                       </TablixMembers>
-                      <Visibility>
-                        <Hidden>false</Hidden>
-                        
-                      </Visibility>
                     </TablixMember>
                   </TablixMembers>
-                  <Visibility>
-                    <Hidden>false</Hidden>
-                    
-                  </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
@@ -1245,7 +1230,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Height>1.2cm</Height>
-        <Width>30cm</Width>
+        <Width>26.6cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
