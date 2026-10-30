@@ -31,7 +31,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -75,7 +75,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Pago_BS</rd:DefaultName>
@@ -123,7 +125,7 @@
                           </TextRun>
                         </TextRuns>
                         <Style>
-                          <TextAlign>Right</TextAlign>
+                          <TextAlign>Center</TextAlign>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
@@ -167,7 +169,7 @@
                               </TextRun>
                             </TextRuns>
                             <Style>
-                              <TextAlign>Right</TextAlign>
+                              <TextAlign>Center</TextAlign>
                             </Style>
                           </Paragraph>
                         </Paragraphs>
@@ -211,7 +213,7 @@
                                   </TextRun>
                                 </TextRuns>
                                 <Style>
-                                  <TextAlign>Right</TextAlign>
+                                  <TextAlign>Center</TextAlign>
                                 </Style>
                               </Paragraph>
                             </Paragraphs>
@@ -255,7 +257,7 @@
                                       </TextRun>
                                     </TextRuns>
                                     <Style>
-                                      <TextAlign>Right</TextAlign>
+                                      <TextAlign>Center</TextAlign>
                                     </Style>
                                   </Paragraph>
                                 </Paragraphs>
@@ -299,7 +301,7 @@
                                           </TextRun>
                                         </TextRuns>
                                         <Style>
-                                          <TextAlign>Right</TextAlign>
+                                          <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
                                     </Paragraphs>
@@ -343,7 +345,7 @@
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
-                                              <TextAlign>Right</TextAlign>
+                                              <TextAlign>Center</TextAlign>
                                             </Style>
                                           </Paragraph>
                                         </Paragraphs>
@@ -387,7 +389,7 @@
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Right</TextAlign>
+                                                  <TextAlign>Center</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -431,7 +433,7 @@
                                                       </TextRun>
                                                     </TextRuns>
                                                     <Style>
-                                                      <TextAlign>Right</TextAlign>
+                                                      <TextAlign>Center</TextAlign>
                                                     </Style>
                                                   </Paragraph>
                                                 </Paragraphs>
@@ -475,7 +477,7 @@
                                                           </TextRun>
                                                         </TextRuns>
                                                         <Style>
-                                                          <TextAlign>Right</TextAlign>
+                                                          <TextAlign>Center</TextAlign>
                                                         </Style>
                                                       </Paragraph>
                                                     </Paragraphs>
@@ -519,7 +521,7 @@
                                                               </TextRun>
                                                             </TextRuns>
                                                             <Style>
-                                                              <TextAlign>Right</TextAlign>
+                                                              <TextAlign>Center</TextAlign>
                                                             </Style>
                                                           </Paragraph>
                                                         </Paragraphs>
@@ -563,7 +565,7 @@
                                                                   </TextRun>
                                                                 </TextRuns>
                                                                 <Style>
-                                                                  <TextAlign>Right</TextAlign>
+                                                                  <TextAlign>Center</TextAlign>
                                                                 </Style>
                                                               </Paragraph>
                                                             </Paragraphs>
@@ -607,7 +609,7 @@
                                                                       </TextRun>
                                                                     </TextRuns>
                                                                     <Style>
-                                                                      <TextAlign>Right</TextAlign>
+                                                                      <TextAlign>Center</TextAlign>
                                                                     </Style>
                                                                   </Paragraph>
                                                                 </Paragraphs>
@@ -684,7 +686,9 @@
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>IDOrdenes_Viaje</rd:DefaultName>
@@ -735,7 +739,9 @@
                                 </Style>
                               </TextRun>
                             </TextRuns>
-                            <Style />
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
                           </Paragraph>
                         </Paragraphs>
                         <rd:DefaultName>Ruta</rd:DefaultName>
@@ -786,7 +792,9 @@
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
-                                <Style />
+                                <Style>
+                                  <TextAlign>Center</TextAlign>
+                                </Style>
                               </Paragraph>
                             </Paragraphs>
                             <rd:DefaultName>Dias_Viaje</rd:DefaultName>
@@ -837,7 +845,9 @@
                                         </Style>
                                       </TextRun>
                                     </TextRuns>
-                                    <Style />
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
                                   </Paragraph>
                                 </Paragraphs>
                                 <rd:DefaultName>Distancia</rd:DefaultName>
@@ -888,7 +898,9 @@
                                             </Style>
                                           </TextRun>
                                         </TextRuns>
-                                        <Style />
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
                                       </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Origen</rd:DefaultName>
@@ -939,7 +951,9 @@
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style />
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Paradas</rd:DefaultName>
@@ -990,7 +1004,9 @@
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style />
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
                                               </Paragraph>
                                             </Paragraphs>
                                             <rd:DefaultName>Destino</rd:DefaultName>
@@ -1041,7 +1057,9 @@
                                                         </Style>
                                                       </TextRun>
                                                     </TextRuns>
-                                                    <Style />
+                                                    <Style>
+                                                      <TextAlign>Center</TextAlign>
+                                                    </Style>
                                                   </Paragraph>
                                                 </Paragraphs>
                                                 <rd:DefaultName>Cedula_Chofer</rd:DefaultName>
@@ -1092,7 +1110,9 @@
                                                             </Style>
                                                           </TextRun>
                                                         </TextRuns>
-                                                        <Style />
+                                                        <Style>
+                                                          <TextAlign>Center</TextAlign>
+                                                        </Style>
                                                       </Paragraph>
                                                     </Paragraphs>
                                                     <rd:DefaultName>Vehiculos_NroPlaca</rd:DefaultName>
@@ -1143,7 +1163,9 @@
                                                                 </Style>
                                                               </TextRun>
                                                             </TextRuns>
-                                                            <Style />
+                                                            <Style>
+                                                              <TextAlign>Center</TextAlign>
+                                                            </Style>
                                                           </Paragraph>
                                                         </Paragraphs>
                                                         <rd:DefaultName>Cedula_Cliente</rd:DefaultName>
@@ -1194,7 +1216,9 @@
                                                                     </Style>
                                                                   </TextRun>
                                                                 </TextRuns>
-                                                                <Style />
+                                                                <Style>
+                                                                  <TextAlign>Center</TextAlign>
+                                                                </Style>
                                                               </Paragraph>
                                                             </Paragraphs>
                                                             <rd:DefaultName>Tasa_USD</rd:DefaultName>
@@ -1245,7 +1269,9 @@
                                                                         </Style>
                                                                       </TextRun>
                                                                     </TextRuns>
-                                                                    <Style />
+                                                                    <Style>
+                                                                      <TextAlign>Center</TextAlign>
+                                                                    </Style>
                                                                   </Paragraph>
                                                                 </Paragraphs>
                                                                 <rd:DefaultName>Estatus</rd:DefaultName>
@@ -1270,70 +1296,26 @@
                                                           <TablixMembers>
                                                             <TablixMember />
                                                           </TablixMembers>
-                                                          <Visibility>
-                                                            <Hidden>false</Hidden>
-                                                            
-                                                          </Visibility>
                                                         </TablixMember>
                                                       </TablixMembers>
-                                                      <Visibility>
-                                                        <Hidden>false</Hidden>
-                                                        
-                                                      </Visibility>
                                                     </TablixMember>
                                                   </TablixMembers>
-                                                  <Visibility>
-                                                    <Hidden>false</Hidden>
-                                                    
-                                                  </Visibility>
                                                 </TablixMember>
                                               </TablixMembers>
-                                              <Visibility>
-                                                <Hidden>false</Hidden>
-                                                
-                                              </Visibility>
                                             </TablixMember>
                                           </TablixMembers>
-                                          <Visibility>
-                                            <Hidden>false</Hidden>
-                                            
-                                          </Visibility>
                                         </TablixMember>
                                       </TablixMembers>
-                                      <Visibility>
-                                        <Hidden>false</Hidden>
-                                        
-                                      </Visibility>
                                     </TablixMember>
                                   </TablixMembers>
-                                  <Visibility>
-                                    <Hidden>false</Hidden>
-                                    
-                                  </Visibility>
                                 </TablixMember>
                               </TablixMembers>
-                              <Visibility>
-                                <Hidden>false</Hidden>
-                                
-                              </Visibility>
                             </TablixMember>
                           </TablixMembers>
-                          <Visibility>
-                            <Hidden>false</Hidden>
-                            
-                          </Visibility>
                         </TablixMember>
                       </TablixMembers>
-                      <Visibility>
-                        <Hidden>false</Hidden>
-                        
-                      </Visibility>
                     </TablixMember>
                   </TablixMembers>
-                  <Visibility>
-                    <Hidden>false</Hidden>
-                    
-                  </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
@@ -1354,8 +1336,10 @@
   </Body>
   <Width>12.79528in</Width>
   <Page>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>38cm</PageWidth>
+    <InteractiveHeight>21cm</InteractiveHeight>
+    <InteractiveWidth>38cm</InteractiveWidth>
     <LeftMargin>2cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>

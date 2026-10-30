@@ -24,7 +24,7 @@
                             <TextRun>
                               <Value>Fecha Nacimiento</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
@@ -118,7 +118,7 @@
                           <TextRun>
                             <Value>Cedula</Value>
                             <Style>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>9pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                               <Color>#666666</Color>
                             </Style>
@@ -162,7 +162,7 @@
                               <TextRun>
                                 <Value>Nombre</Value>
                                 <Style>
-                                  <FontSize>11pt</FontSize>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>#666666</Color>
                                 </Style>
@@ -206,7 +206,7 @@
                                   <TextRun>
                                     <Value>Apellido</Value>
                                     <Style>
-                                      <FontSize>11pt</FontSize>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>#666666</Color>
                                     </Style>
@@ -250,7 +250,7 @@
                                       <TextRun>
                                         <Value>Edad</Value>
                                         <Style>
-                                          <FontSize>11pt</FontSize>
+                                          <FontSize>9pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                           <Color>#666666</Color>
                                         </Style>
@@ -294,7 +294,7 @@
                                           <TextRun>
                                             <Value>Experiencia</Value>
                                             <Style>
-                                              <FontSize>11pt</FontSize>
+                                              <FontSize>9pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
                                               <Color>#666666</Color>
                                             </Style>
@@ -338,7 +338,7 @@
                                               <TextRun>
                                                 <Value>Grado Licencia</Value>
                                                 <Style>
-                                                  <FontSize>11pt</FontSize>
+                                                  <FontSize>9pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
                                                   <Color>#666666</Color>
                                                 </Style>
@@ -382,7 +382,7 @@
                                                   <TextRun>
                                                     <Value>Telefono</Value>
                                                     <Style>
-                                                      <FontSize>11pt</FontSize>
+                                                      <FontSize>9pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                       <Color>#666666</Color>
                                                     </Style>
@@ -426,7 +426,7 @@
                                                       <TextRun>
                                                         <Value>Correo</Value>
                                                         <Style>
-                                                          <FontSize>11pt</FontSize>
+                                                          <FontSize>9pt</FontSize>
                                                           <FontWeight>Bold</FontWeight>
                                                           <Color>#666666</Color>
                                                         </Style>
@@ -470,7 +470,7 @@
                                                           <TextRun>
                                                             <Value>Direccion</Value>
                                                             <Style>
-                                                              <FontSize>11pt</FontSize>
+                                                              <FontSize>9pt</FontSize>
                                                               <FontWeight>Bold</FontWeight>
                                                               <Color>#666666</Color>
                                                             </Style>
@@ -514,7 +514,7 @@
                                                               <TextRun>
                                                                 <Value>Ruta Asignada</Value>
                                                                 <Style>
-                                                                  <FontSize>11pt</FontSize>
+                                                                  <FontSize>9pt</FontSize>
                                                                   <FontWeight>Bold</FontWeight>
                                                                   <Color>#666666</Color>
                                                                 </Style>
@@ -558,7 +558,7 @@
                                                                   <TextRun>
                                                                     <Value>Afiliacion</Value>
                                                                     <Style>
-                                                                      <FontSize>11pt</FontSize>
+                                                                      <FontSize>9pt</FontSize>
                                                                       <FontWeight>Bold</FontWeight>
                                                                       <Color>#666666</Color>
                                                                     </Style>
@@ -865,7 +865,6 @@
                                       <PaddingBottom>2pt</PaddingBottom>
                                     </Style>
                                   </Textbox>
-                                  <rd:Selected>true</rd:Selected>
                                 </CellContents>
                               </TablixHeader>
                               <TablixMembers>
@@ -1243,8 +1242,8 @@
   </Body>
   <Width>11.81102in</Width>
   <Page>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>29.7cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>

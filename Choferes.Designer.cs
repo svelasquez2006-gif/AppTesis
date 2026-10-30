@@ -29,37 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.choferBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.choferTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.ChoferTableAdapter();
             this.salir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.choferBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // choferBindingSource
             // 
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.choferBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppTesis.ReporteChoferes.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(-1, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1137, 246);
-            this.reportViewer1.TabIndex = 0;
+            this.choferBindingSource.DataMember = "Chofer";
+            this.choferBindingSource.DataSource = this.dataBaseDataSet;
             // 
             // dataBaseDataSet
             // 
             this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
             this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // choferBindingSource
+            // reportViewer1
             // 
-            this.choferBindingSource.DataMember = "Chofer";
-            this.choferBindingSource.DataSource = this.dataBaseDataSet;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.choferBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppTesis.ReporteChoferes.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(-1, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1137, 339);
+            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // choferTableAdapter
             // 
@@ -67,7 +68,7 @@
             // 
             // salir
             // 
-            this.salir.Location = new System.Drawing.Point(461, 285);
+            this.salir.Location = new System.Drawing.Point(461, 360);
             this.salir.Name = "salir";
             this.salir.Size = new System.Drawing.Size(216, 33);
             this.salir.TabIndex = 5;
@@ -79,14 +80,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1137, 343);
+            this.ClientSize = new System.Drawing.Size(1137, 412);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Choferes";
             this.Text = "Choferes";
             this.Load += new System.EventHandler(this.Choferes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.choferBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

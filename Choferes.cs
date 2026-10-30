@@ -25,8 +25,7 @@ namespace AppTesis
             this.reportViewer1.RefreshReport();
 
             this.reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
-            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.Percent;
-            this.reportViewer1.ZoomPercent = 100;
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
         }
 
         private void salir_Click(object sender, EventArgs e)
@@ -34,6 +33,11 @@ namespace AppTesis
             this.Close();
             Reportes rep = new Reportes();
             rep.Show();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

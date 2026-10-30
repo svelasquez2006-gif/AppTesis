@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.mantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new AppTesis.DataBaseDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.mantenimientoTableAdapter = new AppTesis.DataBaseDataSetTableAdapters.MantenimientoTableAdapter();
             this.salir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantenimientoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // mantenimientoBindingSource
             // 
-            this.reportViewer1.DocumentMapWidth = 8;
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.mantenimientoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppTesis.ReporteMantenimiento.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(-1, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(801, 250);
-            this.reportViewer1.TabIndex = 0;
+            this.mantenimientoBindingSource.DataMember = "Mantenimiento";
+            this.mantenimientoBindingSource.DataSource = this.dataBaseDataSet;
             // 
             // dataBaseDataSet
             // 
             this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
             this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // mantenimientoBindingSource
+            // reportViewer1
             // 
-            this.mantenimientoBindingSource.DataMember = "Mantenimiento";
-            this.mantenimientoBindingSource.DataSource = this.dataBaseDataSet;
+            this.reportViewer1.DocumentMapWidth = 8;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.mantenimientoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppTesis.ReporteMantenimiento.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(-1, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(888, 318);
+            this.reportViewer1.TabIndex = 0;
             // 
             // mantenimientoTableAdapter
             // 
@@ -68,7 +68,7 @@
             // 
             // salir
             // 
-            this.salir.Location = new System.Drawing.Point(295, 276);
+            this.salir.Location = new System.Drawing.Point(339, 338);
             this.salir.Name = "salir";
             this.salir.Size = new System.Drawing.Size(216, 33);
             this.salir.TabIndex = 4;
@@ -80,14 +80,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 338);
+            this.ClientSize = new System.Drawing.Size(886, 393);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.reportViewer1);
             this.Name = "mantenimiento";
             this.Text = "mantenimiento";
             this.Load += new System.EventHandler(this.mantenimiento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantenimientoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
