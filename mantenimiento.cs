@@ -34,5 +34,24 @@ namespace AppTesis
             Reportes rep = new Reportes();
             rep.Show();
         }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Si tu método en el XSD espera cadenas (string) en lugar de DateTime:
+                string fechaInicio = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                string fechaFin = dateTimePicker2.Value.ToString("yyyy-MM-dd");
+
+                // Llamada adaptada
+                this.mantenimientoTableAdapter.FillByRangoFechas(this.dataBaseDataSet.Mantenimiento, fechaInicio, fechaFin);
+
+                this.reportViewer1.RefreshReport();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar el reporte: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
