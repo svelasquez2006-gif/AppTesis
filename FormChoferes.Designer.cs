@@ -85,6 +85,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripLblDev = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripLblDev2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnLimpiar = new BotonRedondo();
             cedulaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
@@ -657,12 +658,29 @@
             this.ToolStripLblDev2.Text = "Sebastián Velásquez y Veider Gallardo";
             this.ToolStripLblDev2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Yellow;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimpiar.FlatAppearance.BorderSize = 2;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(42, 538);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.RadioBorde = 20;
+            this.btnLimpiar.Size = new System.Drawing.Size(167, 40);
+            this.btnLimpiar.TabIndex = 43;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // FormChoferes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1098, 612);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.CodigoTelfComboBox);
             this.Controls.Add(this.AfiliacionComboBox);
@@ -756,5 +774,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev;
         private System.Windows.Forms.ToolStripStatusLabel ToolStripLblDev2;
+        private BotonRedondo btnLimpiar;
     }
 }

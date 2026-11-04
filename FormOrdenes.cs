@@ -689,6 +689,48 @@ namespace AppTesis
             if (!char.IsDigit(e.KeyChar)) e.Handled = true; // Bloquea letras y símbolos
         }
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            // 1. Cancelar cualquier edición en curso para proteger los registros de la tabla
+            orden_ViajeBindingSource.CancelEdit();
+
+            // 2. Deseleccionar la tabla visualmente
+            orden_ViajeDataGridView.ClearSelection();
+            if (orden_ViajeDataGridView.CurrentRow != null)
+            {
+                orden_ViajeDataGridView.CurrentCell = null;
+            }
+
+            // 3. Restablecer los ComboBoxes de selección (Cédulas, Placas, Rutas, Estatus)
+            if (ClienteComboBox.Items.Count > 0) ClienteComboBox.SelectedIndex = -1;
+            if (RutaComboBox.Items.Count > 0) RutaComboBox.SelectedIndex = -1;
+            if (ChoferComboBox.Items.Count > 0) ChoferComboBox.SelectedIndex = -1;
+            if (PlacaComboBox.Items.Count > 0) PlacaComboBox.SelectedIndex = -1;
+            if (EstatusComboBox.Items.Count > 0) EstatusComboBox.SelectedIndex = -1;
+
+            // 4. Limpiar cajas de texto operativas (días, distancia, paradas y montos de cálculo)
+            dias_ViajeTextBox.Clear();
+            distanciaTextBox.Clear();
+            paradasTextBox.Clear();
+            montobs.Clear();
+            IVAbs.Clear();
+            gtftextbox.Clear();
+            TotalBs.Clear();
+            montousd.Clear();
+            IVAUSD.Clear();
+            gtftextbox.Clear();
+            TotalUSD.Clear();
+            IncidenciasTextBox.Clear();
+            // Nota: txtTasaUsd no se limpia para conservar el valor actualizado de la API.
+
+            // 5. Restablecer fechas a la fecha actual
+            fecha_InicioDateTimePicker.Value = DateTime.Today;
+            fecha_FinalizacionDateTimePicker.Value = DateTime.Today;
+
+            // 6. Restablecer los RadioButtons a su estado por defecto (por ejemplo, Bs)
+            BsRadio.Checked = true;
+        }
+
 
         // 2. Vincul
     }

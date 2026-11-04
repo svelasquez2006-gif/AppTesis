@@ -346,5 +346,32 @@ namespace AppTesis
             // 2. Si la fila falló por estar incompleta al moverse, la descarta de la memoria
             clienteBindingSource.CancelEdit();
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            // 1. Cancelar cualquier edición en curso para proteger los registros existentes de la tabla
+            clienteBindingSource.CancelEdit(); // Si se llama clienteBindingSource en singular, ajústalo aquí
+
+            // 2. Deseleccionar la tabla visualmente
+            clienteDataGridView.ClearSelection(); // Ajusta el nombre del DataGridView si es diferente
+            if (clienteDataGridView.CurrentRow != null)
+            {
+                clienteDataGridView.CurrentCell = null;
+            }
+
+            // 3. Restablecer el selector de tipo de cliente
+            if (TipoComboBox.Items.Count > 0) TipoComboBox.SelectedIndex = -1;
+
+            // 4. Limpiar cajas de texto operativas (Cédula/RIF, Nombre, Apellido, Teléfono, Correo, Dirección)
+            cedulaTextBox.Clear();
+            nombreTextBox.Clear();
+            apellidoTextBox.Clear();
+            telefonoTextBox.Clear();
+            correoTextBox.Clear();
+            DirrecionTextBox.Clear();
+
+            // 5. Restablecer el selector de código de teléfono (si aplica)
+            if (CodigoTelfComboBox.Items.Count > 0) CodigoTelfComboBox.SelectedIndex = -1;
+        }
     }
 }

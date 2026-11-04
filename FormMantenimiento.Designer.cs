@@ -63,6 +63,7 @@
             this.BsRadio = new System.Windows.Forms.RadioButton();
             this.montobs = new System.Windows.Forms.TextBox();
             this.montousd = new System.Windows.Forms.TextBox();
+            this.btnLimpiar = new BotonRedondo();
             nroPlacaLabel = new System.Windows.Forms.Label();
             fechaMantenimientoLabel = new System.Windows.Forms.Label();
             anotacionesLabel = new System.Windows.Forms.Label();
@@ -167,10 +168,10 @@
             this.agregar.FlatAppearance.BorderSize = 2;
             this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar.Location = new System.Drawing.Point(92, 392);
+            this.agregar.Location = new System.Drawing.Point(431, 392);
             this.agregar.Name = "agregar";
             this.agregar.RadioBorde = 20;
-            this.agregar.Size = new System.Drawing.Size(309, 40);
+            this.agregar.Size = new System.Drawing.Size(214, 40);
             this.agregar.TabIndex = 20;
             this.agregar.Text = "Agregar Mantenimiento";
             this.agregar.UseVisualStyleBackColor = false;
@@ -183,10 +184,10 @@
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(549, 392);
+            this.salir.Location = new System.Drawing.Point(651, 392);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
-            this.salir.Size = new System.Drawing.Size(266, 40);
+            this.salir.Size = new System.Drawing.Size(221, 40);
             this.salir.TabIndex = 21;
             this.salir.Text = "Salir";
             this.salir.UseVisualStyleBackColor = false;
@@ -355,6 +356,7 @@
             this.tasa_USDTextBox.ReadOnly = true;
             this.tasa_USDTextBox.Size = new System.Drawing.Size(182, 20);
             this.tasa_USDTextBox.TabIndex = 32;
+            this.tasa_USDTextBox.TextChanged += new System.EventHandler(this.tasa_USDTextBox_TextChanged);
             // 
             // groupBox1
             // 
@@ -417,12 +419,29 @@
             this.montousd.TextChanged += new System.EventHandler(this.montousd_TextChanged);
             this.montousd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.montousd_KeyPress);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Yellow;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimpiar.FlatAppearance.BorderSize = 2;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(126, 392);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.RadioBorde = 20;
+            this.btnLimpiar.Size = new System.Drawing.Size(167, 40);
+            this.btnLimpiar.TabIndex = 46;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // FormMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(884, 459);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(tasa_USDLabel);
             this.Controls.Add(this.tasa_USDTextBox);
@@ -479,5 +498,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tasa_USD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coste_BS;
+        private BotonRedondo btnLimpiar;
     }
 }

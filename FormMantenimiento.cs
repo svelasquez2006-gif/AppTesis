@@ -334,5 +334,35 @@ namespace AppTesis
 
 
         }
+
+        private void tasa_USDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            // 1. Cancelar cualquier edición en curso para proteger los registros de la tabla
+            mantenimientoBindingSource.CancelEdit();
+
+            // 2. Deseleccionar la tabla visualmente
+            mantenimientoDataGridView.ClearSelection();
+            if (mantenimientoDataGridView.CurrentRow != null)
+            {
+                mantenimientoDataGridView.CurrentCell = null;
+            }
+
+            // 3. Limpiar cajas de texto operativos
+            montobs.Clear();
+            montousd.Clear();
+            anotacionesTextBox.Clear();
+
+            // 4. Restablecer controles de fecha y selectores desplegables
+            fechaMantenimientoDateTimePicker.Value = DateTime.Today;
+            if (PlacaComboBox.Items.Count > 0) PlacaComboBox.SelectedIndex = -1;
+
+            // 5. Restablecer los RadioButtons a su estado por defecto
+            BsRadio.Checked = true;
+        }
     }
 }

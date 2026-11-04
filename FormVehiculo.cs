@@ -202,5 +202,31 @@ namespace AppTesis
         {
             utiles.SoloLetras(e);
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            // 1. Cancelar cualquier edición en curso para no alterar la tabla
+            vehiculoBindingSource.CancelEdit();
+
+            // 2. Deseleccionar la tabla visualmente
+            vehiculoDataGridView.ClearSelection();
+            if (vehiculoDataGridView.CurrentRow != null)
+            {
+                vehiculoDataGridView.CurrentCell = null;
+            }
+
+            // 3. Limpiar manualmente cada caja de texto de manera segura
+            nroPlacaTextBox.Clear(); // Ajusta según el nombre real de tu textbox de placa
+            modeloTextBox.Clear();   // Ajusta según el nombre real de tu textbox de modelo
+            colorTextBox.Clear();    // Ajusta según el nombre real de tu textbox de color
+
+            // 4. Restablecer controles de fecha o numéricos (por ejemplo, el año actual)
+            AñoDatePicker.Value = DateTime.Today; // O el control que utilices para el año
+
+            // 5. Restablecer los selectores desplegables (ComboBoxes)
+            if (TipoComboBox.Items.Count > 0) TipoComboBox.SelectedIndex = -1;
+            if (MarcaComboBox.Items.Count > 0) MarcaComboBox.SelectedIndex = -1;
+            if (estatuscombobox.Items.Count > 0) estatuscombobox.SelectedIndex = -1;
+        }
     }
 }

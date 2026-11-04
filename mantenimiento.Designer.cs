@@ -71,7 +71,7 @@
             // 
             // salir
             // 
-            this.salir.Location = new System.Drawing.Point(537, 389);
+            this.salir.Location = new System.Drawing.Point(605, 389);
             this.salir.Name = "salir";
             this.salir.Size = new System.Drawing.Size(216, 33);
             this.salir.TabIndex = 4;
@@ -81,23 +81,23 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(228, 381);
+            this.dateTimePicker1.Location = new System.Drawing.Point(286, 381);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(228, 407);
+            this.dateTimePicker2.Location = new System.Drawing.Point(286, 407);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 6;
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(96, 389);
+            this.btnFiltrar.Location = new System.Drawing.Point(64, 389);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.Size = new System.Drawing.Size(216, 33);
             this.btnFiltrar.TabIndex = 7;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;

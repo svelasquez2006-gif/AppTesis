@@ -202,7 +202,7 @@ namespace AppTesis
             if (e.RowIndex >= 0)
             {
                 // 2. Obtener la fila actual
-                DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
+                DataGridViewRow fila = EmpresasDataGridView.Rows[e.RowIndex];
 
                 // 3. Leer el teléfono. Reemplaza "Telefono" por el nombre de tu columna
                 string telefonoCompleto = fila.Cells["Telefono"].Value?.ToString() ?? "";
@@ -287,6 +287,38 @@ namespace AppTesis
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            // 1. Cancelar cualquier edición en curso para proteger los registros de la tabla
+            empresasSubcontratadaBindingSource.CancelEdit(); // Ajusta el nombre del BindingSource si difiere
+
+            // 2. Deseleccionar la tabla visualmente
+            EmpresasDataGridView.ClearSelection(); // Ajusta el nombre del DataGridView si es diferente
+            if (EmpresasDataGridView.CurrentRow != null)
+            {
+                EmpresasDataGridView.CurrentCell = null;
+            }
+
+            // 3. Limpiar cajas de texto operativas
+            RifTextBox.Clear();
+            nombreTextBox.Clear();
+            correoTextBox.Clear();
+            NombreRepresentanteTextBox.Clear();
+            telefonoTextBox.Clear();
+            textBoxTelfRepre.Clear();
+            direccionTextBox.Clear();
+
+            // 4. Restablecer los selectores desplegables (ComboBoxes: Estado, Calificación y códigos telefónicos)
+            if (EstadoComboBox.Items.Count > 0) EstadoComboBox.SelectedIndex = -1;
+            if (CalificacionComboBox.Items.Count > 0) CalificacionComboBox.SelectedIndex = -1;
+            if (CodigoTelfComboBox.Items.Count > 0) CodigoTelfComboBox.SelectedIndex = -1;
+            if (comboBoxTelfRepre.Items.Count > 0) comboBoxTelfRepre.SelectedIndex = -1;
+
+            // 5. Restablecer las fechas de contrato a la fecha actual
+            fechaInicioDateTimePicker.Value = DateTime.Today;
+            fechafinalDateTimePicker.Value = DateTime.Today;
         }
     }
 }

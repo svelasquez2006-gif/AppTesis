@@ -50,7 +50,7 @@
             System.Windows.Forms.Label fechaInicioLabel;
             System.Windows.Forms.Label fechafinalLabel;
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.EmpresasDataGridView = new System.Windows.Forms.DataGridView();
             this.rif = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,6 +85,7 @@
             this.tableAdapterManager = new AppTesis.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.fechaInicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.fechafinalDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.btnLimpiar = new BotonRedondo();
             telefonoLabel = new System.Windows.Forms.Label();
             lblTelefRepresentante = new System.Windows.Forms.Label();
             lblFechaInicio = new System.Windows.Forms.Label();
@@ -105,7 +106,7 @@
             nombreRepresentanteLabel = new System.Windows.Forms.Label();
             fechaInicioLabel = new System.Windows.Forms.Label();
             fechafinalLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpresasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresasSubcontratadaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -294,14 +295,14 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "EMPRESAS SUBCONTRATADAS";
             // 
-            // dataGridView1
+            // EmpresasDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EmpresasDataGridView.AllowUserToAddRows = false;
+            this.EmpresasDataGridView.AllowUserToDeleteRows = false;
+            this.EmpresasDataGridView.AutoGenerateColumns = false;
+            this.EmpresasDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.EmpresasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmpresasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.rif,
             this.Nombre,
             this.direccion,
@@ -313,14 +314,14 @@
             this.FechaFinal,
             this.Calificacion,
             this.Estado});
-            this.dataGridView1.DataSource = this.empresasSubcontratadaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 315);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1193, 200);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+            this.EmpresasDataGridView.DataSource = this.empresasSubcontratadaBindingSource;
+            this.EmpresasDataGridView.Location = new System.Drawing.Point(27, 315);
+            this.EmpresasDataGridView.Name = "EmpresasDataGridView";
+            this.EmpresasDataGridView.ReadOnly = true;
+            this.EmpresasDataGridView.Size = new System.Drawing.Size(1193, 200);
+            this.EmpresasDataGridView.TabIndex = 4;
+            this.EmpresasDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.EmpresasDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
             // rif
             // 
@@ -538,7 +539,7 @@
             this.salir.FlatAppearance.BorderSize = 2;
             this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(1010, 202);
+            this.salir.Location = new System.Drawing.Point(1093, 194);
             this.salir.Name = "salir";
             this.salir.RadioBorde = 20;
             this.salir.Size = new System.Drawing.Size(150, 40);
@@ -665,12 +666,29 @@
             this.fechafinalDateTimePicker.Size = new System.Drawing.Size(111, 20);
             this.fechafinalDateTimePicker.TabIndex = 60;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Yellow;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimpiar.FlatAppearance.BorderSize = 2;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(916, 191);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.RadioBorde = 20;
+            this.btnLimpiar.Size = new System.Drawing.Size(150, 40);
+            this.btnLimpiar.TabIndex = 61;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // FormEmpresasSubcontratadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1255, 557);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(fechafinalLabel);
             this.Controls.Add(fechaInicioLabel);
             this.Controls.Add(nombreRepresentanteLabel);
@@ -708,12 +726,12 @@
             this.Controls.Add(this.EstadoComboBox);
             this.Controls.Add(this.nombreTextBox);
             this.Controls.Add(this.RifTextBox);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.EmpresasDataGridView);
             this.Controls.Add(this.label1);
             this.Name = "FormEmpresasSubcontratadas";
             this.Text = "FormEmpresasSubcontratadas";
             this.Load += new System.EventHandler(this.FormEmpresasSubcontratadas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpresasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresasSubcontratadaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.statusStrip1.ResumeLayout(false);
@@ -726,7 +744,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView EmpresasDataGridView;
         private DataBaseDataSet dataBaseDataSet;
         private System.Windows.Forms.BindingSource empresasSubcontratadaBindingSource;
         private DataBaseDataSetTableAdapters.EmpresasSubcontratadaTableAdapter empresasSubcontratadaTableAdapter;
@@ -761,5 +779,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFinal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Calificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private BotonRedondo btnLimpiar;
     }
 }

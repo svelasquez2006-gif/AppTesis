@@ -400,5 +400,37 @@ namespace AppTesis
         {
             utiles.SoloLetras(e);
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            // 1. Cancelar cualquier edición en curso para no alterar la tabla
+            choferBindingSource.CancelEdit();
+
+            // 2. Deseleccionar la tabla visualmente
+            dgvChoferes.ClearSelection();
+            if (dgvChoferes.CurrentRow != null)
+            {
+                dgvChoferes.CurrentCell = null;
+            }
+
+            // 3. Limpiar manualmente cada caja de texto de manera segura
+            cedulaTextBox.Clear();
+            nombreTextBox.Clear();
+            apellidoTextBox.Clear();
+            telefonoTextBox.Clear();
+            correoTextBox.Clear();
+            experienciaTextBox.Clear();
+            direccionTextBox.Clear();
+
+            // 4. Establecer el DateTimePicker en una fecha válida (hace 18 años) para la validación de edad
+            fecha_NacimientoDateTimePicker.Value = DateTime.Today.AddYears(-18);
+
+            // 5. Restablecer los selectores desplegables (ComboBoxes)
+            if (CodigoTelfComboBox.Items.Count > 0) CodigoTelfComboBox.SelectedIndex = -1;
+            if (licenciacombobox.Items.Count > 0) licenciacombobox.SelectedIndex = -1;
+            if (estatuscombobox.Items.Count > 0) estatuscombobox.SelectedIndex = -1;
+            if (RutaComboBox.Items.Count > 0) RutaComboBox.SelectedIndex = -1;
+            if (AfiliacionComboBox.Items.Count > 0) AfiliacionComboBox.SelectedIndex = -1;
+        }
     }
 }

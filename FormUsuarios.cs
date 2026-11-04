@@ -289,5 +289,34 @@ namespace AppTesis
         {
             utiles.SoloLetras(e);
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            // 1. Guardar cualquier cambio pendiente en el BindingSource
+            usuarioBindingSource.EndEdit();
+
+            // 2. Desvincular temporalmente la posición (-1) para que los controles queden libres
+            // sin crear filas fantasma ni afectar los registros existentes en la tabla.
+            usuarioBindingSource.Position = -1;
+
+            // 3. Deseleccionar visualmente el DataGridView
+            clienteDataGridView.ClearSelection();
+            if (clienteDataGridView.CurrentRow != null)
+            {
+                clienteDataGridView.CurrentCell = null;
+            }
+
+            // 4. Limpiar explícitamente cada caja de texto (ahora sí se quedarán totalmente en blanco)
+            cedulaTextBox.Clear();
+            nombreTextBox.Clear();
+            apellidoTextBox.Clear();
+            usuarioTextBox.Clear();
+            contrasenaTextBox.Clear();
+            correoTextBox.Clear();
+
+            // 5. Restablecer los ComboBoxes
+            if (jerarquiacomboBox.Items.Count > 0) jerarquiacomboBox.SelectedIndex = -1;
+            if (EstadoComboBox.Items.Count > 0) EstadoComboBox.SelectedIndex = -1;
+        }
     }
 }
